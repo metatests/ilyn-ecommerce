@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<data name="Extra Step Option" inherit_id="wizard_checkout" active="False" customize_show="True">
+        <xpath expr="//li[@id='step40']" position="replace">
+            <li t-att-class="(step==40 and 'text-primary') or 'text-muted'" id="step40">
+                <t t-if="step&gt;40 and step&lt;50">
+                    <a href="/shop/payment" class="text-success">
+                        Payment<span class="chevron"/>
+                    </a>
+                </t>
+                <t t-if="not (step&gt;40 and step&lt;50)">
+                    Payment<span class="chevron"/>
+                </t>
+            </li>
+        </xpath>
+        <xpath expr="//li[@id='step20']" position="after">
+            <li t-att-class="(step==30 and 'text-primary') or 'text-muted'" id="step30">
+                <t t-if="step&gt;30 and step&lt;50">
+                    <a href="/shop/extra_info" class="text-success">
+                        Extra Info<span class="chevron"/>
+                    </a>
+                </t>
+                <t t-if="not (step&gt;30 and step&lt;50)">
+                    Extra Info<span class="chevron"/>
+                </t>
+            </li>
+        </xpath>
+    </data>
+
+    

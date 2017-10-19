@@ -1,0 +1,234 @@
+<?xml version="1.0"?>
+<!--<data inherit_id="website.footer_custom" customize_show="True" name="Automatic Footer">-->
+<!--    <xpath expr="//div[@id='footer']" position="replace">-->
+<!--        <div id="footer" class="container hidden-print">-->
+<!--            <div class="row">-->
+<!--                <div class="col-md-4 col-lg-3">-->
+<!--                    <h4>Our Products &amp; Services</h4>-->
+<!--                    <ul class="list-unstyled" id="products">-->
+<!--                        <li><a href="/">Home</a></li>-->
+<!--                    </ul>-->
+<!--                </div>-->
+<!--                <div class="col-md-4  col-lg-3" id="info">-->
+<!--                    <h4>Connect with us</h4>-->
+<!--                    <ul class="list-unstyled">-->
+<!--                        <li><a href="/page/website.contactus">Contact us</a></li>-->
+<!--                    </ul>-->
+<!--                    <ul class="list-unstyled">-->
+<!--                        <li t-ignore="true"><i class="fa fa-phone"/><span t-field="res_company.phone"/></li>-->
+<!--                        <li t-ignore="true"><i class="fa fa-envelope"/><span t-field="res_company.email"/></li>-->
+<!--                    </ul>-->
+<!--                    <h2>-->
+<!--                        <a t-att-href="website.social_facebook" t-if="website.social_facebook"><i class="fa fa-facebook-square"/></a>-->
+<!--                        <a t-att-href="website.social_twitter" t-if="website.social_twitter"><i class="fa fa-twitter"/></a>-->
+<!--                        <a t-att-href="website.social_linkedin" t-if="website.social_linkedin"><i class="fa fa-linkedin"/></a>-->
+<!--                        <a t-att-href="website.social_youtube" t-if="website.social_youtube"><i class="fa fa-youtube-play"/></a>-->
+<!--                        <a t-att-href="website.social_googleplus" t-if="website.social_googleplus" rel="publisher"><i class="fa fa-google-plus-square"/></a>-->
+<!--                        <a t-att-href="website.social_github" t-if="website.social_github"><i class="fa fa-github"/></a>-->
+<!--                    </h2>-->
+<!--                </div>-->
+<!--                <div class="col-md-4 col-lg-5 col-lg-offset-1">-->
+<!--                    <h4>-->
+<!--                        <span t-field="res_company.name"/>-->
+<!--                        <small> - <a href="/page/website.aboutus">About us</a></small>-->
+<!--                    </h4>-->
+<!--                    <div>-->
+<!--                        <p>-->
+<!--                            We are a team of passionate people whose goal is to improve everyone's-->
+<!--                            life through disruptive products. We build great products to solve your-->
+<!--                            business problems.-->
+<!--                        </p>-->
+<!--                        <p>-->
+<!--                            Our products are designed for small to medium size companies willing to optimize-->
+<!--                            their performance.-->
+<!--                        </p>-->
+<!--                    </div>-->
+<!--                    <t t-call="website.language_selector"/>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </xpath>-->
+<!--</data>-->
+<data inherit_id="website.footer_custom" customize_show="True" name="Automatic Footer">
+    <xpath expr="//div[@id='footer']" position="replace">
+        <div style="height:8px;background:#FFC652;width:100%;"></div>
+        <div style="background:#252525" >
+            <div id="footer" class="container hidden-print">
+                <div class="row" style="padding-bottom: 35px;">
+                    <div class="col-md-2 col-xs-12">
+                        <div class="footer-link">
+                            <h5 style="color: #525F5F;font-size: 24px;">PANJABI</h5>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="/shop/category/all-panjabi-the-sahara-collection-86">Sahara Collection </a>
+                                </li>
+                                <li>
+                                    <a href="/shop/category/all-panjabi-premium-85">Premium </a>
+                                </li>
+                                <li>
+                                    <a href="/shop/category/all-panjabi-platinum-84">Platinum </a>
+                                </li>
+                                <li>
+                                    <a href="/shop/category/all-panjabi-custom-83">Custom</a>
+                                </li>
+                                <li>
+                                    <a href="/shop/category/all-panjabi-basic-82">Basic </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-xs-12">
+                        <div class="footer-link">
+                            <h5 style="color: #525F5F;font-size: 24px;">SHIRT</h5>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="/shop/category/all-shirt-premium-76">Premium </a>
+                                </li>
+                                <li>
+                                    <a href="/shop/category/all-shirt-platinum-75">Platinum </a>
+                                </li>
+                                <li>
+                                    <a href="/shop/category/all-shirt-basic-74">Basic</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-xs-12">
+                        <div class="footer-link">
+                            <h5 style="color: #525F5F;font-size: 24px;">THOBE </h5>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="/shop/category/all-thobe-premium-80">Premium Thobe</a>
+                                </li>
+                                <li>
+                                    <a href="/shop/category/all-thobe-platinum-79">Platinum Thobe</a>
+                                </li>
+                                <li>
+                                    <a href="/shop/category/all-thobe-basic-78">Basic Thobe</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-xs-12">
+                        <div class="footer-link">
+                            <h5 style="color: #525F5F;font-size: 24px;">L-CHINO</h5>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="/shop/category/all-l-chino-air-66">Air </a>
+                                </li>
+                                <li>
+                                    <a href="/shop/category/all-l-chino-basic-2-0-68">Basic 2.0</a>
+                                </li>
+                                <li>
+                                    <a href="/shop/category/all-l-chino-basic-67">Basic </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-xs-12">
+                        <div class="footer-link">
+                            <h5 style="color: #525F5F;font-size: 24px;">PAJAMA </h5>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="/shop/category/all-payjama-trim-fit-90">Trim Fit Pajama </a>
+                                </li>
+                                <li>
+                                    <a href="/shop/category/all-payjama-traditional-89">Traditional Pajama </a>
+                                </li>
+                                <li>
+                                    <a href="/shop/category/all-payjama-relaxed-fit-88">Relaxed Fit Pajama </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-xs-12">
+                        <div class="footer-link">
+                            <h5 style="color: #525F5F;font-size: 24px;">MISC</h5>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="/shop/category/all-leather-goods-luxury-bag-70">Luxury Bag</a>
+                                </li>
+                                <li>
+                                    <a href="/shop/category/all-leather-goods-shoe-72">Shoe </a>
+                                </li>
+                                <li>
+                                    <a href="/shop/category/all-leather-goods-sandal-71">Sandal </a>
+                                </li>
+                                <li>
+                                    <a href="/shop/category/all-concentrated-purfume-rasasi-63">Perfume Rasasi </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!--<div class="col-md-2 col-xs-12">-->
+                    <!--  <div class="footer-link">-->
+                    <!--    <h5>Get in Touch</h5>-->
+                    <!--    <ul class="list-unstyled">-->
+                    <!--      <li>Call us at (555)-555-5555</li>-->
+                    <!--      <li><a href="mailto:hello@delvesolve.com">hello@delvesolve.com</a></li>-->
+                    <!--    </ul>-->
+                    <!--  </div>-->
+                    <!--</div>-->
+                    <!--<div class="col-md-12 col-xs-12" id="info" style='padding-top:3%'>-->
+                    <!--    <div class='col-md-6' style='padding-left:0;'>-->
+                    <!--        <h3 style='color: #929292;'> The Premium Muslim Lifestyle Brand </h3>-->
+                    <!--    </div>-->
+                    <!--    <div class='col-md-3'>-->
+                    <!--        <h4 style="color: #525F5F;font-size: 18px;display:inline">Get in Touch</h4>-->
+                    <!--        <ul class="list-unstyled" style='display:inline'>-->
+                    <!--            <li t-ignore="true">-->
+                    <!--                <i style="color: #929292;" class="fa fa-phone"/>-->
+                    <!--                <span style="color: #929292;" t-field="res_company.phone"/>-->
+                    <!--            </li>-->
+                                <!--<li t-ignore="true">-->
+                                <!--  <i style="color: #929292;" class="fa fa-envelope"/>-->
+                                <!--  <span style="color: #929292;" t-field="res_company.email"/>-->
+                                <!--</li>-->
+                    <!--        </ul>-->
+                    <!--    </div>-->
+                    <!--    <div class='col-md-3 pull-right'>-->
+                    <!--        <h2>-->
+                    <!--            <a t-att-href="website.social_facebook" t-if="website.social_facebook">-->
+                    <!--                <i class="fa fa-facebook-square"/>-->
+                    <!--            </a>-->
+                    <!--            <a t-att-href="website.social_twitter" t-if="website.social_twitter">-->
+                    <!--                <i class="fa fa-twitter"/>-->
+                    <!--            </a>-->
+                    <!--            <a t-att-href="website.social_linkedin" t-if="website.social_linkedin">-->
+                    <!--                <i class="fa fa-linkedin"/>-->
+                    <!--            </a>-->
+                    <!--            <a t-att-href="website.social_youtube" t-if="website.social_youtube">-->
+                    <!--                <i class="fa fa-youtube-play"/>-->
+                    <!--            </a>-->
+                    <!--            <a t-att-href="website.social_googleplus" t-if="website.social_googleplus" rel="publisher">-->
+                    <!--                <i class="fa fa-google-plus-square"/>-->
+                    <!--            </a>-->
+                    <!--            <a t-att-href="website.social_github" t-if="website.social_github">-->
+                    <!--                <i class="fa fa-github"/>-->
+                    <!--            </a>-->
+                    <!--        </h2>-->
+                    <!--    </div>-->
+                    <!--</div>-->
+                    
+                    
+                    <!--<div class="col-md-4 col-xs-12">-->
+                    <!--  <div class="newsletter clearfix">-->
+                    <!--    <h4 style="color: #525F5F; text-align: center;font-size: 21px;">Newsletter</h4>-->
+                    <!--    <h3 style="color: #929292;text-align: center;">Sign up now</h3>-->
+                    <!--    <p style="color: #929292;text-align: center;">Enter your email address and get notified about new products. We hate spam!</p>-->
+                    <!--    <div class="input-group js_subscribe" data-list-id="1" data-subscribe="off">-->
+                    <!--<input type="email" name="email" class="js_subscribe_email form-control" placeholder="your email...">  -->
+                    <!--      <span class="input-group-btn">-->
+                    <!--          <a id="subscribe_button" href="#" class="btn btn-primary js_subscribe_btn">Subscribe</a>-->
+                    <!--          <a href="#" class="btn btn-success js_subscribed_btn hidden" disabled="disabled">Thanks</a>-->
+                    <!--      </span>-->
+                    <!--      <div class="alert alert-success hidden">Thanks for your subscription!</div>-->
+                    <!--    </div>-->
+                    <!--  </div>-->
+                    <!--</div>-->
+                </div>
+            </div>
+        </div>
+    </xpath>
+</data>

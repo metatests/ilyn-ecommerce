@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!--<data inherit_id="website_sale.product" customize_show="True" name="Alternative Products">-->
+<!--        <xpath expr="//div[@id='product_full_description']" position="after">-->
+<!--            <div class="container mt32" t-if="product.alternative_product_ids">-->
+<!--                <h3>Alternative Products:</h3>-->
+<!--                <div class="row mt16" style="">-->
+<!--                    <t t-foreach="product.alternative_product_ids" t-as="alt_product">-->
+<!--                        <div class="col-md-2 thumbnail" style="width: 170px; height:130px; float:left; display:inline; margin-right: 10px; overflow:hidden;">-->
+<!--                            <div class="mt16 text-center" style="height: 100%;">-->
+<!--                                <div t-field="alt_product.image_small" t-options="{'widget': 'image', 'class': 'img-rounded shadow o_alternative_product' }"/>-->
+<!--                                <h5>-->
+<!--                                    <a t-attf-href="/shop/product/#{ slug(alt_product) }" style="display: block">-->
+<!--                                        <span t-att-title="alt_product.name" t-field="alt_product.name" style="display: block;"/>-->
+<!--                                    </a>-->
+<!--                                </h5>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </t>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </xpath>-->
+<!--    </data>-->
+
+<data inherit_id="website_sale.product" customize_show="True" name="Alternative Products">
+        <xpath expr="//div[@id='product_full_description']" position="after">
+            <div class="container mt32" t-if="product.alternative_product_ids">
+                <div class="row" style="margin-top:65px; border-bottom: 6px solid #ededed;padding: 0px 0px 0px 0px;">
+                    <div class="col-md-12 mb0 mt12" style="padding-left: 0px;"> 
+                       <h3 class="text-center text-muted" style="float:left; color: black;font-size: 18px;">
+                           RELATED PRODUCTS</h3>
+                    </div>
+                </div>    
+                    
+                    
+                <div class="row mt16" style="">
+                    <t t-foreach="product.alternative_product_ids" t-as="alt_product">
+                        <div class="col-md-2 thumbnail" style="width: 170px; height:130px; float:left; display:inline; margin-right: 10px; overflow:hidden;">
+                            <div class="mt16 text-center" style="height: 100%;">
+                                <div t-field="alt_product.image_small" t-options="{'widget': 'image', 'class': 'img-rounded shadow o_alternative_product' }"/>
+                                <h5>
+                                    <a t-attf-href="/shop/product/#{ slug(alt_product) }" style="display: block">
+                                        <span t-att-title="alt_product.name" t-field="alt_product.name" style="display: block;"/>
+                                    </a>
+                                </h5>
+                            </div>
+                        </div>
+                    </t>
+                </div>
+            </div>
+            
+            
+        </xpath>
+    </data>
+    
+    
+
+    
