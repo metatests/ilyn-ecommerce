@@ -20,21 +20,20 @@
 
 
 <t name="Pricelists Dropdown" t-name="website_sale.pricelist_list">
-        <t t-set="website_sale_pricelists" t-value="website.get_pricelist_available(show_visible=True)"/>
-        <div t-attf-class="#{website_sale_pricelists and len(website_sale_pricelists)&gt;1 and 'dropdown' or 'hidden'} btn-group">
-            <t t-set="curr_pl" t-value="website.get_current_pricelist()"/>
-            <a href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown">
-                <t t-esc="curr_pl and curr_pl.name or ' - '"/>
-                <span class="caret"/>
-            </a>
-            <ul class="dropdown-menu" role="menu">
-                <li t-foreach="website_sale_pricelists" t-as="pl">
-                    <a t-att-href="'/shop/change_pricelist/%s' % pl.id">
-                        <span class="switcher_pricelist" t-att-data-pl_id="pl.id" t-esc="pl.name"/>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </t>
+    <t t-set="website_sale_pricelists" t-value="website.get_pricelist_available(show_visible=True)"/>
+    <div t-attf-class="#{website_sale_pricelists and len(website_sale_pricelists)&gt;1 and 'dropdown' or 'hidden'} btn-group">
+        <t t-set="curr_pl" t-value="website.get_current_pricelist()"/>
+        <a href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown">
+            <t t-esc="curr_pl and curr_pl.name or ' - '"/>
+            <span class="caret"/>
+        </a>
+        <ul class="dropdown-menu" role="menu">
+            <li t-foreach="website_sale_pricelists" t-as="pl">
+                <a t-att-href="'/shop/change_pricelist/%s' % pl.id">
+                    <span class="switcher_pricelist" t-att-data-pl_id="pl.id" t-esc="pl.name"/>
+                </a>
+            </li>
+        </ul>
+    </div>
+</t>
 
-    

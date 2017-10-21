@@ -13,21 +13,21 @@
 <!--    </data>-->
 
 <data inherit_id="website.layout" name="Footer Copyright">
-        <xpath expr="//footer" position="inside">
-            
-            <div style="background: #101010;">
-            <div class="container " style="height:50px;">
-                <div class=" text-muted" style="padding: 14px 0px 0px 0px; text-align:center;">
-                    Copyright &amp;copy; <span >Illiyeen</span>
-                </div>
-                <!--<div class="pull-right text-muted" style="padding: 14px 0px 0px 0px;">-->
-                <!--    <i style="color: #929292;" class="fa fa-phone"/>-->
-                <!--    <span style="color: #929292;" t-field="res_company.phone"/>-->
-                <!--</div>-->
+    <xpath expr="//footer" position="inside">
+        
+        <div style="background: #101010;">
+        <div class="container " style="height:50px;">
+            <div class=" text-muted" style="padding: 14px 0px 0px 0px; text-align:center;">
+                Copyright &amp;copy; <span >Illiyeen</span>
             </div>
-            
-            </div>
-        </xpath>
-    </data>
+            <!--<div class="pull-right text-muted" style="padding: 14px 0px 0px 0px;">-->
+            <!--    <i style="color: #929292;" class="fa fa-phone"/>-->
+            <!--    <span style="color: #929292;" t-field="res_company.phone"/>-->
+            <!--</div>-->
+        </div>
+        
+        </div>
+    </xpath>
+</data>
 
         
