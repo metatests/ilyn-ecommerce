@@ -1,15 +1,24 @@
 <?xml version="1.0"?>
 <data inherit_id="website.layout" name="Footer Copyright">
-        <xpath expr="//footer" position="inside">
-            <div class="container mt16 mb8">
-                <div class="pull-right" t-ignore="true" t-if="not editable">
-                                                      Powered by <a class="label label-danger" href="http://www.odoo.com/page/website-builder">Odoo</a>,
-                                                      the #1 <a href="http://www.odoo.com/page/e-commerce">Open Source eCommerce</a>.
-                                                    </div>
-                <div class="pull-left text-muted">
-                                                      Copyright &amp;copy; <span t-field="res_company.name">Company name</span></div>
+    <xpath expr="//footer" position="inside">
+      <style>
+        .dark_footer{
+          background: #252525;
+        }
+      </style>       
+      <div class='dark_footer'>
+        <div class="container">
+            <div style='border-top: 1px solid #474747;padding-top: 15px;padding-right:15px; padding-left:15px;'></div>
+            <!--<div class="pull-right" t-ignore="true" t-if="not editable">-->
+            <!--  Powered by <a class="label label-danger" href="http://www.odoo.com/page/website-builder">Odoo</a>,-->
+            <!--  the #1 <a href="http://www.odoo.com/page/e-commerce">Open Source eCommerce</a>.-->
+            <!--</div>-->
+            <div class="pull-left text-muted" style='padding-bottom: 15px;'>
+                Copyright &amp;copy; <span t-field="res_company.name">Company name</span>
             </div>
-        </xpath>
-    </data>
+        </div>
+      </div>
+    </xpath>
+</data>
 
     

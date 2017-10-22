@@ -17,7 +17,7 @@
 
             <t t-raw="head or ''"/>
         </head>
-        <body t-att-class="body_classname" style="font-family: 'Lato', sans-serif;">
+        <body t-att-class="body_classname">
             <t t-raw="0"/>
         </body>
     </html>

@@ -105,6 +105,46 @@
       <!-- CAROUSEL CSS -->
       <style>
 
+        #shop_now_button{
+          background: #FFC652;
+          color: black;
+          border: 3px solid #FFC652;
+          margin: 0 auto;
+          border-radius: 0px;
+          padding: 15px 30px;
+          font-size: 18px;
+          font-weight: 550;
+          text-transform: uppercase;
+          outline: 0 !important;
+          -webkit-transition: all 0.3s ease-in-out;
+          -moz-transition: all 0.3s ease-in-out;
+          -ms-transition: all 0.3s ease-in-out;
+          -o-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+        }
+        
+        #shop_now_button:hover{
+          color: white;
+          background: transparent;
+          border: 3px solid #FFC652;
+          -webkit-transition: all 0.3s ease-in-out;
+          -moz-transition: all 0.3s ease-in-out;
+          -ms-transition: all 0.3s ease-in-out;
+          -o-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+        }
+
+        .slider_icon {
+          color: #FFC652;
+        }
+        .slider_icon:hover {
+          color:#FFC652;
+        }
+
+        .carousel .carousel-control {
+          background: none !important;
+        }
+
         .s_banner.carousel-custom .carousel-indicators li.active {
           background-color: white;
         }
@@ -443,6 +483,7 @@
         }
       </style>
 
+      
       <!-- Category Heading Color Change on Hover Script -->
       <script type="text/javascript">
         $(document).ready(function(){
