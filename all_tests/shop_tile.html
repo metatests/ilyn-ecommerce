@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script
-	src="http://code.jquery.com/jquery-2.2.4.min.js" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"  crossorigin="anonymous"></script>
+	<script	src="http://code.jquery.com/jquery-2.2.4.min.js" ></script>
+	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script> -->
+	<script src="http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"></script>
 	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"> -->
 	<link rel='stylesheet' type='text/css' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
 </head>
@@ -24,7 +24,7 @@
 		-ms-transition: all 0.3s ease-in-out;
 		-o-transition: all 0.3s ease-in-out;
 		transition: all 0.3s ease-in-out;
-		
+
 	}
 	.btn-tile:hover{
 		color: white;
@@ -37,6 +37,13 @@
 		-moz-box-shadow: none 1px 2px #ccc;
 		box-shadow: none 1px 2px #ccc;
 	}
+	.btn-tile:active{
+		color: #FFC652;
+		background-color: transparent;
+		border-color: #FFC652;
+		border-radius: 0;
+	}
+
 	.btn-sub-tile{
 
 	}
@@ -59,7 +66,6 @@
 		margin-top: 20px;
 		margin-bottom: 20px;
 	}
-
 </style>
 
 <p> Uncomment line in script</p>
@@ -73,9 +79,8 @@
 					<div class='img-container'>
 						<img src='blue1-fbbns.png' class='img-responsive '/>
 						<div class='col-md-3 col-md-offset-3 col-sm-12 col-xs-12 img-btn-text'>
-							<a class='btn-block btn btn-outline-warning btn-tile' href='#'><span class='btn-text-middle'>L Chino</span></a>
+							<a class='btn-block btn btn-tile' href='#'><span class='btn-text-middle'>L Chino</span></a>
 						</div>
-
 					</div>
 					<div class='row' id='clothing_lchino_sub_categs_div' style='display: none; margin-top: 20px; margin-bottom: 20px; position: relative;'>
 						<div class='col-md-4 col-sm-12 col-xs-12'>
@@ -116,20 +121,21 @@
 
 	</div>
 </div>
+
 <script type='text/javascript'>
 	$(document).ready(function(){
 		if (window.location.href==='http://188.166.178.138:8069/shop' || window.location.href==='http://web.ilyn.global/shop'){
 			console.log("Shop");
 			$("#product_categ_tile_div").show();
 		} else {
-				// $("#product_categ_tile_div").hide();
-			}
-			$("#clothing_sub_categs_div .btn-tile").click(function(){
-				$("#clothing_lchino_sub_categs_div").slideToggle(300);
-			});
-			console.log(window.location.href);
+			// $("#product_categ_tile_div").hide();
+		}
+		$("#clothing_sub_categs_div .btn-tile").click(function(){
+			$("#clothing_lchino_sub_categs_div").slideToggle(300);
 		});
-	</script>
+		console.log(window.location.href);
+	});
+</script>
 
 </body>
 </html>
