@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<t name="Website Searchbox" t-name="website.website_search_box">
+    <div class="input-group">
+        <div class="oe_search">
+            <input type="text" name="search" class="search-query form-control oe_search_box" placeholder="Search..." t-att-value="search"/>
+        </div>
+        <span class="input-group-btn">
+           <button type="submit" class="btn btn-warning oe_search_button" style='border-radius:0;'><i class="fa fa-search"/></button>
+        </span>
+    </div>
+</t>
