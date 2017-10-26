@@ -264,16 +264,33 @@
         </li>
     </template>
 
-    <!-- Custom Recursive Category -->
-    <template id="categories_recursive_cust" name="Category list Cust">
+    <!-- Haha Custom Recursive Category -->
+    <template id="categories_recursive_cust" name="Category list Cust Haha">
         <li t-att-class="'active' if c.id == int(category or 0) else None">
-            <a t-att-href="keep('/shop/category/' + slug(c), category=0)" t-field="c.name"></a>
+            <span t-if='c.parent_id'>
+                <a t-att-href="keep('/shop/category/' + slug(c), category=0)" t-field="c.name"></a>
+            </span>
             <ul t-if="c.child_id" class="nav nav-pills nav-stacked nav-hierarchy">
-                <!-- <t t-foreach="c.child_id" t-as="c">
-                    <t t-call="website_sale.categories_recursive_cust" />
-                </t> -->
                 <t t-foreach="c.child_id" t-as="c">
-                    <a t-att-href="keep('/shop/category/' + slug(c), category=0)" t-field="c.name"></a>
+                    <div t-if='c.child_id and c.parent_id' id='level2_categ_img'>
+                        <div class='row mb32'>
+                            <div class='col-sm-3'>
+                                <div t-if='c.child_id' id='level3_categ'>
+                                    <h1> <a t-att-href="keep('/shop/category/' + slug(c), category=0)" t-field="c.name"></a></h1>
+                                    <t t-foreach="c.child_id" t-as="c">
+                                        <a t-att-href="keep('/shop/category/' + slug(c), category=0)" t-field="c.name" style='display:block'></a>
+                                    </t>
+                                </div>
+                            </div>
+                            <div class='col-sm-9'>
+                                <span itemprop="image" t-field="c.parent_id.image" t-options="{
+                                    'widget': 'image',
+                                    'class': 'product_detail_img', 
+                                    'alt-field': 'name', 
+                                    'zoom': 'image'}" />
+                            </div>
+                        </div>
+                    </div>
                 </t>
             </ul>
         </li>
