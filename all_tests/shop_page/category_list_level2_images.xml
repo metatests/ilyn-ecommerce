@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<t name="Category List Level2 Images" t-name="website_sale.categories_recursive_cust">
+        <li t-att-class="'active' if c.id == int(category or 0) else None">
+            <span t-if="c.parent_id">
+                <a t-att-href="keep('/shop/category/' + slug(c), category=0)" t-field="c.name"/>
+            </span>
+            
+            <style>
+                .level3_categs_div{
+                    background: #ffc262;
+                    padding-right:0;
+                    height: 212px;
+                }
+                .level2_img_div{
+                    padding-left:0;
+                }
+                .level3_categ{
+                    padding-left:20px;
+                    padding-right:40px;
+                }
+                .level3_categ h2 a {
+                    color: white;
+                    text-decoration:none;
+                    text-transform: uppsercase;
+                }
+                .level3_categ h4 a {
+                    color: white;
+                    text-decoration:none;
+                    padding-bottom: 5px;
+                }
+                .level3_border_btm{
+                    border-bottom: 2px solid #ffd692; padding-right:5px;padding-left: 0;
+                }
+                
+            </style>
+            <ul t-if="c.child_id" class="nav nav-pills nav-stacked nav-hierarchy">
+                <t t-foreach="c.child_id" t-as="c">
+                    <div t-if="c.child_id and c.parent_id" class="level2_categ_img">
+                        <div class="row mb32">
+                            <div class="col-sm-4 level3_categs_div">
+                                <div t-if="c.child_id" class="level3_categ">
+                                    <h2 class="mb16"> <a t-att-href="keep('/shop/category/' + slug(c), category=0)" t-field="c.name"/></h2>
+                                    <t t-if="len(c.child_id) &gt; 4">
+                                        <t t-foreach="c.child_id" t-as="c">
+                                            <h4 class="col-sm-6" style="padding-left:0; margin-top:0; padding-top:0;"><a t-att-href="keep('/shop/category/' + slug(c), category=0)" t-field="c.name" style="display:block"/> <div class='col-sm-12 level3_border_btm'></div></h4>
+                                        </t>
+                                    </t> 
+                                    <t t-if="not len(c.child_id) &gt; 4">
+                                        <t t-foreach="c.child_id" t-as="c">
+                                            <h4><a t-att-href="keep('/shop/category/' + slug(c), category=0)" t-field="c.name" style="display:block"/> <div class='col-sm-12 level3_border_btm'></div></h4>
+                                        </t>
+                                    </t>
+                                </div>
+                            </div>
+                            <div class="col-sm-8 level2_img_div">
+                                <span itemprop="image" t-field="c.parent_id.image" t-options="{                                     'widget': 'image',                                     'class': 'product_detail_img',                                      'alt-field': 'name',                                      'zoom': 'image'}"/>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </ul>
+        </li>
+    </t>
+
+    

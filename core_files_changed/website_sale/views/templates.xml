@@ -264,25 +264,32 @@
         </li>
     </template>
 
-    <!-- Haha Custom Recursive Category -->
-    <template id="categories_recursive_cust" name="Category list Cust Haha">
+    <!-- Level 2 Images Custom Recursive Category -->
+    <template id="categories_recursive_cust" name="Category List Level2 Images">
         <li t-att-class="'active' if c.id == int(category or 0) else None">
             <span t-if='c.parent_id'>
                 <a t-att-href="keep('/shop/category/' + slug(c), category=0)" t-field="c.name"></a>
             </span>
             <ul t-if="c.child_id" class="nav nav-pills nav-stacked nav-hierarchy">
                 <t t-foreach="c.child_id" t-as="c">
-                    <div t-if='c.child_id and c.parent_id' id='level2_categ_img'>
+                    <div t-if='c.child_id and c.parent_id' class='level2_categ_img'>
                         <div class='row mb32'>
-                            <div class='col-sm-3'>
-                                <div t-if='c.child_id' id='level3_categ'>
-                                    <h1> <a t-att-href="keep('/shop/category/' + slug(c), category=0)" t-field="c.name"></a></h1>
-                                    <t t-foreach="c.child_id" t-as="c">
-                                        <a t-att-href="keep('/shop/category/' + slug(c), category=0)" t-field="c.name" style='display:block'></a>
+                            <div class='col-sm-4 level3_categs_div'>
+                                <div t-if='c.child_id' class='level3_categ'>
+                                    <h2 class='mb16'> <a t-att-href="keep('/shop/category/' + slug(c), category=0)" t-field="c.name"></a></h2>
+                                    <t t-if="len(c.child_id) > 4">
+                                        <t t-foreach="c.child_id" t-as="c">
+                                            <h4 class='col-sm-6' style='padding-left:0; margin-top:0; padding-top:0;'><a t-att-href="keep('/shop/category/' + slug(c), category=0)" t-field="c.name" style='display:block'></a></h4>
+                                        </t>
+                                    </t> 
+                                    <t t-if="not len(c.child_id) > 4">
+                                        <t t-foreach="c.child_id" t-as="c">
+                                            <h4><a t-att-href="keep('/shop/category/' + slug(c), category=0)" t-field="c.name" style='display:block'></a></h4>
+                                        </t>
                                     </t>
                                 </div>
                             </div>
-                            <div class='col-sm-9'>
+                            <div class='col-sm-8 level2_img_div'>
                                 <span itemprop="image" t-field="c.parent_id.image" t-options="{
                                     'widget': 'image',
                                     'class': 'product_detail_img', 

@@ -611,7 +611,7 @@
         <div class="container">
           <div class="row">
             <div class="col-md-6" style="padding-left:0px;">
-              <div class="col-md-12 mt16 mb16 address_hb">
+              <div class="col-md-12 mt16 mb16 address_hb" style='padding-left:0; padding-right:30px;'>
                 <h3 class="mb0">BANANI 11</h3>
                 <h5 class="mb16 text-muted">Level3, Tower 52, Road 11 Banani, Dhaka 1213 
 
@@ -626,8 +626,8 @@
                 <br/>
               </div>
             </div>
-            <div class="col-md-6" style="position:relative; padding-right:0px;">
-              <div class="col-md-12 mt16 mb16 address_hb">
+            <div class="col-md-6" style="padding-right:0px;">
+              <div class="col-md-12 mt16 mb16 address_hb" style='padding-left:0;'>
                 <h3 class="mb0">BASHUNDHARA CITY</h3>
                 <h5 class="mb16 text-muted">Level 2, Block A, Basundhara City, Panthapath, Dhaka 1215 
 
