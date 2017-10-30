@@ -9,7 +9,6 @@
                 .level3_categs_div{
                     background: #ffc262;
                     padding-right:0;
-                    height: 212px;
                 }
                 .level2_img_div{
                     padding-left:0;
@@ -21,7 +20,7 @@
                 .level3_categ h2 a {
                     color: white;
                     text-decoration:none;
-                    text-transform: uppsercase;
+                    text-transform: uppercase;
                 }
                 .level3_categ h4 a {
                     color: white;
@@ -31,7 +30,6 @@
                 .level3_border_btm{
                     border-bottom: 2px solid #ffd692; padding-right:5px;padding-left: 0;
                 }
-                
             </style>
             <ul t-if="c.child_id" class="nav nav-pills nav-stacked nav-hierarchy">
                 <t t-foreach="c.child_id" t-as="c">

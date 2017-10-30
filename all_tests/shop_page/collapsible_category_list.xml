@@ -13,9 +13,16 @@
         				font-size: 14px;
         				color:white;
         				text-align:center;
+                        padding:15px;
         			}
+                    #o_shop_collapse_category li {
+                        padding: 5px;
+                    }
+                    #o_shop_collapse_category li a{
+                        color: #16161d;
+                    }
         		</style>
-            <ul class="nav nav-pills nav-stacked product_category_panel_cust" id="o_shop_collapse_category">
+            <ul class="nav nav-pills nav-stacked product_category_panel_cust mt16" id="o_shop_collapse_category">
             	<div style="" class="panel-heading product_category_panel_heading_cust">PRODUCT CATEGORIES</div>
                 <!-- <li t-att-class=" '' if category else 'active' ">
                     <a t-att-href="keep('/shop',category=0)" class="o_not_editable">All Products</a>
