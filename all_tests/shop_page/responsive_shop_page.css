@@ -1,6 +1,6 @@
 <style>
 @media screen and (min-width: 320px) and (max-width: 767px) {
-
+	
 	.level3_categs_div{
 		margin-right: 15px;
 	}
@@ -28,7 +28,7 @@
 	.level3_categs_div{
 		height: 180px;
 	}
-
+	
 	.product_category_panel_cust {
 		margin-left: 5px;
 	}
@@ -58,7 +58,7 @@
 		margin-top: 8px;
 		margin-bottom: 6px;
 	}
-
+	
 }
 @media screen and (min-width: 1200px){
 	.level3_categs_div{
@@ -67,5 +67,7 @@
 	.level3_categ h2{
 		margin-top: 16px;
 	}
+	.level3_categ h4{
+		font-size: 16px;
+	}
 }
-</style>
