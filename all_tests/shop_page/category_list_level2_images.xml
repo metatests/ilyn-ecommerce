@@ -31,7 +31,6 @@
                 }
             </style>
             
-
             <ul t-if="c.child_id" class="nav nav-pills nav-stacked nav-hierarchy">
                 <t t-foreach="c.child_id" t-as="c">
                     <div t-if="c.child_id and c.parent_id" class="level2_categ_img">
