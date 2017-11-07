@@ -27,10 +27,13 @@
                     padding-bottom: 5px;
                 }
                 .level3_border_btm{
-                    border-bottom: 2px solid #ffd692; padding-right:5px;padding-left: 0;
+                    border-bottom: 2px solid #ffd692;
+                    padding-right:5px;
+                    padding-left: 0;
                 }
             </style>
             
+
             <ul t-if="c.child_id" class="nav nav-pills nav-stacked nav-hierarchy">
                 <t t-foreach="c.child_id" t-as="c">
                     <div t-if="c.child_id and c.parent_id" class="level2_categ_img">
@@ -56,10 +59,13 @@
                                         <div class="image-mask-box-s" style="margin-left: 0px;padding-left: 0px;">
                                             <div class='thumbnail-s'>
                                                 <div class="image-wrapper-s">
-                                                    <span itemprop="image" t-field="c.parent_id.image" t-options="{                                     'widget': 'image',                                     'class': 'product_detail_img',                                      'alt-field': 'name',                                      'zoom': 'image'}"/>
-                                                    <div class="masking-s ">
+                                                    <a t-att-href="keep('/shop/category/' + slug(c.parent_id), category=0)">
+                                                        <span  itemprop="image" t-field="c.parent_id.image" t-options="{                                     'widget': 'image',                                     'class': 'product_detail_img',                                      'alt-field': 'name',                                      'zoom': 'image'}"/>
+                                                        <div class="masking-s ">
                                                         
-                                                    </div>
+                                                        </div>
+                                                    
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>

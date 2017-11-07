@@ -13,41 +13,11 @@
           </li>
         </ol>
         <div class="carousel-inner">
-          <div class="item oe_img_bg oe_custom_bg active" style="background-image: url(&quot;http://odoo.metamorphosis.com.bd/web/image/466&quot;); background-position: 0% 0%;">
+          <div class="item oe_img_bg oe_custom_bg active" style="background-position: 0% 0%; background-image: url(&quot;/web/image/12596&quot;);">
             <div class="container">
-              <div class="row content">
+              <div class="row content"><div class="carousel-content mt128 col-md-2 mb64" style=""><h3 class="h3 section-subtitle" style="font-family: Lato, sans-serif; color: #797979; margin-top: 0px; margin-bottom: 22px; text-transform: uppercase;">&amp;nbsp;</h3><h3 class="h3 section-subtitle" style="font-family: Oxygen, sans-serif; color: rgb(112, 70, 100); margin-top: 0px; margin-bottom: 22px; text-transform: uppercase;"><font style="font-size: 17px;font-weight:100" class="text-black"/></h3><h3 class="h3 section-subtitle" style="font-family: Oxygen, sans-serif; color: rgb(112, 70, 100); margin-top: 0px; margin-bottom: 22px; text-transform: uppercase;"><font style="font-size: 17px;font-weight:100" class="text-black"><br/></font></h3><h3 class="h3 section-subtitle" style="font-family: Oxygen, sans-serif; color: rgb(112, 70, 100); margin-top: 0px; margin-bottom: 22px; text-transform: uppercase;"><font style="font-size: 17px;font-weight:100" class="text-black"/></h3><h3 class="h3 section-subtitle" style="font-family: Oxygen, sans-serif; color: rgb(112, 70, 100); margin-top: 0px; margin-bottom: 22px; text-transform: uppercase;"><font style="font-size: 17px;font-weight:100" class="text-black"><br/></font></h3><h3 class="h3 section-subtitle" style="font-family: Oxygen, sans-serif; color: rgb(112, 70, 100); margin-top: 0px; margin-bottom: 22px; text-transform: uppercase;"><font style="font-size: 17px;font-weight:100" class="text-black">
 
-                <div class="carousel-content mt128 col-md-2 mb64" style="">
-                  <h3 class="h3 section-subtitle" style="font-family: Lato, sans-serif; color: #797979; margin-top: 0px; margin-bottom: 22px; text-transform: uppercase;">&amp;nbsp;</h3>
-                  <h3 class="h3 section-subtitle" style="font-family: Oxygen, sans-serif; color: rgb(112, 70, 100); margin-top: 0px; margin-bottom: 22px; text-transform: uppercase;">
-                    <font style="font-size: 17px;font-weight:100" class="text-black"/>
-                  </h3>
-                  <h3 class="h3 section-subtitle" style="font-family: Oxygen, sans-serif; color: rgb(112, 70, 100); margin-top: 0px; margin-bottom: 22px; text-transform: uppercase;">
-                    <font style="font-size: 17px;font-weight:100" class="text-black">
-                      <br/>
-                    </font>
-                  </h3>
-                  <h3 class="h3 section-subtitle" style="font-family: Oxygen, sans-serif; color: rgb(112, 70, 100); margin-top: 0px; margin-bottom: 22px; text-transform: uppercase;">
-                    <font style="font-size: 17px;font-weight:100" class="text-black"/>
-                  </h3>
-                  <h3 class="h3 section-subtitle" style="font-family: Oxygen, sans-serif; color: rgb(112, 70, 100); margin-top: 0px; margin-bottom: 22px; text-transform: uppercase;">
-                    <font style="font-size: 17px;font-weight:100" class="text-black">
-                      <br/>
-                    </font>
-                  </h3>
-                  <h3 class="h3 section-subtitle" style="font-family: Oxygen, sans-serif; color: rgb(112, 70, 100); margin-top: 0px; margin-bottom: 22px; text-transform: uppercase;">
-                    <font style="font-size: 17px;font-weight:100" class="text-black">
-
-                    </font>
-                  </h3>
-                  <h3 class="h3 section-subtitle" style="font-family: Oxygen, sans-serif; color: rgb(112, 70, 100); margin-top: 0px; margin-bottom: 22px; text-transform: uppercase;">
-                    <font style="font-size: 17px;font-weight:100" class="text-black">&amp;nbsp;</font>
-                  </h3>
-                  <p>
-                    <a id="shop_now_button" href="/shop" class="btn btn-default " data-original-title="" title="">SHOP NOW</a>
-                  </p>
-                </div>
-                <br/>&amp;nbsp; 
+                    </font></h3><h3 class="h3 section-subtitle" style="font-family: Oxygen, sans-serif; color: rgb(112, 70, 100); margin-top: 0px; margin-bottom: 22px; text-transform: uppercase;"><font style="font-size: 17px;font-weight:100" class="text-black">&amp;nbsp;</font></h3><p><a id="shop_now_button" href="/shop" class="btn btn-default " data-original-title="" title="">SHOP NOW</a></p></div><br/>&amp;nbsp; 
 
               </div>
             </div>
@@ -56,7 +26,6 @@
             <div class="container">
               <div class="row content">
                 <div class="carousel-content mt128 col-md-2 mb64" style="">
-
                   <h3 class="h3 section-subtitle" style="font-family: Lato, sans-serif; color: #797979; margin-top: 0px; margin-bottom: 22px; text-transform: uppercase;">&amp;nbsp;</h3>
                   <h3 class="h3 section-subtitle" style="font-family: Oxygen, sans-serif; color: rgb(112, 70, 100); margin-top: 0px; margin-bottom: 22px; text-transform: uppercase;">
                     <font style="font-size: 17px;font-weight:100" class="text-black"/>
@@ -85,7 +54,6 @@
                   <p>
                     <a id="shop_now_button" href="/shop" class="btn btn-default " data-original-title="" title="">SHOP NOW</a>
                   </p>
-
                 </div>
                 <div class="carousel-img col-md-offset-1 hidden-sm hidden-xs mt48 col-md-5"/>
               </div>
@@ -101,49 +69,46 @@
           <i class="fa fa-chevron-right" data-original-title="" title=""/>
         </div>
       </div>
-
-      <!-- CAROUSEL CSS -->
       <style>
-
-        #shop_now_button{
-          background: #FFC652;
-          color: black;
-          border: 3px solid #FFC652;
-          margin: 0 auto;
-          border-radius: 0px;
-          padding: 15px 30px;
-          font-size: 18px;
-          font-weight: 550;
-          text-transform: uppercase;
-          outline: 0 !important;
-          -webkit-transition: all 0.3s ease-in-out;
-          -moz-transition: all 0.3s ease-in-out;
-          -ms-transition: all 0.3s ease-in-out;
-          -o-transition: all 0.3s ease-in-out;
-          transition: all 0.3s ease-in-out;
-        }
-        
-        #shop_now_button:hover{
-          color: white;
-          background: transparent;
-          border: 3px solid #FFC652;
-          -webkit-transition: all 0.3s ease-in-out;
-          -moz-transition: all 0.3s ease-in-out;
-          -ms-transition: all 0.3s ease-in-out;
-          -o-transition: all 0.3s ease-in-out;
-          transition: all 0.3s ease-in-out;
-        }
-
-        .slider_icon {
+          
+          #shop_now_button{
+            background: #FFC652;
+            color: black;
+            border: 3px solid #FFC652;
+            margin: 0 auto;
+            border-radius: 0px;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: 550;
+            text-transform: uppercase;
+            outline: 0 !important;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+          }
+          
+          #shop_now_button:hover{
+            color: white;
+            background: transparent;
+            border: 3px solid #FFC652;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+          }
+          
+          .slider_icon {
           color: #FFC652;
         }
         .slider_icon:hover {
           color:#FFC652;
         }
-
         .carousel .carousel-control {
-          background: none !important;
-        }
+            background: none !important;
+          }
 
         .s_banner.carousel-custom .carousel-indicators li.active {
           background-color: white;
@@ -269,8 +234,6 @@
           background: linear-gradient(135deg, #ffc652 0%, #ffc652 50%, #f2bb4e 51%, #f2bb4e 100%);
         }
       </style>
-
-      <!-- A.S HOVER CSS -->
       <style>
         .btnx {
           cursor: pointer;
@@ -458,7 +421,6 @@
           border-radius: 0 !important;
         }
       </style>
-      <!-- 3 OPTIONS Free Delivery, 24 Hr Support Div CSS -->
       <style>
         .s_title .box {
           padding: 50px 20px;
@@ -482,9 +444,6 @@
           text-transform: uppercase;
         }
       </style>
-
-      
-      <!-- Category Heading Color Change on Hover Script -->
       <script type="text/javascript">
         $(document).ready(function(){
           $("#cloth-cat").hover(
@@ -515,7 +474,6 @@
           );
         });
       </script>
-
       <section class="s_title" style="">
         <div class="container" style=" padding-left:0; padding-right:0; padding-top:40px;">
           <div class="col-md-12 mb0 mt12" style="padding-left: 0px; ">
@@ -523,7 +481,6 @@
               <b>SHOP</b>
             </h3>
             <div style="margin-top:65px; padding: 0px ;border-bottom: 6px solid #ededed;width:100%;"/>
-              
           </div>
         </div>
       </section>
@@ -534,7 +491,7 @@
               <div class="product_container col-md-12 col-xs-12" style="padding:0;">
                 <div class="thumbnail" id="cloth-cat">
                   <div class="image-wrapper">
-                    <img src="/web/image/422" class="pull-left product_image " data-original-title="" title="" style="position: relative; width: 100%; height: 100%;"/>
+                    <img src="/web/image/12595" class="pull-left product_image " data-original-title="" title="" style="position: relative; width: 100%; height: 100%;"/>
                     <div class="masking">
                       <a href="#" class="btnx btn-masking btn-xlg o_default_snippet_text">VIEW PRODUCTS</a>
                     </div>
@@ -545,7 +502,7 @@
                 <div class="container">
                   <div class="row">
                     <div class="mt0 col-md-12 ">
-                      <h4 class="mt16 " id="cloth-ht" style="color: rgb(0, 0, 0);">CLOTHING</h4>
+                      <h4 class="mt16 " id="cloth-ht" style="color: rgb(0, 0, 0); font-size:16px; font-weight: bold">CLOTHING</h4>
                     </div>
                   </div>
                 </div>
@@ -555,7 +512,7 @@
               <div class="product_container col-md-12 col-xs-12" style="padding:0;">
                 <div class="thumbnail" id="foot-cat">
                   <div class="image-wrapper">
-                    <img src="/web/image/423" class="pull-left product_image " data-original-title="" title="" style="position: relative; width: 100%; height: 100%;"/>
+                    <img src="/web/image/12594" class="pull-left product_image " data-original-title="" title="" style="position: relative; width: 100%; height: 100%;"/>
                     <div class="masking">
                       <a href="#" class="btnx btn-masking btn-xlg o_default_snippet_text">VIEW PRODUCTS</a>
                     </div>
@@ -566,7 +523,7 @@
                 <div class="container">
                   <div class="row">
                     <div class="mt0 col-md-12 ">
-                      <h4 class="mt16  " id="foot-ht" style="color: rgb(0, 0, 0);">FOOTWEAR</h4>
+                      <h4 class="mt16  " id="foot-ht" style="color: rgb(0, 0, 0); font-size:16px; font-weight: bold">FOOTWEAR</h4>
                     </div>
                   </div>
                 </div>
@@ -576,7 +533,7 @@
               <div class="product_container col-md-12 col-xs-12" style="padding:0;">
                 <div class="thumbnail" id="acc-cat">
                   <div class="image-wrapper">
-                    <img src="/web/image/424" class="pull-left product_image " data-original-title="" title="" style="position: relative; width: 100%; height: 100%;"/>
+                    <img src="/web/image/12593" class="pull-left product_image " data-original-title="" title="" style="position: relative; width: 100%; height: 100%;"/>
                     <div class="masking">
                       <a href="#" class="btnx btn-masking btn-xlg o_default_snippet_text">VIEW PRODUCTS</a>
                     </div>
@@ -587,7 +544,7 @@
                 <div class="container">
                   <div class="row">
                     <div class="mt0 col-md-12 ">
-                      <h4 class="mt16  " id="acc-ht" style="color: rgb(0, 0, 0);">ACCESSORIES</h4>
+                      <h4 class="mt16  " id="acc-ht" style="color: rgb(0, 0, 0); font-size:16px; font-weight: bold">ACCESSORIES</h4>
                     </div>
                   </div>
                 </div>
@@ -618,9 +575,7 @@
                   <br/>
                 </h5>
               </div>
-
-              <iframe scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=23.7912105,90.4019766&amp;hl=es;z=14&amp;output=embed" width="100%" height="300" frameborder="0"></iframe>
-
+              <iframe scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=23.7912105,90.4019766&amp;hl=es;z=14&amp;output=embed" width="100%" height="300" frameborder="0"/>
               <div class="col-md-12">
                 <p>&amp;nbsp;</p>
                 <br/>
@@ -634,9 +589,7 @@
                   <br/>
                 </h5>
               </div>
-
-              <iframe scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=23.7912105,90.4019766&amp;hl=es;z=14&amp;output=embed" width="100%" height="300" frameborder="0"></iframe>
-
+              <iframe scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=23.7912105,90.4019766&amp;hl=es;z=14&amp;output=embed" width="100%" height="300" frameborder="0"/>
               <div class="col-md-12">
                 <h4 class="mb0 mt0">
                   <br/>

@@ -1,256 +1,88 @@
 <?xml version="1.0"?>
-<!--<t name="Products item" t-name="website_sale.products_item">-->
-<!--        <form action="/shop/cart/update" method="post">-->
-<!--            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>-->
-<!--            <div itemscope="itemscope" itemtype="http://schema.org/Product">-->
-<!--                <div class="ribbon-wrapper">-->
-<!--                    <div class="ribbon btn btn-danger">Sale</div>-->
-<!--                </div>-->
-<!--                <div class="oe_product_image">-->
-<!--                    <a itemprop="url" t-att-href="keep('/shop/product/%s' % slug(product), page=(pager['page']['num'] if pager['page']['num']&gt;1 else None))">-->
-<!--                        <span itemprop="image" t-field="product.image" t-options="{'widget': 'image', 'resize': None if product_image_big else '300x300', 'zoom': 'image'}" t-att-alt="product.name"/>-->
-<!--                    </a>-->
-<!--                </div>-->
-<!--                <t t-if="show_publish">-->
-<!--                    <div id="website_published_button" class="" groups="sales_team.group_sale_manager">-->
-<!--                        <t t-call="website.publish_management">-->
-<!--                            <t t-set="object" t-value="product"/>-->
-<!--                            <t t-set="publish_edit" t-value="True"/>-->
-<!--                            <t t-set="action" t-value="'product.product_template_action'"/>-->
-<!--                        </t>-->
-<!--                    </div>-->
-<!--                </t>-->
-<!--                <section>-->
-<!--                    <h5>-->
-<!--                        <strong>-->
-<!--                            <a itemprop="name" t-att-href="keep('/shop/product/%s' % slug(product), page=(pager['page']['num'] if pager['page']['num']&gt;1 else None))" t-field="product.name"/>-->
-<!--                        </strong>-->
-<!--                    </h5>-->
-<!--                    <div itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer" class="product_price" t-if="product.product_variant_ids">-->
-<!--                        <b>-->
-<!--                            <t t-if="(compute_currency(product.lst_price) - product.website_price ) &gt; 0.01  and website.get_current_pricelist().discount_policy=='without_discount'">-->
-<!--                                <del class="text-danger mr8" style="white-space: nowrap;" t-esc="compute_currency(product.website_public_price)" t-options="{'widget': 'monetary', 'display_currency': website.get_current_pricelist().currency_id, 'from_currency': website.currency_id}"/>-->
-<!--                            </t>-->
-<!--                            <span t-esc="product.website_price" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>-->
-<!--                            <span itemprop="price" style="display:none;" t-esc="product.website_price"/>-->
-<!--                            <span itemprop="priceCurrency" style="display:none;" t-esc="website.currency_id.name"/>-->
-<!--                        </b>-->
-<!--                    </div>-->
-<!--                </section>-->
-<!--            </div>-->
-<!--        </form>-->
-<!--    </t>-->
-<!--<t name="Products item" t-name="website_sale.products_item">-->
-<!--    <form action="/shop/cart/update" method="post">-->
-<!--        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>-->
-<!--        <div itemscope="itemscope" itemtype="http://schema.org/Product">-->
-<!--            <div class="ribbon-wrapper">-->
-<!--                <div class="ribbon btn btn-danger">Sale</div>-->
-<!--            </div>-->
-<!--            <div>-->
-<!--   <div class="product_container col-md-12 col-xs-12" style='padding:0;'>-->
-<!--    <img src="http://localhost:8069/web/image/439" class="pull-left product_image " data-original-title="" title="" style="/* width: 349.656px; */position: relative;width: 100%;height: 100%;"/>  -->
-<!--        <div class="overlay">-->
-<!--            <div class="overlay_text"><a href="#" class='btn btn-default overlay_button'>VIEW PRODUCTS</a></div>-->
-<!--        </div>-->
-<!--</div>-->
-<!--<div class="product_container">-->
-<!--<script type='text/javascript'>-->
-<!--    $(document).ready(function(){-->
-<!--        $(".oe_product_image a span img").mouseover(function(){-->
-<!--            $(this).animate({"background-color": "#FFC652", "opacity":0.5}, 200);-->
-<!--$("#product_cart_div").removeClass("product_container");-->
-<!--$(".overlay_text").fadeIn(300);-->
-<!--        });-->
-<!--        $(".oe_product_image a span img").mouseout(function(){-->
-<!--            $(this).animate({"background-color": "transparent", "opacity":1}, 150);-->
-<!--$("#product_cart_div").addClass("product_container");-->
-<!--$(".overlay_text").fadeOut(300);-->
-<!--        });-->
-<!--    });-->
-<!--</script>-->
-<!--            <div class="row" >-->
-<!--                <div class='oe_product_image product_container'>-->
-<!--                    <a itemprop="url" t-att-href="keep('/shop/product/%s' % slug(product), page=(pager['page']['num'] if pager['page']['num']&gt;1 else None))">-->
-<!--                        <span itemprop="image" t-field="product.image" t-options="{'widget': 'image',  'resize': None if product_image_big else '360x360'}" t-att-alt="product.name" style='margin-top:10px; margin-bottom:10px;'/>-->
-<!--<img src="#{product.image}"/>-->
-<!--<div class="overlay">-->
-<!--     <div class="overlay_text">-->
-<!--         <a href="#" class='btn btn-default overlay_button'><i class='fa fa-shopping-cart'></i></a>-->
-<!--         <a href="#" class='btn btn-default overlay_button'><i class='fa fa-eye'></i></a>-->
-<!--     </div>-->
-<!-- </div>-->
-<!-- <div class="overlay2">-->
-<!--    <div class="overlay_text2"><a href="#" class='btn btn-default overlay_button2'>VIEW PRODUCTS</a></div>-->
-<!--</div>-->
-<!--                    </a>-->
-<!--<div class="overlay_text">-->
-<!--    <h3>-->
-<!--        <a t-att-href="keep('/shop/product/%s' % slug(product), page=(pager['page']['num'] if pager['page']['num']&gt;1 else None))" class='btn btn-default overlay_button'>-->
-<!--            <i class='fa fa-shopping-cart'></i>-->
-<!--        </a>-->
-<!--        <a t-att-href="keep('/shop/product/%s' % slug(product), page=(pager['page']['num'] if pager['page']['num']&gt;1 else None))" class='btn btn-default overlay_button'>-->
-<!--            <i class='fa fa-eye'></i>-->
-<!--        </a>-->
-<!--    </h3>-->
-<!--    <div itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer" class="product_price" t-if="product.product_variant_ids" style='display:none;'>-->
-<!--        <b>-->
-<!--<t t-if="(compute_currency(product.lst_price) - product.website_price ) &gt; 0.01  and website.get_current_pricelist().discount_policy=='without_discount'">-->
-<!--    <del class="text-danger mr8" style="white-space: nowrap;" t-esc="compute_currency(product.website_public_price)" t-options="{'widget': 'monetary', 'display_currency': website.get_current_pricelist().currency_id, 'from_currency': website.currency_id}"/>-->
-<!--</t>-->
-<!--<span t-esc="product.website_price" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>-->
-<!--<span itemprop="price" style="display:none;" t-esc="product.website_price"/>-->
-<!--<span itemprop="priceCurrency" style="display:none;" t-esc="website.currency_id.name"/>-->
-<!--        </b>-->
-<!--    </div>-->
-<!--</div>-->
-<!--                </div>-->
-<!--</div>-->
-<!--</div>-->
-<!--<div class='col-md-12 col-sm-12 col-xs-12'>-->
-<!--                <section class="product_details" style='background: transparent; border-top: 0; margin-bottom:10%; margin-top:10%; display: block;'>-->
-<!--<div class='row'>-->
-<!--    <h5 style='text-align: left; margin-left:7%;'>-->
-<!--        <a itemprop="name" t-att-href="keep('/shop/product/%s' % slug(product), page=(pager['page']['num'] if pager['page']['num']&gt;1 else None))" t-field="product.name" class='text-uppercase' style='text-decoration: none; color: #777; padding-top:15%;' />-->
-<!--        <a t-att-href="keep('/shop/product/%s' % slug(product), page=(pager['page']['num'] if pager['page']['num']&gt;1 else None))" t-field="product.name" class='text-uppercase' style='text-decoration: none; color: #777;' />-->
-<!--    </h5>-->
-<!--</div>-->
-<!--                    <div class='row' style='top:30px; position:relative;'>-->
-<!--                        <div class='col-md-12' style='margin:0;'>-->
-<!--1-->
-<!--                            <h5 style='text-align: center; padding:5%; background: #3f3f3f; opacity: 0.7; margin-left:5px; margin-bottom:0;'>-->
-<!--                                <a itemprop="name" t-att-href="keep('/shop/product/%s' % slug(product), page=(pager['page']['num'] if pager['page']['num']&gt;1 else None))" t-field="product.name" class='text-uppercase' style='text-decoration: none; color: white;' />-->
-<!--<a t-att-href="keep('/shop/product/%s' % slug(product), page=(pager['page']['num'] if pager['page']['num']&gt;1 else None))" t-field="product.name" class='text-uppercase' style='text-decoration: none; color: #777;' />-->
-<!--                            </h5>-->
-<!--                        </div>-->
-<!--<div class='col-md-12' style=' padding-left:0; margin-left:0;'>-->
-<!--<div class='col-md-12' style=''>-->
-<!--    <h5 style='text-align: left;'>-->
-<!--        <a itemprop="name" t-att-href="keep('/shop/product/%s' % slug(product), page=(pager['page']['num'] if pager['page']['num']&gt;1 else None))" t-field="product.name" class='text-uppercase' style='text-decoration: none; color: #777; padding-top:15%;' />-->
-<!--<a t-att-href="keep('/shop/product/%s' % slug(product), page=(pager['page']['num'] if pager['page']['num']&gt;1 else None))" t-field="product.name" class='text-uppercase' style='text-decoration: none; color: #000;' />-->
-<!--    </h5>-->
-<!--</div>-->
-<!--                        <div class='col-md-7' style='padding-top:0; margin-top:0; padding-bottom:3%; '>-->
-<!--3-->
-<!--                            <h3 style='text-align:left; margin-left:5px;'>-->
-<!--                                <span t-esc="product.website_price" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>-->
-<!--                            </h3>-->
-<!--                        </div>-->
-<!--                        <div class='col-md-5' style='padding-bottom:3%;'>-->
-<!--4-->
-<!--                            <div class='row' style=''>-->
-<!--                                <div class="overlay" style='background: transparent;'>-->
-<!--                                    <div class="overlay_text_shop">-->
-<!--                                        <h3 class='pull-right'>-->
-<!--                                            <a t-att-href="keep('/shop/product/%s' % slug(product), page=(pager['page']['num'] if pager['page']['num']&gt;1 else None))" class='btn btn-default overlay_button'>-->
-<!--                                                <i class='fa fa-eye'></i>-->
-<!--                                            </a>-->
-<!--                                            <a t-att-href="keep('/shop/product/%s' % slug(product), page=(pager['page']['num'] if pager['page']['num']&gt;1 else None))" class='btn btn-default overlay_button'>-->
-<!--                                                <i class='fa fa-shopping-cart'></i>-->
-<!--                                            </a>-->
-<!--                                        </h3>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                                <div itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer" class="product_price" t-if="product.product_variant_ids" style='display:none;'>-->
-<!--                                    <b>-->
-<!--                                        <t t-if="(compute_currency(product.lst_price) - product.website_price ) &gt; 0.01  and website.get_current_pricelist().discount_policy=='without_discount'">-->
-<!--                                            <del class="text-danger mr8" style="white-space: nowrap;" t-esc="compute_currency(product.website_public_price)" t-options="{'widget': 'monetary', 'display_currency': website.get_current_pricelist().currency_id, 'from_currency': website.currency_id}"/>-->
-<!--                                        </t>-->
-<!--                                        <span t-esc="product.website_price" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>-->
-<!--                                        <span itemprop="price" style="display:none;" t-esc="product.website_price"/>-->
-<!--                                        <span itemprop="priceCurrency" style="display:none;" t-esc="website.currency_id.name"/>-->
-<!--                                    </b>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </section>-->
-<!--</div>-->
-<!--            </div>    -->
-<!--            <t t-if="show_publish">-->
-<!--                <div id="website_published_button" class="" groups="sales_team.group_sale_manager">-->
-<!--                    <t t-call="website.publish_management">-->
-<!--                        <t t-set="object" t-value="product"/>-->
-<!--                        <t t-set="publish_edit" t-value="True"/>-->
-<!--                        <t t-set="action" t-value="'product.product_template_action'"/></t>-->
-<!--                </div>-->
-<!--            </t>-->
-<!--</div>-->
-<!--  <div class="product_container col-md-12 col-xs-12" style='padding:0;'>-->
-<!--    <img src="http://localhost:8069/web/image/439" class="pull-left product_image " data-original-title="" title="" style="/* width: 349.656px; */position: relative;width: 100%;height: 100%;"/>  -->
-<!--        <div class="overlay">-->
-<!--            <div class="overlay_text"><a href="#" class='btn btn-default overlay_button'>VIEW PRODUCTS</a></div>-->
-<!--        </div>-->
-<!--</div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</form>-->
-<!--</t>-->
-
 <t name="Products item" t-name="website_sale.products_item">
-    <form action="/shop/cart/update" method="post">
-        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
-        <div itemscope="itemscope" itemtype="http://schema.org/Product">
-            <div class="ribbon-wrapper">
-                <div class="ribbon btn btn-danger">Sale</div>
-            </div>
-            <div>
+        <form action="/shop/cart/update" method="post">
+            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+            <div itemscope="itemscope" itemtype="http://schema.org/Product">
+                <div class="ribbon-wrapper">
+                    <div class="ribbon btn btn-danger">Sale</div>
+                </div>
+            
+                <style>
+                    .oe_product .product_price {
+                        padding: 5px 0;
+                        position: relative;
+                    }
+                    @media (max-width: 400px){
+                        #products_grid .oe_product.oe_grid {
+                            height: auto; 
+                        }
+                    }
+                    @media (max-width: 768px){
+                        #products_grid .oe_product.oe_grid {
+                            height: auto;
+                        }
+                    }
+                    #products_grid.col-md-9 .oe-height-4 {
+                        height: auto;
+                    }
+                    .product_name_heading{
+                        padding:0 5% 5% 0;
+                        margin-bottom:0;
+                        text-transform: uppercase;
+                    }
+                    
+                </style>
                 
                 <div class="image-mask-box-s">
                     <div class="thumbnail-s">
                         <div class="image-wrapper-s">
                             <span itemprop="image" t-field="product.image" t-options="{'widget': 'image',  'resize': None if product_image_big else '360x360'}" t-att-alt="product.name" style='margin-top:10px; margin-bottom:10px;'/>
                             <div class="masking-s ">
-                                
                                 <a t-att-href="keep('/shop/product/%s' % slug(product), page=(pager['page']['num'] if pager['page']['num']&gt;1 else None))" class="btnx-s btn-masking-s "> <i class='fa fa-shopping-cart'></i> </a> 
-                                <a t-att-href="keep('/shop/product/%s' % slug(product), page=(pager['page']['num'] if pager['page']['num']&gt;1 else None))" class="btnx-s btn-masking-s "> <i class='fa fa-eye'></i> </a> 
-                        
                             </div>
-                            
                         </div>
                     </div>
                 </div>
                 
-                <div class="product_details" style='background: transparent; border-top: 0; margin-bottom:10%; margin-top:10%; display: block;'>
-                    
-                    <div class='row' style=' position:relative;background:transparent'>
-                        <div class='col-md-12' style='margin:0;'>
-                            <h5 style='padding:10% 5% 5% 0; margin-bottom:0;'>
-                                <a itemprop="name" t-att-href="keep('/shop/product/%s' % slug(product), page=(pager['page']['num'] if pager['page']['num']&gt;1 else None))" t-field="product.name" class='text-uppercase' style='text-decoration: none; color: grey;' />
-                                <!--<a t-att-href="keep('/shop/product/%s' % slug(product), page=(pager['page']['num'] if pager['page']['num']&gt;1 else None))" t-field="product.name" class='text-uppercase' style='text-decoration: none; color: #777;' />-->
-                            </h5>
-                        </div>
-
-                        <div class='col-md-12' style='padding-top:0; margin-top:0; padding-bottom:3%; '>
-                            <h3 style='text-align:left;'>
-                                <span t-esc="product.website_price" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>
-                            </h3>
-                        </div>
-                        
-
-                        <div itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer" class="product_price" t-if="product.product_variant_ids" style='display:none;'>
-                            <b>
-                                <t t-if="(compute_currency(product.lst_price) - product.website_price ) &gt; 0.01  and website.get_current_pricelist().discount_policy=='without_discount'">
-                                    <del class="text-danger mr8" style="white-space: nowrap;" t-esc="compute_currency(product.website_public_price)" t-options="{'widget': 'monetary', 'display_currency': website.get_current_pricelist().currency_id, 'from_currency': website.currency_id}"/>
-                                </t>
-                                <span t-esc="product.website_price" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>
-                                <span itemprop="price" style="display:none;" t-esc="product.website_price"/>
-                                <span itemprop="priceCurrency" style="display:none;" t-esc="website.currency_id.name"/>
-                            </b>
-                        </div>
-
-                    </div>
-                </div>
-
                 <t t-if="show_publish">
                     <div id="website_published_button" class="" groups="sales_team.group_sale_manager">
                         <t t-call="website.publish_management">
                             <t t-set="object" t-value="product"/>
                             <t t-set="publish_edit" t-value="True"/>
-                            <t t-set="action" t-value="'product.product_template_action'"/></t>
+                            <t t-set="action" t-value="'product.product_template_action'"/>
+                        </t>
                     </div>
                 </t>
+                
+                <div style='background: transparent; border-top: 0; margin-bottom:10%; margin-top:10%; display: block;'>
+                    <div class='row' style=' position:relative;background:transparent'>
+                        <div class='col-md-12' style='margin:0;'>
+                            <h5 class='product_name_heading'>
+                    <!--<h5 style='margin-bottom:20px; margin-top:20px;'>-->
+                                <strong>
+                                    <a itemprop="name" t-att-href="keep('/shop/product/%s' % slug(product), page=(pager['page']['num'] if pager['page']['num']&gt;1 else None))" t-field="product.name"/>
+                                </strong>
+                            </h5>
+                            
+                            <div itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer" class="product_price" t-if="product.product_variant_ids">
+                                <b>
+                                    <t t-if="(compute_currency(product.lst_price) - product.website_price ) &gt; 0.01  and website.get_current_pricelist().discount_policy=='without_discount'">
+                                        <del class="text-danger mr8" style="white-space: nowrap;" t-esc="compute_currency(product.website_public_price)" t-options="{'widget': 'monetary', 'display_currency': website.get_current_pricelist().currency_id, 'from_currency': website.currency_id}"/>
+                                    </t>
+                                    
+                                    <span itemprop="priceCurrency" style="display:none;" t-esc="website.currency_id.name"/>
+                                    <h3 style='text-transform: uppercase;'> 
+                                        <span t-esc="product.website_price" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>
+                                        <span itemprop="price" style="display:none;" t-esc="product.website_price"/>
+                                    </h3>
+                                    
+                                </b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </form>
-</t>
+        </form>
+    </t>
+
+    
