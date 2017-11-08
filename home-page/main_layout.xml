@@ -1,4 +1,119 @@
 <?xml version="1.0"?>
+<!--<t name="Main layout" t-name="website.layout">-->
+<!--    <t t-call="web.layout">-->
+<!--        <t t-set="html_data" t-value="{             'lang': lang and lang.replace('_', '-'),             'data-website-id': website.id if website else None,             'data-editable': '1' if editable else None,             'data-translatable': '1' if translatable else None,             'data-edit_translations': '1' if edit_translations else None,             'data-view-xmlid': xmlid if editable or translatable else None,             'data-main-object': repr(main_object) if editable or translatable else None,             'data-oe-company-name': res_company.name         }"/>-->
+<!--        <t t-if="not title">-->
+<!--            <t t-if="not additional_title and main_object and 'name' in main_object">-->
+<!--                <t t-set="additional_title" t-value="main_object.name"/>-->
+<!--            </t>-->
+<!--            <t t-if="main_object and 'website_meta_title' in main_object and main_object.website_meta_title">-->
+<!--                <t t-set="title" t-value="main_object.website_meta_title"/>-->
+<!--            </t>-->
+<!--            <t t-else="">-->
+<!--                <t t-set="title"><t t-if="additional_title"><t t-raw="additional_title"/> | </t><t t-esc="(website or res_company).name"/></t>-->
+<!--            </t>-->
+<!--        </t>-->
+<!--        <t t-set="x_icon" t-value="'/web/image/website/%s/favicon/' % website.id"/>-->
+<!--        <t t-set="head_website">-->
+<!--            <meta name="description" t-att-content="main_object and 'website_meta_description' in main_object                 and main_object.website_meta_description or website_meta_description"/>-->
+<!--            <meta name="keywords" t-att-content="main_object and 'website_meta_keywords' in main_object                 and main_object.website_meta_keywords or website_meta_keywords"/>-->
+<!--            <meta name="generator" content="Odoo"/>-->
+
+            <!-- OpenGraph tags for Facebook sharing -->
+<!--            <meta property="og:title" t-att-content="additional_title"/>-->
+<!--            <meta property="og:site_name" t-att-content="res_company.name"/>-->
+<!--            <t t-if="main_object and 'plain_content' in main_object and main_object.plain_content">-->
+<!--                <t t-set="og_description" t-value="main_object.plain_content[0:500]"/>-->
+<!--                <meta property="og:description" t-att-content="og_description"/>-->
+<!--                <meta property="og:image" t-att-content="request.httprequest.url_root+'logo.png'"/>-->
+<!--                <meta property="og:url" t-att-content="request.httprequest.url_root+request.httprequest.path[1:end]"/>-->
+<!--            </t>-->
+
+<!--            <t t-set="languages" t-value="website.get_languages() if website else None"/>-->
+<!--            <t t-if="request and request.website_multilang and website">-->
+<!--                <t t-foreach="website.get_alternate_languages(request.httprequest)" t-as="lg">-->
+<!--                    <link rel="alternate" t-att-hreflang="lg['hreflang']" t-att-href="lg['href']"/>-->
+<!--                </t>-->
+<!--            </t>-->
+
+<!--            <script type="text/javascript">-->
+<!--                odoo.session_info = {-->
+<!--                    is_superuser: <t t-esc="json.dumps(request.env.user._is_superuser())"/>,-->
+<!--                    is_frontend: true,-->
+<!--                };-->
+<!--            </script>-->
+
+<!--            <t t-call-assets="web.assets_common" t-js="false"/>-->
+<!--            <t t-call-assets="web.assets_frontend" t-js="false"/>-->
+<!--            <t t-call-assets="web_editor.summernote" t-js="false" groups="website.group_website_publisher"/>-->
+<!--            <t t-call-assets="web_editor.assets_editor" t-js="false" groups="website.group_website_publisher"/>-->
+<!--            <t t-call-assets="website.assets_editor" t-js="false" groups="website.group_website_publisher"/>-->
+
+<!--            <t t-call-assets="web.assets_common" t-css="false"/>-->
+<!--            <t t-call-assets="web.assets_frontend" t-css="false"/>-->
+<!--            <t t-call-assets="web_editor.summernote" t-css="false" groups="website.group_website_publisher"/>-->
+<!--            <t t-call-assets="web_editor.assets_editor" t-css="false" groups="website.group_website_publisher"/>-->
+<!--            <t t-call-assets="website.assets_editor" t-css="false" groups="website.group_website_publisher"/>-->
+<!--        </t>-->
+<!--        <t t-set="head" t-value="head_website + (head or '')"/>-->
+
+<!--        <div id="wrapwrap" t-att-class="pageName or ''">-->
+<!--            <header>-->
+<!--                <div class="navbar navbar-default navbar-static-top">-->
+<!--                    <div class="container">-->
+<!--                        <div class="navbar-header">-->
+<!--                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-top-collapse">-->
+<!--                                <span class="sr-only">Toggle navigation</span>-->
+<!--                                <span class="icon-bar"/>-->
+<!--                                <span class="icon-bar"/>-->
+<!--                                <span class="icon-bar"/>-->
+<!--                            </button>-->
+<!--                            <a class="navbar-brand" href="/" t-if="website" t-field="website.name">My Website</a>-->
+<!--                        </div>-->
+<!--                        <div class="collapse navbar-collapse navbar-top-collapse">-->
+<!--                            <ul class="nav navbar-nav navbar-right" id="top_menu">-->
+<!--                                <t t-foreach="website.menu_id.child_id" t-as="submenu">-->
+<!--                                    <t t-call="website.submenu"/>-->
+<!--                                </t>-->
+<!--                                <li class="divider" t-ignore="true" t-if="website.user_id != user_id"/>-->
+<!--                                <li class="dropdown" t-ignore="true" t-if="website.user_id != user_id">-->
+<!--                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">-->
+<!--                                        <b>-->
+<!--                                            <span t-esc="(len(user_id.name)&gt;25) and (user_id.name[:23]+'...') or user_id.name"/>-->
+<!--                                            <span class="caret"/>-->
+<!--                                        </b>-->
+<!--                                    </a>-->
+<!--                                    <ul class="dropdown-menu js_usermenu" role="menu">-->
+<!--                                        <li id="o_logout"><a t-attf-href="/web/session/logout?redirect=/" role="menuitem">Logout</a></li>-->
+<!--                                    </ul>-->
+<!--                                </li>-->
+<!--                            </ul>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </header>-->
+<!--            <main>-->
+<!--                <t t-raw="0"/>-->
+<!--            </main>-->
+<!--            <footer>-->
+<!--                <div id="footer">-->
+<!--                </div>-->
+<!--            </footer>-->
+<!--        </div>-->
+<!--        <script id="tracking_code" t-if="website and website.google_analytics_key and not editable">-->
+<!--            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){-->
+<!--            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),-->
+<!--            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)-->
+<!--            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');-->
+
+<!--            ga('create', _.str.trim('<t t-esc="website.google_analytics_key"/>'), 'auto');-->
+<!--            ga('send','pageview');-->
+<!--        </script>-->
+<!--    </t>-->
+<!--</t>-->
+
+<!--<?xml version="1.0"?>-->
+
 <t name="Main layout" t-name="website.layout">
     <t t-call="web.layout">
         <t t-set="html_data" t-value="{             'lang': lang and lang.replace('_', '-'),             'data-website-id': website.id if website else None,             'data-editable': '1' if editable else None,             'data-translatable': '1' if translatable else None,             'data-edit_translations': '1' if edit_translations else None,             'data-view-xmlid': xmlid if editable or translatable else None,             'data-main-object': repr(main_object) if editable or translatable else None,             'data-oe-company-name': res_company.name         }"/>
@@ -60,6 +175,7 @@
         <!-- Lato Font Import  -->
         <style>
             @import url('https://fonts.googleapis.com/css?family=Lato');
+            @import url('https://fonts.googleapis.com/css?family=Oxygen');
         </style> 
 
         <style>
@@ -123,7 +239,7 @@
           }
 
           .btnx-s:hover{
-          	text-decoration: none;
+            text-decoration: none;
           }
             
           .btn.btn-xlg {
@@ -295,12 +411,15 @@
         <!-- S.B CSS custom style sheet start-->
         <style>
                
-          @import url('https://fonts.googleapis.com/css?family=Lato');
-          /*font-family: 'Lato', sans-serif;*/
           
           /*  HOME PAGE CSS START */        
               
-          /* top nav bar css start */             
+          /* top nav bar css start */ 
+
+          #top_nav_phone{
+            padding-left: 10px;
+            color: #bdbdbd;
+          }
           .top-bar {
             background: #252525;
             display: block;
@@ -485,65 +604,65 @@
            
           /* image hover css start */
           .product_container {
-        		position: relative;
-        		/*width: 50%;*/
-        	}
+            position: relative;
+            /*width: 50%;*/
+          }
         
-        	.product_image {
-        		display: block;
-        		width: 100%;
-        		height: auto;
-        	}
+          .product_image {
+            display: block;
+            width: 100%;
+            height: auto;
+          }
         
-        	.overlay {
-        		position: absolute;
-        		top: 0;
-        		bottom: 0;
-        		left: 0;
-        		right: 0;
-        		height: 100%;
-        		width: 100%;
-        		opacity: 0;
-        		transition: .5s ease;
-        		background-color:#47bac1;
-        	}
+          .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+            background-color:#47bac1;
+          }
 
-        	.product_container:hover .overlay {
-        		opacity: 0.8;
-        	}
+          .product_container:hover .overlay {
+            opacity: 0.8;
+          }
         
-        	.overlay_text {
-        		color: white;
-        		font-size: 20px;
-        		position: absolute;
-        		top: 50%;
-        		left: 50%;
-        		transform: translate(-50%, -50%);
-        		-ms-transform: translate(-50%, -50%);
-        	}
-        	.overlay_text_shop {
-        		color: white;
-        		font-size: 20px;
-        		position: absolute;
+          .overlay_text {
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+          }
+          .overlay_text_shop {
+            color: white;
+            font-size: 20px;
+            position: absolute;
               top: 5%;
               left: 10%;
-        	    transform: translate(-5%, -10%);
+              transform: translate(-5%, -10%);
               ms-transform: translate(-5%, -10%);
-        	}
-        	
-        	.overlay_button{
-        		background-color: transparent;
+          }
+          
+          .overlay_button{
+            background-color: transparent;
               padding: 20px;
               font-size: 20px;
-        		border-radius: 0;
-        		color: #fff;
-        		border: 4px solid #fff;
-        	}
-        	.overlay_button:hover{
-        		text-decoration: none;
-        		background-color: #fff;
-        		border-radius: 0;
-        		color: #47bac1;
+            border-radius: 0;
+            color: #fff;
+            border: 4px solid #fff;
+          }
+          .overlay_button:hover{
+            text-decoration: none;
+            background-color: #fff;
+            border-radius: 0;
+            color: #47bac1;
             border: 4px solid #fff;
             opacity:1;
             -webkit-transition: all 0.3s ease-in-out;
@@ -551,8 +670,8 @@
             -ms-transition: all 0.3s ease-in-out;
             -o-transition: all 0.3s ease-in-out;
             transition: all 0.3s ease-in-out;
-        		
-        	}
+            
+          }
           .overlay_button:focus{
             color: #47bac1;
             background-color: white;
@@ -563,7 +682,7 @@
             -moz-box-shadow: none 1px 2px #ccc;
             box-shadow: none 1px 2px #ccc;
           }
-              	   	
+                    
           /* image hover css end */
           /*  HOME PAGE CSS END */
            
@@ -760,32 +879,33 @@
               
               <div class="container">
                 <div class="row">
-                  <div class="col-md-6 hidden-sm hidden-xs">
-                    <ul class="list-inline">
-                      <li><a href="#"><i class="fa fa-twitter top-bar-icon"></i></a></li>
-                      <li><a href="#"><i class="fa fa-facebook top-bar-icon"></i></a></li>
-                      <li><a href="#"><i class="fa fa-dribbble top-bar-icon"></i></a></li>
-                      <li><a href="#"><i class="fa fa-vimeo top-bar-icon"></i></a></li>
-                      <li><a href="#"><i class="fa fa-tumblr top-bar-icon"></i></a></li>
-                    </ul>
-                  </div>
-                  <div class="col-md-6 col-xs-12">
+                  <!--<div class="col-md-6 hidden-sm hidden-xs">-->
+                  <!--  <ul class="list-inline">-->
+                  <!--    <li><a href="#"><i class="fa fa-twitter top-bar-icon"></i></a></li>-->
+                  <!--    <li><a href="#"><i class="fa fa-facebook top-bar-icon"></i></a></li>-->
+                  <!--    <li><a href="#"><i class="fa fa-dribbble top-bar-icon"></i></a></li>-->
+                  <!--    <li><a href="#"><i class="fa fa-vimeo top-bar-icon"></i></a></li>-->
+                  <!--    <li><a href="#"><i class="fa fa-tumblr top-bar-icon"></i></a></li>-->
+                  <!--  </ul>-->
+                  <!--</div>-->
+                  <div class="col-md-12 col-xs-12">
                       <ul class="list-inline pull-right top-right">
-                          <li class="account-login">
-                              <span>
-                                  <a id="login_button" style="text-decoration: none;" data-toggle="modal" href="/web/login">Log in</a>
-                              </span>
-                          </li>
-                          <li class="search-box" id="search_icon">
-                            <a href="#"><i class="fa fa-search"></i></a>
-                            <ul class="dropdown-menu dropdown-menu-right">
-                              <li>
-                                <form action="" method="get">
+                          <li> <i class='fa fa-phone'></i> <span id='top_nav_phone'> 09660450451 </span> </li>
+                          <!--<li class="account-login">-->
+                          <!--    <span>-->
+                          <!--        <a id="login_button" style="text-decoration: none;" data-toggle="modal" href="/web/login">Log in</a>-->
+                          <!--    </span>-->
+                          <!--</li>-->
+                          <!--<li class="search-box" id="search_icon">-->
+                          <!--  <a href="#"><i class="fa fa-search"></i></a>-->
+                          <!--  <ul class="dropdown-menu dropdown-menu-right">-->
+                          <!--    <li>-->
+                          <!--      <form action="" method="get">-->
 
-                                </form>
-                              </li>
-                            </ul>
-                          </li>
+                          <!--      </form>-->
+                          <!--    </li>-->
+                          <!--  </ul>-->
+                          <!--</li>-->
                          <!--  <li class="dropdown cart-dropdown" id="product_cart">
                               <a href="#" class="dropdown-toggle" style="text-decoration: none;" data-toggle="dropdown" aria-expanded="false">
                                 <i class="fa fa-shopping-cart"></i>
@@ -902,7 +1022,7 @@
             <t t-raw="0"/>
           </main>
 
-          <footer>
+          <footer style="font-family: 'Oxygen', sans-serif;">
             <div id="footer">
             </div>
           </footer>
@@ -919,4 +1039,6 @@
         </script>
     </t>
 </t>
+
+
 
