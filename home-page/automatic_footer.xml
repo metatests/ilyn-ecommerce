@@ -292,69 +292,72 @@
                 
                  <div class="row" style="padding-bottom: 35px;">
                     
-                    <style>  </style>
-                    <div class='col-sm-5 col-md-5 col-xs-12 pad_lrz'>
+             
+                    <div class='col-sm-4 col-md-4 col-xs-12 pad_lrz'>
                         <div class='col-md-12 col-sm-12 col-xs-12 pad_lrz'>
-                        <div class='col-md-6 col-sm-6 col-xs-12'>
-                          <a class='anc_tdn anc_l1' href="#"> <h3> Accessories</h3></a>
-                          <div class="footer-link">
-                              <a class='anc_tdn' href="#"> <h5>Leather Goods</h5></a>
-                              <ul class="list-unstyled">
-                                  <li>
-                                      <a class='anc_tdn' href="#">Prayer Mat</a>
-                                  </li>
-                                  <li>
-                                      <a class='anc_tdn' href="/shop/category/all-panjabi-platinum-84">Weekend Bag</a>
-                                  </li>
-                                  <li>
-                                      <a class='anc_tdn' href="/shop/category/all-panjabi-the-sahara-collection-86">Messenger Bag</a>
-                                  </li>
-                                  <li>
-                                      <a class='anc_tdn' href="/shop/category/all-panjabi-basic-82">Executive Bag</a>
-                                  </li>
-                                  <li>
-                                      <a class='anc_tdn' href="/shop/category/all-panjabi-basic-82">Sleeve</a>
-                                  </li>
-                              </ul>
-                          </div>
-                          
-                          <style> 
-                          
-                        </style>
-                          <div style='margin-top: 22px;'>
-                              <a class='anc_tdn anc_l1' href="#"> <h5 class='perfume_heading'>Perfume</h5></a>
-                          </div>
-                          
-                        </div>
-                        
-                        <div class='col-md-6 col-sm-6 col-xs-12'>
-                            <a class='anc_tdn anc_l1' href="#"> <h3> Footware</h3></a>
-                            <div class="footer-link">
-                                <!--<a class='anc_tdn anc_fc_gray' href="#"> <h5>Sandal Sandal</h5></a>-->
-                                <a class='anc_tdn' href="#" > <h5 style='color: #acacac;'>Sandal</h5></a>
-                                <!--<a class='anc_tdn anc_fc_gray' href="#"> <h5>Shoe Shoe</h5></a>-->
-                                <a class='anc_tdn' href="#" > <h5 style='color: #acacac;'>Shoe</h5></a>
+                            <div class='col-md-6 col-sm-6 col-xs-12'>
+                              <a class='anc_tdn anc_l1' href="#"> <h3 class='mt0'> Accessories</h3></a>
+                              <div class="footer-link">
+                                  <a class='anc_tdn' href="#"> <h5>Leather Goods</h5></a>
+                                  <ul class="list-unstyled">
+                                      <li>
+                                          <a class='anc_tdn' href="#">Prayer Mat</a>
+                                      </li>
+                                      <li>
+                                          <a class='anc_tdn' href="/shop/category/all-panjabi-platinum-84"> Bag</a>
+                                      </li>
+                                      <li>
+                                          <a class='anc_tdn' href="/shop/category/all-panjabi-basic-82">Sleeve</a>
+                                      </li>
+                                  </ul>
+                              </div>
+                              
+                              <style> 
+                              
+                            </style>
+                              <div style='margin-top: 22px;'>
+                                  <a class='anc_tdn anc_l1' href="#"> <h5 class='perfume_heading'>Perfume</h5></a>
+                              </div>
+                              
                             </div>
-                        </div>
+                            
+                            <div class='col-md-6 col-sm-6 col-xs-12'>
+                                <a class='anc_tdn anc_l1' href="#"> <h3 class='mt0'> Footware</h3></a>
+                                <div class="footer-link">
+                                    <!--<a class='anc_tdn anc_fc_gray' href="#"> <h5>Sandal Sandal</h5></a>-->
+                                    <a class='anc_tdn' href="#" > <h5 style='color: #acacac;'>Sandal</h5></a>
+                                    <!--<a class='anc_tdn anc_fc_gray' href="#"> <h5>Shoe Shoe</h5></a>-->
+                                    <a class='anc_tdn' href="#" > <h5 style='color: #acacac;'>Shoe</h5></a>
+                                </div>
+                            </div>
                         
-                    </div>
+                        </div>
                     
                     </div>
                     
-                    <div class='col-sm-7 col-md-7 col-xs-12 pad_lrz'>
-                      <div class='col-md-8 col-sm-8 col-xs-12'>
-                          <h3 class="mb16" style='color: #acacac;'> Banani Store</h3>
-                          <h5>Level3, Tower 52, Road 11 Banani, Dhaka 1213 </h5>
-                          <h5>Call: 09666-774577</h5>
-                          <h3 class="mb16" style='color: #acacac;'>Bashundhara Store</h3>
-                          <h5>Level 2, Block A, Basundhara City, Panthapath, Dhaka 1215 </h5>
-                          <h5>Call: 09666-774577</h5>
-                      </div>
+                    <div class='col-sm-8 col-md-8 col-xs-12 pad_lrz'>
+                        <h3 class="mt0 mb16" style='padding-left:14px'> Display Centers </h3>
+                         <div class='col-md-4 col-sm-4 col-xs-12'>
+                              <h4 class="mb16" style='color: #acacac;'> Banani Store</h4>
+                              <h6>Level3, Tower 52, Road 11 Banani, Dhaka 1213 </h6>
+                              
+                               <h4 class="mb16 mt32" style='color: #acacac;'>Bashundhara Store</h4>
+                              <h6>Level 2, Block A, Basundhara City, Panthapath, Dhaka 1215 </h6>
+                            </div>
+                              <div class='col-md-4 col-sm-4 col-xs-12'>
+                              <h4 class="mb16 mt32" style='color: #acacac;'>Ctg Store</h4>
+                              <h6>Coming Soon, Chittagong 1215 </h6>  
+                             
+                          </div>
+                          
+                           <div class='col-md-4 col-sm-4 col-xs-12'>
+                              <h4 class='text-center'> Get in touch</h4>
+                              <p class='footer_msg_p'> Enter your email address and get notified about new products. <br></br>We hate spam!</p>
+                          </div>
+                          
+                     
                       
-                      <div class='col-md-4 col-sm-4 col-xs-12'>
-                          <h4 class='text-center'> Get in touch</h4>
-                          <p class='footer_msg_p'> Enter your email address and get notified about new products. We hate spam!</p>
-                      </div>
+                     
                     </div>
                     
                     <!--DELETE FROM HERE-->
@@ -535,540 +538,5 @@
     </xpath>
 </data>
 
-<?xml version="1.0"?>
-<!--<data inherit_id="website.footer_custom" customize_show="True" name="Automatic Footer">-->
-<!--    <xpath expr="//div[@id='footer']" position="replace">-->
-<!--        <div id="footer" class="container hidden-print">-->
-<!--            <div class="row">-->
-<!--                <div class="col-md-4 col-lg-3">-->
-<!--                    <h4>Our Products &amp; Services</h4>-->
-<!--                    <ul class="list-unstyled" id="products">-->
-<!--                        <li><a href="/">Home</a></li>-->
-<!--                    </ul>-->
-<!--                </div>-->
-<!--                <div class="col-md-4  col-lg-3" id="info">-->
-<!--                    <h4>Connect with us</h4>-->
-<!--                    <ul class="list-unstyled">-->
-<!--                        <li><a href="/page/website.contactus">Contact us</a></li>-->
-<!--                    </ul>-->
-<!--                    <ul class="list-unstyled">-->
-<!--                        <li t-ignore="true"><i class="fa fa-phone"/> <span t-field="res_company.phone"/></li>-->
-<!--                        <li t-ignore="true"><i class="fa fa-envelope"/>  <span t-field="res_company.email"/></li>-->
-<!--                    </ul>-->
-<!--                    <h2>-->
-<!--                        <a t-att-href="website.social_facebook" t-if="website.social_facebook"><i class="fa fa-facebook-square"/></a>-->
-<!--                        <a t-att-href="website.social_twitter" t-if="website.social_twitter"><i class="fa fa-twitter"/></a>-->
-<!--                        <a t-att-href="website.social_linkedin" t-if="website.social_linkedin"><i class="fa fa-linkedin"/></a>-->
-<!--                        <a t-att-href="website.social_youtube" t-if="website.social_youtube"><i class="fa fa-youtube-play"/></a>-->
-<!--                        <a t-att-href="website.social_googleplus" t-if="website.social_googleplus" rel="publisher"><i class="fa fa-google-plus-square"/></a>-->
-<!--                        <a t-att-href="website.social_github" t-if="website.social_github"><i class="fa fa-github"/></a>-->
-<!--                    </h2>-->
-<!--                </div>-->
-<!--                <div class="col-md-4 col-lg-5 col-lg-offset-1">-->
-<!--                    <h4>-->
-<!--                        <span t-field="res_company.name"/>-->
-<!--                        <small> - <a href="/page/website.aboutus">About us</a></small>-->
-<!--                    </h4>-->
-<!--                    <div>-->
-<!--                        <p>-->
-<!--                            We are a team of passionate people whose goal is to improve everyone's-->
-<!--                            life through disruptive products. We build great products to solve your-->
-<!--                            business problems.-->
-<!--                        </p>-->
-<!--                        <p>-->
-<!--                            Our products are designed for small to medium size companies willing to optimize-->
-<!--                            their performance.-->
-<!--                        </p>-->
-<!--                    </div>-->
-<!--                    <t t-call="website.language_selector"/>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </xpath>-->
-<!--</data>-->
 
-
-<data inherit_id="website.footer_custom" customize_show="True" name="Automatic Footer">
-    <xpath expr="//div[@id='footer']" position="replace">
-        <div style="height:8px;background:#FFC652;width:100%;"></div>
-        
-        <style>
-            #level1_footer_heading{
-                padding-left: 14px;
-            }
-            
-            footer #footer .footer-link h5 {
-              letter-spacing: 1px;
-              color: #5f5f5f;
-              text-transform: uppercase;
-              margin-bottom: 13px;
-              margin-top:22px;
-              font-size: 14px;
-              font-weight: bold; 
-            }
-            
-            footer #footer .footer-link ul li {
-                color: #acacac;
-                font-size: 12px;
-                line-height: 20px;
-            }
-                footer #footer .footer-link ul li a {
-                color: #acacac;
-                font-size: 12px;
-                line-height: 20px;
-            }
-            .anc_tdn{
-                text-decoration: none !important;
-            }
-          .anc_l1{
-              color: #5f5f5f;
-          }
-          .anc_l1:hover {
-              text-decoration: none !important;
-          }
-          .anc_fc_gray{
-              color: #acacac;
-          }
-          .footer_msg_p{
-              color: #acacac;
-              font-size: 12px;
-          }
-          .perfume_heading{
-              letter-spacing: 1px;
-              color: #5f5f5f;
-              text-transform: uppercase;
-              margin-bottom: 13px;
-              margin-top: 22px;
-              font-size: 14px;
-              font-weight: bold;
-        }
-        .pad_lrz{ 
-            padding-left:0;
-            padding-right:0
-        }
-          </style>
-          
-        
-        <div style="background:#252525" >
-            <div id="footer" class="container hidden-print">
-                
-                <div class="row" style="padding-bottom: 35px;">
-                    <div class="col-md-12 col-sm-12 col-xs-12" style="padding-left:0;">
-                        <h3 id='level1_footer_heading'> <a class='anc_tdn anc_l1' href="#"> Clothing </a></h3> 
-                    </div>
-                    <div class="col-md-2 col-sm-2 col-xs-4">
-                        <div class="footer-link">
-                            <a class='anc_tdn' href="#"><h5>PANJABI</h5> </a>
-                            <ul class="list-unstyled">
-                                <li>
-                                    <a class='anc_tdn' href="/shop/category/all-panjabi-premium-85">Premium </a>
-                                </li>
-                                <li>
-                                    <a class='anc_tdn' href="/shop/category/all-panjabi-platinum-84">Platinum </a>
-                                </li>
-                                <li>
-                                    <a class='anc_tdn' href="/shop/category/all-panjabi-the-sahara-collection-86">Sahara </a>
-                                </li>
-                                <li>
-                                    <a class='anc_tdn' href="/shop/category/all-panjabi-basic-82">Basic </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-2 col-sm-2 col-xs-4">
-                        <div class="footer-link">
-                            <a class='anc_tdn' href="#"><h5>Kabli</h5></a>
-                            <ul class="list-unstyled">
-                                <li>
-                                    <a class='anc_tdn' href="/shop/category/all-shirt-premium-76">Premium </a>
-                                </li>
-                                <li>
-                                    <a class='anc_tdn' href="/shop/category/all-shirt-platinum-75">Platinum </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-2 col-sm-2 col-xs-4">
-                        <div class="footer-link">
-                            <a class='anc_tdn' href="#"> <h5>THOBE </h5> </a>
-                            <ul class="list-unstyled">
-                                <li>
-                                    <a class='anc_tdn' href="/shop/category/all-thobe-premium-80">Premium</a>
-                                </li>
-                                <li>
-                                    <a class='anc_tdn' href="/shop/category/all-thobe-platinum-79">Platinum</a>
-                                </li>
-                                <li>
-                                    <a class='anc_tdn' href="/shop/category/all-thobe-basic-78">Basic</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-2 col-sm-2 col-xs-4" id='4th_level2_prodcat_div'>
-                        <div class="footer-link">
-                            <a class='anc_tdn' href="#"> <h5>SHIRT</h5></a>
-                            <ul class="list-unstyled">
-                                <li>
-                                    <a class='anc_tdn' href="/shop/category/all-shirt-premium-76">Premium</a>
-                                </li>
-                                <li>
-                                    <a class='anc_tdn' href="/shop/category/all-shirt-platinum-75">Platinum</a>
-                                </li>
-                                <li>
-                                    <a class='anc_tdn' href="/shop/category/all-shirt-basic-74">Basic</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-2 col-sm-2 col-xs-4">
-                        <div class="footer-link">
-                            <a class='anc_tdn' href="#"> <h5>L-CHINO</h5></a>
-                            <ul class="list-unstyled">
-                                <li>
-                                    <a class='anc_tdn' href="/shop/category/all-l-chino-basic-67">Basic </a>
-                                </li>
-                                <li>
-                                    <a class='anc_tdn' href="/shop/category/all-l-chino-basic-2-0-68">Basic 2.0</a>
-                                </li>
-                                 <li>
-                                    <a class='anc_tdn' href="/shop/category/all-l-chino-air-66">Air </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-2 col-sm-2 col-xs-4">
-                        <div class="footer-link">
-                            <a class='anc_tdn' href="#"> <h5>PAYJAMA </h5></a>
-                            <ul class="list-unstyled">
-                                <li>
-                                    <a class='anc_tdn' href="/shop/category/all-payjama-relaxed-fit-88">Relaxed Fit </a>
-                                </li>
-                                <li>
-                                    <a class='anc_tdn' href="/shop/category/all-payjama-traditional-89">Traditional </a>
-                                </li>
-                                <li>
-                                    <a class='anc_tdn' href="/shop/category/all-payjama-trim-fit-90">Trim Fit </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    
-                    <!--<div class="col-md-2 col-xs-12">-->
-                    <!--  <div class="footer-link">-->
-                    <!--    <h5>Get in Touch</h5>-->
-                    <!--    <ul class="list-unstyled">-->
-                    <!--      <li>Call us at (555)-555-5555</li>-->
-                    <!--      <li><a href="mailto:hello@delvesolve.com">hello@delvesolve.com</a></li>-->
-                    <!--    </ul>-->
-                    <!--  </div>-->
-                    <!--</div>-->
-                    <!--<div class="col-md-12 col-xs-12" id="info" style='padding-top:3%'>-->
-                    <!--    <div class='col-md-6' style='padding-left:0;'>-->
-                    <!--        <h3 style='color: #929292;'> The Premium Muslim Lifestyle Brand </h3>-->
-                    <!--    </div>-->
-                    <!--    <div class='col-md-3'>-->
-                    <!--        <h4 style="color: #525F5F;font-size: 18px;display:inline">Get in Touch</h4>-->
-                    <!--        <ul class="list-unstyled" style='display:inline'>-->
-                    <!--            <li t-ignore="true">-->
-                    <!--                <i style="color: #929292;" class="fa fa-phone"/>-->
-                    <!--                <span style="color: #929292;" t-field="res_company.phone"/>-->
-                    <!--            </li>-->
-                                <!--<li t-ignore="true">-->
-                                <!--  <i style="color: #929292;" class="fa fa-envelope"/>-->
-                                <!--  <span style="color: #929292;" t-field="res_company.email"/>-->
-                                <!--</li>-->
-                    <!--        </ul>-->
-                    <!--    </div>-->
-                    <!--    <div class='col-md-3 pull-right'>-->
-                    <!--        <h2>-->
-                    <!--            <a t-att-href="website.social_facebook" t-if="website.social_facebook">-->
-                    <!--                <i class="fa fa-facebook-square"/>-->
-                    <!--            </a>-->
-                    <!--            <a t-att-href="website.social_twitter" t-if="website.social_twitter">-->
-                    <!--                <i class="fa fa-twitter"/>-->
-                    <!--            </a>-->
-                    <!--            <a t-att-href="website.social_linkedin" t-if="website.social_linkedin">-->
-                    <!--                <i class="fa fa-linkedin"/>-->
-                    <!--            </a>-->
-                    <!--            <a t-att-href="website.social_youtube" t-if="website.social_youtube">-->
-                    <!--                <i class="fa fa-youtube-play"/>-->
-                    <!--            </a>-->
-                    <!--            <a t-att-href="website.social_googleplus" t-if="website.social_googleplus" rel="publisher">-->
-                    <!--                <i class="fa fa-google-plus-square"/>-->
-                    <!--            </a>-->
-                    <!--            <a t-att-href="website.social_github" t-if="website.social_github">-->
-                    <!--                <i class="fa fa-github"/>-->
-                    <!--            </a>-->
-                    <!--        </h2>-->
-                    <!--    </div>-->
-                    <!--</div>-->
-                    
-                    
-                    <!--<div class="col-md-4 col-xs-12">-->
-                    <!--  <div class="newsletter clearfix">-->
-                    <!--    <h4 style="color: #525F5F; text-align: center;font-size: 21px;">Newsletter</h4>-->
-                    <!--    <h3 style="color: #929292;text-align: center;">Sign up now</h3>-->
-                    <!--    <p style="color: #929292;text-align: center;">Enter your email address and get notified about new products. We hate spam!</p>-->
-                    <!--    <div class="input-group js_subscribe" data-list-id="1" data-subscribe="off">-->
-                    <!--<input type="email" name="email" class="js_subscribe_email form-control" placeholder="your email...">  -->
-                    <!--      <span class="input-group-btn">-->
-                    <!--          <a id="subscribe_button" href="#" class="btn btn-primary js_subscribe_btn">Subscribe</a>-->
-                    <!--          <a href="#" class="btn btn-success js_subscribed_btn hidden" disabled="disabled">Thanks</a>-->
-                    <!--      </span>-->
-                    <!--      <div class="alert alert-success hidden">Thanks for your subscription!</div>-->
-                    <!--    </div>-->
-                    <!--  </div>-->
-                    <!--</div>-->
-                </div>
-                
-                 <div class="row" style="padding-bottom: 35px;">
-                    
-                    <style>  </style>
-                    <div class='col-sm-5 col-md-5 col-xs-12 pad_lrz'>
-                        <div class='col-md-12 col-sm-12 col-xs-12 pad_lrz'>
-                        <div class='col-md-6 col-sm-6 col-xs-12'>
-                          <a class='anc_tdn anc_l1' href="#"> <h3> Accessories</h3></a>
-                          <div class="footer-link">
-                              <a class='anc_tdn' href="#"> <h5>Leather Goods</h5></a>
-                              <ul class="list-unstyled">
-                                  <li>
-                                      <a class='anc_tdn' href="#">Prayer Mat</a>
-                                  </li>
-                                  <li>
-                                      <a class='anc_tdn' href="/shop/category/all-panjabi-platinum-84">Weekend Bag</a>
-                                  </li>
-                                  <li>
-                                      <a class='anc_tdn' href="/shop/category/all-panjabi-the-sahara-collection-86">Messenger Bag</a>
-                                  </li>
-                                  <li>
-                                      <a class='anc_tdn' href="/shop/category/all-panjabi-basic-82">Executive Bag</a>
-                                  </li>
-                                  <li>
-                                      <a class='anc_tdn' href="/shop/category/all-panjabi-basic-82">Sleeve</a>
-                                  </li>
-                              </ul>
-                          </div>
-                          
-                          <style> 
-                          
-                        </style>
-                          <div style='margin-top: 22px;'>
-                              <a class='anc_tdn anc_l1' href="#"> <h5 class='perfume_heading'>Perfume</h5></a>
-                          </div>
-                          
-                        </div>
-                        
-                        <div class='col-md-6 col-sm-6 col-xs-12'>
-                            <a class='anc_tdn anc_l1' href="#"> <h3> Footware</h3></a>
-                            <div class="footer-link">
-                                <!--<a class='anc_tdn anc_fc_gray' href="#"> <h5>Sandal Sandal</h5></a>-->
-                                <a class='anc_tdn' href="#" > <h5 style='color: #acacac;'>Sandal</h5></a>
-                                <!--<a class='anc_tdn anc_fc_gray' href="#"> <h5>Shoe Shoe</h5></a>-->
-                                <a class='anc_tdn' href="#" > <h5 style='color: #acacac;'>Shoe</h5></a>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    
-                    </div>
-                    
-                    <div class='col-sm-7 col-md-7 col-xs-12 pad_lrz'>
-                      <div class='col-md-8 col-sm-8 col-xs-12'>
-                          <h3 class="mb16" style='color: #acacac;'> Banani Store</h3>
-                          <h5>Level3, Tower 52, Road 11 Banani, Dhaka 1213 </h5>
-                          <h5>Call: 09666-774577</h5>
-                          <h3 class="mb16" style='color: #acacac;'>Bashundhara Store</h3>
-                          <h5>Level 2, Block A, Basundhara City, Panthapath, Dhaka 1215 </h5>
-                          <h5>Call: 09666-774577</h5>
-                      </div>
-                      
-                      <div class='col-md-4 col-sm-4 col-xs-12'>
-                          <h4 class='text-center'> Get in touch</h4>
-                          <p class='footer_msg_p'> Enter your email address and get notified about new products. We hate spam!</p>
-                      </div>
-                    </div>
-                    
-                    <!--DELETE FROM HERE-->
-                    <!--<h3 class='level1_footer_heading'> SOMETHING</h3>-->
-                    <!--<div class="col-md-2 col-sm-4 col-xs-12">-->
-                    <!--    <div class="footer-link">-->
-                    <!--        <h5>PANJABI</h5>-->
-                    <!--        <ul class="list-unstyled">-->
-                    <!--            <li>-->
-                    <!--                <a href="/shop/category/all-panjabi-premium-85">Premium </a>-->
-                    <!--            </li>-->
-                    <!--            <li>-->
-                    <!--                <a href="/shop/category/all-panjabi-platinum-84">Platinum </a>-->
-                    <!--            </li>-->
-                    <!--            <li>-->
-                    <!--                <a href="/shop/category/all-panjabi-the-sahara-collection-86">Sahara </a>-->
-                    <!--            </li>-->
-                    <!--            <li>-->
-                    <!--                <a href="/shop/category/all-panjabi-basic-82">Basic </a>-->
-                    <!--            </li>-->
-                    <!--        </ul>-->
-                    <!--    </div>-->
-                    <!--</div>-->
-                    
-                    <!--<div class="col-md-2 col-sm-4 col-xs-12">-->
-                    <!--    <div class="footer-link">-->
-                    <!--        <h5>Kabli</h5>-->
-                    <!--        <ul class="list-unstyled">-->
-                    <!--            <li>-->
-                    <!--                <a href="/shop/category/all-shirt-premium-76">Premium </a>-->
-                    <!--            </li>-->
-                    <!--            <li>-->
-                    <!--                <a href="/shop/category/all-shirt-platinum-75">Platinum </a>-->
-                    <!--            </li>-->
-                    <!--        </ul>-->
-                    <!--    </div>-->
-                    <!--</div>-->
-                    
-                    <!--<div class="col-md-2 col-sm-4 col-xs-12">-->
-                    <!--    <div class="footer-link">-->
-                    <!--        <h5>THOBE </h5>-->
-                    <!--        <ul class="list-unstyled">-->
-                    <!--            <li>-->
-                    <!--                <a href="/shop/category/all-thobe-premium-80">Premium</a>-->
-                    <!--            </li>-->
-                    <!--            <li>-->
-                    <!--                <a href="/shop/category/all-thobe-platinum-79">Platinum</a>-->
-                    <!--            </li>-->
-                    <!--            <li>-->
-                    <!--                <a href="/shop/category/all-thobe-basic-78">Basic</a>-->
-                    <!--            </li>-->
-                    <!--        </ul>-->
-                    <!--    </div>-->
-                    <!--</div>-->
-                    
-                    <!--<div class="col-md-2 col-sm-4 col-xs-12">-->
-                    <!--    <div class="footer-link">-->
-                    <!--        <h5>SHIRT</h5>-->
-                    <!--        <ul class="list-unstyled">-->
-                    <!--            <li>-->
-                    <!--                <a href="/shop/category/all-shirt-premium-76">Premium</a>-->
-                    <!--            </li>-->
-                    <!--            <li>-->
-                    <!--                <a href="/shop/category/all-shirt-platinum-75">Platinum</a>-->
-                    <!--            </li>-->
-                    <!--            <li>-->
-                    <!--                <a href="/shop/category/all-shirt-basic-74">Basic</a>-->
-                    <!--            </li>-->
-                    <!--        </ul>-->
-                    <!--    </div>-->
-                    <!--</div>-->
-                    
-                    <!--<div class="col-md-2 col-sm-4 col-xs-12">-->
-                    <!--    <div class="footer-link">-->
-                    <!--        <h5>L-CHINO</h5>-->
-                    <!--        <ul class="list-unstyled">-->
-                    <!--            <li>-->
-                    <!--                <a href="/shop/category/all-l-chino-basic-67">Basic </a>-->
-                    <!--            </li>-->
-                    <!--            <li>-->
-                    <!--                <a href="/shop/category/all-l-chino-basic-2-0-68">Basic 2.0</a>-->
-                    <!--            </li>-->
-                    <!--             <li>-->
-                    <!--                <a href="/shop/category/all-l-chino-air-66">Air </a>-->
-                    <!--            </li>-->
-                    <!--        </ul>-->
-                    <!--    </div>-->
-                    <!--</div>-->
-                    
-                    <!--<div class="col-md-2 col-sm-4 col-xs-12">-->
-                    <!--    <div class="footer-link">-->
-                    <!--        <h5>PAJAMA </h5>-->
-                    <!--        <ul class="list-unstyled">-->
-                    <!--            <li>-->
-                    <!--                <a href="/shop/category/all-payjama-relaxed-fit-88">Relaxed Fit</a>-->
-                    <!--            </li>-->
-                    <!--            <li>-->
-                    <!--                <a href="/shop/category/all-payjama-traditional-89">Traditional</a>-->
-                    <!--            </li>-->
-                    <!--            <li>-->
-                    <!--                <a href="/shop/category/all-payjama-trim-fit-90">Trim Fit</a>-->
-                    <!--            </li>-->
-                    <!--        </ul>-->
-                    <!--    </div>-->
-                    <!--</div>-->
-                    
-                    
-                    <!--<div class="col-md-2 col-xs-12">-->
-                    <!--  <div class="footer-link">-->
-                    <!--    <h5>Get in Touch</h5>-->
-                    <!--    <ul class="list-unstyled">-->
-                    <!--      <li>Call us at (555)-555-5555</li>-->
-                    <!--      <li><a href="mailto:hello@delvesolve.com">hello@delvesolve.com</a></li>-->
-                    <!--    </ul>-->
-                    <!--  </div>-->
-                    <!--</div>-->
-                    <!--<div class="col-md-12 col-xs-12" id="info" style='padding-top:3%'>-->
-                    <!--    <div class='col-md-6' style='padding-left:0;'>-->
-                    <!--        <h3 style='color: #929292;'> The Premium Muslim Lifestyle Brand </h3>-->
-                    <!--    </div>-->
-                    <!--    <div class='col-md-3'>-->
-                    <!--        <h4 style="color: #525F5F;font-size: 18px;display:inline">Get in Touch</h4>-->
-                    <!--        <ul class="list-unstyled" style='display:inline'>-->
-                    <!--            <li t-ignore="true">-->
-                    <!--                <i style="color: #929292;" class="fa fa-phone"/>-->
-                    <!--                <span style="color: #929292;" t-field="res_company.phone"/>-->
-                    <!--            </li>-->
-                                <!--<li t-ignore="true">-->
-                                <!--  <i style="color: #929292;" class="fa fa-envelope"/>-->
-                                <!--  <span style="color: #929292;" t-field="res_company.email"/>-->
-                                <!--</li>-->
-                    <!--        </ul>-->
-                    <!--    </div>-->
-                    <!--    <div class='col-md-3 pull-right'>-->
-                    <!--        <h2>-->
-                    <!--            <a t-att-href="website.social_facebook" t-if="website.social_facebook">-->
-                    <!--                <i class="fa fa-facebook-square"/>-->
-                    <!--            </a>-->
-                    <!--            <a t-att-href="website.social_twitter" t-if="website.social_twitter">-->
-                    <!--                <i class="fa fa-twitter"/>-->
-                    <!--            </a>-->
-                    <!--            <a t-att-href="website.social_linkedin" t-if="website.social_linkedin">-->
-                    <!--                <i class="fa fa-linkedin"/>-->
-                    <!--            </a>-->
-                    <!--            <a t-att-href="website.social_youtube" t-if="website.social_youtube">-->
-                    <!--                <i class="fa fa-youtube-play"/>-->
-                    <!--            </a>-->
-                    <!--            <a t-att-href="website.social_googleplus" t-if="website.social_googleplus" rel="publisher">-->
-                    <!--                <i class="fa fa-google-plus-square"/>-->
-                    <!--            </a>-->
-                    <!--            <a t-att-href="website.social_github" t-if="website.social_github">-->
-                    <!--                <i class="fa fa-github"/>-->
-                    <!--            </a>-->
-                    <!--        </h2>-->
-                    <!--    </div>-->
-                    <!--</div>-->
-                    
-                    
-                    <!--<div class="col-md-4 col-xs-12">-->
-                    <!--  <div class="newsletter clearfix">-->
-                    <!--    <h4 style="color: #525F5F; text-align: center;font-size: 21px;">Newsletter</h4>-->
-                    <!--    <h3 style="color: #929292;text-align: center;">Sign up now</h3>-->
-                    <!--    <p style="color: #929292;text-align: center;">Enter your email address and get notified about new products. We hate spam!</p>-->
-                    <!--    <div class="input-group js_subscribe" data-list-id="1" data-subscribe="off">-->
-                    <!--<input type="email" name="email" class="js_subscribe_email form-control" placeholder="your email...">  -->
-                    <!--      <span class="input-group-btn">-->
-                    <!--          <a id="subscribe_button" href="#" class="btn btn-primary js_subscribe_btn">Subscribe</a>-->
-                    <!--          <a href="#" class="btn btn-success js_subscribed_btn hidden" disabled="disabled">Thanks</a>-->
-                    <!--      </span>-->
-                    <!--      <div class="alert alert-success hidden">Thanks for your subscription!</div>-->
-                    <!--    </div>-->
-                    <!--  </div>-->
-                    <!--</div>-->
-
-                </div>
-            </div>
-        </div>
-    </xpath>
-</data>
 
