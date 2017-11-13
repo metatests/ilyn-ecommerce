@@ -1,8 +1,29 @@
 <?xml version="1.0"?>
 <t name="Collapse Category Recursive" t-name="website_sale.option_collapse_categories_recursive">
+    <style>
+        #o_shop_collapse_category li a:hover {
+            background: transparent;
+        }  
+        .left_prod_cat_l3_atag: hover{
+            color: #c1b497;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+    </style>
+
         <li t-att-class="'active' if categ.id == int(category or 0) else None">
-            <a t-att-href="keep('/shop/category/' + slug(categ), category=0)" t-field="categ.name"/>
+            
+            <a t-if='categ.child_id' t-field="categ.name"/>
+            <a class='left_prod_cat_l3_atag' t-if='not categ.child_id' t-att-href="keep('/shop/category/' + slug(categ), category=0)" t-field='categ.name'/>
             <i t-if="categ.child_id" t-attf-class="fa #{'fa-chevron-down' if categ.id in parent_category_ids else 'fa-chevron-right'}"/>
+            
+            <div class='hidden'>
+                <a class='mt16' t-att-href="keep('/shop/category/' + slug(categ), category=0)" t-field="categ.name" style='color: green'/>
+                <i t-if="categ.child_id" t-attf-class="fa #{'fa-chevron-down' if categ.id in parent_category_ids else 'fa-chevron-right'}"/>
+            </div>
+            
             <ul t-if="categ.child_id" class="nav nav-pills nav-stacked nav-hierarchy" t-att-style="'display:block;' if categ.id in parent_category_ids else 'display:none;'">
                 <t t-foreach="categ.child_id" t-as="categ">
                     <t t-call="website_sale.option_collapse_categories_recursive"/>
