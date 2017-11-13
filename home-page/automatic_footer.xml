@@ -15,8 +15,8 @@
 <!--                        <li><a href="/page/website.contactus">Contact us</a></li>-->
 <!--                    </ul>-->
 <!--                    <ul class="list-unstyled">-->
-<!--                        <li t-ignore="true"><i class="fa fa-phone"/> <span t-field="res_company.phone"/></li>-->
-<!--                        <li t-ignore="true"><i class="fa fa-envelope"/>  <span t-field="res_company.email"/></li>-->
+<!--                        <li t-ignore="true"><i class="fa fa-phone"/><span t-field="res_company.phone"/></li>-->
+<!--                        <li t-ignore="true"><i class="fa fa-envelope"/><span t-field="res_company.email"/></li>-->
 <!--                    </ul>-->
 <!--                    <h2>-->
 <!--                        <a t-att-href="website.social_facebook" t-if="website.social_facebook"><i class="fa fa-facebook-square"/></a>-->
@@ -49,12 +49,9 @@
 <!--        </div>-->
 <!--    </xpath>-->
 <!--</data>-->
-
-
 <data inherit_id="website.footer_custom" customize_show="True" name="Automatic Footer">
     <xpath expr="//div[@id='footer']" position="replace">
         <div style="height:8px;background:#FFC652;width:100%;"></div>
-        
         <style>
             #level1_footer_heading{
                 padding-left: 14px;
@@ -110,18 +107,19 @@
             padding-right:0
         }
           </style>
-          
-        
         <div style="background:#252525" >
             <div id="footer" class="container hidden-print">
-                
                 <div class="row" style="padding-bottom: 35px;">
                     <div class="col-md-12 col-sm-12 col-xs-12" style="padding-left:0;">
-                        <h3 id='level1_footer_heading'> <a class='anc_tdn anc_l1' href="#"> Clothing </a></h3> 
+                        <h3 id='level1_footer_heading'>
+                            <a class='anc_tdn anc_l1' href="#"> Clothing </a>
+                        </h3>
                     </div>
                     <div class="col-md-2 col-sm-2 col-xs-4">
                         <div class="footer-link">
-                            <a class='anc_tdn' href="#"><h5>PANJABI</h5> </a>
+                            <a class='anc_tdn' href="#">
+                                <h5>PANJABI</h5>
+                            </a>
                             <ul class="list-unstyled">
                                 <li>
                                     <a class='anc_tdn' href="/shop/category/all-panjabi-premium-85">Premium </a>
@@ -138,10 +136,11 @@
                             </ul>
                         </div>
                     </div>
-                    
                     <div class="col-md-2 col-sm-2 col-xs-4">
                         <div class="footer-link">
-                            <a class='anc_tdn' href="#"><h5>Kabli</h5></a>
+                            <a class='anc_tdn' href="#">
+                                <h5>Kabli</h5>
+                            </a>
                             <ul class="list-unstyled">
                                 <li>
                                     <a class='anc_tdn' href="/shop/category/all-shirt-premium-76">Premium </a>
@@ -152,10 +151,11 @@
                             </ul>
                         </div>
                     </div>
-                    
                     <div class="col-md-2 col-sm-2 col-xs-4">
                         <div class="footer-link">
-                            <a class='anc_tdn' href="#"> <h5>THOBE </h5> </a>
+                            <a class='anc_tdn' href="#">
+                                <h5>THOBE </h5>
+                            </a>
                             <ul class="list-unstyled">
                                 <li>
                                     <a class='anc_tdn' href="/shop/category/all-thobe-premium-80">Premium</a>
@@ -169,10 +169,11 @@
                             </ul>
                         </div>
                     </div>
-                    
                     <div class="col-md-2 col-sm-2 col-xs-4" id='4th_level2_prodcat_div'>
                         <div class="footer-link">
-                            <a class='anc_tdn' href="#"> <h5>SHIRT</h5></a>
+                            <a class='anc_tdn' href="#">
+                                <h5>SHIRT</h5>
+                            </a>
                             <ul class="list-unstyled">
                                 <li>
                                     <a class='anc_tdn' href="/shop/category/all-shirt-premium-76">Premium</a>
@@ -186,10 +187,11 @@
                             </ul>
                         </div>
                     </div>
-                    
                     <div class="col-md-2 col-sm-2 col-xs-4">
                         <div class="footer-link">
-                            <a class='anc_tdn' href="#"> <h5>L-CHINO</h5></a>
+                            <a class='anc_tdn' href="#">
+                                <h5>L-CHINO</h5>
+                            </a>
                             <ul class="list-unstyled">
                                 <li>
                                     <a class='anc_tdn' href="/shop/category/all-l-chino-basic-67">Basic </a>
@@ -197,16 +199,17 @@
                                 <li>
                                     <a class='anc_tdn' href="/shop/category/all-l-chino-basic-2-0-68">Basic 2.0</a>
                                 </li>
-                                 <li>
+                                <li>
                                     <a class='anc_tdn' href="/shop/category/all-l-chino-air-66">Air </a>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    
                     <div class="col-md-2 col-sm-2 col-xs-4">
                         <div class="footer-link">
-                            <a class='anc_tdn' href="#"> <h5>PAYJAMA </h5></a>
+                            <a class='anc_tdn' href="#">
+                                <h5>PAYJAMA </h5>
+                            </a>
                             <ul class="list-unstyled">
                                 <li>
                                     <a class='anc_tdn' href="/shop/category/all-payjama-relaxed-fit-88">Relaxed Fit </a>
@@ -220,8 +223,6 @@
                             </ul>
                         </div>
                     </div>
-                    
-                    
                     <!--<div class="col-md-2 col-xs-12">-->
                     <!--  <div class="footer-link">-->
                     <!--    <h5>Get in Touch</h5>-->
@@ -242,10 +243,10 @@
                     <!--                <i style="color: #929292;" class="fa fa-phone"/>-->
                     <!--                <span style="color: #929292;" t-field="res_company.phone"/>-->
                     <!--            </li>-->
-                                <!--<li t-ignore="true">-->
-                                <!--  <i style="color: #929292;" class="fa fa-envelope"/>-->
-                                <!--  <span style="color: #929292;" t-field="res_company.email"/>-->
-                                <!--</li>-->
+                    <!--<li t-ignore="true">-->
+                    <!--  <i style="color: #929292;" class="fa fa-envelope"/>-->
+                    <!--  <span style="color: #929292;" t-field="res_company.email"/>-->
+                    <!--</li>-->
                     <!--        </ul>-->
                     <!--    </div>-->
                     <!--    <div class='col-md-3 pull-right'>-->
@@ -271,8 +272,6 @@
                     <!--        </h2>-->
                     <!--    </div>-->
                     <!--</div>-->
-                    
-                    
                     <!--<div class="col-md-4 col-xs-12">-->
                     <!--  <div class="newsletter clearfix">-->
                     <!--    <h4 style="color: #525F5F; text-align: center;font-size: 21px;">Newsletter</h4>-->
@@ -289,76 +288,148 @@
                     <!--  </div>-->
                     <!--</div>-->
                 </div>
-                
-                 <div class="row" style="padding-bottom: 35px;">
-                    
-             
+                <div class="row" style="padding-bottom: 35px;">
                     <div class='col-sm-4 col-md-4 col-xs-12 pad_lrz'>
                         <div class='col-md-12 col-sm-12 col-xs-12 pad_lrz'>
                             <div class='col-md-6 col-sm-6 col-xs-12'>
-                              <a class='anc_tdn anc_l1' href="#"> <h3 class='mt0'> Accessories</h3></a>
-                              <div class="footer-link">
-                                  <a class='anc_tdn' href="#"> <h5>Leather Goods</h5></a>
-                                  <ul class="list-unstyled">
-                                      <li>
-                                          <a class='anc_tdn' href="#">Prayer Mat</a>
-                                      </li>
-                                      <li>
-                                          <a class='anc_tdn' href="/shop/category/all-panjabi-platinum-84"> Bag</a>
-                                      </li>
-                                      <li>
-                                          <a class='anc_tdn' href="/shop/category/all-panjabi-basic-82">Sleeve</a>
-                                      </li>
-                                  </ul>
-                              </div>
-                              
-                              <style> 
-                              
-                            </style>
-                              <div style='margin-top: 22px;'>
-                                  <a class='anc_tdn anc_l1' href="#"> <h5 class='perfume_heading'>Perfume</h5></a>
-                              </div>
-                              
-                            </div>
-                            
-                            <div class='col-md-6 col-sm-6 col-xs-12'>
-                                <a class='anc_tdn anc_l1' href="#"> <h3 class='mt0'> Footware</h3></a>
+                                <a class='anc_tdn anc_l1' href="#">
+                                    <h3 class='mt0'> Accessories</h3>
+                                </a>
                                 <div class="footer-link">
-                                    <!--<a class='anc_tdn anc_fc_gray' href="#"> <h5>Sandal Sandal</h5></a>-->
-                                    <a class='anc_tdn' href="#" > <h5 style='color: #acacac;'>Sandal</h5></a>
-                                    <!--<a class='anc_tdn anc_fc_gray' href="#"> <h5>Shoe Shoe</h5></a>-->
-                                    <a class='anc_tdn' href="#" > <h5 style='color: #acacac;'>Shoe</h5></a>
+                                    <a class='anc_tdn' href="#">
+                                        <h5>Leather Goods</h5>
+                                    </a>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a class='anc_tdn' href="#">Prayer Mat</a>
+                                        </li>
+                                        <li>
+                                            <a class='anc_tdn' href="/shop/category/all-panjabi-platinum-84"> Bag</a>
+                                        </li>
+                                        <li>
+                                            <a class='anc_tdn' href="/shop/category/all-panjabi-basic-82">Sleeve</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <style></style>
+                                <div style='margin-top: 22px;'>
+                                    <a class='anc_tdn anc_l1' href="#">
+                                        <h5 class='perfume_heading'>Perfume</h5>
+                                    </a>
                                 </div>
                             </div>
-                        
+                            <div class='col-md-6 col-sm-6 col-xs-12'>
+                                <a class='anc_tdn anc_l1' href="#">
+                                    <h3 class='mt0'> Footware</h3>
+                                </a>
+                                <div class="footer-link">
+                                    <!--<a class='anc_tdn anc_fc_gray' href="#"><h5>Sandal Sandal</h5></a>-->
+                                    <a class='anc_tdn' href="#" >
+                                        <h5 style='color: #acacac;'>Sandal</h5>
+                                    </a>
+                                    <!--<a class='anc_tdn anc_fc_gray' href="#"><h5>Shoe Shoe</h5></a>-->
+                                    <a class='anc_tdn' href="#" >
+                                        <h5 style='color: #acacac;'>Shoe</h5>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                    
                     </div>
-                    
                     <div class='col-sm-8 col-md-8 col-xs-12 pad_lrz'>
                         <h3 class="mt0 mb16" style='padding-left:14px'> Display Centers </h3>
-                         <div class='col-md-4 col-sm-4 col-xs-12'>
-                              <h4 class="mb16" style='color: #acacac;'> Banani Store</h4>
-                              <h6>Level3, Tower 52, Road 11 Banani, Dhaka 1213 </h6>
-                              
-                               <h4 class="mb16 mt32" style='color: #acacac;'>Bashundhara Store</h4>
-                              <h6>Level 2, Block A, Basundhara City, Panthapath, Dhaka 1215 </h6>
+                        <div class='col-md-4 col-sm-4 col-xs-12'>
+                            <h4 class="mb16" style='color: #acacac;'> Banani Store</h4>
+                            <h6>Level3, Tower 52, Road 11 Banani, Dhaka 1213 </h6>
+                            <h4 class="mb16 mt32" style='color: #acacac;'>Bashundhara Store</h4>
+                            <h6>Level 2, Block A, Basundhara City, Panthapath, Dhaka 1215 </h6>
+                        </div>
+                        <div class='col-md-4 col-sm-4 col-xs-12'>
+                            <h4 class="mb16" style='color: #acacac;'>Chittagong Store</h4>
+                            <h6>Coming Soon, Chittagong 1215 </h6>
+                        </div>
+                        <div class='col-md-4 col-sm-4 col-xs-12'>
+                            <h4 class='text-center'> Get in touch</h4>
+                            <p class='footer_msg_p'> Enter your email address and get notified about new products. 
+                                <br></br>We hate spam!
+                            </p>
+                            <div class="input-group js_subscribe" data-list-id="1" data-subscribe="off">
+                                <input type="email" name="email" class="js_subscribe_email form-control" placeholder="your email..."/>
+                                <a href="#" class="btn btn-success js_subscribed_btn hidden" disabled="disabled">Thanks</a>
                             </div>
-                              <div class='col-md-4 col-sm-4 col-xs-12'>
-                              <h4 class="mb16 mt32" style='color: #acacac;'>Ctg Store</h4>
-                              <h6>Coming Soon, Chittagong 1215 </h6>  
-                             
-                          </div>
-                          
-                           <div class='col-md-4 col-sm-4 col-xs-12'>
-                              <h4 class='text-center'> Get in touch</h4>
-                              <p class='footer_msg_p'> Enter your email address and get notified about new products. <br></br>We hate spam!</p>
-                          </div>
-                          
-                     
-                      
-                     
+                            
+                            <form action="/website_form/" method="post" data-model_name="res.partner" class="s_website_form form-horizontal container-fluid mt32" enctype="multipart/form-data">
+                                <div class="form-group form-field o_website_form_required_custom">
+                                    <label class="col-md-3 col-sm-4 control-label" for="name">Your Name</label>
+                                    <div class="col-md-7 col-sm-8">
+                                        <input type="text" class="form-control o_website_form_input" name="name" t-att-value="request.params.get('name', '')" required="" id='footer_subscription_customer_name'/>
+                                    </div>
+                                </div>
+                                <div class="form-group form-field o_website_form_required_custom">
+                                    <label class="col-md-3 col-sm-4 control-label" for="phone"> Mobile Number</label>
+                                    <div class="col-md-7 col-sm-8">
+                                        <input type="text" class="form-control o_website_form_input" name="phone" t-att-value="request.params.get('phone', '')" required="" id='footer_subscription_customer_phone'/>
+                                    </div>
+                                </div>
+                                <div class="form-group form-field o_website_form_required_custom">
+                                    <label class="col-md-3 col-sm-4 control-label" for="email">Email</label>
+                                    <div class="col-md-7 col-sm-8">
+                                        <input type="text" class="form-control o_website_form_input" name="email" required="" t-att-value="request.params.get('email', '')" id='footer_subscription_customer_email'/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-offset-3 col-sm-offset-4 col-sm-8 col-md-7">
+                                        <!--<span class="btn btn-primary btn-lg o_website_form_send" data-toggle="modal" data-target="#subscribe_success_modal" id='subscription_form_submit_btn'>Subscribe</span>-->
+                                        <span class="btn btn-warning btn-block o_website_form_send" id='subscription_form_submit'>Subscribe</span>
+                                        <h5 id="o_website_form_result"/>
+                                    </div>
+                                </div>
+                            </form>
+                            <script type='text/javascript'>
+                                $("#subscription_form_submit").click(function(){
+                                    if ($("#footer_subscription_customer_name").val()){
+                                        if($("#footer_subscription_customer_phone").val()){
+                                            if($("#footer_subscription_customer_email").val()){
+                                                $('#subscribe_success_modal').modal('show');    
+                                            }    
+                                        }
+                                    }
+                                });
+                            </script>
+                            <div id="subscribe_success_modal" class="modal fade" role="dialog">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">x</button>
+                                            <h4 class="modal-title">Thank you for Subscribing to ILYN</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="alert alert-success">
+                                                        You're now subscribed to ILYN..
+                                        </div>
+                                            <p>Stay Connected for updates and place some message here.</p>
+                                            <p class="mt64">    What message here? and do not hesitate to contact us:   </p>
+                                            <ul class="list-unstyled">
+                                                <li>
+                                                    <i class="fa fa-phone"/> : 
+                                                
+                                                    <span t-field="res_company.phone"/>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-envelope"/> : 
+                                                
+                                                    <span t-field="res_company.email"/>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    
                     
                     <!--DELETE FROM HERE-->
                     <!--<h3 class='level1_footer_heading'> SOMETHING</h3>-->
@@ -381,7 +452,6 @@
                     <!--        </ul>-->
                     <!--    </div>-->
                     <!--</div>-->
-                    
                     <!--<div class="col-md-2 col-sm-4 col-xs-12">-->
                     <!--    <div class="footer-link">-->
                     <!--        <h5>Kabli</h5>-->
@@ -395,7 +465,6 @@
                     <!--        </ul>-->
                     <!--    </div>-->
                     <!--</div>-->
-                    
                     <!--<div class="col-md-2 col-sm-4 col-xs-12">-->
                     <!--    <div class="footer-link">-->
                     <!--        <h5>THOBE </h5>-->
@@ -412,7 +481,6 @@
                     <!--        </ul>-->
                     <!--    </div>-->
                     <!--</div>-->
-                    
                     <!--<div class="col-md-2 col-sm-4 col-xs-12">-->
                     <!--    <div class="footer-link">-->
                     <!--        <h5>SHIRT</h5>-->
@@ -429,7 +497,6 @@
                     <!--        </ul>-->
                     <!--    </div>-->
                     <!--</div>-->
-                    
                     <!--<div class="col-md-2 col-sm-4 col-xs-12">-->
                     <!--    <div class="footer-link">-->
                     <!--        <h5>L-CHINO</h5>-->
@@ -446,7 +513,6 @@
                     <!--        </ul>-->
                     <!--    </div>-->
                     <!--</div>-->
-                    
                     <!--<div class="col-md-2 col-sm-4 col-xs-12">-->
                     <!--    <div class="footer-link">-->
                     <!--        <h5>PAJAMA </h5>-->
@@ -463,8 +529,6 @@
                     <!--        </ul>-->
                     <!--    </div>-->
                     <!--</div>-->
-                    
-                    
                     <!--<div class="col-md-2 col-xs-12">-->
                     <!--  <div class="footer-link">-->
                     <!--    <h5>Get in Touch</h5>-->
@@ -485,10 +549,10 @@
                     <!--                <i style="color: #929292;" class="fa fa-phone"/>-->
                     <!--                <span style="color: #929292;" t-field="res_company.phone"/>-->
                     <!--            </li>-->
-                                <!--<li t-ignore="true">-->
-                                <!--  <i style="color: #929292;" class="fa fa-envelope"/>-->
-                                <!--  <span style="color: #929292;" t-field="res_company.email"/>-->
-                                <!--</li>-->
+                    <!--<li t-ignore="true">-->
+                    <!--  <i style="color: #929292;" class="fa fa-envelope"/>-->
+                    <!--  <span style="color: #929292;" t-field="res_company.email"/>-->
+                    <!--</li>-->
                     <!--        </ul>-->
                     <!--    </div>-->
                     <!--    <div class='col-md-3 pull-right'>-->
@@ -514,8 +578,6 @@
                     <!--        </h2>-->
                     <!--    </div>-->
                     <!--</div>-->
-                    
-                    
                     <!--<div class="col-md-4 col-xs-12">-->
                     <!--  <div class="newsletter clearfix">-->
                     <!--    <h4 style="color: #525F5F; text-align: center;font-size: 21px;">Newsletter</h4>-->
@@ -531,7 +593,6 @@
                     <!--    </div>-->
                     <!--  </div>-->
                     <!--</div>-->
-
                 </div>
             </div>
         </div>

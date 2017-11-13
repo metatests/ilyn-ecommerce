@@ -21,7 +21,7 @@
                             </div>
             </div>
           </div>
-          <div class="item  oe_img_bg oe_custom_bg" style="background-image: url(&quot;http://odoo.metamorphosis.com.bd/web/image/465&quot;); background-position: 0% 0%;">
+          <div class="item  oe_img_bg oe_custom_bg" style="background-position: 0% 0%; background-image: url(&quot;/web/image/12817&quot;);">
             <div class="container">
               <div class="row content">
                 <div class="carousel-content mt128 col-md-2 mb64" style="">
@@ -500,12 +500,12 @@
       <section class="s_three_columns bg-white mt0 mb0" style="overflow: hidden;">
         <div class="container">
           <div class="row">
-            <div class="col-md-4 padleft_zero">
+            <div class="col-md-4 padleft_zero mb0">
               <div class="s_references">
                 <div class="container">
                   <div class="row">
                     <div class="mt0 col-md-12 ">
-                      <h4 class="mt16 " id="cloth-ht" style="color: rgb(0, 0, 0); font-size: 16px; font-weight: bold; ">CLOTHING</h4>
+                      <h4 class="mt16 " id="cloth-ht" style="color: rgb(0, 0, 0); font-size: 16px; font-weight: bold;">CLOTHING</h4>
                     </div>
                   </div>
                 </div>
@@ -514,7 +514,7 @@
                 <div class="product_container col-md-12 col-xs-12 padleft_zero">
                   <div class="thumbnail" id="cloth-cat">
                     <div class="image-wrapper">
-                      <img src="/web/image/12814" class="pull-left product_image " data-original-title="" title="" style="position: relative; width: 100%; height: 100%;"/>
+                      <img src="/web/image/12818" class="pull-left product_image " data-original-title="" title="" style="position: relative; width: 100%; height: 100%;"/>
                       <div class="masking">
                         <a href="#" class="btnx btn-masking btn-xlg o_default_snippet_text">VIEW PRODUCTS</a>
                       </div>
@@ -528,16 +528,16 @@
                 <div class="container">
                   <div class="row">
                     <div class="mt0 col-md-12 ">
-                      <h4 class="mt16  " id="foot-ht" style="color: rgb(0, 0, 0); font-size: 16px; font-weight: bold; padding-left:15px;">FOOTWEAR</h4>
+                      <h4 class="mt16  " id="foot-ht" style="color: rgb(0, 0, 0); font-size: 16px; font-weight: bold; padding-left: 15px;">FOOTWEAR</h4>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="mt16  shop_img mb32 image-mask-box" style="margin-left: 0px;">
-                <div class="product_container col-md-12 col-xs-12 padright_zero" >
+                <div class="product_container col-md-12 col-xs-12 padright_zero">
                   <div class="thumbnail" id="foot-cat">
                     <div class="image-wrapper">
-                      <img src="/web/image/12815" class="pull-left product_image " data-original-title="" title="" style="position: relative; width: 100%; height: 100%;"/>
+                      <img src="/web/image/12817" class="pull-left product_image " data-original-title="" title="" style="position: relative; width: 100%; height: 100%;"/>
                       <div class="masking">
                         <a href="#" class="btnx btn-masking btn-xlg o_default_snippet_text">VIEW PRODUCTS</a>
                       </div>
@@ -551,7 +551,7 @@
                 <div class="container">
                   <div class="row">
                     <div class="mt0 col-md-12 ">
-                      <h4 class="mt16  " id="acc-ht" style="color: rgb(0, 0, 0); font-size: 16px; font-weight: bold; padding-left:15px;">ACCESSORIES</h4>
+                      <h4 class="mt16  " id="acc-ht" style="color: rgb(0, 0, 0); font-size: 16px; font-weight: bold; padding-left: 15px;">ACCESSORIES</h4>
                     </div>
                   </div>
                 </div>
@@ -596,9 +596,9 @@
               </div>
               <div class="col-md-12 col-xs-12 padleft_zero">
                 <div class="image-mask-box">
-                  <div class="thumbnail" style="border:none">
+                  <div class="thumbnail" style="border:none;height: 300px;">
                     <div class="image-wrapper">
-                      <img src="/web/image/12814" class="pull-left product_image " data-original-title="" title="" style="position: relative; width: 100%; height: 100%;"/>
+                      <img src="/web/image/12816" class="pull-left product_image " data-original-title="" title="" style="position: relative;width: 100%;height: 100%;"/>
                       <div class="masking">
                         <a href="#" class="btnx btn-masking btn-xlg o_default_snippet_text" data-toggle="modal" data-target="#banani_map_modal">VIEW MAP</a>
                       </div>
@@ -636,7 +636,7 @@
                 <div class="image-mask-box">
                   <div class="thumbnail" style="border:none">
                     <div class="image-wrapper">
-                      <img src="/web/image/12815" class="pull-left product_image " data-original-title="" title="" style="position: relative; width: 100%; height: 100%;"/>
+                      <img src="/web/image/12818" class="pull-left product_image " data-original-title="" title="" style="position: relative; width: 100%; height: 100%;"/>
                       <div class="masking">
                         <a href="#" class="btnx btn-masking btn-xlg o_default_snippet_text" data-toggle="modal" data-target="#bcity_map_modal">VIEW MAP</a>
                       </div>
@@ -673,7 +673,7 @@
                 <div class="image-mask-box">
                   <div class="thumbnail" style="border:none">
                     <div class="image-wrapper">
-                      <img src="/web/image/12816" class="pull-left product_image " data-original-title="" title="" style="position: relative; width: 100%; height: 100%;"/>
+                      <img src="/web/image/12817" class="pull-left product_image " data-original-title="" title="" style="position: relative; width: 100%; height: 100%;"/>
                       <div class="masking">
                         <a href="#" class="btnx btn-masking btn-xlg o_default_snippet_text" data-toggle="modal" data-target="#ctg_map_modal">VIEW MAP</a>
                       </div>
