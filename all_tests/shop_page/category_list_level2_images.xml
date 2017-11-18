@@ -6,7 +6,7 @@
             </span>
             <style>
                 .level3_categs_div{
-                    background: #ffc262;
+                    background: #c1b497;
                     padding-right:0;
                 }
                 .level2_img_div{
@@ -27,9 +27,10 @@
                     padding-bottom: 5px;
                 }
                 .level3_border_btm{
-                    border-bottom: 2px solid #ffd692;
-                    padding-right:5px;
-                    padding-left: 0;
+                    border-bottom: 2px solid #ada185; padding-right:5px;padding-left: 0;
+                }
+                .image-mask-box-s .thumbnail-s {
+                    cursor: default;
                 }
             </style>
             
@@ -54,24 +55,19 @@
                                 </div>
                             </div>
                             <div class="col-sm-8 level2_img_div">
-                                <div class='container'>
-                                    <!--<div class='row'>-->
-                                        <div class="image-mask-box-s" style="margin-left: 0px;padding-left: 0px;">
-                                            <div class='thumbnail-s'>
-                                                <div class="image-wrapper-s">
-                                                    <a t-att-href="keep('/shop/category/' + slug(c.parent_id), category=0)">
-                                                        <span  itemprop="image" t-field="c.parent_id.image" t-options="{                                     'widget': 'image',                                     'class': 'product_detail_img',                                      'alt-field': 'name',                                      'zoom': 'image'}"/>
-                                                        <div class="masking-s ">
-                                                        
-                                                        </div>
-                                                    
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
+                                <!--<div class='container'>-->
+                                    <!--<div class="image-mask-box-s" style="margin-left: 0px;padding-left: 0px;">-->
+                                        <!--<div class='thumbnail-s'>-->
+                                            <!--<div class="image-wrapper-s">-->
+                                                <!--<a t-att-href="keep('/shop/category/' + slug(c.parent_id), category=0)">-->
+                                                    <span  itemprop="image" t-field="c.parent_id.image" t-options="{                                     'widget': 'image',                                     'class': 'product_detail_img',                                      'alt-field': 'name',                                      'zoom': 'image'}"/>
+                                                    <!--<div class="masking-s ">-->
+                                                    <!--</div>-->
+                                                <!--</a>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
                                     <!--</div>-->
-                                </div>
-                               
+                                <!--</div>-->
                             </div>
                         </div>
                     </div>

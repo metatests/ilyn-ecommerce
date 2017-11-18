@@ -129,7 +129,7 @@
                                 line-height: 1.42857143;
                                 text-decoration: none;
                                 color: #494946;
-                                background-color: #FFC652;
+                                background-color: #c1b497;
                                 border: 1px solid #ddd;
                                 margin-left: -1px;
                             }
@@ -161,7 +161,7 @@
                                     </t>
                                 </div>
 
-                                <div class="products_pager">
+                                <div class="col-md-6 col-offset-3 col-sm-6 col-sm-offset-3 col-xs-12 products_pager">
                                     <t t-call="website.pager"/>
                                 </div>
                             </t>

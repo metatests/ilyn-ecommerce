@@ -18,8 +18,7 @@
 <!--            <meta name="description" t-att-content="main_object and 'website_meta_description' in main_object                 and main_object.website_meta_description or website_meta_description"/>-->
 <!--            <meta name="keywords" t-att-content="main_object and 'website_meta_keywords' in main_object                 and main_object.website_meta_keywords or website_meta_keywords"/>-->
 <!--            <meta name="generator" content="Odoo"/>-->
-
-            <!-- OpenGraph tags for Facebook sharing -->
+<!-- OpenGraph tags for Facebook sharing -->
 <!--            <meta property="og:title" t-att-content="additional_title"/>-->
 <!--            <meta property="og:site_name" t-att-content="res_company.name"/>-->
 <!--            <t t-if="main_object and 'plain_content' in main_object and main_object.plain_content">-->
@@ -28,27 +27,23 @@
 <!--                <meta property="og:image" t-att-content="request.httprequest.url_root+'logo.png'"/>-->
 <!--                <meta property="og:url" t-att-content="request.httprequest.url_root+request.httprequest.path[1:end]"/>-->
 <!--            </t>-->
-
 <!--            <t t-set="languages" t-value="website.get_languages() if website else None"/>-->
 <!--            <t t-if="request and request.website_multilang and website">-->
 <!--                <t t-foreach="website.get_alternate_languages(request.httprequest)" t-as="lg">-->
 <!--                    <link rel="alternate" t-att-hreflang="lg['hreflang']" t-att-href="lg['href']"/>-->
 <!--                </t>-->
 <!--            </t>-->
-
 <!--            <script type="text/javascript">-->
 <!--                odoo.session_info = {-->
 <!--                    is_superuser: <t t-esc="json.dumps(request.env.user._is_superuser())"/>,-->
 <!--                    is_frontend: true,-->
 <!--                };-->
 <!--            </script>-->
-
 <!--            <t t-call-assets="web.assets_common" t-js="false"/>-->
 <!--            <t t-call-assets="web.assets_frontend" t-js="false"/>-->
 <!--            <t t-call-assets="web_editor.summernote" t-js="false" groups="website.group_website_publisher"/>-->
 <!--            <t t-call-assets="web_editor.assets_editor" t-js="false" groups="website.group_website_publisher"/>-->
 <!--            <t t-call-assets="website.assets_editor" t-js="false" groups="website.group_website_publisher"/>-->
-
 <!--            <t t-call-assets="web.assets_common" t-css="false"/>-->
 <!--            <t t-call-assets="web.assets_frontend" t-css="false"/>-->
 <!--            <t t-call-assets="web_editor.summernote" t-css="false" groups="website.group_website_publisher"/>-->
@@ -56,7 +51,6 @@
 <!--            <t t-call-assets="website.assets_editor" t-css="false" groups="website.group_website_publisher"/>-->
 <!--        </t>-->
 <!--        <t t-set="head" t-value="head_website + (head or '')"/>-->
-
 <!--        <div id="wrapwrap" t-att-class="pageName or ''">-->
 <!--            <header>-->
 <!--                <div class="navbar navbar-default navbar-static-top">-->
@@ -105,27 +99,25 @@
 <!--            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),-->
 <!--            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)-->
 <!--            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');-->
-
 <!--            ga('create', _.str.trim('<t t-esc="website.google_analytics_key"/>'), 'auto');-->
 <!--            ga('send','pageview');-->
 <!--        </script>-->
 <!--    </t>-->
 <!--</t>-->
-
 <!--<?xml version="1.0"?>-->
-
 <t name="Main layout" t-name="website.layout">
     <t t-call="web.layout">
         <t t-set="html_data" t-value="{             'lang': lang and lang.replace('_', '-'),             'data-website-id': website.id if website else None,             'data-editable': '1' if editable else None,             'data-translatable': '1' if translatable else None,             'data-edit_translations': '1' if edit_translations else None,             'data-view-xmlid': xmlid if editable or translatable else None,             'data-main-object': repr(main_object) if editable or translatable else None,             'data-oe-company-name': res_company.name         }"/>
         <t t-if="not title">
             <t t-if="not additional_title and main_object and 'name' in main_object">
-                <t t-set="additional_title" t-value="main_object.name"/>
-            </t>
+                <t t-set="additional_title" t-value="main_object.name"/></t>
             <t t-if="main_object and 'website_meta_title' in main_object and main_object.website_meta_title">
-                <t t-set="title" t-value="main_object.website_meta_title"/>
-            </t>
+                <t t-set="title" t-value="main_object.website_meta_title"/></t>
             <t t-else="">
-                <t t-set="title"><t t-if="additional_title"><t t-raw="additional_title"/> | </t><t t-esc="(website or res_company).name"/></t>
+                <t t-set="title">
+                    <t t-if="additional_title">
+                        <t t-raw="additional_title"/> | </t>
+                    <t t-esc="(website or res_company).name"/></t>
             </t>
         </t>
         <t t-set="x_icon" t-value="'/web/image/website/%s/favicon/' % website.id"/>
@@ -133,7 +125,6 @@
             <meta name="description" t-att-content="main_object and 'website_meta_description' in main_object                 and main_object.website_meta_description or website_meta_description"/>
             <meta name="keywords" t-att-content="main_object and 'website_meta_keywords' in main_object                 and main_object.website_meta_keywords or website_meta_keywords"/>
             <meta name="generator" content="Odoo"/>
-
             <!-- OpenGraph tags for Facebook sharing -->
             <meta property="og:title" t-att-content="additional_title"/>
             <meta property="og:site_name" t-att-content="res_company.name"/>
@@ -143,47 +134,43 @@
                 <meta property="og:image" t-att-content="request.httprequest.url_root+'logo.png'"/>
                 <meta property="og:url" t-att-content="request.httprequest.url_root+request.httprequest.path[1:end]"/>
             </t>
-
             <t t-set="languages" t-value="website.get_languages() if website else None"/>
             <t t-if="request and request.website_multilang and website">
                 <t t-foreach="website.get_alternate_languages(request.httprequest)" t-as="lg">
                     <link rel="alternate" t-att-hreflang="lg['hreflang']" t-att-href="lg['href']"/>
                 </t>
             </t>
-
             <script type="text/javascript">
                 odoo.session_info = {
-                    is_superuser: <t t-esc="json.dumps(request.env.user._is_superuser())"/>,
+                    is_superuser: 
+                <t t-esc="json.dumps(request.env.user._is_superuser())"/>,
                     is_frontend: true,
                 };
+            
             </script>
-
             <t t-call-assets="web.assets_common" t-js="false"/>
             <t t-call-assets="web.assets_frontend" t-js="false"/>
             <t t-call-assets="web_editor.summernote" t-js="false" groups="website.group_website_publisher"/>
             <t t-call-assets="web_editor.assets_editor" t-js="false" groups="website.group_website_publisher"/>
             <t t-call-assets="website.assets_editor" t-js="false" groups="website.group_website_publisher"/>
-
             <t t-call-assets="web.assets_common" t-css="false"/>
             <t t-call-assets="web.assets_frontend" t-css="false"/>
             <t t-call-assets="web_editor.summernote" t-css="false" groups="website.group_website_publisher"/>
             <t t-call-assets="web_editor.assets_editor" t-css="false" groups="website.group_website_publisher"/>
-            <t t-call-assets="website.assets_editor" t-css="false" groups="website.group_website_publisher"/>
-        </t>
+            <t t-call-assets="website.assets_editor" t-css="false" groups="website.group_website_publisher"/></t>
         <t t-set="head" t-value="head_website + (head or '')"/>
-        
         <!-- Lato Font Import  -->
         <style>
             @import url('https://fonts.googleapis.com/css?family=Lato');
             @import url('https://fonts.googleapis.com/css?family=Oxygen');
-        </style> 
-
+        </style>
         <style>
         .top-bar ul li a{
           color: #b3b3b3!important;
         }
         .top-bar{
             padding-top: 8px!important;
+            background: #252525;
         }
 
         #main_nav{
@@ -213,8 +200,13 @@
               color: #47bac1 !important!important;
               background-color: white !important!important;
           }
+          .padleft_zero{
+                padding-left:0;
+            }
+            #top_nav_phone{
+                padding-left: 10px;
+            }
       </style>
-
         <!-- A.S Shop Page Hover CSS -->
         <style type='text/css'>
           .btnx-s {
@@ -263,7 +255,7 @@
           
           .btn-masking-s:focus,
           .btn-masking-s.focus {
-            color: #FFC652;
+            color: #c1b497;
             background-color: white;
             border-color: white;
             -webkit-box-shadow: none;
@@ -274,7 +266,7 @@
           }
             
           .btn-masking-s:hover {
-            color: #FFC652;
+            color: #c1b497;
             background-color: white;
             border-color: white;
             -webkit-box-shadow: none;
@@ -292,7 +284,7 @@
             -webkit-box-shadow: none 1px 2px #ccc;
             -moz-box-shadow: none 1px 2px #ccc;
             box-shadow: none 1px 2px #ccc;
-            color: #FFC652;
+            color: #c1b497;
             background-color: white;
             border-color: white;
           }
@@ -301,7 +293,7 @@
           .btn-masking-s.active:hover,
           .btn-masking-s:active.focus,
           .btn-masking-s.active.focus {
-            color: #FFC652;
+            color: #c1b497;
             background-color: white;
             border-color: white;
             -webkit-box-shadow: none;
@@ -347,7 +339,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: RGBA(255, 198, 82, 0.7);;
+            background-color: RGBA(193, 180, 151, 0.7);
             opacity: 0;
             -webkit-transition: all 0.3s ease-in-out;
             -moz-transition: all 0.3s ease-in-out;
@@ -399,643 +391,114 @@
           }
           
           .image-mask-box-s .thumbnail-s:hover .caption h4 {
-            color: #FFC652;
+            color: #c1b497;
           }
           
           .s_image_mask_boxes {
             padding-top: 50px;
           }
         </style>
-      
-        
-        <!-- S.B CSS custom style sheet start-->
-        <style>
-               
-          
-          /*  HOME PAGE CSS START */        
-              
-          /* top nav bar css start */ 
-
-          #top_nav_phone{
-            padding-left: 10px;
-            color: #bdbdbd;
-          }
-          .top-bar {
-            background: #252525;
-            display: block;
-            min-height: 35px;
-            height: auto;
-            width: 100%;
-          }  
-          
-          .top-bar ul {
-            margin: 0;
-            padding: 0;
-          }
-         
-          <!-- (index):85 -->
-          .list-inline {
-            list-style: none;
-          }
-          
-          .list-inline > li {
-            display: inline-block;
-            padding-left: 5px;
-            padding-right: 5px;
-          }
-          
-          .top-bar ul li a {
-            padding: 0 3px;
-            display: block;
-            line-height: 35px;
-            font-size: 14px;
-            transition: all 0.3s ease-in-out;
-            color: white;
-          }
-          
-          .top-bar-icon {
-            margin-top: 10px;
-          }
-          
-          #login_button {
-            text-decoration: none;
-            border-right: 1px solid #B2B2B2;
-            line-height: 19px;
-            padding-right: 14px;
-          }
-          
-          #search_icon {
-            padding: 0px 10px 0px 6px;
-          }
-          
-          #product_cart {
-            background: #FFC652;
-            padding: 0px 10px 0px 10px;
-          }
-
-          /* top nav bar css end */
-          
-          /* main nav bar css start */
-          #main_nav{
-            height: 80px;
-            background: white;
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-          }
-          
-          header a.navbar-brand img {
-            max-height: 60px;
-            margin-top: 8px;
-          }
-        
-          .navbar-nav > li > a {
-              padding-top: 30px;
-              padding-bottom: 30px;
-          }
-
-          .navbar.navbar-static-top ul.nav > li.divider {
-            margin-top: 20px;
-            padding-top: 20px;
-            border-right: 1px solid grey;
-            height: 40px;
-          }
-
-          .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
-              color: #47bac1 !important;
-              background-color: white !important;
-          }
-
-          /* main nav bar css end */
-          
-          /* slider css start */
-          #shop_now_button{
-            background: #FFC652;
-            color: black;
-            border: 3px solid #FFC652;
-            margin: 0 auto;
-            border-radius: 0px;
-            padding: 15px 30px;
-            font-size: 18px;
-            font-weight: 550;
-            text-transform: uppercase;
-            outline: 0 !important;
-            -webkit-transition: all 0.3s ease-in-out;
-            -moz-transition: all 0.3s ease-in-out;
-            -ms-transition: all 0.3s ease-in-out;
-            -o-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out;
-          }
-          
-          #shop_now_button:hover{
-            color: white;
-            background: transparent;
-            border: 3px solid #FFC652;
-            -webkit-transition: all 0.3s ease-in-out;
-            -moz-transition: all 0.3s ease-in-out;
-            -ms-transition: all 0.3s ease-in-out;
-            -o-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out;
-          }
-          
-          .carousel .carousel-control {
-            background: none !important;
-          }
-          
-          .slider_icon {
-            color: #FFC652;
-          }
-          .slider_icon:hover {
-            color:#FFC652;
-          }
-
-          /* slider css start */
-          
-          <!-- 
-          /* shop image start */
-           .shop_img{}
-
-          /* shop image end */
-           -->
-          
-          /* display centers address start*/
-          .address_hb{ 
-            margin-top: 30px;
-            background: #EEEEEE;
-            <!--height: 220px;-->
-          }
-          
-          #address2{ 
-            margin-top: 30px;
-            background: #EEEEEE;
-            <!--height: 220px;-->
-          }
-
-          /* display centers address end*/
-          
-          /* footer start */
-          .list-unstyled > li > a {
-            color: #929292 !important;
-            list-style: none;
-            text-decoration: none;
-          }
-
-          .list-unstyled > li > a:hover {
-            color: #FFC652;
-            transition: all 0.3s ease-in-out;
-          }
-
-          #subscribe_button {
-            float: right;
-            background: transparent;
-            border: 2px solid #FFC652;
-            font-weight: bold;
-          }
-
-          #subscribe_button:hover {
-            float: right;
-            background: #FFC652;
-            border: 2px solid #FFC652;
-            font-weight: bold;
-            color:#252525;
-            transition: all 0.3s ease-in-out;
-          }
-           
-          /* footer end */
-           
-           
-          /* image hover css start */
-          .product_container {
-            position: relative;
-            /*width: 50%;*/
-          }
-        
-          .product_image {
-            display: block;
-            width: 100%;
-            height: auto;
-          }
-        
-          .overlay {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 100%;
-            width: 100%;
-            opacity: 0;
-            transition: .5s ease;
-            background-color:#47bac1;
-          }
-
-          .product_container:hover .overlay {
-            opacity: 0.8;
-          }
-        
-          .overlay_text {
-            color: white;
-            font-size: 20px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-          }
-          .overlay_text_shop {
-            color: white;
-            font-size: 20px;
-            position: absolute;
-              top: 5%;
-              left: 10%;
-              transform: translate(-5%, -10%);
-              ms-transform: translate(-5%, -10%);
-          }
-          
-          .overlay_button{
-            background-color: transparent;
-              padding: 20px;
-              font-size: 20px;
-            border-radius: 0;
-            color: #fff;
-            border: 4px solid #fff;
-          }
-          .overlay_button:hover{
-            text-decoration: none;
-            background-color: #fff;
-            border-radius: 0;
-            color: #47bac1;
-            border: 4px solid #fff;
-            opacity:1;
-            -webkit-transition: all 0.3s ease-in-out;
-            -moz-transition: all 0.3s ease-in-out;
-            -ms-transition: all 0.3s ease-in-out;
-            -o-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out;
-            
-          }
-          .overlay_button:focus{
-            color: #47bac1;
-            background-color: white;
-            border-color: white;
-            -webkit-box-shadow: none;
-            box-shadow: none;
-            -webkit-box-shadow: none 1px 2px #ccc;
-            -moz-box-shadow: none 1px 2px #ccc;
-            box-shadow: none 1px 2px #ccc;
-          }
-                    
-          /* image hover css end */
-          /*  HOME PAGE CSS END */
-           
-          /*  SHOP PAGE CSS START */   
-           
-          .navbar-nav > li {
-            text-transform: uppercase;
-          }
-         
-         
-          .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus { 
-            background-color: transparent !important;
-            color : #FFC652 !important;
-          }
-         
-          ul.nav-stacked > li > a { 
-            color: black;
-          }
-         
-          ul.nav-stacked > li > a:hover { 
-            background: transparent;
-            color : #FFC652 !important;
-            transition: all 0.3s ease-in-out;
-          }
-         
-          .nav-pills > li {
-            padding: 14px 0px 0px 14px;
-          }
-       
-          .oe_product {
-            height: 450px !important;
-            border: none !important;
-          }
-                         
-          .product_view_button {
-            margin: 9px;
-            border-radius: 0px;
-            background: transparent;
-            border: 1px solid #47bac1;
-            color: black;
-            padding: 10px;
-          }
-         
-          .product_view_button:hover {
-            background: white;
-            border: 4px solid #47bac1;
-            color: transparent;
-          }
-         
-          /*  SHOP PAGE CSS END */  
-            
-          /* Single product page start */
-          .oe_price_h4 {
-            font-size: 24px !important;
-            margin-left: 5px !important;
-            font-family: monospace !important;
-          }
-     
-          .quantity{
-            font-weight: bold !important;
-            box-shadow: none !important;
-            /* width: 90px; */
-            height: 37px !important;
-          }
-               
-          .css_quantity{
-            margin-top: 50px;
-          }
-         
-          .js_add_cart_json {
-            background: transparent;
-            color: #FFC652;
-            border-radius:0px;
-          }
-
-          .js_add_cart_json:hover {
-            color:#000;
-            background: #FFC652;
-            transition: all 0.3s ease-in-out;
-          }
-          
-          #add_to_cart {
-            background: #FFC652;
-            color: #000;
-            border: none;
-            border-radius: 0px;
-            width: 162px;
-            margin-top: 17px !important;
-          }
-                
-          #add_to_cart:hover {
-            background: #EFA40A;
-            transition: all 0.3s ease-in-out;
-          }
-      
-          /* Single product page end */
-            
-          
-          /* Shopping cart page start */
-                
-          .box_border{
-            border: 4px solid #F0F0F0 !important;
-            margin-top: 80px !important;
-            margin-bottom: 80px !important;
-            padding: 30px;
-          }
-          
-          .table > thead > tr > th {
-             border-bottom : none !important;
-          }
-                     
-          .checkout_btn{
-            background: #FFC248;
-            border-radius: 0px;
-            border: 1px solid #e2a427;
-            color: black;
-            font-size: 16px;
-          }
-                
-          .checkout_btn:hover{
-            background: #F9A11B;
-            transition: all 0.3s ease-in-out;
-            border:1px solid #F9A11B;
-            color: black;
-          }
-                
-          .back_btn{
-            background: #ededed;
-            border-radius: 0px;
-            border: 1px solid #ededed;
-            color: black;
-            font-size: 16px;
-            width: 130px;
-          }
-                
-          .back_btn:hover{ 
-            background: #b7b5b5;
-            transition: all 0.3s ease-in-out;
-            border:1px solid #b7b5b5;
-            color: black;
-          }
-          
-          /* Shopping cart page end */
-          
-          /* Address start */
-            
-          .border_primary{
-            border-radius: 0px;
-            border: 2px solid #FFC44D;
-          }
-            
-          /* Address end */
-          
-          /* payment start */
-          
-          .panel-info > .panel-heading{
-            color: black !important;
-            background-color: #F0F0F0 !important;
-            border-color: #F0F0F0 !important;
-            font-size: 16px !important;
-          }
-            
-          .panel-info {
-            border-color: #FFC44D !important;
-          }
-             
-           /*.btn-primary {
-            color: black !important;
-            background-color: #FFC44D !important;
-            border-color: #FFC44D !important;
-          }
-          
-          .btn-primary:hover{
-            background: #F9A11B !important;
-            transition: all 0.3s ease-in-out !important;
-            border:1px solid #F9A11B !important;
-            color: black !important;
-          } 
-        
-          ul.wizard li.text-primary{
-            background: #FFC248;
-          }*/
-          
-          /* payment end */
-          
-        </style>
-        <!-- custome style sheet end-->
-        
         <div id="wrapwrap" t-att-class="pageName or ''" style="font-family: 'Lato', sans-serif;">
-          <header>
-              
-            <!-- topbar start-->
-            <div class="top-bar">
-              
-              <div class="container">
-                <div class="row">
-                  <!--<div class="col-md-6 hidden-sm hidden-xs">-->
-                  <!--  <ul class="list-inline">-->
-                  <!--    <li><a href="#"><i class="fa fa-twitter top-bar-icon"></i></a></li>-->
-                  <!--    <li><a href="#"><i class="fa fa-facebook top-bar-icon"></i></a></li>-->
-                  <!--    <li><a href="#"><i class="fa fa-dribbble top-bar-icon"></i></a></li>-->
-                  <!--    <li><a href="#"><i class="fa fa-vimeo top-bar-icon"></i></a></li>-->
-                  <!--    <li><a href="#"><i class="fa fa-tumblr top-bar-icon"></i></a></li>-->
-                  <!--  </ul>-->
-                  <!--</div>-->
-                  <div class="col-md-12 col-xs-12">
-                      <ul class="list-inline pull-right top-right">
-                          <li> <i class='fa fa-phone'></i> <span id='top_nav_phone'> 09660450451 </span> </li>
-                          <!--<li class="account-login">-->
-                          <!--    <span>-->
-                          <!--        <a id="login_button" style="text-decoration: none;" data-toggle="modal" href="/web/login">Log in</a>-->
-                          <!--    </span>-->
-                          <!--</li>-->
-                          <!--<li class="search-box" id="search_icon">-->
-                          <!--  <a href="#"><i class="fa fa-search"></i></a>-->
-                          <!--  <ul class="dropdown-menu dropdown-menu-right">-->
-                          <!--    <li>-->
-                          <!--      <form action="" method="get">-->
-
-                          <!--      </form>-->
-                          <!--    </li>-->
-                          <!--  </ul>-->
-                          <!--</li>-->
-                         <!--  <li class="dropdown cart-dropdown" id="product_cart">
-                              <a href="#" class="dropdown-toggle" style="text-decoration: none;" data-toggle="dropdown" aria-expanded="false">
-                                <i class="fa fa-shopping-cart"></i>
+            <header>
+                <!-- topbar start-->
+                <div class="top-bar">
+                    <div class="container">
+                        <div class="row">
+                            <!--<div class="col-md-6 hidden-sm hidden-xs">-->
+                            <!--  <ul class="list-inline">-->
+                            <!--    <li><a href="#"><i class="fa fa-twitter top-bar-icon"></i></a></li>-->
+                            <!--    <li><a href="#"><i class="fa fa-facebook top-bar-icon"></i></a></li>-->
+                            <!--    <li><a href="#"><i class="fa fa-dribbble top-bar-icon"></i></a></li>-->
+                            <!--    <li><a href="#"><i class="fa fa-vimeo top-bar-icon"></i></a></li>-->
+                            <!--    <li><a href="#"><i class="fa fa-tumblr top-bar-icon"></i></a></li>-->
+                            <!--  </ul>-->
+                            <!--</div>-->
+                            <div class="col-md-12 col-xs-12">
+                                <ul class="list-inline pull-right top-right">
+                                    <li style='color: #bdbdbd;'>
+                                        <i class='fa fa-phone'></i>
+                                        <span id='top_nav_phone'>09660450451 </span>
+                                    </li>
+                                    <!--<li class="account-login">-->
+                                    <!--    <span>-->
+                                    <!--        <a id="login_button" style="text-decoration: none;" data-toggle="modal" href="/web/login">Log in</a>-->
+                                    <!--    </span>-->
+                                    <!--</li>-->
+                                    <!--<li class="search-box" id="search_icon">-->
+                                    <!--  <a href="#"><i class="fa fa-search"></i></a>-->
+                                    <!--  <ul class="dropdown-menu dropdown-menu-right">-->
+                                    <!--    <li>-->
+                                    <!--      <form action="" method="get">-->
+                                    <!--      </form>-->
+                                    <!--    </li>-->
+                                    <!--  </ul>-->
+                                    <!--</li>-->
+                                    <!--  <li class="dropdown cart-dropdown" id="product_cart"><a href="#" class="dropdown-toggle" style="text-decoration: none;" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-shopping-cart"></i>
                                 7
-                              </a>
-                              <ul class="dropdown-menu dropdown-menu-right">
-                                <li class="cart-items">Item(s) in your cart</li>
-                                <li class="cart-item">
-                                  <a href="/shop/product/nike-sportswear-38">
-                                    <div class="media">
-                                      <div class="media-left media-object"></div>
-                                      <div class="media-body">
-                                        <div class="product-name">Nike Sportswear</div>
-                                        <div class="product-price">
+                              </a><ul class="dropdown-menu dropdown-menu-right"><li class="cart-items">Item(s) in your cart</li><li class="cart-item"><a href="/shop/product/nike-sportswear-38"><div class="media"><div class="media-left media-object"></div><div class="media-body"><div class="product-name">Nike Sportswear</div><div class="product-price">
                                           5 x
-                                          <span style="white-space: nowrap;">$ <span class="oe_currency_value">179.10</span></span>
-                                          
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </a>
-                                </li><li class="cart-item">
-                                  <a href="/shop/product/sun-buddies-41">
-                                    <div class="media">
-                                        <div class="media-left media-object"></div>
-                                      <div class="media-body">
-                                        <div class="product-name">Sun Buddies</div>
-                                        <div class="product-price">
+                                          <span style="white-space: nowrap;">$ <span class="oe_currency_value">179.10</span></span></div></div></div></a></li><li class="cart-item"><a href="/shop/product/sun-buddies-41"><div class="media"><div class="media-left media-object"></div><div class="media-body"><div class="product-name">Sun Buddies</div><div class="product-price">
                                           2 x
-                                          <span style="white-space: nowrap;">$ <span class="oe_currency_value">134.10</span></span>
-                                          
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </a>
+                                          <span style="white-space: nowrap;">$ <span class="oe_currency_value">134.10</span></span></div></div></div></a></li><li class="cart-total"><div id="cart_total" class="col-xs-12"><div class="row" id="order_total_untaxed"><span class="col-xs-6 text-right text-muted">Subtotal:</span><span class="col-xs-6 text-left text-muted"><span style="white-space: nowrap;">$ <span class="oe_currency_value">1,163.70</span></span></span></div><div class="row" id="order_total_taxes"><span class="col-xs-6 text-right text-muted" title="Taxes may be updated after providing shipping address"> Taxes:</span><span class="col-xs-6 text-left text-muted"><span style="white-space: nowrap;">$ <span class="oe_currency_value">174.56</span></span></span></div><div class="row" id="order_total"><span class="col-xs-6 text-right h4">Total:</span><span class="col-xs-6 text-left h4" style="white-space: nowrap;"><span style="white-space: nowrap;">$ <span class="oe_currency_value">1,338.26</span></span></span></div></div></li><li class="cart-buttons"><div class="btn-group" role="group" aria-label="..."><a class="btn btn-default" href="/shop/cart">Shopping Cart</a><a class="btn btn-default" href="/shop/checkout">Checkout</a></div></li></ul></li> -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- topbar end-->
+                <!-- main navbar start -->
+                <div class="navbar navbar-default navbar-static-top" id="main_nav">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-top-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"/>
+                                <span class="icon-bar"/>
+                                <span class="icon-bar"/>
+                            </button>
+                            <a class="navbar-brand" href="/" t-if="website" t-field="website.name">My Website</a>
+                        </div>
+                        <div class="collapse navbar-collapse navbar-top-collapse">
+                            <ul class="nav navbar-nav navbar-right" id="top_menu">
+                                <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                                    <t t-call="website.submenu"/></t>
+                                <li class="divider" t-ignore="true" t-if="website.user_id != user_id"/>
+                                <li class="dropdown" t-ignore="true" t-if="website.user_id != user_id">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        <b>
+                                            <span t-esc="(len(user_id.name)&gt;25) and (user_id.name[:23]+'...') or user_id.name"/>
+                                            <span class="caret"/>
+                                        </b>
+                                    </a>
+                                    <ul class="dropdown-menu js_usermenu" role="menu">
+                                        <li id="o_logout">
+                                            <a t-attf-href="/web/session/logout?redirect=/" role="menuitem">Logout</a>
+                                        </li>
+                                    </ul>
                                 </li>
-                                <li class="cart-total">
-                                  
-                                  <div id="cart_total" class="col-xs-12">
-                                      <div class="row" id="order_total_untaxed">
-                                          <span class="col-xs-6 text-right text-muted">Subtotal:</span>
-                                          <span class="col-xs-6 text-left text-muted">
-                                              <span style="white-space: nowrap;">$ <span class="oe_currency_value">1,163.70</span></span>
-                                          </span>
-                                      </div>
-                                      <div class="row" id="order_total_taxes">
-                                          <span class="col-xs-6 text-right text-muted" title="Taxes may be updated after providing shipping address"> Taxes:</span>
-                                          <span class="col-xs-6 text-left text-muted">
-                                              <span style="white-space: nowrap;">$ <span class="oe_currency_value">174.56</span></span>
-                                          </span>
-                                      </div>
-                                      <div class="row" id="order_total">
-                                          <span class="col-xs-6 text-right h4">Total:</span>
-                                          <span class="col-xs-6 text-left h4" style="white-space: nowrap;">
-                                              <span style="white-space: nowrap;">$ <span class="oe_currency_value">1,338.26</span></span>
-                                          </span>
-                                      </div>
-                                  </div>
-                              
-                                </li>
-                                <li class="cart-buttons">
-                                  <div class="btn-group" role="group" aria-label="...">
-                                    <a class="btn btn-default" href="/shop/cart">Shopping Cart</a>
-                                    <a class="btn btn-default" href="/shop/checkout">Checkout</a>
-                                  </div>
-                                </li>
-                              
                             </ul>
-                          </li> -->
-                      </ul>
-                  </div>
+                        </div>
+                    </div>
                 </div>
-              </div>  
-            </div>
-            <!-- topbar end-->
-                             
-            <!-- main navbar start -->
-            <div class="navbar navbar-default navbar-static-top" id="main_nav">
-              <div class="container">
-                <div class="navbar-header">
-                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-top-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"/>
-                    <span class="icon-bar"/>
-                    <span class="icon-bar"/>
-                  </button>
-                  <a class="navbar-brand" href="/" t-if="website" t-field="website.name">My Website</a>
-                </div>
-                <div class="collapse navbar-collapse navbar-top-collapse">
-                  <ul class="nav navbar-nav navbar-right" id="top_menu">
-                    <t t-foreach="website.menu_id.child_id" t-as="submenu">
-                        <t t-call="website.submenu"/>
-                    </t>
-                    <li class="divider" t-ignore="true" t-if="website.user_id != user_id"/>
-                    <li class="dropdown" t-ignore="true" t-if="website.user_id != user_id">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <b>
-                          <span t-esc="(len(user_id.name)&gt;25) and (user_id.name[:23]+'...') or user_id.name"/>
-                          <span class="caret"/>
-                        </b>
-                      </a>
-                      <ul class="dropdown-menu js_usermenu" role="menu">
-                        <li id="o_logout"><a t-attf-href="/web/session/logout?redirect=/" role="menuitem">Logout</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <!-- main navbar end -->
-          </header>
-
-          <main>
-            <t t-raw="0"/>
-          </main>
-
-          <footer style="font-family: 'Oxygen', sans-serif;">
-            <div id="footer">
-            </div>
-          </footer>
+                <!-- main navbar end -->
+            </header>
+            <main>
+                <t t-raw="0"/>
+            </main>
+            <footer style="font-family: 'Oxygen', sans-serif;">
+                <div id="footer"></div>
+            </footer>
         </div>
-        
         <script id="tracking_code" t-if="website and website.google_analytics_key and not editable">
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
             })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-            ga('create', _.str.trim('<t t-esc="website.google_analytics_key"/>'), 'auto');
+            ga('create', _.str.trim('
+            <t t-esc="website.google_analytics_key"/>'), 'auto');
             ga('send','pageview');
+        
         </script>
     </t>
 </t>

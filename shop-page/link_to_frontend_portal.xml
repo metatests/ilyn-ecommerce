@@ -1,7 +1,0 @@
-<?xml version="1.0"?>
-<data name="Link to frontend portal" inherit_id="website.layout">
-    <xpath expr="//li[@id='o_logout']" position="before">
-        <li><a href="/my/home" role="menuitem">My Account</a></li>
-    </xpath>
-</data>
-

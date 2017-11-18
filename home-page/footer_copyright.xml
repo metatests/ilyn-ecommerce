@@ -3,17 +3,20 @@
     <xpath expr="//footer" position="inside">
       <style>
         .dark_footer{
-          background: #252525;
+          background: #101010;
+        }
+        .footer_line{
+            border-top: 1px solid #474747;padding-top: 15px;padding-right:15px; padding-left:15px;
         }
       </style>       
       <div class='dark_footer'>
-        <div class="container">
-            <div style='border-top: 1px solid #474747;padding-top: 15px;padding-right:15px; padding-left:15px;'></div>
+        <div class="container ">
+            <!--<div class='footer_line'></div>-->
             <!--<div class="pull-right" t-ignore="true" t-if="not editable">-->
             <!--  Powered by <a class="label label-danger" href="http://www.odoo.com/page/website-builder">Odoo</a>,-->
             <!--  the #1 <a href="http://www.odoo.com/page/e-commerce">Open Source eCommerce</a>.-->
             <!--</div>-->
-            <div class="pull-left text-muted" style='padding-bottom: 15px;'>
+            <div class="pull-left text-muted" style='padding-bottom: 15px;padding-top:15px;'>
                 Copyright &amp;copy; <span t-field="res_company.name">Company name</span>
             </div>
         </div>

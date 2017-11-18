@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<t name="Shopping Cart" t-name="website_sale.cart">
+    <t t-call="website.layout">
+        <div id="wrap" style="font-family: 'Oxygen', sans-serif">
+            <style>
+                .first_row_acp{
+                    background-color: #f0f0f0;
+                    width: 100%;
+                }
+                ol.breadcrumb{
+                    background-color: transparent;
+                    padding-top: 25px;
+                    margin-bottom: 0;
+                    padding-right:0;
+                }
+                ol.breadcrumb li a, ol.breadcrumb li span{
+                    font-size: 12px;
+                    color: #656565;
+                    text-transform: uppercase;
+                }
+                .sec_row_acp{
+                    padding: 30px;
+                    border: 5px solid #f0f0f0;
+                }
+            </style>
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12 first_row_acp">
+                <div class='container'>
+                    <div class='col-sm-6 col-lg-6 padleft_zero'>
+                        <h2 class="mb16 text-uppercase">Cart</h2>
+                    </div>
+                    <div class="col-sm-6 col-lg-6 padright_zero">
+                        <ol class="breadcrumb pull-right">
+                            <li>
+                                <a href="/">Home</a>
+                            </li>
+                            <li>
+                                <a href="/shop">Shop</a>
+                            </li>
+                            <li class="active">
+                                <span>Cart</span>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12 mt64">
+                <div class="container oe_website_sale ">
+                    <div class='sec_row_acp '>
+                        <t t-call="website_sale.wizard_checkout">
+                            <t t-set="step" t-value="10"/>
+                        </t>
+                        <div class="row ">
+                            <div class="col-md-12 col-sm-12 oe_cart mt64">
+                                <t t-call="website_sale.cart_lines"/>
+                                <div class="clearfix"/>
+                                    <a t-if="not optional_products and website_sale_order and website_sale_order.website_order_line" class="btn btn-primary pull-right mb32" href="/shop/checkout">
+                                        <span class="hidden-xs">Process Checkout</span>
+                                        <span class="visible-xs-inline">Checkout</span>
+                                        <span class="fa fa-long-arrow-right"/>
+                                    </a>
+                                    <div class="oe_structure"/>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="oe_structure"/></div>
+    </t>
+</t>
+
+    
