@@ -16,6 +16,16 @@
                 background: white;
                 color:#c1b497;
                 padding:15px;
+                -webkit-transition: all 0.3s ease-in-out;
+                -moz-transition: all 0.3s ease-in-out;
+                -ms-transition: all 0.3s ease-in-out;
+                -o-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+            }
+            .input_qty_btn_spv:hover{
+                background: #c1b497;
+                color: white;
+                
             }
             .oe_website_sale ul ul {
                 margin-left: 0;

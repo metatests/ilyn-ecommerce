@@ -48,6 +48,23 @@
             .table{
                 margin-bottom: 0;
             }
+            .atcp1_qty_btn{
+                background: white;
+                color: #c1b497;
+                -webkit-transition: all 0.3s ease-in-out;
+                    -moz-transition: all 0.3s ease-in-out;
+                    -ms-transition: all 0.3s ease-in-out;
+                    -o-transition: all 0.3s ease-in-out;
+                    transition: all 0.3s ease-in-out;
+            }
+            .atcp1_qty_btn{
+                background: white;
+                color: #c1b497;
+            }
+            .atcp1_qty_btn:hover{
+                background: #c1b497;
+                color: white;
+            }
 
         </style>
     <div t-if="not website_sale_order or not website_sale_order.website_order_line" class="js_cart_lines well well-lg">
@@ -147,11 +164,11 @@
                             </td>
                             <td class="text-center col-sm-2" id="td-qty">
                                 <div class="input-group oe_website_spinner mt16">
-                                    <a t-attf-href="#" class="mb8 input-group-addon js_add_cart_json" data-no-instant="">
+                                    <a t-attf-href="#" class="mb8 input-group-addon js_add_cart_json atcp1_qty_btn" data-no-instant="">
                                         <i class="fa fa-minus"/>
                                     </a>
                                     <input type="text" class="js_quantity form-control quantity" t-att-data-line-id="line.id" t-att-data-product-id="line.product_id.id" t-att-value="int(line.product_uom_qty)"/>
-                                    <a t-attf-href="#" class="mb8 input-group-addon float_left js_add_cart_json" data-no-instant="">
+                                    <a t-attf-href="#" class="mb8 input-group-addon float_left js_add_cart_json atcp1_qty_btn" data-no-instant="">
                                         <i class="fa fa-plus"/>
                                     </a>
                                 </div>

@@ -24,7 +24,7 @@
                 text-transform: uppercase;
             }
             #product_details{
-                padding-left: 36px;
+                /*padding-left: 36px;*/
             }
             .product_desc_pt_spv{
                 line-height: 24px;
@@ -39,6 +39,14 @@
                 text-transform: uppercase;
                 padding:10px 24px;
                 border-radius: 0;
+                -webkit-transition: all 0.3s ease-in-out;
+                -moz-transition: all 0.3s ease-in-out;
+                -ms-transition: all 0.3s ease-in-out;
+                -o-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+            }
+            #add_to_cart:hover{
+                background: #cdc3ab;
             }
         </style>
         <div style="font-family: 'Oxygen', sans-serif;">
@@ -124,24 +132,26 @@
                                 </div>
                             </t>
                         </div>
-                        <div class="col-sm-6 col-md-6 col-lg-6 " id="product_details">
+                        
+                        <div class="col-sm-6 col-md-6 col-lg-6 col-md-offset-1 " id="product_details">
                             <h2 itemprop="name" t-field="product.name" class='product_name_heading_spv'>Product Name</h2>
                             <span itemprop="url" style="display:none;" t-esc="'/shop/product/%s' % slug(product)"/>
                             <t t-set="attribute_value_ids" t-value="get_attribute_value_ids(product)"/>
                             <form action="/shop/cart/update" class="js_add_cart_variants" t-att-data-attribute_value_ids="attribute_value_ids" method="POST">
                                 <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
                                 <div class="js_product" t-if="product.product_variant_ids">
-                                    <hr/>
-                                    <t t-placeholder="select">
-                                        <input type="hidden" class="product_id" name="product_id" t-att-value="product.product_variant_id.id if len(product.product_variant_ids) == 1 else '0'"/>
-                                        <t t-call="website_sale.variants">
-                                            <t t-set="ul_class" t-value="'nav-stacked'"/></t>
-                                    </t>
                                     
                                     <hr t-if="product.description_sale"/>
                                     <div>
                                         <p t-field="product.description_sale" class="product_desc_pt_spv mt32 mb32"/>
                                     </div>
+                                    <hr/>
+                                    
+                                    <t t-placeholder="select">
+                                        <input type="hidden" class="product_id" name="product_id" t-att-value="product.product_variant_id.id if len(product.product_variant_ids) == 1 else '0'"/>
+                                        <t t-call="website_sale.variants">
+                                            <t t-set="ul_class" t-value="'nav-stacked'"/></t>
+                                    </t>
                                     <hr/>
                                     
                                     <div class='col-sm-12 pad_lrz'>
@@ -169,9 +179,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class='col-md-12 col-lg-12 col-xs-12'>
-                        <h5> SIZE CHART</h5>
-                        <table class='table table-stripped table-hover'>
+                    
+                    <div class='col-md-12 col-lg-12 col-xs-12 mt64 mb64'>
+                        <h3 class='mb32'> SIZE CHART</h3>
+                        <table class='table table-stripped table-hover '>
                             <thead>
                                 <tr>
                                     <th> Code</th>
