@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<t name="Kanban address" t-name="website_sale.address_kanban">
+        
+        <style>
+            .border_primary{
+                border-radius:0;
+                border-color: #c1b497;
+            }
+        </style>
+        
+            <form action="/shop/checkout" method="POST" class="hide">
+                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                <input type="hidden" name="partner_id" t-att-value="contact.id"/>
+                <t t-if="edit_billing">
+                    <input type="hidden" name="callback" value="/shop/checkout?use_billing"/>
+                </t>
+                <input type="submit"/>
+            </form>
+            <a class="btn btn-link pull-right fa fa-edit js_edit_address no-decoration" style='color: #c1b497' title="Edit this address"/>
+            
+            <div t-att-class="'panel panel-default %s' % (selected and 'border_primary' or 'js_change_shipping')">
+                <div class="panel-body" style="min-height: 130px;">
+                    <t t-esc="contact" t-options="dict(widget='contact', fields=['name', 'address', 'phone'], no_marker=True)"/>
+                </div>
+                <div class="panel-footer" t-if="not readonly">
+                    <span class="btn-ship" t-att-style="'' if selected else 'display:none;'">
+                        <a class="btn btn-block btn-primary">
+                            <i class="fa fa-check"/> Ship to this address
+                        </a>
+                    </span>
+                    <span class="btn-ship" t-att-style="'' if not selected else 'display:none;'">
+                        <a class="btn btn-block btn-default">
+                            Select this address
+                        </a>
+                    </span>
+                </div>
+            </div>
+    </t>
+
+    

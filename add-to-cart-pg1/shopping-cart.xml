@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <t name="Shopping Cart" t-name="website_sale.cart">
     <t t-call="website.layout">
+        
         <div id="wrap" style="font-family: 'Oxygen', sans-serif">
             <style>
                 .first_row_acp{
@@ -27,10 +28,10 @@
                     padding: 20px;
                 }
                 .act_btn{
-                    padding: 15px 30px;
+                    padding: 15px 35px;
                     border-radius: 0;
                     text-transform: uppercase;
-                    font-size: 15px;
+                    font-size: 14px;
                     line-height: 1.3333333;
                     font-weight: bold;
                     font-family: Lato;
@@ -43,7 +44,7 @@
                 .btn_back_atcp{
                     color: #252525;
                     background: #dedede;
-                    width: 136px;
+                    min-width: 136px;
                     
                 }
                 .btn_back_atcp:hover{
@@ -58,11 +59,16 @@
                     background: #cdc3ab;
                     color: white;
                 }
+                .breadcrumb_heading_acp{
+                    color: #797979;
+                    font-weight: 400;
+                    font-size:30px;
+                }
             </style>
             <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12 first_row_acp">
                 <div class='container'>
                     <div class='col-sm-6 col-lg-6 padleft_zero'>
-                        <h2 class="mb16 text-uppercase">Cart</h2>
+                        <h2 class="mb16 text-uppercase breadcrumb_heading_acp">Cart</h2>
                     </div>
                     <div class="col-sm-6 col-lg-6 padright_zero">
                         <ol class="breadcrumb pull-right">
