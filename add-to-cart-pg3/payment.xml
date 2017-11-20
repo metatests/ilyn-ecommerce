@@ -55,9 +55,6 @@
                 .table{
                    margin-bottom: 0;
                 }
-                .panel-body ul li label{
-                    font-size: 12px;
-                }
                 .thrd_row_acp3{
                     background: #f5f5f5;
                     padding: 20px;
@@ -76,11 +73,8 @@
                     border:none;
                     font-weight: bold;
                 }
-                .oe_sale_acquirer_button form button span span{
-                    display: none;
-                }
                 
-                .oe_sale_acquirer_button form button:hover{
+                .oe_sale_acquirer_button form button:hover, .oe_sale_acquirer_button form button:active {
                     background: #cdc3ab;
                     color: white;
                 }
@@ -89,7 +83,6 @@
                     color: #252525;
                     font-size: 12px;
                 }
-                
                 .actp3_btn{
                     padding: 15px 35px;
                     border-radius: 0;
@@ -112,7 +105,7 @@
                 .btn_back_atcp3:hover{
                     background: #c1b497;
                     color: white;
-                }    
+                }
 
             </style>
         <div id="wrap" style="font-family: 'Oxygen', sans-serif">
@@ -136,7 +129,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12 mt32 mb32">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12 mt64 mb64">
                 <div class="container oe_website_sale">
                     <div class='sec_row_acp3 '>
                         <t t-call="website_sale.wizard_checkout">
@@ -152,7 +145,7 @@
                                     </div>
                                 </t>
                             </div>
-                            <div class="col-lg-12 col-sm-12 mt32 mb32" id="right_column">
+                            <div class="col-lg-12 col-sm-12 mt64 mb64" id="right_column">
                                 <t t-call="website_sale.bill_to">
                                     <t t-set="order" t-value="order"/></t>
                             </div>
@@ -171,11 +164,14 @@
                                         <tbody>
                                             <tr t-foreach="website_sale_order.website_order_line" t-as="line" class='actp3_prod_tr_border'>
                                                 <td colspan="2" t-if="not line.product_id.product_tmpl_id"/>
+                                                
                                                 <td class='col-sm-2' align='center' t-if="line.product_id.product_tmpl_id">
                                                     <a class='actp3_prod_name' t-attf-href="/shop/product/#{ slug(line.product_id.product_tmpl_id) }">
                                                         <span t-field="line.product_id.image_small" t-options="{'widget': 'image'}"/>
                                                     </a>
                                                 </td>
+                                                
+                                                
                                                 <td class='col-sm-4' t-if="line.product_id.product_tmpl_id" style='padding-left:18px'>
                                                     <div class='mt24'>
                                                         <strong t-field="line.product_id.with_context(display_default_code=False).display_name"/>
@@ -189,130 +185,129 @@
                                                     <!--    </t>-->
                                                     <!--</div>-->
                                                 </td>
+                                                
                                                 <td class="text-center">
                                                     <div class='mt24'>
                                                         <span t-field="line.price_unit" style="white-space: nowrap;" t-options="{'widget': 'monetary','from_currency': website_sale_order.pricelist_id.currency_id,'display_currency': website.currency_id}"/>
                                                     </div>
                                                 </td>
+                                                
                                                 <td class="text-center col-sm-2" id="td-qty" style='padding: 12px 0;'>
                                                     <div class='mt24' t-esc="line.product_uom_qty"/>
                                                 </td>
-                                                <td class="text-center col-sm-2" style='padding: 12px 0;'>
-                                                    <div class='mt24'>
-                                                        <span t-field='line.price_total'></span>
-                                                    </div>
-                                                </td>
+                                                
+                                                
                                             </tr>
                                         </tbody>
                                     </table>
-                                    <div class="col-sm-12 actp3_prod_tr_border mb32" style='padding:20px 0 0 0;'>
-                                        <t t-call="website_sale.total">
-                                            <!--<t t-set="extra_class" t-value="&quot;col-sm-4 col-sm-offset-8 col-xs-12&quot;"/>--></t>
-                                    </div>
+                                </div>
+                                <div>
+                                    <t t-call="website_sale.total">
+                                        <!--<t t-set="extra_class" t-value="&quot;col-sm-4 col-sm-offset-8 col-xs-12&quot;"/>-->
+                                    </t>
                                 </div>
                                 <div class="clearfix"/>
                                 <div class="oe_structure"/>
-                                <div class="js_payment mb64" t-if="acquirers and website_sale_order.amount_total" id="payment_method">
+                                <div class="js_payment mb64 row" t-if="acquirers and website_sale_order.amount_total" id="payment_method">
+                                    
                                     <div class="col-lg-6 col-sm-6">
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
                                                 <h4 class='panel-title'> Payment Method </h4>
                                             </div>
                                             <div class="panel-body">
-                                                <ul class="list-unstyled">
-                                                    <t t-foreach="acquirers or []" t-as="acquirer">
-                                                        <li>
-                                                            <label t-if="acquirer.button">
-                                                                <input t-att-value="acquirer.id" type="radio" name="acquirer" t-att-checked="acquirers[0] == acquirer"/>
-                                                                <span t-field="acquirer.image_small" t-att-title="acquirer.name" t-field-options="{&quot;widget&quot;: &quot;image&quot;, &quot;style&quot;:&quot;max-width: 60px; display: inline-block&quot;}"/>
-                                                                <span t-field="acquirer.name"/>
-                                                                <span t-if="acquirer.fees_active">(processing fees apply)</span>
-                                                            </label>
-                                                        </li>
-                                                    </t>
-                                                    <li t-if="tokens">
-                                                        <label>
-                                                            <input type="radio" name="acquirer"/>
-                                                            <span class="fa fa-2x fa-credit-card"/>
+                                        <ul class="list-unstyled">
+                                            <t t-foreach="acquirers or []" t-as="acquirer">
+                                                <li>
+                                                    <label t-if="acquirer.button">
+                                                        <input t-att-value="acquirer.id" type="radio" name="acquirer" t-att-checked="acquirers[0] == acquirer"/>
+                                                        <span t-field="acquirer.image_small" t-att-title="acquirer.name" t-field-options="{&quot;widget&quot;: &quot;image&quot;, &quot;style&quot;:&quot;max-width: 60px; display: inline-block&quot;}"/>
+                                                        <span t-field="acquirer.name"/>
+                                                        <span t-if="acquirer.fees_active">(processing fees apply)</span>
+                                                    </label>
+                                                </li>
+                                            </t>
+                                            <li t-if="tokens">
+                                                <label>
+                                                    <input type="radio" name="acquirer"/>
+                                                    <span class="fa fa-2x fa-credit-card"/>
                                                 Saved Cards
                                             
                                                 
                                                 
-                                                
-                                                        </label>
-                                                        <div class="list-group">
-                                                            <t t-foreach="tokens" t-as="token">
-                                                                <a class="list-group-item btn_payment_token" t-att-data-acquirer="token.acquirer_id.id" t-att-data-token="token.id">
-                                                                    <span class="js_radio fa fa-circle-o"/>&amp;nbsp;
+                                                </label>
+                                                <div class="list-group">
+                                                    <t t-foreach="tokens" t-as="token">
+                                                        <a class="list-group-item btn_payment_token" t-att-data-acquirer="token.acquirer_id.id" t-att-data-token="token.id">
+                                                            <span class="js_radio fa fa-circle-o"/>&amp;nbsp;
                                                         
                                                             
                                                             
-                                                            
-                                                                    <t t-esc="token.name"/>
-                                                                    <t t-if="len(set(tokens.mapped('acquirer_id')))&gt;1">
+                                                            <t t-esc="token.name"/>
+                                                            <t t-if="len(set(tokens.mapped('acquirer_id')))&gt;1">
                                                             (
                                                                 
                                                                 
-                                                                
-                                                                        <t t-esc="token.acquirer_id.name"/>)
+                                                                <t t-esc="token.acquirer_id.name"/>)
                                                         </t>
-                                                                    <span t-if="token.acquirer_id.fees_active">(processing fees apply)</span>
-                                                                </a>
-                                                            </t>
-                                                        </div>
-                                                    </li>
-                                                </ul>
+                                                            <span t-if="token.acquirer_id.fees_active">(processing fees apply)</span>
+                                                        </a>
+                                                    </t>
+                                                </div>
+                                            </li>
+                                        </ul>
                                             </div>
-                                        </div>
-                                    
+                                        </div>                                    
                                     </div>
                                     
                                     
-                                </div>
-                                
-                                <div class='col-sm-12'>
+                                    <div class='col-sm-12'>
                                     <div class='col-sm-12 thrd_row_acp3 mt32 mb32'>
                                         <div class="col-lg-6 col-sm-6">
                                             <a href="/shop/checkout" class="btn actp3_btn btn_back_atcp3"> Back </a>
                                         </div>
-                                        
-                                        <div class="col-lg-6 col-sm-6 text-right">
-                                            <t t-foreach="acquirers or []" t-as="acquirer" id="acquirers_list">
-                                                <div t-att-data-id="acquirer.id" class="oe_sale_acquirer_button pull-right">
-                                                    <div t-raw="acquirer.button"/>
-                                                    <div class="token_hide">
-                                                        <div t-if="acquirer.save_token == 'ask'">
-                                                            <input type="checkbox" name="odoo_save_token"/>
-                                                            <label for="odoo_save_token">Save my payment data</label>
-                                                        </div>
-                                                        <div class="pre_msg" t-field="acquirer.pre_msg"/></div>
-                                                </div>
-                                            </t>
-                                        </div>
-                                        
-                                        <div class="js_payment" t-if="not website_sale_order.amount_total" id="payment_method">
-                                            <div class="col-sm-12">
-                                                <form target="_self" action="/shop/payment/validate" method="post" class="pull-right">
-                                                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
-                                                    <a class="btn btn-warning a-submit">
-                                                        <span t-if="order.amount_total &gt; 0">Pay Now 
-                                                            
-                                                            
-                                                            
-                                                            <span class="fa fa-long-arrow-right"/></span>
-                                                        <span t-if="order.amount_total == 0">Confirm Order 
-                                                            
-                                                            
-                                                            
-                                                            <span class="fa fa-long-arrow-right"/></span>
-                                                    </a>
-                                                </form>
+                                    
+                                    <div class="col-lg-6 col-sm-6 text-right">
+                                        <t t-foreach="acquirers or []" t-as="acquirer" id="acquirers_list">
+                                            <div t-att-data-id="acquirer.id" class="oe_sale_acquirer_button hidden pull-right">
+                                                <div t-raw="acquirer.button"/>
+                                                <div class="token_hide">
+                                                    <div t-if="acquirer.save_token == 'ask'">
+                                                        <input type="checkbox" name="odoo_save_token"/>
+                                                        <label for="odoo_save_token">Save my payment data</label>
+                                                    </div>
+                                                    <div class="pre_msg" t-field="acquirer.pre_msg"/></div>
                                             </div>
-                                        </div>
+                                        </t>
+                                    </div>
+                                    
+                                    </div>
+                                    </div>
+                                    
+                                    
+                                    
+                                    
+                                    
+                                </div>
+                                <div class="js_payment mb64 row" t-if="not website_sale_order.amount_total" id="payment_method">
+                                    <div class="col-sm-12">
+                                        <form target="_self" action="/shop/payment/validate" method="post" class="pull-right">
+                                            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                            <a class="btn btn-primary a-submit">
+                                                <span t-if="order.amount_total &gt; 0">Pay Now 
+                                                    
+                                                    
+                                                    <span class="fa fa-long-arrow-right"/></span>
+                                                <span t-if="order.amount_total == 0">Confirm Order 
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    </span>
+                                            </a>
+                                        </form>
                                     </div>
                                 </div>
-                                
-                                
                             </div>
                         </div>
                     </div>
