@@ -2,10 +2,45 @@
 <t name="Kanban address" t-name="website_sale.address_kanban">
         
         <style>
-            .border_primary{
+            .panel{
                 border-radius:0;
-                border-color: #c1b497;
+                border: 3px solid #f0f0f0;
             }
+            .panel-body address{
+                line-height: 30px;
+                font-size: 13px;
+                color: #252525;
+            }
+            .anim-btn{
+                padding:10px;
+                border-radius: 0;
+                text-decoration:none;
+                color:white;
+                font-sie: 12px;
+                text-transform: uppercase;
+                -webkit-transition: all 0.3s ease-in-out;
+                -moz-transition: all 0.3s ease-in-out;
+                -ms-transition: all 0.3s ease-in-out;
+                -o-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+            }
+            .btn-golden{
+                background: #c1b497;
+            }
+            .btn-golden:hover{
+                background: #9a9078;
+                color: white;
+            }
+            .btn-def-hov-gl{
+                background: #d4d4d4;
+                color: #252525;
+            }    
+            .btn-def-hov-gl:hover{
+                background: #c1b497;
+                color: white;
+            }
+                
+            
         </style>
         
             <form action="/shop/checkout" method="POST" class="hide">
@@ -24,12 +59,12 @@
                 </div>
                 <div class="panel-footer" t-if="not readonly">
                     <span class="btn-ship" t-att-style="'' if selected else 'display:none;'">
-                        <a class="btn btn-block btn-primary">
+                        <a class="btn btn-block anim-btn btn-golden">
                             <i class="fa fa-check"/> Ship to this address
                         </a>
                     </span>
                     <span class="btn-ship" t-att-style="'' if not selected else 'display:none;'">
-                        <a class="btn btn-block btn-default">
+                        <a class="btn btn-block anim-btn btn-def-hov-gl">
                             Select this address
                         </a>
                     </span>

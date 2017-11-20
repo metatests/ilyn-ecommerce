@@ -10,6 +10,7 @@
                 color: #252525;
                 font-size:16px;
                 font-weight: bold;
+                padding-bottom:12px;
             }
             .sec_row_acp2_addc{
                 padding: 30px;
@@ -35,9 +36,68 @@
                 font-weight: 400;
                 font-size:30px;
             }
+            .one_kanban{
+                border-radius:0;
+                color: c1b497;
+                border-color: #c1b497;
+            }
+            .acp2_add_address_btn{
+                background: white;
+                border-radius:0;
+                color: #252525;
+                padding: 15px 30px;
+                -webkit-transition: all 0.3s ease-in-out;
+                -moz-transition: all 0.3s ease-in-out;
+                -ms-transition: all 0.3s ease-in-out;
+                -o-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+                border: 2px solid #dedede;
+                font-size: 14px;
+                line-height: 1.5;
+                text-transform: uppercase;
+            }
+            .acp2_add_address_btn:hover{
+                background: #c1b497;
+                color: white;
+            }
+            .thrd_row_acp2_chktpg{
+                background: #f5f5f5;
+                padding: 20px;
+            }
+            .actp2chpg_btn{
+                padding: 15px 35px;
+                border-radius: 0;
+                text-transform: uppercase;
+                font-size: 14px;
+                line-height: 1.3333333;
+                font-weight: bold;
+                font-family: Lato;
+                -webkit-transition: all 0.3s ease-in-out;
+                -moz-transition: all 0.3s ease-in-out;
+                -ms-transition: all 0.3s ease-in-out;
+                -o-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+            }
+            .btn_back_atcp2_cht{
+                color: #252525;
+                background: #dedede;
+                min-width: 136px;
+            }
+            .btn_back_atcp2_cht:hover{
+                background: #c1b497;
+                color: white;
+            }
+            .btn_cnf_atcp2cht{
+                background: #c1b497;
+                color: white;
+            }
+            .btn_cnf_atcp2cht:hover{
+                background: #cdc3ab;
+                color: white;
+            }
         </style>
         <div id="wrap">
-            <div style='font-family: "Oxygen";'>
+            <div style='font-family: "Oxygen", sans-serif;'>
                 <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12 mb32 first_row_acp2_addc">
                     <div class='container'>
                         <div class='col-sm-6 col-lg-6 padleft_zero'>
@@ -68,7 +128,7 @@
                                 <div class="col-md-12 oe_cart" id='oe_cart_div'>
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <h4 class="page-header actp2_add_h mt16">Billing Address</h4>
+                                            <h4 class="page-header actp2_add_h mt16 mb32">Billing Address</h4>
                                         </div>
                                         <div class="col-md-6 one_kanban">
                                             <t t-call="website_sale.address_kanban">
@@ -85,16 +145,18 @@
                                         </div>
                                         <div class="row all_shipping">
                                             <div class="col-md-12">
-                                                <div class="row mt8">
-                                                    <div class="col-sm-12 col-md-12 one_kanban">
-                                                        <form action="/shop/address" method="post" class="">
-                                                            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
-                                                            <a class="a-submit btn btn-default mb16 btn-block">
-                                                                <i class="fa fa-plus-square" aria-hidden="true"/> Add an address
-                                                        
-                                                        
-                                                            </a>
-                                                        </form>
+                                                <div class="row">
+                                                    <div class='col-sm-12' style='padding:0'>
+                                                        <div class="col-sm-4 col-md-4 mt16 mb16 one_kanban">
+                                                            <form action="/shop/address" method="post" class="">
+                                                                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                                                <a class="a-submit acp2_add_address_btn btn mb16 btn-block">
+                                                                    <i class="fa fa-plus" aria-hidden="true" style='padding-right:3px' /> Add an Address
+                                                            
+                                                            
+                                                                </a>
+                                                            </form>
+                                                        </div>
                                                     </div>
                                                     <t t-foreach="shippings" t-as="ship">
                                                         <div class="col-sm-12 col-md-6 one_kanban">
@@ -104,28 +166,29 @@
                                                                 <t t-set="readonly" t-value="bool(len(shippings)==1)"/>
                                                                 <t t-set="edit_billing" t-value="bool(ship==order.partner_id)"/></t>
                                                         </div>
+                                                        
                                                     </t>
+                                                    
+                                                    <div class='col-sm-12'>
+                                                        <div class='col-sm-12 thrd_row_acp2_chktpg mt32 mb32'>
+                                                            <div class='col-xs-6'>
+                                                                <a href="/shop/cart" class="btn actp2chpg_btn btn_back_atcp2_cht btn-default"> Back </a>
+                                                            </div>
+                                                            <div class='col-xs-6'>
+                                                                <a class="btn actp2chpg_btn btn-default btn_cnf_atcp2cht pull-right" href="/shop/confirm_order">Confirm </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
                                                 </div>
                                             </div>
+                                            
                                         </div>
                                     </t>
                                     <div class="clearfix"/>
-                                    <div>
-                                        <a href="/shop/cart" class="btn btn-default mb32">
-                                            <span class="fa fa-long-arrow-left"/> Return to Cart
-                                    
-                                        </a>
-                                        <a class="btn btn-default btn-primary pull-right mb32 " href="/shop/confirm_order">Confirm 
-                                        
-                                            <span class="fa fa-long-arrow-right"/>
-                                        </a>
-                                    </div>
+                                   
                                 </div>
-                                <div class="col-lg-offset-1 col-md-3 text-muted hidden" id='total_price_div'>
-                                    <h3 class="page-header mt16">Your Order</h3>
-                                    <t t-set="website_sale_order" t-value="website.sale_get_order()"/>
-                                    <t t-call="website_sale.total"/>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
