@@ -3,21 +3,22 @@
   <xpath expr="//div[@id='products_grid_before']/ul" position="replace">
     <style>
       .product_category_panel_cust{
-        border-left: 2px solid #e9e9e9;
-        border-right: 2px solid #e9e9e9;
-        border-bottom: 2px solid #e9e9e9;
+        border-left: 1px solid #c1b497;
+        border-right: 1px solid #c1b497;
+        border-bottom: 1px solid #c1b497;
       }
       .product_category_panel_heading_cust{
-        background: #c1b497;
+        background: white;
         border-radius: 0px;
         font-size: 14px;
         font-weight: bold;
-        color:white;
+        color: #c1b497;
         text-align:center;
         padding:15px;
         border-top: 1px solid #c1b497;
         border-left: 1px solid #c1b497;
         border-right: 1px solid #c1b497;
+        border-bottom: 1px solid #c1b497;
       }
       #o_shop_collapse_category li {
         padding: 5px;
@@ -33,6 +34,7 @@
         border-bottom: 2px solid #c1b497;
         border-radius: 0; 
       }
+
       #prod_main_cat_at{
         text-decoration: none;
       }

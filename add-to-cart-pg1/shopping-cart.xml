@@ -92,7 +92,7 @@
                             <t t-set="step" t-value="10"/>
                         </t>
                         <div class="row ">
-                            <div class="col-md-12 col-sm-12 oe_cart mt64">
+                            <div class="col-md-12 col-sm-12 oe_cart mt24">
                                 <t t-call="website_sale.cart_lines"/>
                                 
                                 <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12 mt24 mb36 thrd_row_acp">

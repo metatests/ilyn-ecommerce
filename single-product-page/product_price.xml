@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <t t-name="website_sale.product_price">
         <style>
-            <!--.product_price_fontcolor{-->
-            <!--    color: #252525;-->
-            <!--}-->
+            .product_price_fontcolor{
+                color: #252525;
+            }
         </style>
       <div itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer" class="product_price mt16">
           <h3 class="oe_price_h4 product_price_fontcolor css_editable_mode_hidden">

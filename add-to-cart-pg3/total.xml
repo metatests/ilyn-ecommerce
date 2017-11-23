@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<t t-name="website_sale.total">
+        <div id="cart_total" t-att-class="extra_class or ''" t-if="website_sale_order" style="font-family: 'Oxygen', sans-serif">
+            
+            <style>
+                .subtotal_text{
+                    color:#777777;
+                    font-size: 13px;
+                    line-height: 1.42857143;
+                }
+                .dg_tc{
+                    color: #252525;
+                }
+                .oe_currency_value{
+                    font-size: 13px;
+                    color: #252525;
+                }
+                #order_total span{
+                    font-size: 16px;
+                    color: #252525;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                }
+            </style>
+            
+            <div class="row" id="order_total_untaxed">
+                <div class='col-xs-6 pull-right'>
+                    <span class="col-xs-6 text-right subtotal_text">Subtotal:</span>
+                    <span class="col-xs-6 text-left subtotal_text">
+                        <span t-field="website_sale_order.amount_untaxed" style="white-space: nowrap;" t-options="{'widget': 'monetary','from_currency': website_sale_order.pricelist_id.currency_id,'display_currency': website.currency_id}"/>
+                    </span>
+                </div>
+            </div>
+            <div class="row" id="order_total_taxes">
+                <div class='col-xs-6 pull-right'>
+                <span class="col-xs-6 text-right subtotal_text" title="Taxes may be updated after providing shipping address"> Taxes:</span>
+                <span class="col-xs-6 text-left subtotal_text">
+                    <span t-field="website_sale_order.amount_tax" style="white-space: nowrap;" t-options="{'widget': 'monetary', 'from_currency': website_sale_order.pricelist_id.currency_id, 'display_currency': website.currency_id}"/>
+                </span>
+                </div>
+            </div>
+            <div class="row mt24 mb16" id="order_total">
+                <div class='col-xs-6 pull-right'>
+                <span class="col-xs-6 text-right h4 dg_tc">Total:</span>
+                <span class="col-xs-6 text-left h4" style="white-space: nowrap;">
+                    <span t-field="website_sale_order.amount_total" style="white-space: nowrap;" t-options="{'widget': 'monetary','from_currency': website_sale_order.pricelist_id.currency_id,'display_currency': website.currency_id}"/>
+                </span>
+                </div>
+            </div>
+        </div>
+    </t>
+
+    

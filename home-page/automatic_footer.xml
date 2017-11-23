@@ -51,7 +51,6 @@
 <!--</data>-->
 <data inherit_id="website.footer_custom" customize_show="True" name="Automatic Footer">
     <xpath expr="//div[@id='footer']" position="replace">
-        
         <style>
             
             footer #footer .footer-link h5 {
@@ -69,10 +68,10 @@
                 font-size: 12px;
                 line-height: 20px;
             }
-                footer #footer .footer-link ul li a {
-                color: #acacac;
-                font-size: 12px;
-                line-height: 20px;
+            footer #footer .footer-link ul li a {
+            color: #acacac;
+            font-size: 12px;
+            line-height: 20px;
             }
             .anc_tdn{
                 text-decoration: none !important;
@@ -81,6 +80,7 @@
               color: #5f5f5f;
           }
           .anc_l1:hover {
+              color: #5f5f5f;
               text-decoration: none !important;
           }
           .anc_fc_gray{
@@ -106,10 +106,10 @@
         #subscription_form_submit{
             background: transparent;
             color: white;
-            border: 4px solid #c1b497;
             border-radius: 0;
             text-transform: uppercase;
             font-size:12px;
+            border: 2px solid #c1b497 !important;
             
         }
         .o_website_form_input{
@@ -119,11 +119,17 @@
         textarea:focus,input[type="text"]:focus,input[type="password"]:focus,input[type="datetime"]:focus,input[type="datetime-local"]:focus,input[type="date"]:focus,input[type="month"]:focus,input[type="time"]:focus,input[type="week"]:focus,input[type="number"]:focus,input[type="email"]:focus,input[type="url"]:focus,input[type="search"]:focus,input[type="tel"]:focus,input[type="color"]:focus,.uneditable-input:focus {   
             outline: none;
             box-shadow:none !important;
-            border:1px solid #ccc !important;
+            border: 2px solid #c1b497 !important;
+            
         }
         
+        #footer_subscription_customer_name, #footer_subscription_customer_phone{
+            background: #1d1a18;
+            color: #c1b497;
+            border: none;
+            font-size: 11px; 
+        }
         </style>
-        
         <script type="text/javascript">
             $(document).ready(function(){
                 $("#subscription_form_submit").click(function(){
@@ -144,13 +150,16 @@
             });
                     
         </script>
-
         <!--<div style="height:8px;background:#a89c83;width:100%;"></div>                                -->
-        <div style="background:#252525" >
+        
+        <div style="background:#25211e;" >
+            
             <div id="footer" class="container hidden-print">
                 <div class="row">
                     <div class="col-md-12 col-sm-12 col-xs-12">
-                        <h3><a class='anc_tdn anc_l1' href="#"> Clothing </a> </h3>
+                        <h3>
+                            <a class='anc_tdn anc_l1' href="#"> Clothing </a>
+                        </h3>
                     </div>
                     <div class="col-md-2 col-sm-2 col-xs-4 ">
                         <div class="footer-link">
@@ -185,7 +194,6 @@
                             </ul>
                         </div>
                     </div>
-                    
                     <div class="col-md-2 col-sm-2 col-xs-4 ">
                         <div class="footer-link">
                             <a class='anc_tdn' href="#">
@@ -258,19 +266,17 @@
                             </ul>
                         </div>
                     </div>
-                    
                 </div>
-                
                 <div class="row mb16">
-                    <div class='col-md-12 mt24 mb8'> <div class='footer_line'></div> </div>
-                    
+                    <div class='col-md-12 mt24 mb8'>
+                        <div class='footer_line'></div>
+                    </div>
                     <div class="col-sm-4 col-md-4 col-xs-12 ">
                         <div class="col-md-12 col-sm-12 col-xs-12 pad_lrz">
                             <div class="col-md-6 col-sm-6 col-xs-12 padleft_zero">
-                                <h3 class="mt0 mb32"> 
+                                <h3 class="mt0 mb32">
                                     <a class="anc_tdn anc_l1" href="#"> Accessories </a>
                                 </h3>
-                                
                                 <div class="footer-link">
                                     <a class="anc_tdn" href="#">
                                         <h5>Leather Goods</h5>
@@ -318,8 +324,8 @@
                                 <h6>Level 2, Block A, Basundhara City, Panthapath, Dhaka 1215 </h6>
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-12 padleft_zero">
-                                <h4 class="mb16 mt0" style="color: #acacac;">Chittagong Store</h4>
-                                <h6>Coming Soon, Chittagong 1215 </h6>
+                                <h4 class="mb16 mt0" style="color: #acacac;">New Store</h4>
+                                <h6>Coming Soon! </h6>
                             </div>
                         </div>
                         <div class="col-sm-4 col-md-4">
@@ -345,7 +351,6 @@
                                         </div>
                                     </div>
                                 </form>
-                                
                                 <div id="subscribe_success_modal" class="modal fade" role="dialog">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
@@ -360,10 +365,12 @@
                                                 <ul class="list-unstyled">
                                                     <li>
                                                         <i class="fa fa-phone"></i> : 
+                                                        
                                                         <span t-field="res_company.phone"/>
                                                     </li>
                                                     <li>
                                                         <i class="fa fa-envelope"></i> : 
+                                                        
                                                         <span t-field="res_company.email"/>
                                                     </li>
                                                 </ul>
@@ -377,7 +384,6 @@
                             </div>
                         </div>
                     </div>
-                    
                 </div>
             </div>
         </div>

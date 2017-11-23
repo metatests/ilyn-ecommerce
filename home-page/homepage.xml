@@ -447,6 +447,8 @@
         }
         .bg-golden{
          background: #c1b497;
+         border-top: 6px solid #9a9078;
+         border-bottom: 6px solid #9a9078;
         }
       </style>
       <script type="text/javascript">
@@ -495,7 +497,7 @@
         <div class="container" style=" padding-right:0;">
           <div class="col-md-12 mb0 mt12" style="padding-left: 0px; ">
             <h3 class=" text-muted" style="float:left; color: black;font-size: 18px;">
-              <b>SHOP</b>
+              <b>PRODUCTS</b>
             </h3>
             <div class="mt64" style="padding: 0px ;border-bottom: 6px solid #ededed;width:100%;"/>
           </div>
@@ -504,76 +506,76 @@
       <section class="s_three_columns bg-white mt0 mb0" style="overflow: hidden;">
         <div class="container">
           <div class="row">
-            <div class='col-md-12'>  
-                <div class="col-md-4 padleft_zero mb0">
-                  <div class="s_references">
-                    <div class="container">
-                      <div class="row">
-                        <div class="mt0 col-md-12 ">
-                          <h4 class="mt16 " id="cloth-ht" style="color: rgb(0, 0, 0); font-size: 16px; font-weight: bold;">CLOTHING</h4>
-                        </div>
+            <div class="col-md-12">
+              <div class="col-md-4 padleft_zero mb0">
+                <div class="s_references">
+                  <div class="container">
+                    <div class="row">
+                      <div class="mt0 col-md-12 ">
+                        <h4 class="mt16 " id="cloth-ht" style="color: rgb(0, 0, 0); font-size: 16px; font-weight: bold;">CLOTHING</h4>
                       </div>
                     </div>
                   </div>
-                  <div class="mt16 shop_img mb32 image-mask-box" style="margin-left: 0px;">
-                    <div class="product_container col-md-12 col-xs-12 padleft_zero">
-                      <div class="thumbnail" id="cloth-cat">
-                        <div class="image-wrapper">
-                          <img src="/web/image/12818" class="pull-left product_image " data-original-title="" title="" style="position: relative; width: 100%; height: 100%;"/>
-                          <div class="masking">
-                            <a href="#" class="btnx btn-masking btn-xlg o_default_snippet_text">VIEW PRODUCTS</a>
-                          </div>
+                </div>
+                <div class="mt16 shop_img mb32 image-mask-box" style="margin-left: 0px;">
+                  <div class="product_container col-md-12 col-xs-12 padleft_zero">
+                    <div class="thumbnail" id="cloth-cat">
+                      <div class="image-wrapper">
+                        <img src="/web/image/12818" class="pull-left product_image " data-original-title="" title="" style="position: relative; width: 100%; height: 100%;"/>
+                        <div class="masking">
+                          <a href="#" class="btnx btn-masking btn-xlg o_default_snippet_text">VIEW PRODUCTS</a>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="col-md-4 padleft_zero">
-                  <div class="s_references">
-                    <div class="container">
-                      <div class="row">
-                        <div class="mt0 col-md-12 ">
-                          <h4 class="mt16  " id="foot-ht" style="color: rgb(0, 0, 0); font-size: 16px; font-weight: bold; padding-left: 15px;">FOOTWEAR</h4>
-                        </div>
+              </div>
+              <div class="col-md-4 padleft_zero">
+                <div class="s_references">
+                  <div class="container">
+                    <div class="row">
+                      <div class="mt0 col-md-12 ">
+                        <h4 class="mt16  " id="foot-ht" style="color: rgb(0, 0, 0); font-size: 16px; font-weight: bold; padding-left: 15px;">FOOTWEAR</h4>
                       </div>
                     </div>
                   </div>
-                  <div class="mt16  shop_img mb32 image-mask-box" style="margin-left: 0px;">
-                    <div class="product_container col-md-12 col-xs-12 padright_zero">
-                      <div class="thumbnail" id="foot-cat">
-                        <div class="image-wrapper">
-                          <img src="/web/image/12817" class="pull-left product_image " data-original-title="" title="" style="position: relative; width: 100%; height: 100%;"/>
-                          <div class="masking">
-                            <a href="#" class="btnx btn-masking btn-xlg o_default_snippet_text">VIEW PRODUCTS</a>
-                          </div>
+                </div>
+                <div class="mt16  shop_img mb32 image-mask-box" style="margin-left: 0px;">
+                  <div class="product_container col-md-12 col-xs-12 padright_zero">
+                    <div class="thumbnail" id="foot-cat">
+                      <div class="image-wrapper">
+                        <img src="/web/image/12817" class="pull-left product_image " data-original-title="" title="" style="position: relative; width: 100%; height: 100%;"/>
+                        <div class="masking">
+                          <a href="#" class="btnx btn-masking btn-xlg o_default_snippet_text">VIEW PRODUCTS</a>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="col-md-4 padright_zero">
-                  <div class="s_references">
-                    <div class="container">
-                      <div class="row">
-                        <div class="mt0 col-md-12 ">
-                          <h4 class="mt16  " id="acc-ht" style="color: rgb(0, 0, 0); font-size: 16px; font-weight: bold; padding-left: 15px;">ACCESSORIES</h4>
-                        </div>
+              </div>
+              <div class="col-md-4 padright_zero">
+                <div class="s_references">
+                  <div class="container">
+                    <div class="row">
+                      <div class="mt0 col-md-12 ">
+                        <h4 class="mt16  " id="acc-ht" style="color: rgb(0, 0, 0); font-size: 16px; font-weight: bold; padding-left: 15px;">ACCESSORIES</h4>
                       </div>
                     </div>
                   </div>
-                  <div class="mt16 shop_img mb32 image-mask-box" style="margin-left: 0px;">
-                    <div class="product_container col-md-12 col-xs-12 padright_zero">
-                      <div class="thumbnail" id="acc-cat">
-                        <div class="image-wrapper">
-                          <img src="/web/image/12816" class="pull-left product_image " data-original-title="" title="" style="position: relative; width: 100%; height: 100%;"/>
-                          <div class="masking">
-                            <a href="#" class="btnx btn-masking btn-xlg o_default_snippet_text">VIEW PRODUCTS</a>
-                          </div>
+                </div>
+                <div class="mt16 shop_img mb32 image-mask-box" style="margin-left: 0px;">
+                  <div class="product_container col-md-12 col-xs-12 padright_zero">
+                    <div class="thumbnail" id="acc-cat">
+                      <div class="image-wrapper">
+                        <img src="/web/image/12816" class="pull-left product_image " data-original-title="" title="" style="position: relative; width: 100%; height: 100%;"/>
+                        <div class="masking">
+                          <a href="#" class="btnx btn-masking btn-xlg o_default_snippet_text">VIEW PRODUCTS</a>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
+              </div>
             </div>
           </div>
         </div>
@@ -593,35 +595,34 @@
       <section class="s_three_columns">
         <div class="container">
           <div class="row">
-            <div class='col-md-12'>
-                <div class="col-md-4 padleft_zero">
-                  <div class="col-md-12 mt16 mb16 address_hb" style="padding-left:0; padding-right:30px;">
-                    <h4 class="h4 o_default_snippet_text text-center">BANANI 11   </h4>
-                    <h5 class="mb16 text-muted text-center">Level3, Tower 52, Road 11<br/> Banani, Dhaka 1213 
+            <div class="col-md-12">
+              <div class="col-md-4 padleft_zero">
+                <div class="col-md-12 mt16 mb16 address_hb" style="padding-left:0; padding-right:30px;">
+                  <h4 class="h4 o_default_snippet_text text-left">BANANI 11   </h4>
+                  <h5 class="mb16 text-muted text-left">Level3, Tower 52, Road 11<br/> Banani, Dhaka 1213 
                                         <br/>
                                     </h5>
-                  </div>
-                  <div class="col-md-12 col-xs-12 padleft_zero">
-                    <div class="image-mask-box">
-                      <div class="thumbnail" style="border:none;height: 300px;">
-                        <div class="image-wrapper">
-                          <img src="/web/image/12816" class="pull-left product_image " data-original-title="" title="" style="position: relative;width: 100%;height: 100%;"/>
-                          <div class="masking">
-                            <a href="#" class="btnx btn-masking btn-xlg o_default_snippet_text" data-toggle="modal" data-target="#banani_map_modal">VIEW MAP</a>
-                          </div>
-                          <div id="banani_map_modal" class="modal fade" role="dialog">
-                            <div class="modal-dialog">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <button type="button" class="close" data-dismiss="modal">x</button>
-                                  <h4 class="modal-title">Banani 11 Display Center</h4>
-                                </div>
-                                <div class="modal-body">
-                                  <iframe scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=23.7912105,90.4019766&amp;hl=es;z=14&amp;output=embed" width="100%" height="300" frameborder="0"/>
-                                </div>
-                                <div class="modal-footer">
-                                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                </div>
+                </div>
+                <div class="col-md-12 col-xs-12 padleft_zero">
+                  <div class="image-mask-box">
+                    <div class="thumbnail" style="border:none;height: 300px;padding:0">
+                      <div class="image-wrapper">
+                        <img src="/web/image/12816" class="pull-left product_image " data-original-title="" title="" style="position: relative;width: 100%;height: 100%;"/>
+                        <div class="masking">
+                          <a href="#" class="btnx btn-masking btn-xlg o_default_snippet_text" data-toggle="modal" data-target="#banani_map_modal">VIEW MAP</a>
+                        </div>
+                        <div id="banani_map_modal" class="modal fade" role="dialog">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">x</button>
+                                <h4 class="modal-title">Banani 11 Display Center</h4>
+                              </div>
+                              <div class="modal-body">
+                                <iframe scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=23.7912105,90.4019766&amp;hl=es;z=14&amp;output=embed" width="100%" height="300" frameborder="0"/>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                               </div>
                             </div>
                           </div>
@@ -630,36 +631,36 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-4 padleft_zero">
-                  <div class="col-md-12 mt16 mb16 address_hb" style="padding-left:0;">
-                    <h4 class="mb0 text-center">BASHUNDHARA CITY</h4>
-                    <h5 class="mb16 text-muted text-center">Level 2, Block A, Basundhara City <br/> Panthapath, Dhaka 1215 
+              </div>
+              <div class="col-md-4 padleft_zero">
+                <div class="col-md-12 mt16 mb16 address_hb" >
+                  <h4 class="mb0 ">BASHUNDHARA CITY</h4>
+                  <h5 class="mb16 text-muted">Level 2, Block A, Basundhara City <br/> Panthapath, Dhaka 1215 
     
                       
                                         <br/>
                                     </h5>
-                  </div>
-                  <div class="col-md-12 col-xs-12 padright_zero">
-                    <div class="image-mask-box">
-                      <div class="thumbnail" style="border:none">
-                        <div class="image-wrapper">
-                          <img src="/web/image/12818" class="pull-left product_image " data-original-title="" title="" style="position: relative; width: 100%; height: 100%;"/>
-                          <div class="masking">
-                            <a href="#" class="btnx btn-masking btn-xlg o_default_snippet_text" data-toggle="modal" data-target="#bcity_map_modal">VIEW MAP</a>
-                          </div>
-                          <div id="bcity_map_modal" class="modal fade" role="dialog">
-                            <div class="modal-dialog">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <button type="button" class="close" data-dismiss="modal">x</button>
-                                  <h4 class="modal-title">Bashundhara City Display Center</h4>
-                                </div>
-                                <div class="modal-body">
-                                  <iframe scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=23.7912105,90.4019766&amp;hl=es;z=14&amp;output=embed" width="100%" height="300" frameborder="0"/>
-                                </div>
-                                <div class="modal-footer">
-                                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                </div>
+                </div>
+                <div class="col-md-12 col-xs-12 padright_zero">
+                  <div class="image-mask-box">
+                    <div class="thumbnail" style="border:none; padding:0">
+                      <div class="image-wrapper">
+                        <img src="/web/image/12818" class="pull-left product_image " data-original-title="" title="" style="position: relative; width: 100%; height: 100%;"/>
+                        <div class="masking">
+                          <a href="#" class="btnx btn-masking btn-xlg o_default_snippet_text" data-toggle="modal" data-target="#bcity_map_modal">VIEW MAP</a>
+                        </div>
+                        <div id="bcity_map_modal" class="modal fade" role="dialog">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">x</button>
+                                <h4 class="modal-title">Bashundhara City Display Center</h4>
+                              </div>
+                              <div class="modal-body">
+                                <iframe scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=23.7912105,90.4019766&amp;hl=es;z=14&amp;output=embed" width="100%" height="300" frameborder="0"/>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                               </div>
                             </div>
                           </div>
@@ -668,36 +669,36 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-4 padright_zero">
-                  <div class="col-md-12 mt16 mb16 address_hb" style="padding-left:0;">
-                    <h4 class="mb0 text-center">CHITTAGONG STORE</h4>
-                    <h5 class="mb16 text-muted text-center">Coming Soon! <br/> Stay Tuned to find out
+              </div>
+              <div class="col-md-4 padright_zero">
+                <div class="col-md-12 mt16 mb16 address_hb">
+                  <h4 class="mb0 text-LEFT">NEW STORE</h4>
+                  <h5 class="mb16 text-muted text-left">Coming Soon! <br/> Stay Tuned to find out
     
                                         <br/>
                                     </h5>
-                  </div>
-                  <div class="col-md-12 col-xs-12 padright_zero">
-                    <div class="image-mask-box">
-                      <div class="thumbnail" style="border:none">
-                        <div class="image-wrapper">
-                          <img src="/web/image/12817" class="pull-left product_image " data-original-title="" title="" style="position: relative; width: 100%; height: 100%;"/>
-                          <div class="masking">
-                            <a href="#" class="btnx btn-masking btn-xlg o_default_snippet_text" data-toggle="modal" data-target="#ctg_map_modal">VIEW MAP</a>
-                          </div>
-                          <div id="ctg_map_modal" class="modal fade" role="dialog">
-                            <div class="modal-dialog">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <button type="button" class="close" data-dismiss="modal">x</button>
-                                  <h4 class="modal-title">Chittagong Store Display Center</h4>
-                                </div>
-                                <div class="modal-body">
-                                  <h3> Stay Tuned!</h3>
-                                  <h6> Store Opening Soon at Chittagong City.</h6>
-                                </div>
-                                <div class="modal-footer">
-                                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                </div>
+                </div>
+                <div class="col-md-12 col-xs-12 padright_zero">
+                  <div class="image-mask-box">
+                    <div class="thumbnail" style="border:none; padding:0">
+                      <div class="image-wrapper">
+                        <img src="/web/image/12817" class="pull-left product_image " data-original-title="" title="" style="position: relative; width: 100%; height: 100%;"/>
+                        <div class="masking">
+                          <a href="#" class="btnx btn-masking btn-xlg o_default_snippet_text" data-toggle="modal" data-target="#ctg_map_modal">VIEW MAP</a>
+                        </div>
+                        <div id="ctg_map_modal" class="modal fade" role="dialog">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">x</button>
+                                <h4 class="modal-title">Chittagong Store Display Center</h4>
+                              </div>
+                              <div class="modal-body">
+                                <h3> Stay Tuned!</h3>
+                                <h6> Store Opening Soon at Chittagong City.</h6>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                               </div>
                             </div>
                           </div>
@@ -706,23 +707,32 @@
                     </div>
                   </div>
                 </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="s_title mt32" >
+      <section class="s_title mt8">
         <div class="container ">
-          <div class="col-md-12 mb0 mt12 pad_lrz" >
+          <div class="col-md-12 pad_lrz">
             <h3 class=" text-muted" style="float:left; color: black;font-size: 18px;">
-              <b>SOMETHING HERE</b>
+              <b>WHY ILLIYEEN</b>
             </h3>
             <div class="mt64" style="padding: 0px ;border-bottom: 6px solid #ededed;width:100%;"/>
           </div>
         </div>
       </section>
       <section class="s_title mt24 mb32">
-        <div class="container" >
-          <div class="col-md-3 col-xs-12" style="padding-left: 0px; ">
+        <div class="container">
+             <div class="col-md-3 col-xs-12" style="padding-left: 0px; ">
+            <div class="box text-center">
+              <span class="fa fa-3x fa-gift"/>
+              <h5 class="text-uppercase o_default_snippet_text">
+                <strong>Premium Quality</strong>
+              </h5>
+            </div>
+          </div>
+          <div class="col-md-3 col-xs-12" >
             <div class="box text-center">
               <span class="fa fa-3x fa-truck"/>
               <h5 class="text-uppercase ">
@@ -738,14 +748,7 @@
               </h5>
             </div>
           </div>
-          <div class="col-md-3 col-xs-12">
-            <div class="box text-center">
-              <span class="fa fa-3x fa-gift"/>
-              <h5 class="text-uppercase o_default_snippet_text">
-                <strong>4th Feature</strong>
-              </h5>
-            </div>
-          </div>
+         
           <div class="col-md-3 col-xs-12" style="padding-right:0;">
             <div class="box text-center">
               <span class="fa fa-3x fa-headphones"/>
@@ -756,47 +759,42 @@
           </div>
         </div>
       </section>
-      
-      
-      
-      <section class="s_title mt32 mb32" >
-        <div class="container">
-          <div class="row" style="padding: 0px;">
-            <div class="col-md-12 mb0 mt12">
-              <h2 class="text-muted text-center" style=" color: black; font-variant: small-caps;">
-                Define Your Style
-              </h2>
-              <div class="mt24" style="padding: 0px ;border-bottom: 6px solid #ededed;width:100%;"/>
-            </div>
+
+      <section class="s_title mt32">
+        <div class="container ">
+          <div class="col-md-12 mt12 mb32 pad_lrz">
+            <h3 class=" text-muted" style="float:left; color: black;font-size: 18px;">
+              <b>OUR BRANDS</b>
+            </h3>
+            <!--<div style="padding: 0px ;border-bottom: 6px solid #777;width:100%;"/>-->
           </div>
         </div>
       </section>
-      <!--<div style="width:100%; border-bottom: 8px solid #a89c83;"></div>-->
+      
       <section class="s_references bg-golden">
-        <div class="container" >
-          <div class="row" style='padding: 36px 0 36px 0;'>
-            <div class="col-md-2 col-sm-3 col-xs-6 mt16 mb16">
-              <img src="/web/image/12824" class="img img-responsive " alt="Demo Logo" data-original-title="" title=""/>
+        <div class="container">
+          <div class="row" style="padding: 24px 0 24px 0;">
+            <div class="col-md-2 col-sm-3 col-xs-6 mt16 mb16 hidden">
+              <img src="/web/image/12824" class="img img-responsive " alt="Sahara" data-original-title="" title="ILYN Sahara"/>
             </div>
             <div class="col-md-2 col-sm-3 col-xs-6 mt16 mb16">
-              <img src="/web/image/12825" class="img img-responsive " alt="Demo Logo" data-original-title="" title=""/>
+              <img src="/web/image/12890" class="img img-responsive " alt="Platinum" data-original-title="" title="ILYN Platinum"/>
             </div>
             <div class="col-md-2 col-sm-3 col-xs-6 mt16 mb16">
-              <img src="/web/image/12826" class="img img-responsive " alt="Demo Logo"/>
+              <img src="/web/image/12891" class="img img-responsive " alt="Luxury" title='ILYN Luxury'/>
             </div>
             <div class="col-md-2 col-sm-3 col-xs-6 mt16 mb16">
-              <img src="/web/image/website.s_reference_demo_image_4" class="img img-responsive " alt="Demo Logo"/>
+              <img src="/web/image/12893" class="img img-responsive " alt="Premium" title='ILYN Premium'/>
             </div>
             <div class="col-md-2 col-sm-3 col-xs-6 mt16 mb16">
-              <img src="/web/image/website.s_reference_demo_image_5" class="img img-responsive " alt="Demo Logo" data-original-title="" title=""/>
+              <img src="/web/image/12892" class="img img-responsive " alt="Premium Essentials" data-original-title="" title="ILYN Premium Essentials"/>
             </div>
             <div class="col-md-2 col-sm-3 col-xs-6 mt16 mb16">
-              <img src="/web/image/website.s_reference_demo_image_5" class="img img-responsive " alt="Demo Logo" data-original-title="" title=""/>
+              <img src="/web/image/12894" class="img img-responsive " alt="Handcrafted" data-original-title="" title="ILYN Handcrafted"/>
             </div>
           </div>
         </div>
       </section>
-      
     </div>
   </t>
 </t>

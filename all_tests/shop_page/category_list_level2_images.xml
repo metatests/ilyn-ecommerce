@@ -6,8 +6,13 @@
             </span>
             <style>
                 .level3_categs_div{
-                    background: #c1b497;
+                    
                     padding-right:0;
+                    background: white;
+                    border-left: 2px solid #c1b497;
+                    border-top: 2px solid #c1b497;
+                    border-bottom: 2px solid #c1b497;
+                    
                 }
                 .level2_img_div{
                     padding-left:0;
@@ -16,18 +21,31 @@
                     padding-left:20px;
                     padding-right:40px;
                 }
-                .level3_categ h2 a {
-                    color: white;
-                    text-decoration:none;
-                    text-transform: uppeercase;
+                .level3_categ h2 {
+                    color: #c1b497;
+                    text-transform: uppercase;
                 }
-                .level3_categ h4 a {
-                    color: white;
+                .level3_categ h4 a{
+                    color: #ada287;
                     text-decoration:none;
+                    -webkit-transition: all 0.3s ease-in-out;
+                    -moz-transition: all 0.3s ease-in-out;
+                    -ms-transition: all 0.3s ease-in-out;
+                    -o-transition: all 0.3s ease-in-out;
+                    transition: all 0.3s ease-in-out;
+                    border-bottom: 3px solid #ada185;
+                    padding-right:5px;
+                    padding-left: 0;
                     padding-bottom: 5px;
+                    
                 }
+                .level3_categ h4 a:hover{
+                    color: #25211e;
+                    border-bottom: 3px solid #25211e;
+                }
+                
                 .level3_border_btm{
-                    border-bottom: 2px solid #ada185; padding-right:5px;padding-left: 0;
+                    border-bottom: 3px solid #ada185; padding-right:5px;padding-left: 0;
                 }
                 .image-mask-box-s .thumbnail-s {
                     cursor: default;
@@ -41,15 +59,16 @@
                         <div class="row mb32">
                             <div class="col-sm-4 level3_categs_div">
                                 <div t-if="c.child_id" class="level3_categ">
-                                    <h2 class="mb16"> <a t-att-href="keep('/shop/category/' + slug(c), category=0)" t-field="c.name"/></h2>
+                                    <!--<h2 class="mb16"> <a t-att-href="keep('/shop/category/' + slug(c), category=0)" t-field="c.name"/></h2>-->
+                                    <h2 class="mb16" t-field="c.name" ></h2>
                                     <t t-if="len(c.child_id) &gt; 4">
                                         <t t-foreach="c.child_id" t-as="c">
-                                            <h4 class="col-sm-6" style="padding-left:0; margin-top:0; padding-top:0;"><a t-att-href="keep('/shop/category/' + slug(c), category=0)" t-field="c.name" style="display:block"/> <div class="col-sm-12 level3_border_btm"/> </h4>
+                                            <h4 class="col-sm-6" style="padding-left:0; margin-top:0; padding-top:0;"><a t-att-href="keep('/shop/category/' + slug(c), category=0)" t-field="c.name" style="display:block"/>  </h4>
                                         </t>
                                     </t> 
                                     <t t-if="not len(c.child_id) &gt; 4">
                                         <t t-foreach="c.child_id" t-as="c">
-                                            <h4><a t-att-href="keep('/shop/category/' + slug(c), category=0)" t-field="c.name" style="display:block"/> <div class="col-sm-12 level3_border_btm"/> </h4>
+                                            <h4><a t-att-href="keep('/shop/category/' + slug(c), category=0)" t-field="c.name" style="display:block"/> </h4>
                                         </t>
                                     </t>
                                 </div>

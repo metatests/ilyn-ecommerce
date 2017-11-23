@@ -1,153 +1,154 @@
 <?xml version="1.0"?>
 <t name="Shopping Cart Lines" t-name="website_sale.cart_lines">
     <style>
-        .atcp_panel_heading_cust{
-            background: #c1b497;
-            border-radius: 0px;
-            font-size: 14px;
-            font-weight: bold;
-            color:white;
-            border-left: 5px solid #c1b497;
-            border-right: 5px solid #c1b497;
-            border-bottom: 1px solid #c1b497;
-        }
-        #cart_products thead tr th{
-            padding:20px;
-        }
-        .actp_prod_name, .oe_currency_value{
-            font-size: 12px;
-            color: #252525;
-        }
-        .border-right-lgray{
-            border-right: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        .panel_heading_pad{
-            padding:20px 15px;
-        }
-        .atcp_prod_trow{
-            border-top: 0;
-            border-bottom: 3px solid #f0f0f0;
-            border-left: 5px solid #f0f0f0;
-            border-right: 5px solid #f0f0f0;
-            padding: 15px 0 15px 0;
-        }
-        .actp_prod_img_tr > .img-responsive{
-            margin: 0 auto;
-        }
-        .actp_prod_tr_border{
-            border-bottom: 3px solid #f0f0f0;
-            border-left: 5px solid #f0f0f0;
-            border-right: 5px solid #f0f0f0;
-        }
-        .pad_lz{
-            padding-left:0;
-        }
-        .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
-            min-height: 0px;
-        }
-        .table{
-            margin-bottom: 0;
-        }
-        .atcp1_qty_btn{
-            background: white;
-            border-radius:0;
-            color: #c1b497;
-            -webkit-transition: all 0.3s ease-in-out;
-            -moz-transition: all 0.3s ease-in-out;
-            -ms-transition: all 0.3s ease-in-out;
-            -o-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out;
-        }
-        .atcp1_qty_btn{
-            background: white;
-            color: #c1b497;
-        }
-        .atcp1_qty_btn:hover{
-            background: #c1b497;
-            color: white;
-        }
-        .act_prod_qty_div{
-            padding-left: 10px;
-            padding-right: 10px;
-        }
+            .atcp_panel_heading_cust{
+                background: #c1b497;
+                border-radius: 0px;
+                font-size: 14px;
+                font-weight: bold;
+                color:white;
+                border-left: 5px solid #c1b497;
+                border-right: 5px solid #c1b497;
+                border-bottom: 1px solid #c1b497;
+            }
+            #cart_products thead tr th{
+                padding:20px;
+            }
+            .actp_prod_name, .oe_currency_value{
+                font-size: 12px;
+                color: #252525;
+            }
+            .border-right-lgray{
+                border-right: 1px solid rgba(255, 255, 255, 0.2);
+            }
+            .panel_heading_pad{
+                padding:20px 15px;
+            }
+            .atcp_prod_trow{
+                border-top: 0;
+                border-bottom: 3px solid #f0f0f0;
+                border-left: 5px solid #f0f0f0;
+                border-right: 5px solid #f0f0f0;
+                padding: 15px 0 15px 0;
+            }
+            .actp_prod_img_tr > .img-responsive{
+                margin: 0 auto;
+            }
+            .actp_prod_tr_border{
+                border-bottom: 3px solid #f0f0f0;
+                border-left: 5px solid #f0f0f0;
+                border-right: 5px solid #f0f0f0;
+            }
+            .pad_lz{
+                padding-left:0;
+            }
+            .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+                min-height: 0px;
+            }
+            .table{
+                margin-bottom: 0;
+            }
+            .atcp1_qty_btn{
+                background: white;
+                border-radius:0;
+                color: #c1b497;
+                -webkit-transition: all 0.3s ease-in-out;
+                -moz-transition: all 0.3s ease-in-out;
+                -ms-transition: all 0.3s ease-in-out;
+                -o-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+            }
+            .atcp1_qty_btn{
+                background: white;
+                color: #c1b497;
+            }
+            .atcp1_qty_btn:hover{
+                background: #c1b497;
+                color: white;
+            }
+            .act_prod_qty_div{
+                padding-left: 10px;
+                padding-right: 10px;
+            }
 
-    </style>
+        </style>
     <div t-if="not website_sale_order or not website_sale_order.website_order_line" class="js_cart_lines well well-lg">
-      Your cart is empty!
-  </div>
-
-  <table class="table js_cart_lines" id="cart_products" t-if="website_sale_order and website_sale_order.website_order_line">
-    <thead>
-        <tr class='atcp_panel_heading_cust'>
-            <th width='20%'> </th>
-            <th width='40%'>Product</th>
-            <th width='20%' class='text-center'> Price </th>
-            <th width='20%' class='text-center'> Quantity  </th> 
-            <th width='20%' class='text-center'>Sub-Total </th>
-
-        </tr>
-    </thead>
-
-    <div class='col-sm-12' style='padding:0'>
-        <tbody>
-            <t t-foreach="website_sale_order.website_order_line" t-as="line">
-                <tr class='actp_prod_tr_border'>
-                    <td colspan="2" t-if="not line.product_id.product_tmpl_id"/>
-                    <div class='col-sm-12'>
-                        <td class='col-sm-2' align="center" t-if="line.product_id.product_tmpl_id" style='padding: 12px 0;'>
-                            <span t-field="line.product_id.image_small" t-options="{'widget': 'image'}"/>
-                        </td>
-                        <td class='col-sm-4' t-if="line.product_id.product_tmpl_id" style='padding-left:18px'>
-                            <div class='mt24'>
-                                <a t-attf-href="/shop/product/#{ slug(line.product_id.product_tmpl_id) }" class='actp_prod_name'>
-                                    <strong t-esc="line.product_id.with_context(display_default_code=False).display_name"/>
-                                </a>
-                            </div>
-                            <!--<div class="text-muted">-->
-                            <!--    <t t-foreach="line.name.splitlines()[1:]" t-as="name_line">-->
-                            <!--        <span><t t-esc="name_line"/></span><br/>-->
-                            <!--    </t>-->
-                            <!--</div>-->
-                            <!--<a href="#" class="js_delete_product no-decoration"><small><i class="fa fa-trash-o"/> Remove</small></a>-->
-                        </td>
-                        <td class="text-center col-sm-2" id="td-price" name="price" style='padding: 12px 0;'>
-                            <div class='mt24'>
-                                <t t-if="(compute_currency(line.product_id.lst_price) - line.price_reduce ) &gt; 0.01  and website.get_current_pricelist().discount_policy=='without_discount'">
-                                    <del t-attf-class="#{'text-danger mr8'}" style="white-space: nowrap;" t-esc="compute_currency(line.product_id.website_public_price)" t-options="{'widget': 'monetary', 'display_currency': website.get_current_pricelist().currency_id, 'from_currency': website.currency_id}"/>
-                                </t>
-                                <span t-field="line.price_reduce_taxexcl" style="white-space: nowrap;" t-options="{'widget': 'monetary', 'from_currency': website_sale_order.pricelist_id.currency_id, 'display_currency': website.currency_id}" groups="sale.group_show_price_subtotal"/>
-                                <span t-field="line.price_reduce_taxinc" style="white-space: nowrap;" t-options="{'widget': 'monetary', 'from_currency': website_sale_order.pricelist_id.currency_id, 'display_currency': website.currency_id}" groups="sale.group_show_price_total"/>
-                            </div>
-                        </td>
-                        <td class="text-center col-sm-2" id="td-qty" style='padding: 12px 0;'> 
-                            <div class="input-group oe_website_spinner act_prod_qty_div mt16">
-                                <a t-attf-href="#" class="mb8 input-group-addon js_add_cart_json atcp1_qty_btn" data-no-instant="">
-                                    <i class="fa fa-minus"/>
-                                </a>
-                                <input type="text" class="js_quantity form-control quantity" t-att-data-line-id="line.id" t-att-data-product-id="line.product_id.id" t-att-value="int(line.product_uom_qty)"/>
-                                <a t-attf-href="#" class="mb8 input-group-addon float_left js_add_cart_json atcp1_qty_btn" data-no-instant="">
-                                    <i class="fa fa-plus"/>
-                                </a>
-                            </div>
-                        </td>
-                        <td class="text-center col-sm-2" style='padding: 12px 0;'>
-                            <div class='mt24'>
-                                <span t-field='line.price_total'></span>
-                            </div>
-                        </td>
-                    </div>
-                </tr>
-            </t>
-        </tbody>
-    </div>
-
-</table>
-
-<div class="col-sm-12 actp_prod_tr_border" style='padding:20px 0 0 0;'>
-    <div class="js_cart_lines">
-        <t t-call="website_sale.total">
-            <!--<t t-set="extra_class" t-value="&quot;col-sm-4 col-sm-offset-8 col-xs-12&quot;"/>--></t>
+          Your cart is empty!
+        </div>
+    
+    <table class="table js_cart_lines" id="cart_products" t-if="website_sale_order and website_sale_order.website_order_line">
+        <thead>
+            <tr class='atcp_panel_heading_cust'>
+                <th width='20%'> </th>
+                <th width='40%'>Product</th>
+                <th width='20%' class='text-center'> Price </th>
+                <th width='20%' class='text-center'> Quantity  </th> 
+                <th width='20%' class='text-center'>Sub-Total </th>
+                
+            </tr>
+        </thead>
+            
+        <div class='col-sm-12' style='padding:0'>
+            <tbody>
+                <t t-foreach="website_sale_order.website_order_line" t-as="line">
+                    <tr class='actp_prod_tr_border'>
+                        <td colspan="2" t-if="not line.product_id.product_tmpl_id"/>
+                        <div class='col-sm-12'>
+                            <td class='col-sm-2' align="center" t-if="line.product_id.product_tmpl_id" style='padding: 12px 0;'>
+                                <span t-field="line.product_id.image_small" t-options="{'widget': 'image'}"/>
+                            </td>
+                            <td class='col-sm-4' t-if="line.product_id.product_tmpl_id" style='padding-left:18px'>
+                                <div class='mt24'>
+                                    <a t-attf-href="/shop/product/#{ slug(line.product_id.product_tmpl_id) }" class='actp_prod_name'>
+                                        <strong t-esc="line.product_id.with_context(display_default_code=False).display_name"/>
+                                    </a>
+                                </div>
+                                <!--<div class="text-muted">-->
+                                <!--    <t t-foreach="line.name.splitlines()[1:]" t-as="name_line">-->
+                                <!--        <span><t t-esc="name_line"/></span><br/>-->
+                                <!--    </t>-->
+                                <!--</div>-->
+                                <!--<a href="#" class="js_delete_product no-decoration"><small><i class="fa fa-trash-o"/> Remove</small></a>-->
+                            </td>
+                            <td class="text-center col-sm-2" id="td-price" name="price" style='padding: 12px 0;'>
+                                <div class='mt24'>
+                                    <t t-if="(compute_currency(line.product_id.lst_price) - line.price_reduce ) &gt; 0.01  and website.get_current_pricelist().discount_policy=='without_discount'">
+                                        <del t-attf-class="#{'text-danger mr8'}" style="white-space: nowrap;" t-esc="compute_currency(line.product_id.website_public_price)" t-options="{'widget': 'monetary', 'display_currency': website.get_current_pricelist().currency_id, 'from_currency': website.currency_id}"/>
+                                    </t>
+                                    <span t-field="line.price_reduce_taxexcl" style="white-space: nowrap;" t-options="{'widget': 'monetary', 'from_currency': website_sale_order.pricelist_id.currency_id, 'display_currency': website.currency_id}" groups="sale.group_show_price_subtotal"/>
+                                    <span t-field="line.price_reduce_taxinc" style="white-space: nowrap;" t-options="{'widget': 'monetary', 'from_currency': website_sale_order.pricelist_id.currency_id, 'display_currency': website.currency_id}" groups="sale.group_show_price_total"/>
+                                </div>
+                            </td>
+                            <td class="text-center col-sm-2" id="td-qty" style='padding: 12px 0;'> 
+                                <div class="input-group oe_website_spinner act_prod_qty_div mt16">
+                                    <a t-attf-href="#" class="mb8 input-group-addon js_add_cart_json atcp1_qty_btn" data-no-instant="">
+                                        <i class="fa fa-minus"/>
+                                    </a>
+                                    <input type="text" class="js_quantity form-control quantity" t-att-data-line-id="line.id" t-att-data-product-id="line.product_id.id" t-att-value="int(line.product_uom_qty)"/>
+                                    <a t-attf-href="#" class="mb8 input-group-addon float_left js_add_cart_json atcp1_qty_btn" data-no-instant="">
+                                        <i class="fa fa-plus"/>
+                                    </a>
+                                </div>
+                            </td>
+                            <td class="text-center col-sm-2" style='padding: 12px 0;'>
+                                <div class='mt24'>
+                                    <span t-field='line.price_total'></span>
+                                </div>
+                            </td>
+                        </div>
+                    </tr>
+                </t>
+            </tbody>
+        </div>
+        
+    </table>
+    
+    <div class="col-sm-12 actp_prod_tr_border" style='padding:20px 0 0 0;'>
+        <div class="js_cart_lines">
+            <t t-call="website_sale.total">
+                <!--<t t-set="extra_class" t-value="&quot;col-sm-4 col-sm-offset-8 col-xs-12&quot;"/>--></t>
         </div>
     </div>
 </t>
 
+    

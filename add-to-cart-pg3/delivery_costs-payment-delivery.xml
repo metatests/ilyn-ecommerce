@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<data name="Delivery Costs" inherit_id="website_sale.payment">
+    <xpath expr="//div[@id='payment_method']" position="before">
+        <div t-if="deliveries" class="" id="delivery_carrier">
+            
+            <style>
+                .panel-title{
+                    font-size: 15px;
+                    margin-bottom: 0;
+                    font-weight: 700;
+                    text-transform: capitalize;
+                }
+                .panel{
+                    border-radius:0;
+                    border: 3px solid #f0f0f0;
+                }
+                .panel-heading{
+                    font-weight: bold;
+                }
+                #delivery_method_desc_div{
+                    padding: 5px;
+                }
+                #delivery_method_badge{
+                    margin-left: 10px;
+                }
+            
+            </style>
+            
+            <div class="col-lg-6 col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class='panel-title'> Delivery Charge </h4>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="list-unstyled">
+                            <li t-foreach="deliveries" t-as="delivery">
+                                <t t-if="delivery.available">
+                                    <label>
+                                        <input t-att-value="delivery.id" type="radio" name="delivery_type" t-att-checked="order.carrier_id and order.carrier_id.id == delivery.id and 'checked' or False"/>
+                                        <abbr t-att-title="delivery.website_description">
+                                            <span t-field="delivery.name"/>
+                                        </abbr>
+                                        <span class="badge" id='delivery_method_badge' t-field="delivery.price" t-options="{                                             &quot;widget&quot;: &quot;monetary&quot;,                                             &quot;from_currency&quot;: delivery.product_id.company_id.currency_id,                                             &quot;display_currency&quot;: website_sale_order.currency_id                                         }"/>
+                                        <div t-field="delivery.website_description" class="text-muted" id='delivery_method_desc_div'/>
+                                    </label>
+                                </t>
+                            </li>
+                        </ul>        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </xpath>
+</data>
+
+    

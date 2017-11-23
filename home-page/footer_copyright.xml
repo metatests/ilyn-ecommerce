@@ -3,7 +3,7 @@
     <xpath expr="//footer" position="inside">
       <style>
         .dark_footer{
-          background: #101010;
+          background: #1d1a18;
         }
         .footer_line{
             border-top: 1px solid #474747;padding-top: 15px;padding-right:15px; padding-left:15px;
