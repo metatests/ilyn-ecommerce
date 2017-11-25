@@ -1,0 +1,292 @@
+<?xml version="1.0"?>
+<t name="Address Management" t-name="website_sale.address">
+    <t t-call="website.layout">
+        <style>
+            .first_row_acp{
+                background-color: #f0f0f0;
+                width: 100%;
+            }
+            ol.breadcrumb{
+                background-color: transparent;
+                padding-top: 25px;
+                margin-bottom: 0;
+                padding-right:0;
+            }
+            ol.breadcrumb li a, ol.breadcrumb li span{
+                font-size: 12px;
+                color: #656565;
+                text-transform: uppercase;
+            }
+            .sec_row_acp{
+                padding: 30px;
+                border: 5px solid #f0f0f0;
+            }
+            .thrd_row_acp{
+                background: #f5f5f5;
+                padding: 20px;
+            }
+            .actp2_btn{
+                padding: 15px 35px;
+                border-radius: 0;
+                text-transform: uppercase;
+                font-size: 14px;
+                line-height: 1.3333333;
+                font-weight: bold;
+                font-family: Lato;
+                -webkit-transition: all 0.3s ease-in-out;
+                -moz-transition: all 0.3s ease-in-out;
+                -ms-transition: all 0.3s ease-in-out;
+                -o-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+            }
+            .btn_back_atcp2{
+                color: #252525;
+                background: #dedede;
+                min-width: 136px;
+            
+            }
+            .btn_back_atcp2:hover{
+                background: #c1b497;
+                color: white;
+            }
+            .btn_ctn_atcp2{
+                background: #c1b497;
+                color: white;
+            }
+            .btn_ctn_atcp2:hover{
+                background: #cdc3ab;
+                color: white;
+            }
+            .atcp2_add_or_login_atag{
+                color: #252525;
+                -webkit-transition: all 0.3s ease-in-out;
+                -moz-transition: all 0.3s ease-in-out;
+                -ms-transition: all 0.3s ease-in-out;
+                -o-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+            }
+            .atcp2_add_or_login_atag:hover{
+                color: #c1b497;
+                text-decoration: none; 
+            }
+            .atcp2_add_heading{
+                text-transform: uppercase;
+                font-weight: bold;
+                border-bottom: 5px solid #e4e4e4;
+            }
+            #country_id{
+                background: #ededed;
+            }
+            select:focus,textarea:focus,input[type="text"]:focus,input[type="password"]:focus,input[type="datetime"]:focus,input[type="datetime-local"]:focus,input[type="date"]:focus,input[type="month"]:focus,input[type="time"]:focus,input[type="week"]:focus,input[type="number"]:focus,input[type="email"]:focus,input[type="url"]:focus,input[type="search"]:focus,input[type="tel"]:focus,input[type="color"]:focus,.uneditable-input:focus {   
+                outline: none;
+                box-shadow:none !important;
+                border:none;
+            }
+            .atcp_cust_itag{
+                border-radius: 0;
+                background: #f0f0f0;
+                color: #555555;
+                border:0;
+                -webkit-box-shadow: 0;
+                box-shadow: 0;
+                -webkit-transition: none;
+                -o-transition: none;
+                transition: none;
+            }
+            .actp2_label{
+                font-size: 13px;
+                font-family: Oxygen;
+                line-height: 1.428571;
+                color: #252525;
+            }
+            .actp2_form_error{
+                font-size: 14px !important;
+                padding-left: 14px !important;
+                margin-bottom: 32px !important;        
+            }
+            .breadcrumb_heading_acp2_ad{
+                color: #797979;
+                font-weight: 400;
+                font-size:30px;
+            }
+            .atcp2_add_heading{
+                color: #252525;
+                font-size: 16px;
+                font-weight: 700;
+            }
+        </style>
+        <script>
+            $(document).ready(function(){
+                $('#country_id').prop('disabled', true);
+                $('#actp2_address_form').on('submit', function() {
+                     $('#country_id').prop('disabled', false);
+                });
+            });
+        </script>
+        <div id="wrap">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12 first_row_acp" style='font-family: "Oxygen", sans-serif;'>
+                <div class='container'>
+                    <div class='col-sm-6 col-lg-6 padleft_zero'>
+                        <h2 class="mb16 text-uppercase breadcrumb_heading_acp2_ad">Address</h2>
+                    </div>
+                    <div class="col-sm-6 col-lg-6 padright_zero">
+                        <ol class="breadcrumb pull-right">
+                            <li>
+                                <a href="/">Home</a>
+                            </li>
+                            <li>
+                                <a href="/shop">Shop</a>
+                            </li>
+                            <li class="active">
+                                <span>Address</span>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12 mt64 mb64" style='font-family: "Oxygen", sans-serif;'>
+                <div class="container oe_website_sale ">
+                    <div class='sec_row_acp '>
+                        <t t-call="website_sale.wizard_checkout">
+                            <t t-set="step" t-value="20"/></t>
+                        <div class="row">
+                            <div class="col-md-12 oe_cart">
+                                <div class="row">
+                                    <t t-if="mode == ('new', 'billing')">
+                                        <div class='col-md-12'>
+                                            <h4 class="page-header atcp2_add_heading mt16 mb16">Your Address
+                                                
+                                                <small> or </small>
+                                                <t t-set="connect" t-value="request.env['ir.config_parameter'].sudo().get_param('auth_signup.allow_uninvited') == 'True' and ('signup', 'Sign Up') or ('login', 'Log In')"/>
+                                                <a t-attf-href="/web/{{connect[0]}}?redirect=/shop/checkout" class="atcp2_add_or_login_atag" style="margin-top: -11px">
+                                                    <t t-esc="connect[1]"/>
+                                                </a>
+                                            </h4>
+                                        </div>
+                                    </t>
+                                    <t t-if="mode == ('edit', 'billing')">
+                                        <div class='col-md-12'>
+                                            <h4 class="page-header atcp2_add_heading mt16">Your Address</h4>
+                                        </div>
+                                    </t>
+                                    <t t-if="mode[1] == 'shipping'">
+                                        <div class='col-md-12'>
+                                            <h4 class="page-header atcp2_add_heading mt16">Shipping Address </h4>
+                                        </div>
+                                    </t>
+                                    <t t-if="error" t-foreach="error.get('error_message', [])" t-as="err">
+                                        <h4 class="text-danger actp2_form_error" t-esc="err"/>
+                                    </t>
+                                    <form name="/shop/checkout" method="post" class="checkout_autoformat" id='actp2_address_form'>
+                                        <div t-attf-class="form-group #{error.get('name') and 'has-error' or ''} col-md-12 div_name">
+                                            <label class="control-label actp2_label" for="name">Name</label>
+                                            <br/>
+                                            <input type="text" name="name" class="form-control atcp_cust_itag" t-att-value="'name' in checkout and checkout['name']"/>
+                                        </div>
+                                        <div class="clearfix"/>
+                                        <t t-if="mode[1] == 'billing'">
+                                            <div t-attf-class="form-group #{error.get('email') and 'has-error' or ''} col-md-6" id="div_email">
+                                                <label class="control-label actp2_label" for="email">Email</label>
+                                                <input type="email" name="email" class="form-control atcp_cust_itag" t-att-value="'email' in checkout and checkout['email']"/>
+                                            </div>
+                                        </t>
+                                        <div t-attf-class="form-group #{error.get('phone') and 'has-error' or ''} col-md-6" id="div_phone">
+                                            <label class="control-label actp2_label" for="phone">Phone</label>
+                                            <input type="tel" name="phone" class="form-control atcp_cust_itag" t-att-value="'phone' in checkout and checkout['phone']"/>
+                                        </div>
+                                        <div class="clearfix"/>
+                                        <div class='hidden'>
+                                            <t t-if="mode == ('new', 'billing')">
+                                                <div t-attf-class="form-group #{error.get('company_name') and 'has-error' or ''} col-md-6">
+                                                    <label class="control-label label-optional" for="company_name">Company Name</label>
+                                                    <input type="text" name="company_name" class="form-control" t-att-value="'company_name' in checkout and checkout['company_name']"/>
+                                                </div>
+                                                <div t-attf-class="form-group #{error.get('vat') and 'has-error' or ''} col-md-6 div_vat">
+                                                    <label class="control-label label-optional" for="vat">TIN / VAT </label>
+                                                    <input type="text" name="vat" class="form-control" t-att-value="'vat' in checkout and checkout['vat']"/>
+                                                </div>
+                                            </t>
+                                        </div>
+                                        <div class="clearfix"/>
+                                        <div t-attf-class="form-group #{error.get('street') and 'has-error' or ''} col-md-12 div_street">
+                                            <label class="control-label actp2_label" for="street">Address
+                                            </label>
+                                            <input type="text" name="street" class="form-control atcp_cust_itag" t-att-value="'street' in checkout and checkout['street']"/>
+                                        </div>
+                                        <div class="clearfix"/>
+                                        <t t-set="zip_city" t-value="country and [x for x in country.get_address_fields() if x in [&quot;zip&quot;, &quot;city&quot;]] or [&quot;city&quot;, &quot;zip&quot;]"/>
+                                        <t t-if="'zip' in zip_city and zip_city.index('zip') &lt; zip_city.index('city')">
+                                            <div t-attf-class="form-group #{error.get('zip') and 'has-error' or ''} col-sm-4 div_zip">
+                                                <label class="control-label label-optional actp2_label" for="zip">Zip Code</label>
+                                                <input type="text" name="zip" class="form-control atcp_cust_itag" t-att-value="'zip' in checkout and checkout['zip']"/>
+                                            </div>
+                                        </t>
+                                        <div t-attf-class="form-group #{error.get('city') and 'has-error' or ''} col-sm-8 div_city">
+                                            <label class="control-label actp2_label" for="city">District</label>
+                                            <input type="text" name="city" class="form-control atcp_cust_itag" placeholder='Dhaka, Gazipur, Narayanganj ... ' t-att-value="'city' in checkout and checkout['city']"/>
+                                        </div>
+                                        <t t-if="'zip' in zip_city and zip_city.index('zip') &gt; zip_city.index('city')">
+                                            <div t-attf-class="form-group #{error.get('zip') and 'has-error' or ''} col-sm-4 div_zip">
+                                                <label class="control-label label-optional actp2_label" for="zip">Zip Code</label>
+                                                <input type="text" name="zip" class="form-control atcp_cust_itag" t-att-value="'zip' in checkout and checkout['zip']"/>
+                                            </div>
+                                        </t>
+                                        <div class="clearfix"/>
+                                        <div t-attf-class="form-group #{error.get('state_id') and 'has-error' or ''} col-md-6 div_state" t-att-style="(not country or not country.state_ids) and 'display: none'">
+                                            <label class="control-label actp2_label" for="state_id">Division</label>
+                                            <select name="state_id" class="form-control atcp_cust_itag" data-init="1">
+                                                <option value="">Select Division...</option>
+                                                <t t-foreach="country and country.state_ids or []" t-as="s">
+                                                    <option t-att-value="s.id" t-att-selected="s.id == ('state_id' in checkout and country and checkout['state_id'] != '' and int(checkout['state_id']))">
+                                                        <t t-esc="s.name"/>
+                                                    </option>
+                                                </t>
+                                            </select>
+                                        </div>
+                                        <div t-attf-class="form-group #{error.get('country_id') and 'has-error' or ''} col-md-6 div_country">
+                                            <label class="control-label actp2_label" for="country_id">Country</label>
+                                            <select id="country_id" name="country_id" class="form-control atcp_cust_itag">
+                                                <option value="">Country...</option>
+                                                <t t-foreach="countries" t-as="c">
+                                                    <option t-att-value="c.id" t-att-selected="c.id == (country and country.id or -1)">
+                                                        <t t-esc="c.name"/>
+                                                    </option>
+                                                </t>
+                                            </select>
+                                        </div>
+                                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                        <input type="hidden" name="submitted" value="1"/>
+                                        <input type="hidden" name="partner_id" t-att-value="partner_id or '0'"/>
+                                        <input type="hidden" name="callback" t-att-value="callback"/>
+                                        <!-- Example -->
+                                        <input type="hidden" name="field_required" t-att-value="mode[1] == 'billing' and 'phone,name' or ''"/>
+                                        <div class="clearfix"/>
+                                        
+                                        <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12 mt24 mb24">
+                                            <div class='container thrd_row_acp'> 
+                                               
+                                            
+                                                    <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12 ">
+                                                        <div class='col-xs-6'>
+                                                            <a t-att-href="mode == ('new', 'billing') and '/shop/cart' or '/shop/checkout'" class="btn actp2_btn btn_back_atcp2">Back</a>
+                                                        </div>
+                                                        <div class='col-xs-6'>
+                                                            <a class="btn pull-right a-submit a-submit-disable a-submit-loading actp2_btn btn_ctn_atcp2">Continue</a>
+                                                        </div>
+                                                    </div>
+                                                
+                                                
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+</t>

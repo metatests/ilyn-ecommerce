@@ -1,0 +1,534 @@
+<?xml version="1.0"?>
+<!--<t name="Main layout" t-name="website.layout">-->
+<!--    <t t-call="web.layout">-->
+<!--        <t t-set="html_data" t-value="{             'lang': lang and lang.replace('_', '-'),             'data-website-id': website.id if website else None,             'data-editable': '1' if editable else None,             'data-translatable': '1' if translatable else None,             'data-edit_translations': '1' if edit_translations else None,             'data-view-xmlid': xmlid if editable or translatable else None,             'data-main-object': repr(main_object) if editable or translatable else None,             'data-oe-company-name': res_company.name         }"/>-->
+<!--        <t t-if="not title">-->
+<!--            <t t-if="not additional_title and main_object and 'name' in main_object">-->
+<!--                <t t-set="additional_title" t-value="main_object.name"/>-->
+<!--            </t>-->
+<!--            <t t-if="main_object and 'website_meta_title' in main_object and main_object.website_meta_title">-->
+<!--                <t t-set="title" t-value="main_object.website_meta_title"/>-->
+<!--            </t>-->
+<!--            <t t-else="">-->
+<!--                <t t-set="title"><t t-if="additional_title"><t t-raw="additional_title"/> | </t><t t-esc="(website or res_company).name"/></t>-->
+<!--            </t>-->
+<!--        </t>-->
+<!--        <t t-set="x_icon" t-value="'/web/image/website/%s/favicon/' % website.id"/>-->
+<!--        <t t-set="head_website">-->
+<!--            <meta name="description" t-att-content="main_object and 'website_meta_description' in main_object                 and main_object.website_meta_description or website_meta_description"/>-->
+<!--            <meta name="keywords" t-att-content="main_object and 'website_meta_keywords' in main_object                 and main_object.website_meta_keywords or website_meta_keywords"/>-->
+<!--            <meta name="generator" content="Odoo"/>-->
+<!-- OpenGraph tags for Facebook sharing -->
+<!--            <meta property="og:title" t-att-content="additional_title"/>-->
+<!--            <meta property="og:site_name" t-att-content="res_company.name"/>-->
+<!--            <t t-if="main_object and 'plain_content' in main_object and main_object.plain_content">-->
+<!--                <t t-set="og_description" t-value="main_object.plain_content[0:500]"/>-->
+<!--                <meta property="og:description" t-att-content="og_description"/>-->
+<!--                <meta property="og:image" t-att-content="request.httprequest.url_root+'logo.png'"/>-->
+<!--                <meta property="og:url" t-att-content="request.httprequest.url_root+request.httprequest.path[1:end]"/>-->
+<!--            </t>-->
+<!--            <t t-set="languages" t-value="website.get_languages() if website else None"/>-->
+<!--            <t t-if="request and request.website_multilang and website">-->
+<!--                <t t-foreach="website.get_alternate_languages(request.httprequest)" t-as="lg">-->
+<!--                    <link rel="alternate" t-att-hreflang="lg['hreflang']" t-att-href="lg['href']"/>-->
+<!--                </t>-->
+<!--            </t>-->
+<!--            <script type="text/javascript">-->
+<!--                odoo.session_info = {-->
+<!--                    is_superuser: <t t-esc="json.dumps(request.env.user._is_superuser())"/>,-->
+<!--                    is_frontend: true,-->
+<!--                };-->
+<!--            </script>-->
+<!--            <t t-call-assets="web.assets_common" t-js="false"/>-->
+<!--            <t t-call-assets="web.assets_frontend" t-js="false"/>-->
+<!--            <t t-call-assets="web_editor.summernote" t-js="false" groups="website.group_website_publisher"/>-->
+<!--            <t t-call-assets="web_editor.assets_editor" t-js="false" groups="website.group_website_publisher"/>-->
+<!--            <t t-call-assets="website.assets_editor" t-js="false" groups="website.group_website_publisher"/>-->
+<!--            <t t-call-assets="web.assets_common" t-css="false"/>-->
+<!--            <t t-call-assets="web.assets_frontend" t-css="false"/>-->
+<!--            <t t-call-assets="web_editor.summernote" t-css="false" groups="website.group_website_publisher"/>-->
+<!--            <t t-call-assets="web_editor.assets_editor" t-css="false" groups="website.group_website_publisher"/>-->
+<!--            <t t-call-assets="website.assets_editor" t-css="false" groups="website.group_website_publisher"/>-->
+<!--        </t>-->
+<!--        <t t-set="head" t-value="head_website + (head or '')"/>-->
+<!--        <div id="wrapwrap" t-att-class="pageName or ''">-->
+<!--            <header>-->
+<!--                <div class="navbar navbar-default navbar-static-top">-->
+<!--                    <div class="container">-->
+<!--                        <div class="navbar-header">-->
+<!--                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-top-collapse">-->
+<!--                                <span class="sr-only">Toggle navigation</span>-->
+<!--                                <span class="icon-bar"/>-->
+<!--                                <span class="icon-bar"/>-->
+<!--                                <span class="icon-bar"/>-->
+<!--                            </button>-->
+<!--                            <a class="navbar-brand" href="/" t-if="website" t-field="website.name">My Website</a>-->
+<!--                        </div>-->
+<!--                        <div class="collapse navbar-collapse navbar-top-collapse">-->
+<!--                            <ul class="nav navbar-nav navbar-right" id="top_menu">-->
+<!--                                <t t-foreach="website.menu_id.child_id" t-as="submenu">-->
+<!--                                    <t t-call="website.submenu"/>-->
+<!--                                </t>-->
+<!--                                <li class="divider" t-ignore="true" t-if="website.user_id != user_id"/>-->
+<!--                                <li class="dropdown" t-ignore="true" t-if="website.user_id != user_id">-->
+<!--                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">-->
+<!--                                        <b>-->
+<!--                                            <span t-esc="(len(user_id.name)&gt;25) and (user_id.name[:23]+'...') or user_id.name"/>-->
+<!--                                            <span class="caret"/>-->
+<!--                                        </b>-->
+<!--                                    </a>-->
+<!--                                    <ul class="dropdown-menu js_usermenu" role="menu">-->
+<!--                                        <li id="o_logout"><a t-attf-href="/web/session/logout?redirect=/" role="menuitem">Logout</a></li>-->
+<!--                                    </ul>-->
+<!--                                </li>-->
+<!--                            </ul>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </header>-->
+<!--            <main>-->
+<!--                <t t-raw="0"/>-->
+<!--            </main>-->
+<!--            <footer>-->
+<!--                <div id="footer">-->
+<!--                </div>-->
+<!--            </footer>-->
+<!--        </div>-->
+<!--        <script id="tracking_code" t-if="website and website.google_analytics_key and not editable">-->
+<!--            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){-->
+<!--            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),-->
+<!--            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)-->
+<!--            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');-->
+<!--            ga('create', _.str.trim('<t t-esc="website.google_analytics_key"/>'), 'auto');-->
+<!--            ga('send','pageview');-->
+<!--        </script>-->
+<!--    </t>-->
+<!--</t>-->
+<!--<?xml version="1.0"?>-->
+<t name="Main layout" t-name="website.layout">
+    <t t-call="web.layout">
+        <t t-set="html_data" t-value="{             'lang': lang and lang.replace('_', '-'),             'data-website-id': website.id if website else None,             'data-editable': '1' if editable else None,             'data-translatable': '1' if translatable else None,             'data-edit_translations': '1' if edit_translations else None,             'data-view-xmlid': xmlid if editable or translatable else None,             'data-main-object': repr(main_object) if editable or translatable else None,             'data-oe-company-name': res_company.name         }"/>
+        <t t-if="not title">
+            <t t-if="not additional_title and main_object and 'name' in main_object">
+                <t t-set="additional_title" t-value="main_object.name"/></t>
+            <t t-if="main_object and 'website_meta_title' in main_object and main_object.website_meta_title">
+                <t t-set="title" t-value="main_object.website_meta_title"/></t>
+            <t t-else="">
+                <t t-set="title">
+                    <t t-if="additional_title">
+                        <t t-raw="additional_title"/> | </t>
+                    <t t-esc="(website or res_company).name"/></t>
+            </t>
+        </t>
+        <t t-set="x_icon" t-value="'/web/image/website/%s/favicon/' % website.id"/>
+        <t t-set="head_website">
+            <meta name="description" t-att-content="main_object and 'website_meta_description' in main_object                 and main_object.website_meta_description or website_meta_description"/>
+            <meta name="keywords" t-att-content="main_object and 'website_meta_keywords' in main_object                 and main_object.website_meta_keywords or website_meta_keywords"/>
+            <meta name="generator" content="Odoo"/>
+            <!-- OpenGraph tags for Facebook sharing -->
+            <meta property="og:title" t-att-content="additional_title"/>
+            <meta property="og:site_name" t-att-content="res_company.name"/>
+            <t t-if="main_object and 'plain_content' in main_object and main_object.plain_content">
+                <t t-set="og_description" t-value="main_object.plain_content[0:500]"/>
+                <meta property="og:description" t-att-content="og_description"/>
+                <meta property="og:image" t-att-content="request.httprequest.url_root+'logo.png'"/>
+                <meta property="og:url" t-att-content="request.httprequest.url_root+request.httprequest.path[1:end]"/>
+            </t>
+            <t t-set="languages" t-value="website.get_languages() if website else None"/>
+            <t t-if="request and request.website_multilang and website">
+                <t t-foreach="website.get_alternate_languages(request.httprequest)" t-as="lg">
+                    <link rel="alternate" t-att-hreflang="lg['hreflang']" t-att-href="lg['href']"/>
+                </t>
+            </t>
+            <script type="text/javascript">
+                odoo.session_info = {
+                    is_superuser: 
+                
+                <t t-esc="json.dumps(request.env.user._is_superuser())"/>,
+                    is_frontend: true,
+                };
+            
+            
+            </script>
+            <t t-call-assets="web.assets_common" t-js="false"/>
+            <t t-call-assets="web.assets_frontend" t-js="false"/>
+            <t t-call-assets="web_editor.summernote" t-js="false" groups="website.group_website_publisher"/>
+            <t t-call-assets="web_editor.assets_editor" t-js="false" groups="website.group_website_publisher"/>
+            <t t-call-assets="website.assets_editor" t-js="false" groups="website.group_website_publisher"/>
+            <t t-call-assets="web.assets_common" t-css="false"/>
+            <t t-call-assets="web.assets_frontend" t-css="false"/>
+            <t t-call-assets="web_editor.summernote" t-css="false" groups="website.group_website_publisher"/>
+            <t t-call-assets="web_editor.assets_editor" t-css="false" groups="website.group_website_publisher"/>
+            <t t-call-assets="website.assets_editor" t-css="false" groups="website.group_website_publisher"/></t>
+        <t t-set="head" t-value="head_website + (head or '')"/>
+        <!-- Lato Font Import  -->
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Lato');
+            @import url('https://fonts.googleapis.com/css?family=Oxygen');
+        </style>
+        <style>
+        .top-bar ul li a{
+          color: #b3b3b3!important;
+        }
+        .top-bar{
+            padding-top: 8px!important;
+            background: #25211e;
+        }
+
+        #main_nav{
+            height: 80px!important;
+            background: white!important;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1)!important;
+          }
+          
+          header a.navbar-brand img {
+            max-height: 60px!important;
+            margin-top: 8px!important;
+          }
+
+          .navbar-nav > li > a {
+                color: #777;
+                font-weight: bold;
+                text-transform: uppercase;
+                padding-top: 30px!important;
+                padding-bottom: 30px!important;
+                -webkit-transition: all 0.3s ease-in-out;
+                -moz-transition: all 0.3s ease-in-out;
+                -ms-transition: all 0.3s ease-in-out;
+                -o-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+          }
+           .navbar-nav > li > a:hover{
+             color: #c1b497 !important;
+            }
+
+          .navbar.navbar-static-top ul.nav > li.divider {
+            margin-top: 20px!important;
+            padding-top: 20px!important;
+            border-right: 1px solid grey!important;
+            height: 40px!important;
+          }
+
+        .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+            color: #c1b497;
+            background-color: white;
+        }
+
+          .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
+              color: #c1b497 !important;
+              background-color: white !important!;
+          }
+          .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:hover{
+              color: #c1b497 !important;
+              background-color: transparent !important!;
+          }
+          .padleft_zero{
+                padding-left:0;
+          }
+          .padright_zero{
+                padding-right:0;
+          }
+          #top_nav_phone{
+              padding-left: 10px;
+          }
+      </style>
+        <!-- A.S Shop Page Hover CSS -->
+        <style type='text/css'>
+          .btnx-s {
+            cursor: pointer;
+            background-image: none;
+            border: 1px solid transparent;
+            white-space: nowrap;
+            padding: 8px 12px;
+            font-size: 18px;
+            text-align: center;
+            vertical-align: middle;
+            border-width: 2px;    
+            text-decoration: none;
+            border: 2px solid transparent;
+            text-transform: uppercase;
+            outline: 0 !important;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+          }
+
+          .btnx-s:hover{
+            text-decoration: none;
+          }
+            
+          .btn.btn-xlg {
+            padding: 0 20px;
+            height: 55px;
+            line-height: 49px;
+            border-width: 3px;
+            font-size: 18px;
+          }
+           
+          .btn-masking-s {
+            color: white;
+            background-color: transparent;
+            border-color: white;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            -webkit-box-shadow: none 1px 2px #ccc;
+            -moz-box-shadow: none 1px 2px #ccc;
+            box-shadow: none 1px 2px #ccc;
+          }
+          
+          .btn-masking-s:focus,
+          .btn-masking-s.focus {
+            color: #c1b497;
+            background-color: white;
+            border-color: white;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            -webkit-box-shadow: none 1px 2px #ccc;
+            -moz-box-shadow: none 1px 2px #ccc;
+            box-shadow: none 1px 2px #ccc;
+          }
+            
+          .btn-masking-s:hover {
+            color: #c1b497;
+            background-color: white;
+            border-color: white;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            -webkit-box-shadow: none 1px 2px #ccc;
+            -moz-box-shadow: none 1px 2px #ccc;
+            box-shadow: none 1px 2px #ccc;
+          }
+          
+          .btn-masking-s:active,
+          .btn-masking-s.active,
+          .open > .dropdown-toggle.btn-masking-s {
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            -webkit-box-shadow: none 1px 2px #ccc;
+            -moz-box-shadow: none 1px 2px #ccc;
+            box-shadow: none 1px 2px #ccc;
+            color: #c1b497;
+            background-color: white;
+            border-color: white;
+          }
+          
+          .btn-masking-s:active:hover,
+          .btn-masking-s.active:hover,
+          .btn-masking-s:active.focus,
+          .btn-masking-s.active.focus {
+            color: #c1b497;
+            background-color: white;
+            border-color: white;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            -webkit-box-shadow: none 1px 2px #ccc;
+            -moz-box-shadow: none 1px 2px #ccc;
+            box-shadow: none 1px 2px #ccc;
+          }
+          
+          .btn-masking-s:active,
+          .btn-masking-s.active {
+            background-image: none;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            -webkit-box-shadow: none 1px 2px #ccc;
+            -moz-box-shadow: none 1px 2px #ccc;
+            box-shadow: none 1px 2px #ccc;
+          }
+          
+          .image-mask-box-s .thumbnail-s {
+            cursor: pointer;
+            background: transparent;
+          }
+          
+          .image-mask-box-s .thumbnail-s .image-wrapper-s {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+          }
+          
+          .image-mask-box-s .thumbnail-s .image-wrapper-s img {
+            -webkit-transition: all 0.5s ease-in-out;
+            -moz-transition: all 0.5s ease-in-out;
+            -ms-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+            width: 100%;
+          }
+          
+          .image-mask-box-s .thumbnail-s .image-wrapper-s .masking-s {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: RGBA(193, 180, 151, 0.7);
+            opacity: 0;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+          }
+          
+         .image-mask-box-s .thumbnail-s .image-wrapper-s .masking-s a {
+            width: 42px;
+            height: 42px;
+            position: relative;
+            top: 45%;
+            left: 40%;
+            margin-right: 5%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+          }
+          
+          .image-mask-box-s .thumbnail-s:hover .image-wrapper-s .masking-s {
+            opacity: 1;
+          }
+          
+          .image-mask-box-s .thumbnail-s:hover .image-wrapper-s img {
+            -webkit-transform: scale(1.2);
+            -moz-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+            -o-transform: scale(1.2);
+            transform: scale(1.2);
+          }
+          
+          .image-mask-box-s .thumbnail-s:hover .image-wrapper-s a {
+            -o-animation: itemMove 0.3s linear;
+            -webkit-animation: itemMove 0.3s linear;
+            animation: itemMove 0.3s linear;
+          }
+          
+          .image-mask-box-s .thumbnail-s .caption h4 {
+            margin-bottom: 0;
+            text-transform: uppercase;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+          }
+          
+          .image-mask-box-s .thumbnail-s:hover .caption h4 {
+            color: #c1b497;
+          }
+          
+          .s_image_mask_boxes {
+            padding-top: 50px;
+          }
+        </style>
+        <div id="wrapwrap" t-att-class="pageName or ''" style="font-family: 'Lato', sans-serif;">
+            <header>
+                <!-- topbar start-->
+                <div class="top-bar">
+                    <div class="container">
+                        <div class="row">
+                            <!--<div class="col-md-6 hidden-sm hidden-xs">-->
+                            <!--  <ul class="list-inline">-->
+                            <!--    <li><a href="#"><i class="fa fa-twitter top-bar-icon"></i></a></li>-->
+                            <!--    <li><a href="#"><i class="fa fa-facebook top-bar-icon"></i></a></li>-->
+                            <!--    <li><a href="#"><i class="fa fa-dribbble top-bar-icon"></i></a></li>-->
+                            <!--    <li><a href="#"><i class="fa fa-vimeo top-bar-icon"></i></a></li>-->
+                            <!--    <li><a href="#"><i class="fa fa-tumblr top-bar-icon"></i></a></li>-->
+                            <!--  </ul>-->
+                            <!--</div>-->
+                            <div class="col-md-12 col-xs-12">
+                                <ul class="list-inline pull-right top-right">
+                                    <li style='color: #c1b497; padding-right:0;'>
+                                        <i class='fa fa-phone'></i>
+                                        <span id='top_nav_phone'>09660450451 </span>
+                                    </li>
+                                    <!--<li class="account-login">-->
+                                    <!--    <span>-->
+                                    <!--        <a id="login_button" style="text-decoration: none;" data-toggle="modal" href="/web/login">Log in</a>-->
+                                    <!--    </span>-->
+                                    <!--</li>-->
+                                    <!--<li class="search-box" id="search_icon">-->
+                                    <!--  <a href="#"><i class="fa fa-search"></i></a>-->
+                                    <!--  <ul class="dropdown-menu dropdown-menu-right">-->
+                                    <!--    <li>-->
+                                    <!--      <form action="" method="get">-->
+                                    <!--      </form>-->
+                                    <!--    </li>-->
+                                    <!--  </ul>-->
+                                    <!--</li>-->
+                                    <!--  <li class="dropdown cart-dropdown" id="product_cart"><a href="#" class="dropdown-toggle" style="text-decoration: none;" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-shopping-cart"></i>
+                                7
+                              </a><ul class="dropdown-menu dropdown-menu-right"><li class="cart-items">Item(s) in your cart</li><li class="cart-item"><a href="/shop/product/nike-sportswear-38"><div class="media"><div class="media-left media-object"></div><div class="media-body"><div class="product-name">Nike Sportswear</div><div class="product-price">
+                                          5 x
+                                          <span style="white-space: nowrap;">$ <span class="oe_currency_value">179.10</span></span></div></div></div></a></li><li class="cart-item"><a href="/shop/product/sun-buddies-41"><div class="media"><div class="media-left media-object"></div><div class="media-body"><div class="product-name">Sun Buddies</div><div class="product-price">
+                                          2 x
+                                          <span style="white-space: nowrap;">$ <span class="oe_currency_value">134.10</span></span></div></div></div></a></li><li class="cart-total"><div id="cart_total" class="col-xs-12"><div class="row" id="order_total_untaxed"><span class="col-xs-6 text-right text-muted">Subtotal:</span><span class="col-xs-6 text-left text-muted"><span style="white-space: nowrap;">$ <span class="oe_currency_value">1,163.70</span></span></span></div><div class="row" id="order_total_taxes"><span class="col-xs-6 text-right text-muted" title="Taxes may be updated after providing shipping address"> Taxes:</span><span class="col-xs-6 text-left text-muted"><span style="white-space: nowrap;">$ <span class="oe_currency_value">174.56</span></span></span></div><div class="row" id="order_total"><span class="col-xs-6 text-right h4">Total:</span><span class="col-xs-6 text-left h4" style="white-space: nowrap;"><span style="white-space: nowrap;">$ <span class="oe_currency_value">1,338.26</span></span></span></div></div></li><li class="cart-buttons"><div class="btn-group" role="group" aria-label="..."><a class="btn btn-default" href="/shop/cart">Shopping Cart</a><a class="btn btn-default" href="/shop/checkout">Checkout</a></div></li></ul></li> -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- topbar end-->
+                <!-- main navbar start -->
+                <div class="navbar navbar-default navbar-static-top" id="main_nav">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-top-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"/>
+                                <span class="icon-bar"/>
+                                <span class="icon-bar"/>
+                            </button>
+                            <a class="navbar-brand" href="/" t-if="website" t-field="website.name">My Website</a>
+                        </div>
+                        <div class="collapse navbar-collapse navbar-top-collapse">
+                            <ul class="nav navbar-nav navbar-right" id="top_menu">
+                                <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                                    <t t-call="website.submenu"/></t>
+                                <li class="divider" t-ignore="true" t-if="website.user_id != user_id"/>
+                                <li class="dropdown" t-ignore="true" t-if="website.user_id != user_id">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        <b>
+                                            <span t-esc="(len(user_id.name)&gt;25) and (user_id.name[:23]+'...') or user_id.name"/>
+                                            <span class="caret"/>
+                                        </b>
+                                    </a>
+                                    <ul class="dropdown-menu js_usermenu" role="menu">
+                                        <li id="o_logout">
+                                            <a t-attf-href="/web/session/logout?redirect=/" role="menuitem">Logout</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- main navbar end -->
+            </header>
+            <main>
+                <t t-raw="0"/>
+            </main>
+            <footer style="font-family: 'Oxygen', sans-serif;">
+                <div id="footer"></div>
+            </footer>
+        </div>
+        <script id="tracking_code" t-if="website and website.google_analytics_key and not editable">
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', _.str.trim('
+            
+            <t t-esc="website.google_analytics_key"/>'), 'auto');
+            ga('send','pageview');
+        
+        
+        </script>
+    </t>
+</t>
+
+
+

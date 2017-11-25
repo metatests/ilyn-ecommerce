@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<data inherit_id="website.layout" name="Footer">
+    <xpath expr="//div[@id='footer']" position="replace">
+        <div class="oe_structure" id="footer">
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h4 class="mt16">Subtitle</h4>
+                            <p>
+                                <a href="/">Homepage</a>
+                            </p>
+                        </div>
+                        <div class="col-md-4">
+                            <h4 class="mt16">Subtitle 2</h4>
+                            <p>
+                                ...
+                            </p>
+                        </div>
+                        <div class="col-md-4">
+                            <h4 class="mt16">Subtitle 3</h4>
+                            <p>
+                                ...
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </xpath>
+</data>
+

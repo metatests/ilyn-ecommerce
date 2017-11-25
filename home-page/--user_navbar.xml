@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<data inherit_id="website.user_navbar">
+        <xpath expr="//ul['id=oe_applications']" position="replace">
+            <a href="#" class="fa fa-th o_menu_toggle"/>
+        </xpath>
+    </data>

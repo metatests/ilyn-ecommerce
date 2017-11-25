@@ -1,0 +1,387 @@
+<?xml version="1.0"?>
+<t name="Products" t-name="website_sale.products">
+    <t t-call="website.layout">
+        <t t-set="additional_title">Shop</t>
+        <div id="wrap" class="js_sale">
+            <div class="oe_structure"/>
+            <div class="container oe_website_sale">
+                <div class="products_pager">
+                    <div class="row" style="width: 100%;">
+                        <t t-call="website_sale.search">
+                            <t t-set="search_class" t-value="'pagination form-inline o_website_sale_search'"/></t>
+                        <t t-call="website_sale.pricelist_list"/>
+                        <div style='display:none'> <t t-call="website.pager"/> </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="hidden" id="products_grid_before"/>
+                    <div class="col-md-12" id="products_grid">
+                        <div id='product_categ_tile_div'>
+                            <div class="oe_structure">
+                                <section class="s_text_image" style="">
+                                    <style>
+                                        .btn-tile{
+                                            height: 80px;
+                                            padding-top:30px;
+                                            color: #FFC652;
+                                            background-color: transparent;
+                                            border-color: #FFC652;
+                                            border-radius: 0;
+                                            text-transform: uppercase;
+                                            outline: 0 !important;
+                                            -webkit-transition: all 0.3s ease-in-out;
+                                            -moz-transition: all 0.3s ease-in-out;
+                                            -ms-transition: all 0.3s ease-in-out;
+                                            -o-transition: all 0.3s ease-in-out;
+                                            transition: all 0.3s ease-in-out;
+                                        }
+                                        .btn-tile:hover{
+                                            color: white;
+                                            background-color: #FFC652;
+                                            /*opacity: 0.7;*/
+                                            border-color: #FFC652;
+                                            -webkit-box-shadow: none;
+                                            box-shadow: none;
+                                            -webkit-box-shadow: none 1px 2px #ccc;
+                                            -moz-box-shadow: none 1px 2px #ccc;
+                                            box-shadow: none 1px 2px #ccc;
+                                        }
+                                        .btn-tile:active{
+                                            color: #FFC652;
+                                            background-color: transparent;
+                                            border-color: #FFC652;
+                                            border-radius: 0;
+                                        }
+                                        .btn-sub-tile{
+                                            border-radius: 0px;
+                                        }
+                                        .clothing_subcat_div{
+                                            margin-top: 20px;
+                                        }
+                                    </style>
+                                    
+                                    <style>
+                                        .btnx {
+                                            cursor: pointer;
+                                            background-image: none;
+                                            white-space: nowrap;
+                                            padding: 14px 14px;
+                                            font-size: 18px;
+                                            text-align: center;
+                                            vertical-align: middle;
+                                            border-width: 2px;    
+                                            text-decoration: none;
+                                            border: 4px solid transparent;
+                                            text-transform: uppercase;
+                                            outline: 0 !important;
+                                            -webkit-transition: all 0.3s ease-in-out;
+                                            -moz-transition: all 0.3s ease-in-out;
+                                            -ms-transition: all 0.3s ease-in-out;
+                                            -o-transition: all 0.3s ease-in-out;
+                                            transition: all 0.3s ease-in-out;
+                                        }
+                                        .btnx:hover{
+                                            text-decoration: none;
+                                        }
+                        
+                                        .btn.btn-xlg {
+                                            padding: 0 20px;
+                                            height: 55px;
+                                            line-height: 49px;
+                                            border-width: 3px;
+                                            font-size: 18px;
+                                        }
+                        
+                                        .btn-masking {
+                                            color: white;
+                                            background-color: transparent;
+                                            border-color: white;
+                                            -webkit-box-shadow: none;
+                                            box-shadow: none;
+                                            -webkit-box-shadow: none 1px 2px #ccc;
+                                            -moz-box-shadow: none 1px 2px #ccc;
+                                            box-shadow: none 1px 2px #ccc;
+                                        }
+                        
+                                        .btn-masking:focus,
+                                        .btn-masking.focus {
+                                            color: #FFC652;
+                                            background-color: white;
+                                            border-color: white;
+                                            -webkit-box-shadow: none;
+                                            box-shadow: none;
+                                            -webkit-box-shadow: none 1px 2px #ccc;
+                                            -moz-box-shadow: none 1px 2px #ccc;
+                                            box-shadow: none 1px 2px #ccc;
+                                        }
+                        
+                                        .btn-masking:hover {
+                                            color: #FFC652;
+                                            background-color: white;
+                                            border-color: white;
+                                            -webkit-box-shadow: none;
+                                            box-shadow: none;
+                                            -webkit-box-shadow: none 1px 2px #ccc;
+                                            -moz-box-shadow: none 1px 2px #ccc;
+                                            box-shadow: none 1px 2px #ccc;
+                                        }
+                        
+                                        .btn-masking:active,
+                                        .btn-masking.active,
+                                        .open &gt; .dropdown-toggle.btn-masking {
+                                            -webkit-box-shadow: none;
+                                            box-shadow: none;
+                                            -webkit-box-shadow: none 1px 2px #ccc;
+                                            -moz-box-shadow: none 1px 2px #ccc;
+                                            box-shadow: none 1px 2px #ccc;
+                                            color: #FFC652;
+                                            background-color: white;
+                                            border-color: white;
+                                        }
+                        
+                                        .btn-masking:active:hover,
+                                        .btn-masking.active:hover,
+                                        .btn-masking:active.focus,
+                                        .btn-masking.active.focus {
+                                            color: #FFC652;
+                                            background-color: white;
+                                            border-color: white;
+                                            -webkit-box-shadow: none;
+                                            box-shadow: none;
+                                            -webkit-box-shadow: none 1px 2px #ccc;
+                                            -moz-box-shadow: none 1px 2px #ccc;
+                                            box-shadow: none 1px 2px #ccc;
+                                        }
+                        
+                                        .btn-masking:active,
+                                        .btn-masking.active {
+                                            background-image: none;
+                                            -webkit-box-shadow: none;
+                                            box-shadow: none;
+                                            -webkit-box-shadow: none 1px 2px #ccc;
+                                            -moz-box-shadow: none 1px 2px #ccc;
+                                            box-shadow: none 1px 2px #ccc;
+                                        }
+                        
+                                        .image-mask-box .thumbnail {
+                                            cursor: pointer;
+                                            background: transparent;
+                                        }
+                        
+                                        .image-mask-box .thumbnail .image-wrapper {
+                                            position: relative;
+                                            width: 100%;
+                                            overflow: hidden;
+                                        }
+                        
+                                        .image-mask-box .thumbnail .image-wrapper img {
+                                            -webkit-transition: all 0.5s ease-in-out;
+                                            -moz-transition: all 0.5s ease-in-out;
+                                            -ms-transition: all 0.5s ease-in-out;
+                                            -o-transition: all 0.5s ease-in-out;
+                                            transition: all 0.5s ease-in-out;
+                                            width: 100%;
+                                        }
+                        
+                                        .image-mask-box .thumbnail .image-wrapper .masking {
+                                            position: absolute;
+                                            top: 0;
+                                            left: 0;
+                                            width: 100%;
+                                            height: 100%;
+                                            background-color: RGBA(255, 198, 82, 0.7);
+                                            opacity: 0;
+                                            -webkit-transition: all 0.3s ease-in-out;
+                                            -moz-transition: all 0.3s ease-in-out;
+                                            -ms-transition: all 0.3s ease-in-out;
+                                            -o-transition: all 0.3s ease-in-out;
+                                            transition: all 0.3s ease-in-out;
+                                        }
+                        
+                                        .image-mask-box .thumbnail .image-wrapper .masking a {
+                                            width: 196px;
+                                            position: absolute;
+                                            top: 50%;
+                                            left: 50%;
+                                            transform: translate(-50%, -50%);
+                                            -webkit-transform: translate(-50%, -50%);
+                                            -moz-transform: translate(-50%, -50%);
+                                            -ms-transform: translate(-50%, -50%);
+                                            -o-transform: translate(-50%, -50%);
+                                        }
+                        
+                                        .image-mask-box .thumbnail:hover .image-wrapper .masking {
+                                            opacity: 1;
+                                        }
+                        
+                                        .image-mask-box .thumbnail:hover .image-wrapper img {
+                                            -webkit-transform: scale(1.2);
+                                            -moz-transform: scale(1.2);
+                                            -ms-transform: scale(1.2);
+                                            -o-transform: scale(1.2);
+                                            transform: scale(1.2);
+                                        }
+                        
+                                        .image-mask-box .thumbnail:hover .image-wrapper a {
+                                            -o-animation: itemMove 0.3s linear;
+                                            -webkit-animation: itemMove 0.3s linear;
+                                            animation: itemMove 0.3s linear;
+                                        }
+                                    </style>
+                                    
+                                    <div class="container">
+                                        <div class="row" id='clothing_sub_categs_div'>
+                                            <div class='col-md-12 clothing_subcat_div' id='lchino_div'>
+                                                <div class="mt64 mb32 col-md-4">
+                                                    <h3 style="text-align: center;" class="o_default_snippet_text">
+                                                        <a class='btn-block btn btn-tile' href='#'>
+                                                            <span class='span-btn-text-middle'>L-Chino</span>
+                                                        </a>
+                                                    </h3>
+                                                </div>
+                                                <div class="mt32 mb32 col-md-8">
+                                                    <div class='img-container'>
+                                                        <img class="img img-responsive pull-left mb16" src="/web/image/12596" alt="Illiyeen L-Chino" data-original-title="" title="L-Chino"/>
+                                                    </div>
+                                                    <div class='row clothing_product_subcateg_div' id='clothing_lchino_sub_categs_div' style='display: none; margin-top: 20px;'>
+                                                        <div class='col-md-4 col-sm-12 col-xs-12'>
+                                                            <a class='btn btn-block btn-warning btn-sub-tile' href='/shop/category/clothing-l-chino-air-27'> Air</a>
+                                                        </div>
+                                                        <div class='col-md-4 col-sm-12 col-xs-12'>
+                                                            <a class='btn btn-block btn-warning btn-sub-tile' href='/shop/category/clothing-l-chino-basic-28'> Basic</a>
+                                                        </div>
+                                                        <div class='col-md-4 col-sm-12 col-xs-12'>
+                                                            <a class='btn btn-block btn-warning btn-sub-tile' href='/shop/category/clothing-l-chino-basic-2-0-29'> Basic 2.0</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class='col-md-12 clothing_subcat_div' id='punjabi_div'>
+                                        <div class="mt32 mb32 col-md-12">
+                                            <div class='row'>
+                                                <div class='image-mask-box'>
+                                                    <div class="col-md-12 col-xs-12" style="padding:0;">
+                                                        <div class="thumbnail" style='border:none; padding:0;'>
+                                                            <div class='image-wrapper'>
+                                                                <img class="img img-responsive pull-left" src="/web/image/12596" alt="Illiyeen Punjabi" data-original-title="" title="Punjabi"/>
+                                                                <div class="masking">
+                                                                    <a  class="btnx btn-masking btn-xlg o_default_snippet_text" id='punjabi_mask_btn'>Panjabi</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class='row level3_categ_div' id='clothing_punjabi_sub_categs_div' style='display: none; margin-top: 20px; position:relative; '>
+                                                <div class='row mb16'>
+                                                    <div class='col-md-12 col-sm-12 col-xs-12' style='padding-left:0; padding-right:0;'>
+                                                        <div class='col-md-4 col-sm-12 col-xs-12'>
+                                                            <a class='btn btn-block btn-warning btn-sub-tile' href='/shop/category/clothing-panjabi-basic-34'> Basic</a>
+                                                        </div>
+                                                        <div class='col-md-4 col-sm-12 col-xs-12'>
+                                                            <a class='btn btn-block btn-warning btn-sub-tile' href='/shop/category/clothing-panjabi-custom-35'> Custom</a>
+                                                        </div>
+                                                        <div class='col-md-4 col-sm-12 col-xs-12'>
+                                                            <a class='btn btn-block btn-warning btn-sub-tile' href='/shop/category/clothing-panjabi-platinum-36'> Platinum</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class='row'>
+                                                    <div class='col-md-12 col-sm-12 col-xs-12' style='padding-left: 0; padding-right: 0;'>
+                                                        <div class='col-md-4 col-sm-12 col-xs-12'>
+                                                            <a class='btn btn-block btn-warning btn-sub-tile' href='/shop/category/clothing-panjabi-premium-37'> Premium</a>
+                                                        </div>
+                                                        <div class='col-md-4 col-sm-12 col-xs-12'>
+                                                            <a class='btn btn-block btn-warning btn-sub-tile' href='/shop/category/clothing-panjabi-the-sahara-collection-38'> The Sahara Collection</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                
+                                <script type='text/javascript'>
+                                    $(document).ready(function(){
+                                        if (window.location.href==='http://188.166.178.138:8069/shop' || window.location.href==='http://web.ilyn.global/shop' || window.location.href==='http://188.166.178.138:8069/shop?search=' || window.location.href==='http://web.ilyn.global/shop?search='){
+                                            $("#product_categ_tile_div").show();
+                                            $("#all_shop_products_div").hide();
+                                        } else {
+                                            $("#product_categ_tile_div").hide();
+                                            $("#all_shop_products_div").show();
+                                        }
+                        
+                                        $(document).click(function(){
+                                            $(".clothing_product_subcateg_div").fadeOut(300);
+                                        });
+                        
+                                        $("#lchino_div .btn-tile").click(function(e){
+                                            e.stopPropagation();
+                                            $("#clothing_lchino_sub_categs_div").fadeToggle(300);
+                                            $("#clothing_punjabi_sub_categs_div").fadeOut(300);
+                        
+                                        });
+                        
+                                        $("#punjabi_div .btn-tile").click(function(e){
+                                            e.stopPropagation();
+                                            $("#clothing_punjabi_sub_categs_div").fadeToggle(300);
+                                            $("#clothing_lchino_sub_categs_div").fadeOut(300);
+                                        });
+                        
+                                        $("#punjabi_mask_btn").click(function(e){
+                                            e.stopPropagation();
+                                            $("#clothing_punjabi_sub_categs_div").fadeToggle(300);
+                                            $("#clothing_lchino_sub_categs_div").fadeOut(300);
+                                        });
+                        
+                                    });
+                                </script>
+                                
+                            </div>
+                        </div>
+                        
+                        <div id='all_shop_products_div'>
+                            <table width="100%">
+                                <tbody>
+                                    <tr t-ignore="true">
+                                        <td t-foreach="range(0,rows)" t-as="row" t-attf-width="#{100/rows}%"/>
+                                    </tr>
+                                    <tr t-foreach="bins" t-as="tr_product">
+                                        <t t-foreach="tr_product" t-as="td_product">
+                                            <t t-if="td_product">
+                                                <t t-set="product" t-value="td_product['product']"/>
+                                                <td t-att-colspan="td_product['x'] != 1 and td_product['x']" t-att-rowspan="td_product['y'] != 1 and td_product['y']" t-attf-class="oe_product oe_grid oe-height-#{td_product['y']*2} #{ td_product['class'] }">
+                                                    <div class="oe_product_cart" t-att-data-publish="product.website_published and 'on' or 'off'">
+                                                        <t t-set="product_image_big" t-value="td_product['x']+td_product['y'] &gt; 2"/>
+                                                        <t t-call="website_sale.products_item"/>
+                                                    </div>
+                                                </td>
+                                            </t>
+                                            <td t-if="not td_product" class="oe-height-2"/>
+                                        </t>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <t t-if="not bins">
+                            <div class="text-center text-muted">
+                                <h3 class="css_editable_display">No product defined.</h3>
+                                <p groups="sales_team.group_sale_manager">Click 
+                                    <i>'New'</i> in the top-right corner to create your first product.
+                                </p>
+                            </div>
+                        </t>
+                    </div>
+                </div>
+                <div class="products_pager">
+                    <t t-call="website.pager"/>
+                </div>
+            </div>
+            <div class="oe_structure mb32"/></div>
+    </t>
+</t>
+
+    

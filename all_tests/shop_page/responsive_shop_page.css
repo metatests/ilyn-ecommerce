@@ -1,0 +1,73 @@
+<style>
+@media screen and (min-width: 320px) and (max-width: 767px) {
+	
+	.level3_categs_div{
+		margin-right: 15px;
+	}
+
+	.product_category_panel_cust {
+		margin-left: 5px;
+	}
+	.product_category_panel_heading_cust{
+		margin-left: 5px;
+	}
+	.level3_categ {
+		padding-bottom:10px;
+	}
+	.level3_categ h2 {
+		font-size: 23px;
+		padding-top: 10px;
+	}
+	.level3_categ h4 {
+		font-size: 15px;
+		margin-top: 10px;
+		margin-bottom: 0px;
+	}
+}
+@media screen and (min-width: 786px) and (max-width: 991px) {
+	.level3_categs_div{
+		height: 180px;
+	}
+	
+	.product_category_panel_cust {
+		margin-left: 5px;
+	}
+	.product_category_panel_heading_cust{
+		margin-left: 5px;
+	}
+	.level3_categ h2{
+		font-size: 23px;
+		margin-top: 12px;
+	}
+	.level3_categ h4{
+		font-size: 15px;
+		margin-top: 10px;
+		margin-top: 10px;
+	}
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+	.level3_categs_div{
+		height: 174px;
+	}
+	.level3_categ h2{
+		margin-top: 10px;
+		font-size: 24px;
+	}
+	.level3_categ h4{
+		font-size: 15px;
+		margin-top: 8px;
+		margin-bottom: 6px;
+	}
+	
+}
+@media screen and (min-width: 1200px){
+	.level3_categs_div{
+		height: 212px;
+	}
+	.level3_categ h2{
+		margin-top: 16px;
+	}
+	.level3_categ h4{
+		font-size: 16px;
+	}
+}

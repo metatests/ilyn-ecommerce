@@ -1,0 +1,601 @@
+<?xml version="1.0"?>
+<t name="Wizard Checkout" t-name="website_sale.wizard_checkout">
+    <ul class="wizard hidden pull-right ">
+        <li t-att-class="step==10 and 'text-primary' or 'text-muted'" id="step10">
+            
+            <t t-if="step&gt;10 and step&lt;50">
+                
+                <a href="/shop/cart" class="text-success">
+                        Cart
+                    
+                    <span class="chevron"/>
+                </a>
+            </t>
+            <t t-if="not (step&gt;10 and step&lt;50)">
+                    Cart
+                
+                
+                
+                
+                <span class="chevron"/>
+            </t>
+        </li>
+        <li t-att-class="(step==20 and 'text-primary') or 'text-muted'" id="step20">
+            <t t-if="step&gt;20 and step&lt;50">
+                <a href="/shop/checkout" class="text-success">
+                    <!-- billing if not loggedin - TODO -->
+                    <t t-if="not website_sale_order or not website_sale_order.website_order_line or not website_sale_order.only_services">Address</t>
+                    <span class="chevron"/>
+                </a>
+            </t>
+            <t t-if="not (step&gt;20 and step&lt;50)">
+                <t t-if="not website_sale_order or not website_sale_order.website_order_line or not website_sale_order.only_services">Address</t>
+                <span class="chevron"/>
+            </t>
+        </li>
+        <li t-att-class="(step==40 and 'text-primary') or 'text-muted'" id="step40">
+                Payment
+            
+            
+            
+            
+            <span class="chevron"/>
+        </li>
+        <li t-att-class="(step==50 and 'text-primary') or 'text-muted'" id="step50">
+                Confirmation
+            
+            
+            
+            
+            <span class="chevron"/>
+        </li>
+    </ul>
+    
+    <style>
+        .steps-wrapper .inner-wrapper {
+        border: 5px solid #f0f0f0;
+        display: block;
+        padding: 30px 30px 0;
+        width: 100%;
+    }
+    
+    @media only screen and (max-width: 479px) {
+        .steps-wrapper .inner-wrapper.steps-page {
+            margin-bottom: 0px;
+            padding: 0;
+            border: 0;
+        }
+    }
+    
+    @media only screen and (min-width: 480px) {
+        .steps-wrapper .inner-wrapper.steps-page {
+            margin-bottom: 90px;
+        }
+    }
+    
+    @media only screen and (min-width: 768px) {
+        .steps-wrapper .inner-wrapper.steps-page {
+            margin-bottom: 30px;
+        }
+    }
+    
+    .steps-wrapper .inner-wrapper.steps-page .panel {
+        border-radius: 0;
+        border: 3px solid #f0f0f0;
+        box-shadow: none;
+        margin-bottom: 30px;
+    }
+    
+    .steps-wrapper .inner-wrapper.steps-page .panel .panel-heading {
+        background-color: #f0f0f0;
+        border-color: #f0f0f0;
+        border-radius: 0;
+    }
+    
+    .steps-wrapper .inner-wrapper.steps-page .panel .panel-heading .panel-title {
+        font-size: 15px;
+        margin-bottom: 0;
+        font-weight: 700;
+        text-transform: capitalize;
+    }
+    
+    .steps-wrapper .inner-wrapper.steps-page .panel .panel-body address {
+        font-size: 13px;
+        line-height: 30px;
+        margin-bottom: 0;
+    }
+    
+    .steps-wrapper .inner-wrapper.steps-page .panel .panel-body address strong {
+        font-size: 15px;
+        font-weight: 400;
+    }
+    
+    .steps-wrapper .inner-wrapper.steps-page .panel .panel-body address span {
+        font-size: 13px;
+    }
+    
+    .steps-wrapper .inner-wrapper.steps-page .panel .panel-body address a {
+        font-size: 15px;
+        color: #252525;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .steps-wrapper .inner-wrapper.steps-page .panel .panel-body address a:hover {
+        opacity: .8;
+    }
+    
+    .steps-wrapper .inner-wrapper.steps-page .panel .panel-body address p {
+        line-height: 24px;
+        margin-bottom: 0;
+        color: #252525;
+    }
+    
+    .steps-wrapper .inner-wrapper.steps-page .panel .panel-footer {
+        background-color: #f0f0f0;
+        border-color: #f0f0f0;
+        border-radius: 0;
+        padding: 10px 20px;
+    }
+    
+    .steps-wrapper .inner-wrapper.steps-page .one_kanban a.js_edit_address {
+        color: #47bac1;
+        font-size: 20px;
+        margin-right: 0px;
+        font-weight: 100;
+    }
+    
+    .steps-wrapper .inner-wrapper.steps-page .well {
+        border-radius: 0;
+        border: none;
+        box-shadow: none;
+        margin-bottom: 50px;
+    }
+    
+    @media only screen and (max-width: 479px) {
+        .steps-wrapper .inner-wrapper.steps-page .well .col-xs-6 {
+            width: 100%;
+            padding-top: 10px;
+        }
+    }
+    
+    @media only screen and (min-width: 480px) {
+        .steps-wrapper .inner-wrapper.steps-page .well .col-xs-6 {
+            width: 50%;
+            padding-top: 0;
+        }
+    }
+    
+    @media only screen and (max-width: 479px) {
+        .steps-wrapper .inner-wrapper.steps-page .well .btn {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    }
+    
+    @media only screen and (min-width: 480px) {
+        .steps-wrapper .inner-wrapper.steps-page .well .btn {
+            width: 136px;
+            margin: 0;
+        }
+    }
+    
+    .steps-wrapper .inner-wrapper.steps-page .well .next {
+        padding: 0;
+        text-align: right;
+    }
+    
+    .steps-wrapper .inner-wrapper.steps-page .well .next .btn-primary {
+        padding: 0 20px;
+        height: 45px;
+        line-height: 39px;
+        border-width: 3px;
+        font-size: 15px;
+        color: white;
+        background-color: #47bac1;
+        border-color: #47bac1;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        -webkit-box-shadow: none 1px 2px #ccc;
+        -moz-box-shadow: none 1px 2px #ccc;
+        box-shadow: none 1px 2px #ccc;
+    }
+    
+    .steps-wrapper .inner-wrapper.steps-page .well .next .btn-primary:focus,
+    .steps-wrapper .inner-wrapper.steps-page .well .next .btn-primary.focus {
+        color: white;
+        background-color: #47bac1;
+        border-color: #47bac1;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        -webkit-box-shadow: none 1px 2px #ccc;
+        -moz-box-shadow: none 1px 2px #ccc;
+        box-shadow: none 1px 2px #ccc;
+    }
+    
+    .steps-wrapper .inner-wrapper.steps-page .well .next .btn-primary:hover {
+        color: white;
+        background-color: #47bac1;
+        border-color: #47bac1;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        -webkit-box-shadow: none 1px 2px #ccc;
+        -moz-box-shadow: none 1px 2px #ccc;
+        box-shadow: none 1px 2px #ccc;
+    }
+    
+    .steps-wrapper .inner-wrapper.steps-page .well .next .btn-primary:active,
+    .steps-wrapper .inner-wrapper.steps-page .well .next .btn-primary.active,
+    .open > .dropdown-toggle.steps-wrapper .inner-wrapper.steps-page .well .next .btn-primary {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        -webkit-box-shadow: none 1px 2px #ccc;
+        -moz-box-shadow: none 1px 2px #ccc;
+        box-shadow: none 1px 2px #ccc;
+        color: white;
+        background-color: #47bac1;
+        border-color: #47bac1;
+    }
+    
+    .steps-wrapper .inner-wrapper.steps-page .well .next .btn-primary:active:hover,
+    .steps-wrapper .inner-wrapper.steps-page .well .next .btn-primary.active:hover,
+    .open > .dropdown-toggle.steps-wrapper .inner-wrapper.steps-page .well .next .btn-primary:hover,
+    .steps-wrapper .inner-wrapper.steps-page .well .next .btn-primary:active:focus,
+    .steps-wrapper .inner-wrapper.steps-page .well .next .btn-primary.active:focus,
+    .open > .dropdown-toggle.steps-wrapper .inner-wrapper.steps-page .well .next .btn-primary:focus,
+    .steps-wrapper .inner-wrapper.steps-page .well .next .btn-primary:active.focus,
+    .steps-wrapper .inner-wrapper.steps-page .well .next .btn-primary.active.focus,
+    .open > .dropdown-toggle.steps-wrapper .inner-wrapper.steps-page .well .next .btn-primary.focus {
+        color: white;
+        background-color: #47bac1;
+        border-color: #47bac1;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        -webkit-box-shadow: none 1px 2px #ccc;
+        -moz-box-shadow: none 1px 2px #ccc;
+        box-shadow: none 1px 2px #ccc;
+    }
+    
+    .steps-wrapper .inner-wrapper.steps-page .well .next .btn-primary:active,
+    .steps-wrapper .inner-wrapper.steps-page .well .next .btn-primary.active,
+    .open > .dropdown-toggle.steps-wrapper .inner-wrapper.steps-page .well .next .btn-primary {
+        background-image: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        -webkit-box-shadow: none 1px 2px #ccc;
+        -moz-box-shadow: none 1px 2px #ccc;
+        box-shadow: none 1px 2px #ccc;
+    }
+    
+    .steps-wrapper .inner-wrapper.steps-page .well .next .btn-primary.disabled,
+    .steps-wrapper .inner-wrapper.steps-page .well .next .btn-primary[disabled],
+    fieldset[disabled] .steps-wrapper .inner-wrapper.steps-page .well .next .btn-primary,
+    .steps-wrapper .inner-wrapper.steps-page .well .next .btn-primary.disabled:hover,
+    .steps-wrapper .inner-wrapper.steps-page .well .next .btn-primary[disabled]:hover,
+    fieldset[disabled] .steps-wrapper .inner-wrapper.steps-page .well .next .btn-primary:hover,
+    .steps-wrapper .inner-wrapper.steps-page .well .next .btn-primary.disabled:focus,
+    .steps-wrapper .inner-wrapper.steps-page .well .next .btn-primary[disabled]:focus,
+    fieldset[disabled] .steps-wrapper .inner-wrapper.steps-page .well .next .btn-primary:focus,
+    .steps-wrapper .inner-wrapper.steps-page .well .next .btn-primary.disabled.focus,
+    .steps-wrapper .inner-wrapper.steps-page .well .next .btn-primary[disabled].focus,
+    fieldset[disabled] .steps-wrapper .inner-wrapper.steps-page .well .next .btn-primary.focus,
+    .steps-wrapper .inner-wrapper.steps-page .well .next .btn-primary.disabled:active,
+    .steps-wrapper .inner-wrapper.steps-page .well .next .btn-primary[disabled]:active,
+    fieldset[disabled] .steps-wrapper .inner-wrapper.steps-page .well .next .btn-primary:active,
+    .steps-wrapper .inner-wrapper.steps-page .well .next .btn-primary.disabled.active,
+    .steps-wrapper .inner-wrapper.steps-page .well .next .btn-primary[disabled].active,
+    fieldset[disabled] .steps-wrapper .inner-wrapper.steps-page .well .next .btn-primary.active {
+        background-color: #47bac1;
+        border-color: #47bac1;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        -webkit-box-shadow: none 1px 2px #ccc;
+        -moz-box-shadow: none 1px 2px #ccc;
+        box-shadow: none 1px 2px #ccc;
+    }
+    
+    .steps-wrapper .inner-wrapper.steps-page .well .next .btn-primary:hover {
+        opacity: 0.8;
+    }
+    
+    .steps-wrapper .inner-wrapper.steps-page .well .previous {
+        padding: 0;
+        text-align: left;
+    }
+    
+    .steps-wrapper .inner-wrapper.steps-page .well .pre_msg {
+        padding-top: 10px;
+        text-align: right;
+    }
+    
+    .steps-wrapper .inner-wrapper.steps-page .well.well-lg {
+        padding: 20px 30px;
+    }
+    
+    .progress-wizard {
+        padding: 0 15px 50px 15px;
+    }
+    
+    .progress-wizard .progress-wizard-step {
+        padding: 0;
+        position: relative;
+    }
+    
+    .progress-wizard .progress-wizard-step .progress-wizard-stepnum {
+        color: #252525;
+        margin-bottom: 5px;
+    }
+    
+    @media only screen and (max-width: 479px) {
+        .progress-wizard .progress-wizard-step .progress-wizard-stepnum {
+            font-size: 11px;
+            height: 15px;
+        }
+    }
+    
+    @media only screen and (min-width: 480px) {
+        .progress-wizard .progress-wizard-step .progress-wizard-stepnum {
+            font-size: 12px;
+            height: 36px;
+        }
+    }
+    
+    @media only screen and (min-width: 768px) {
+        .progress-wizard .progress-wizard-step .progress-wizard-stepnum {
+            font-size: 12px;
+            height: auto;
+        }
+    }
+    
+    @media only screen and (min-width: 992px) {
+        .progress-wizard .progress-wizard-step .progress-wizard-stepnum {
+            font-size: 14px;
+        }
+    }
+    
+    .progress-wizard .progress-wizard-step .progress-wizard-info {
+        color: #999;
+        font-size: 14px;
+    }
+    
+    .progress-wizard .progress-wizard-step .progress-wizard-dot {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        display: block;
+        background: #c1b497;
+        left: 50%;
+        margin-top: -15px;
+        margin-left: -15px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+    }
+    
+    .progress-wizard .progress-wizard-step .progress-wizard-dot:after {
+        content: ' ';
+        width: 14px;
+        height: 14px;
+        background: white;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        position: absolute;
+        top: 8px;
+        left: 8px;
+    }
+    
+    @media only screen and (min-width: 480px) {
+        .progress-wizard .progress-wizard-step .progress-wizard-dot {
+            top: 60px;
+        }
+    }
+    
+    @media only screen and (min-width: 768px) {
+        .progress-wizard .progress-wizard-step .progress-wizard-dot {
+            top: 43px;
+        }
+    }
+    
+    .progress-wizard .progress-wizard-step .progress {
+        position: relative;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+        height: 8px;
+        box-shadow: none;
+        margin: 20px 0;
+        background-color: #f0f0f0;
+    }
+    
+    .progress-wizard .progress-wizard-step .progress .progress-bar {
+        width: 0px;
+        box-shadow: none;
+        background: #c1b497;
+    }
+    
+    .progress-wizard .progress-wizard-step.complete .progress .progress-bar {
+        width: 100%;
+    }
+    
+    .progress-wizard .progress-wizard-step.complete:first-child .progress {
+        left: 0;
+        width: 100%;
+    }
+    
+    .progress-wizard .progress-wizard-step.complete:first-child .progress .progress-bar {
+        width: 50%;
+    }
+    
+    .progress-wizard .progress-wizard-step.complete:last-child .progress {
+        width: 100%;
+    }
+    
+    .progress-wizard .progress-wizard-step.complete:last-child .progress .progress-bar {
+        width: 100%;
+    }
+    
+    .progress-wizard .progress-wizard-step.complete.full-bar .progress .progress-bar {
+        width: 100%;
+    }
+    
+    .progress-wizard .progress-wizard-step.active .progress .progress-bar {
+        width: 50%;
+    }
+    
+    .progress-wizard .progress-wizard-step.disabled .progress-wizard-dot {
+        pointer-events: none;
+        cursor: default;
+        background-color: #f0f0f0;
+    }
+    
+    .progress-wizard .progress-wizard-step.disabled .progress-wizard-dot:after {
+        content: ' ';
+        width: 14px;
+        height: 14px;
+        background: white;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        position: absolute;
+        top: 8px;
+        left: 8px;
+    }
+    
+        
+</style>
+    
+    <div id='add-to-cart-w1' style='display:none;'>
+        <div class="row progress-wizard">
+            <div class="col-xs-3 progress-wizard-step active">
+                <div class="text-center progress-wizard-stepnum">Cart</div>
+                <div class="progress">
+                    <div class="progress-bar"></div>
+                </div>
+                <a class="progress-wizard-dot" href="/shop/cart"></a>
+            </div>
+            <div class="col-xs-3 progress-wizard-step disabled">
+                <div class="text-center progress-wizard-stepnum">Address</div>
+                <div class="progress">
+                    <div class="progress-bar"></div>
+                </div>
+                <a class="progress-wizard-dot" href="/shop/checkout"></a>
+            </div>
+            <div class="col-xs-3 progress-wizard-step disabled">
+                <div class="text-center progress-wizard-stepnum">Payment</div>
+                <div class="progress">
+                    <div class="progress-bar"></div>
+                </div>
+                <a href="/shop/payment" class="progress-wizard-dot"></a>
+            </div>
+            <div class="col-xs-3 progress-wizard-step disabled">
+                <div class="text-center progress-wizard-stepnum">Confirmation</div>
+                <div class="progress">
+                    <div class="progress-bar"></div>
+                </div>
+                <a href="#" class="progress-wizard-dot"></a>
+            </div>
+        </div>
+    </div>
+   
+    <div  id='add-to-cart-w2' style='display:none;'>
+        <div class="row progress-wizard">
+            <div class="col-xs-3 progress-wizard-step complete complete full-bar">
+                <div class="text-center progress-wizard-stepnum">Cart</div>
+                <div class="progress">
+                    <div class="progress-bar"></div>
+                </div>
+                <a class="progress-wizard-dot" href="/shop/cart"></a>
+            </div>
+            <div class="col-xs-3 progress-wizard-step active">
+                <div class="text-center progress-wizard-stepnum">Address</div>
+                <div class="progress">
+                    <div class="progress-bar"></div>
+                </div>
+                <a class="progress-wizard-dot" href="/shop/checkout"></a>
+            </div>
+            <div class="col-xs-3 progress-wizard-step disabled">
+                <div class="text-center progress-wizard-stepnum">Payment</div>
+                <div class="progress">
+                    <div class="progress-bar"></div>
+                </div>
+                <a href="/shop/payment" class="progress-wizard-dot"></a>
+            </div>
+            <div class="col-xs-3 progress-wizard-step disabled">
+                <div class="text-center progress-wizard-stepnum">Confirmation</div>
+                <div class="progress">
+                    <div class="progress-bar"></div>
+                </div>
+                <a href="#" class="progress-wizard-dot"></a>
+            </div>
+        </div>
+    </div>
+    
+    <div id='add-to-cart-w3' style='display:none;'>
+        <div class="row progress-wizard">
+            <div class="col-xs-3 progress-wizard-step complete complete full-bar">
+                <div class="text-center progress-wizard-stepnum">Cart</div>
+                <div class="progress">
+                    <div class="progress-bar"></div>
+                </div>
+                <a class="progress-wizard-dot" href="/shop/cart"></a>
+            </div>
+            <div class="col-xs-3 progress-wizard-step complete complete full-bar">
+                <div class="text-center progress-wizard-stepnum">Address</div>
+                <div class="progress">
+                    <div class="progress-bar"></div>
+                </div>
+                <a class="progress-wizard-dot" href="/shop/checkout"></a>
+            </div>
+            <div class="col-xs-3 progress-wizard-step active">
+                <div class="text-center progress-wizard-stepnum">Payment</div>
+                <div class="progress">
+                    <div class="progress-bar"></div>
+                </div>
+                <a href="/shop/payment" class="progress-wizard-dot"></a>
+            </div>
+            <div class="col-xs-3 progress-wizard-step disabled">
+                <div class="text-center progress-wizard-stepnum">Confirmation</div>
+                <div class="progress">
+                    <div class="progress-bar"></div>
+                </div>
+                <a href="#" class="progress-wizard-dot"></a>
+            </div>
+        </div>
+    </div>
+       
+    <script>
+        $(document).ready(function(){
+            
+            if(window.location.pathname == '/shop/cart'){
+                $("#add-to-cart-w2").css({"display": "none"});
+                $("#add-to-cart-w3").css({"display": "none"});
+                $("#add-to-cart-w1").css({"display": "block"});
+            } else if (window.location.pathname == '/shop/checkout'){
+                $("#add-to-cart-w1").css({"display": "none"});
+                $("#add-to-cart-w3").css({"display": "none"});
+                $("#add-to-cart-w2").css({"display": "block"});
+                
+            } else if (window.location.pathname == '/shop/address'){
+                $("#add-to-cart-w1").css({"display": "none"});
+                $("#add-to-cart-w3").css({"display": "none"});
+                $("#add-to-cart-w2").css({"display": "block"});
+                
+            } else if (window.location.pathname == '/shop/payment'){
+                $("#add-to-cart-w1").css({"display": "none"});
+                $("#add-to-cart-w2").css({"display": "none"});
+                $("#add-to-cart-w3").css({"display": "block"});
+            } else{
+                $("#add-to-cart-w2").css({"display": "none"});
+                $("#add-to-cart-w3").css({"display": "none"});
+                $("#add-to-cart-w1").css({"display": "block"});
+            }
+            
+        });
+    </script>
+</t>
+
+    

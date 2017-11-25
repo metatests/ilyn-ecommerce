@@ -1,0 +1,188 @@
+<?xml version="1.0"?>
+<t name="Products" t-name="website_sale.products">
+        <t t-call="website.layout">
+            <t t-set="additional_title">Shop</t>
+            <div id="wrap" class="js_sale">
+                <div class="oe_structure"/>
+                <div class="container oe_website_sale">
+                    <div class="products_pager mb64">
+                        <div class="row hidden " style="width: 100%;">
+                            <div class='pull-right'>
+                                <t t-call="website_sale.search">
+                                    <t t-set="search_class" t-value="'pagination form-inline o_website_sale_search'"/>
+                                </t>
+                            </div>
+                            <t t-call="website_sale.pricelist_list"/>
+                           
+                        </div>
+                    </div>
+                    <style>
+                        @media screen and (min-width: 320px) and (max-width: 767px) {
+                        
+                          .level3_categs_div{
+                            margin-right: 15px;
+                          }
+
+                          .product_category_panel_cust {
+                            margin-left: 5px;
+                          }
+                            .product_category_panel_heading_cust{
+                                margin-left: 5px;
+                          }
+                          .level3_categ {
+                            padding-bottom:10px;
+                          }
+                          .level3_categ h2 {
+                              font-size: 23px;
+                              padding-top: 10px;
+                          }
+                          .level3_categ h4 {
+                            font-size: 15px;
+                            margin-top: 10px;
+                            margin-bottom: 0px;
+                          }
+                        }
+                        @media screen and (min-width: 786px) and (max-width: 991px) {
+                          .level3_categs_div{
+                            height: 180px;
+                          }
+                        
+                          .product_category_panel_cust {
+                            margin-left: 5px;
+                          }
+                          .product_category_panel_heading_cust{
+                                margin-left: 5px;
+                          }
+                          .level3_categ h2{
+                            font-size: 23px;
+                            margin-top: 12px;
+                          }
+                          .level3_categ h4{
+                            font-size: 15px;
+                            margin-top: 10px;
+                            margin-top: 10px;
+                          }
+                        }
+                        @media screen and (min-width: 992px) and (max-width: 1199px) {
+                          .level3_categs_div{
+                            height: 174px;
+                          }
+                          .level3_categ h2{
+                            margin-top: 10px;
+                            font-size: 24px;
+                          }
+                          .level3_categ h4{
+                            font-size: 15px;
+                            margin-top: 8px;
+                            margin-bottom: 6px;
+                          }
+                          
+                        }
+                        @media screen and (min-width: 1200px){
+                          .level3_categs_div{
+                            height: 212px;
+                          }
+                          .level3_categ h2{
+                            margin-top: 16px;
+                          }
+                          .level3_categ h4{
+                            font-size: 16px;
+                          }
+                        }
+                    </style>
+                    
+                    <style>
+                        .oe_product {
+                           border: none;
+                          }
+                          
+                         .oe_product .oe_product_image {
+                              position: absolute;
+                              left: 10px;
+                              right: 15px;
+                              top: 15px;
+                              bottom: 5px;
+                              text-align: center;
+                          } 
+                          .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+                                z-index: 2;
+                                color: #fff;
+                                background-color: #494946;
+                                border-color: #494946;
+                                cursor: default;
+                            }
+                            .pagination > li > a, .pagination > li > span {
+                                position: relative;
+                                float: left;
+                                padding: 6px 12px;
+                                line-height: 1.42857143;
+                                text-decoration: none;
+                                color: #494946;
+                                background-color: #fff;
+                                border: 1px solid #ddd;
+                                margin-left: -1px;
+                            }
+                            .pagination > li > a:hover, .pagination > li > span {
+                                position: relative;
+                                float: left;
+                                padding: 6px 12px;
+                                line-height: 1.42857143;
+                                text-decoration: none;
+                                color: #494946;
+                                background-color: #c1b497;
+                                border: 1px solid #ddd;
+                                margin-left: -1px;
+                            }
+                              .level3_categ h2  {
+                              font-size: 27px;
+                            }
+                    </style>
+                    
+                    <div class="row">
+                        <div class="hidden" id="products_grid_before"/>
+                            
+                        <t t-if="show_leveltwo_categs">
+                            <div class="col-md-9 col-sm-12 col-xs-12" id="prod_cat_in_prod_grid"> </div>
+                        </t>
+
+                        <div class="col-md-9 col-sm-12" id="products_grid" style='padding-right:0'>
+                            
+                            <t t-if="show_all_products">
+
+                                <div t-foreach="bins" t-as="tr_product">
+                                    <t t-foreach="tr_product" t-as="td_product">
+                                        <t t-if="td_product">
+                                            <t t-set="product" t-value="td_product['product']"/>
+                                            <div t-att-colspan="td_product['x'] != 1 and td_product['x']" t-att-rowspan="td_product['y'] != 1 and td_product['y']" t-attf-class="oe_product oe_grid oe-height-#{td_product['y']*4} #{ td_product['class'] } col-md-4 col-sm-4 col-xs-12 ">
+                                                <div class="oe_product_cart" t-att-data-publish="product.website_published and 'on' or 'off'">
+                                                    <t t-set="product_image_big" t-value="td_product['x']+td_product['y'] &gt; 2"/>
+                                                    <t t-call="website_sale.products_item"/>
+                                                </div>
+                                            </div>
+                                        </t>
+                                        <div t-if="not td_product" class="oe-height-2"/>
+                                    </t>
+                                </div>
+
+                                <div class="col-md-6 col-offset-3 col-sm-6 col-sm-offset-3 col-xs-12 products_pager">
+                                    <t t-call="website.pager"/>
+                                </div>
+                            </t>
+
+                            <t t-if="not bins">
+                                <div class="text-center text-muted">
+                                    <h3 class="css_editable_display">No product defined.</h3>
+                                    <p groups="sales_team.group_sale_manager">Click <i>'New'</i> in the top-right corner to create your first product.</p>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                    <!--Here-->
+                    
+                </div>
+                <div class="oe_structure mb32"/>
+            </div>
+        </t>
+    </t>
+
+    

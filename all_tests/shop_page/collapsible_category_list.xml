@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<data name="Collapsible Category List" inherit_id="website_sale.products_categories" active="False" customize_show="True">
+  <xpath expr="//div[@id='products_grid_before']/ul" position="replace">
+    <style>
+      .product_category_panel_cust{
+        border-left: 1px solid #c1b497;
+        border-right: 1px solid #c1b497;
+        border-bottom: 1px solid #c1b497;
+      }
+      .product_category_panel_heading_cust{
+        background: white;
+        border-radius: 0px;
+        font-size: 14px;
+        font-weight: bold;
+        color: #c1b497;
+        text-align:center;
+        padding:15px;
+        border-top: 1px solid #c1b497;
+        border-left: 1px solid #c1b497;
+        border-right: 1px solid #c1b497;
+        border-bottom: 1px solid #c1b497;
+      }
+      #o_shop_collapse_category li {
+        padding: 5px;
+        color: #c1b497;
+      }
+      #o_shop_collapse_category li a{
+        color: #16161d;
+        padding: 5px;
+      }
+      .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+        color: #fff;
+        background-color: transparent;
+        border-bottom: 2px solid #c1b497;
+        border-radius: 0; 
+      }
+
+      #prod_main_cat_at{
+        text-decoration: none;
+      }
+    </style>
+    <a href='/shop' id='prod_main_cat_at'> <div class="panel-heading product_category_panel_heading_cust">PRODUCT CATEGORIES </div></a>
+    <ul class="nav nav-pills nav-stacked product_category_panel_cust" id="o_shop_collapse_category">
+    <!-- <li t-att-class=" '' if category else 'active' ">
+        <a t-att-href="keep('/shop',category=0)" class="o_not_editable">All Products</a>
+      </li> -->
+      <t t-foreach="categories" t-as="categ">
+        <t t-call="website_sale.option_collapse_categories_recursive"/>
+      </t>
+    </ul>
+  </xpath>
+</data>
+
