@@ -96,14 +96,53 @@
                 color: white;
             }
         </style>
+        
+        <style>
+            @media screen and (min-width: 320px) and (max-width: 767px) {
+                .breadcrumb_heading{
+                    font-size: 22px;
+                }
+                ol.breadcrumb li a, ol.breadcrumb li span {
+                    font-size: 10px;
+                }
+                .act2p_btm_dv{
+                    padding:0;
+                }
+                .btn_back_atcp2_cht{
+                    min-width: auto;
+                }
+                .actp2chpg_btn {
+                    padding: 10px 12px;
+                }
+                .breadcrumb{
+                    padding:4px;
+                }
+                .breadcrumb > li + li:before{
+                    padding:0;
+                }
+                
+            }
+            @media screen and (min-width: 768px) and (max-width: 991px) {
+                
+            }
+            @media screen and (min-width: 992px) and (max-width: 1199px) {
+                
+            }
+            @media screen and (min-width: 1200px){
+                
+            }
+
+        </style>
+        
+        
         <div id="wrap">
             <div style='font-family: "Oxygen", sans-serif;'>
                 <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12 mb32 first_row_acp2_addc">
                     <div class='container'>
-                        <div class='col-sm-6 col-lg-6 padleft_zero'>
+                        <div class='col-xs-4 col-sm-6 col-lg-6 padleft_zero'>
                             <h2 class="mb16 text-uppercase breadcrumb_heading">Checkout</h2>
                         </div>
-                        <div class="col-sm-6 col-lg-6 padright_zero">
+                        <div class="col-xs-8 col-sm-6 col-lg-6 padright_zero">
                             <ol class="breadcrumb pull-right">
                                 <li>
                                     <a href="/">Home</a>
@@ -170,11 +209,11 @@
                                                     </t>
                                                     
                                                     <div class='col-sm-12'>
-                                                        <div class='col-sm-12 thrd_row_acp2_chktpg mt32 mb32'>
-                                                            <div class='col-xs-6'>
+                                                        <div class='col-sm-12 col-xs-12 thrd_row_acp2_chktpg mt32 mb32'>
+                                                            <div class='col-xs-6 act2p_btm_dv'>
                                                                 <a href="/shop/cart" class="btn actp2chpg_btn btn_back_atcp2_cht btn-default"> Back </a>
                                                             </div>
-                                                            <div class='col-xs-6'>
+                                                            <div class='col-xs-6 act2p_btm_dv'>
                                                                 <a class="btn actp2chpg_btn btn-default btn_cnf_atcp2cht pull-right" href="/shop/confirm_order">Confirm </a>
                                                             </div>
                                                         </div>

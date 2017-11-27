@@ -123,10 +123,33 @@
                 });
             });
         </script>
+        <style>
+            @media screen and (min-width: 320px) and (max-width: 767px) {
+                .breadcrumb_heading_acp2_ad{
+                    font-size: 24px;
+                }
+                ol.breadcrumb li a, ol.breadcrumb li span {
+                    font-size: 10px;
+                }
+                .btn_back_atcp2, .btn_ctn_atcp2 {
+                    min-width: auto;
+                    font-size: 12px;
+                }
+                .actp2_btn {
+                    padding: 10px 15px;
+                }
+                .actp2_adm_btm_div{
+                    padding:0;
+                }
+                .xs-padlrz{
+                    padding-right:0;
+                }
+            }
+        </style>
         <div id="wrap">
             <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12 first_row_acp" style='font-family: "Oxygen", sans-serif;'>
                 <div class='container'>
-                    <div class='col-xs-4 col-sm-4 col-lg-6 padleft_zero'>
+                    <div class='col-xs-4 col-sm-4 col-lg-6 padleft_zero xs-padlrz'>
                         <h2 class="mb16 text-uppercase breadcrumb_heading_acp2_ad">Address</h2>
                     </div>
                     <div class="col-xs-8 col-sm-8 col-lg-6 padright_zero">
@@ -267,10 +290,10 @@
                                                
                                             
                                                     <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12 ">
-                                                        <div class='col-xs-6'>
+                                                        <div class='col-xs-6 actp2_adm_btm_div'>
                                                             <a t-att-href="mode == ('new', 'billing') and '/shop/cart' or '/shop/checkout'" class="btn actp2_btn btn_back_atcp2">Back</a>
                                                         </div>
-                                                        <div class='col-xs-6'>
+                                                        <div class='col-xs-6 actp2_adm_btm_div'>
                                                             <a class="btn pull-right a-submit a-submit-disable a-submit-loading actp2_btn btn_ctn_atcp2">Continue</a>
                                                         </div>
                                                     </div>
