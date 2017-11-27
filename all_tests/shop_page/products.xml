@@ -20,18 +20,23 @@
                         @media screen and (min-width: 320px) and (max-width: 767px) {
                         
                           .level3_categs_div{
-                            margin-right: 15px;
+                            margin:0;
+                            border-right: 2px solid #c1b497;
                           }
-
+                          .level3_categs_div:first-child{
+                               margin-top:16px;
+                            }
                           .product_category_panel_cust {
-                            margin-left: 5px;
+                            margin-left: 0px;
+                            margin-bottom:32px;
                           }
-                            .product_category_panel_heading_cust{
-                                margin-left: 5px;
+                          .product_category_panel_heading_cust{
+                                margin-left: 0px;
                           }
                           .level3_categ {
                             padding-bottom:10px;
                           }
+                         
                           .level3_categ h2 {
                               font-size: 23px;
                               padding-top: 10px;
@@ -41,6 +46,12 @@
                             margin-top: 10px;
                             margin-bottom: 0px;
                           }
+                          #bottom_pagination ul li a{
+                              font-size: 10px;
+                            }
+                          #products_grid_before{
+                              padding-left:36px;
+                           }
                         }
                         @media screen and (min-width: 786px) and (max-width: 991px) {
                           .level3_categs_div{
@@ -48,10 +59,11 @@
                           }
                         
                           .product_category_panel_cust {
-                            margin-left: 5px;
+                            margin-left: 0px;
+                            margin-bottom:32px;
                           }
                           .product_category_panel_heading_cust{
-                                margin-left: 5px;
+                                margin-left: 0px;
                           }
                           .level3_categ h2{
                             font-size: 23px;
@@ -61,6 +73,12 @@
                             font-size: 15px;
                             margin-top: 10px;
                             margin-top: 10px;
+                          }
+                          .oe_website_sale ul ul {
+                            margin-left: 0;
+                           }   
+                           .level2_img_div{
+                            padding-right:0;
                           }
                         }
                         @media screen and (min-width: 992px) and (max-width: 1199px) {
@@ -76,7 +94,11 @@
                             margin-top: 8px;
                             margin-bottom: 6px;
                           }
-                          
+                        
+                          .level2_img_div{
+                              padding-left:0;
+                              padding-right:0;  
+                          }
                         }
                         @media screen and (min-width: 1200px){
                           .level3_categs_div{
@@ -145,7 +167,7 @@
                             <div class="col-md-9 col-sm-12 col-xs-12" id="prod_cat_in_prod_grid"> </div>
                         </t>
 
-                        <div class="col-md-9 col-sm-12" id="products_grid" style='padding-right:0'>
+                        <div class="col-md-9 col-sm-12" id="products_grid" style='padding-left:0; padding-right:0'>
                             
                             <t t-if="show_all_products">
 
@@ -164,7 +186,7 @@
                                     </t>
                                 </div>
 
-                                <div class="col-md-6 col-offset-3 col-sm-6 col-sm-offset-3 col-xs-12 products_pager">
+                                <div class="col-md-8 col-offset-2 col-sm-8 col-sm-offset-2 col-xs-12 products_pager" id='bottom_pagination'>
                                     <t t-call="website.pager"/>
                                 </div>
                             </t>

@@ -4,6 +4,8 @@
             <span t-if="c.parent_id">
                 <a t-att-href="keep('/shop/category/' + slug(c), category=0)" t-field="c.name"/>
             </span>
+
+            
             <style>
                 .level3_categs_div{
                     
@@ -16,6 +18,7 @@
                 }
                 .level2_img_div{
                     padding-left:0;
+                    padding-right: 0;
                 }
                 .level3_categ{
                     padding-left:20px;
@@ -33,7 +36,7 @@
                     -ms-transition: all 0.3s ease-in-out;
                     -o-transition: all 0.3s ease-in-out;
                     transition: all 0.3s ease-in-out;
-                    border-bottom: 3px solid #ada185;
+                    border-bottom: 2px solid #ada185;
                     padding-right:5px;
                     padding-left: 0;
                     padding-bottom: 5px;
@@ -41,7 +44,7 @@
                 }
                 .level3_categ h4 a:hover{
                     color: #25211e;
-                    border-bottom: 3px solid #25211e;
+                    border-bottom: 2px solid #25211e;
                 }
                 
                 .level3_border_btm{
@@ -56,7 +59,7 @@
             <ul t-if="c.child_id" class="nav nav-pills nav-stacked nav-hierarchy">
                 <t t-foreach="c.child_id" t-as="c">
                     <div t-if="c.child_id and c.parent_id" class="level2_categ_img">
-                        <div class="row mb32">
+                        <div class="col-sm-12 mb48" style='padding:0'>
                             <div class="col-sm-4 level3_categs_div">
                                 <div t-if="c.child_id" class="level3_categ">
                                     <!--<h2 class="mb16"> <a t-att-href="keep('/shop/category/' + slug(c), category=0)" t-field="c.name"/></h2>-->
