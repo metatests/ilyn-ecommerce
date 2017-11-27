@@ -53,9 +53,9 @@
                               padding-left:36px;
                            }
                         }
-                        @media screen and (min-width: 786px) and (max-width: 991px) {
+                        @media screen and (min-width: 768px) and (max-width: 991px) {
                           .level3_categs_div{
-                            height: 180px;
+                            height: 183px;
                           }
                         
                           .product_category_panel_cust {
@@ -67,11 +67,10 @@
                           }
                           .level3_categ h2{
                             font-size: 23px;
-                            margin-top: 12px;
+                            margin-top: 8px;
                           }
                           .level3_categ h4{
-                            font-size: 15px;
-                            margin-top: 10px;
+                            font-size: 14px;
                             margin-top: 10px;
                           }
                           .oe_website_sale ul ul {
@@ -83,15 +82,15 @@
                         }
                         @media screen and (min-width: 992px) and (max-width: 1199px) {
                           .level3_categs_div{
-                            height: 174px;
+                            height: 172px;
                           }
                           .level3_categ h2{
                             margin-top: 10px;
                             font-size: 24px;
                           }
                           .level3_categ h4{
-                            font-size: 15px;
-                            margin-top: 8px;
+                            font-size: 14px;
+                            margin-top: 6px;
                             margin-bottom: 6px;
                           }
                         
@@ -99,10 +98,15 @@
                               padding-left:0;
                               padding-right:0;  
                           }
+                          #o_shop_collapse_category li a {
+                              padding-bottom: 5px;
+                              padding-top: 5px;
+                              padding-left: 22px;
+                          }
                         }
                         @media screen and (min-width: 1200px){
                           .level3_categs_div{
-                            height: 212px;
+                            height: 210px;
                           }
                           .level3_categ h2{
                             margin-top: 16px;

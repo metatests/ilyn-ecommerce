@@ -29,11 +29,19 @@
                         padding:0 5% 0 0;
                         margin-bottom:0;
                         text-transform: uppercase;
+                    }
+                    .product_name_heading:hover a  {
+                        color:#c1b497;
                         
                     }
                     .product_name_heading a{
                         color: #252525;
                         text-decoration: none;
+                        -webkit-transition: all 0.3s ease-in-out;
+                                    -moz-transition: all 0.3s ease-in-out;
+                                    -ms-transition: all 0.3s ease-in-out;
+                                    -o-transition: all 0.3s ease-in-out;
+                                    transition: all 0.3s 
                     }
                     
                 </style>

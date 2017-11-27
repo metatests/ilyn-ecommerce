@@ -16,6 +16,9 @@
                     border-bottom: 2px solid #c1b497;
                     
                 }
+                .shop_lvl2_img{
+                    max-height:210px;
+                }
                 .level2_img_div{
                     padding-left:0;
                     padding-right: 0;
@@ -82,7 +85,7 @@
                                         <!--<div class='thumbnail-s'>-->
                                             <!--<div class="image-wrapper-s">-->
                                                 <!--<a t-att-href="keep('/shop/category/' + slug(c.parent_id), category=0)">-->
-                                                    <span  itemprop="image" t-field="c.parent_id.image" t-options="{                                     'widget': 'image',                                     'class': 'product_detail_img',                                      'alt-field': 'name',                                      'zoom': 'image'}"/>
+                                                    <span  itemprop="image" t-field="c.parent_id.image" t-options="{                                     'widget': 'image',                                     'class': 'product_detail_img shop_lvl2_img',                                      'alt-field': 'name',                                      'zoom': 'image'}"/>
                                                     <!--<div class="masking-s ">-->
                                                     <!--</div>-->
                                                 <!--</a>-->

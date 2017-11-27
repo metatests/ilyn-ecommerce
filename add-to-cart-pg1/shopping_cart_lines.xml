@@ -14,7 +14,21 @@
             #cart_products thead tr th{
                 padding:20px;
             }
-            .actp_prod_name, .oe_currency_value{
+            .actp_prod_name{
+                font-size: 12px;
+                color: #252525;
+                text-decoration: none;
+                -webkit-transition: all 0.3s ease-in-out;
+                -moz-transition: all 0.3s ease-in-out;
+                -ms-transition: all 0.3s ease-in-out;
+                -o-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+            }
+            .actp_prod_name:hover{
+                text-decoration: none;
+                color: #c1b497;
+            }
+            .oe_currency_value{
                 font-size: 12px;
                 color: #252525;
             }
