@@ -1,0 +1,25 @@
+<div class="row hidden">
+  <p id="cust_phone" t-field="order.partner_invoice_id.phone"/>
+  <p id="order_name" t-field="order.name"/>
+  <p id="cust_name" t-field="order.partner_invoice_id.name"/>
+  <p id="cust_total_amount" t-field='order.amount_total' />
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function(){ 
+
+    var phone = document.getElementById("cust_phone").innerHTML;
+    var orderName = document.getElementById("order_name").innerHTML;
+    var cusName = document.getElementById("cust_name").innerHTML;
+    var orderTotalAmount = document.getElementsByClassName('oe_currency_value')[2].innerText;
+
+    var msg = "Hello "+cusName+", Your ILYN Order is: '"+orderName+"' and Total amount: "+orderTotalAmount+"৳. Thank you for your order.";
+
+    var url = "http://bangladeshsms.com/smsapi?api_key=C200038059f06f05487361.76812382&amp;type=text&amp;contacts="+phone+"&amp;senderid=8804445629100&amp;msg="+msg;
+
+    $.get(url,function(data,status) {
+
+    },'html');
+
+  });
+</script>
