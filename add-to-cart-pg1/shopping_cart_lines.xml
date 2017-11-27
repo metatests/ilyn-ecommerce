@@ -19,14 +19,14 @@
                 color: #252525;
                 text-decoration: none;
                 -webkit-transition: all 0.3s ease-in-out;
-                -moz-transition: all 0.3s ease-in-out;
-                -ms-transition: all 0.3s ease-in-out;
-                -o-transition: all 0.3s ease-in-out;
-                transition: all 0.3s ease-in-out;
+                            -moz-transition: all 0.3s ease-in-out;
+                            -ms-transition: all 0.3s ease-in-out;
+                            -o-transition: all 0.3s ease-in-out;
+                            transition: all 0.3s ease-in-out;
             }
             .actp_prod_name:hover{
-                text-decoration: none;
                 color: #c1b497;
+                text-decoration: none;
             }
             .oe_currency_value{
                 font-size: 12px;
@@ -97,7 +97,7 @@
                 <th width='40%'>Product</th>
                 <th width='20%' class='text-center'> Price </th>
                 <th width='20%' class='text-center'> Quantity  </th> 
-                <th width='20%' class='text-center'>Sub-Total </th>
+                <th width='20%' class='text-center' id='th_sub_total'>Sub-Total </th>
                 
             </tr>
         </thead>
@@ -112,7 +112,7 @@
                                 <span t-field="line.product_id.image_small" t-options="{'widget': 'image'}"/>
                             </td>
                             <td class='col-sm-4' t-if="line.product_id.product_tmpl_id" style='padding-left:18px'>
-                                <div class='mt24'>
+                                <div class='mt24 td-div'>
                                     <a t-attf-href="/shop/product/#{ slug(line.product_id.product_tmpl_id) }" class='actp_prod_name'>
                                         <strong t-esc="line.product_id.with_context(display_default_code=False).display_name"/>
                                     </a>
@@ -125,7 +125,7 @@
                                 <!--<a href="#" class="js_delete_product no-decoration"><small><i class="fa fa-trash-o"/> Remove</small></a>-->
                             </td>
                             <td class="text-center col-sm-2" id="td-price" name="price" style='padding: 12px 0;'>
-                                <div class='mt24'>
+                                <div class='mt24 td-div'>
                                     <t t-if="(compute_currency(line.product_id.lst_price) - line.price_reduce ) &gt; 0.01  and website.get_current_pricelist().discount_policy=='without_discount'">
                                         <del t-attf-class="#{'text-danger mr8'}" style="white-space: nowrap;" t-esc="compute_currency(line.product_id.website_public_price)" t-options="{'widget': 'monetary', 'display_currency': website.get_current_pricelist().currency_id, 'from_currency': website.currency_id}"/>
                                     </t>
@@ -134,7 +134,7 @@
                                 </div>
                             </td>
                             <td class="text-center col-sm-2" id="td-qty" style='padding: 12px 0;'> 
-                                <div class="input-group oe_website_spinner act_prod_qty_div mt16">
+                                <div class="input-group oe_website_spinner act_prod_qty_div mt16 td-div">
                                     <a t-attf-href="#" class="mb8 input-group-addon js_add_cart_json atcp1_qty_btn" data-no-instant="">
                                         <i class="fa fa-minus"/>
                                     </a>
@@ -144,8 +144,8 @@
                                     </a>
                                 </div>
                             </td>
-                            <td class="text-center col-sm-2" style='padding: 12px 0;'>
-                                <div class='mt24'>
+                            <td class="text-center col-sm-2 hidden-xs" style='padding: 12px 0;'>
+                                <div class='mt24 td-div'>
                                     <span t-field='line.price_total'></span>
                                 </div>
                             </td>

@@ -65,23 +65,83 @@
                     font-size:30px;
                 }
             </style>
+            
+            <style>
+                @media screen and (min-width: 320px) and (max-width: 767px) {
+                    #cart_products td{
+                        padding:20px;
+                    }
+                    #cart_products{
+                        font-size:10px;
+                    }
+                    .breadcrumb_heading_acp{
+                        font-size: 24px;
+                    }
+                    ol.breadcrumb li a, ol.breadcrumb li span {
+                        font-size: 10px;
+                    }
+                    .td-div{
+                        margin-top:0 !important;
+                    }
+                    .act_prod_qty_div{
+                        text-align: center;
+                    }
+                    .actp_prod_tr_border{
+                        border-top: 3px solid #f0f0f0;
+                    }
+                    #order_total_untaxed .pull-right, #order_total_taxes .pull-right, #order_total .pull-right{
+                        float:none !important;
+                    }
+                   
+                }
+                @media screen and (min-width: 768px) and (max-width: 991px) {
+                    .act_btn {
+                        padding: 15px 25px;
+                    }
+                    #cart_products>td{
+                        padding-top:8px;
+                    }
+                    #cart_products{
+                        font-size:12px;
+                    }
+                    .act_prod_qty_div {
+                        padding-left: opx;
+                    }
+                    .input-group-addon {
+                        padding: 4px 8px;
+                        font-size: 12px;
+                    }
+                    .oe_website_sale input.js_quantity{
+                        font-size:12px;
+                    }
+                }
+                @media screen and (min-width: 992px) and (max-width: 1199px) {
+                    
+                }
+                @media screen and (min-width: 1200px){
+                    
+                }
+            </style>    
+            
             <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12 first_row_acp">
                 <div class='container'>
-                    <div class='col-sm-6 col-lg-6 padleft_zero'>
-                        <h2 class="mb16 text-uppercase breadcrumb_heading_acp">Cart</h2>
-                    </div>
-                    <div class="col-sm-6 col-lg-6 padright_zero">
-                        <ol class="breadcrumb pull-right">
-                            <li>
-                                <a href="/">Home</a>
-                            </li>
-                            <li>
-                                <a href="/shop">Shop</a>
-                            </li>
-                            <li class="active">
-                                <span>Cart</span>
-                            </li>
-                        </ol>
+                    <div class='col-sm-12 col-xs-12 pad_lrz'>
+                        <div class='col-sm-6 col-xs-4 col-lg-6 padleft_zero'>
+                            <h2 class="mb16 text-uppercase breadcrumb_heading_acp">Cart</h2>
+                        </div>
+                        <div class="col-sm-6 col-xs-8 col-lg-6 padright_zero">
+                            <ol class="breadcrumb pull-right">
+                                <li>
+                                    <a href="/">Home</a>
+                                </li>
+                                <li>
+                                    <a href="/shop">Shop</a>
+                                </li>
+                                <li class="active">
+                                    <span>Cart</span>
+                                </li>
+                            </ol>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -96,13 +156,13 @@
                                 <t t-call="website_sale.cart_lines"/>
                                 
                                 <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12 mt24 mb36 thrd_row_acp">
-                                    <div class='col-xs-6'>
+                                    <div class='col-xs-6 col-sm-6'>
                                         <a href="/shop" class="btn btn_back_atcp act_btn">
                                             <span class="hidden-xs">Back</span>
                                             <span class="visible-xs-inline">Back</span>
                                         </a>
                                     </div>
-                                    <div class='col-xs-3 col-xs-offset-2'>
+                                    <div class='col-xs-6 col-sm-2 col-md-3 col-md-offset-2 col-sm-offset-2'>
                                         <a t-if="not optional_products and website_sale_order and website_sale_order.website_order_line" class="btn btn_pc_atcp act_btn btn-block" href="/shop/checkout">
                                             <span class="hidden-xs">Checkout</span>
                                             <span class="visible-xs-inline">Checkout</span>

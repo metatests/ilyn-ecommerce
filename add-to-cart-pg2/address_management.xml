@@ -126,10 +126,10 @@
         <div id="wrap">
             <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12 first_row_acp" style='font-family: "Oxygen", sans-serif;'>
                 <div class='container'>
-                    <div class='col-sm-6 col-lg-6 padleft_zero'>
+                    <div class='col-xs-4 col-sm-4 col-lg-6 padleft_zero'>
                         <h2 class="mb16 text-uppercase breadcrumb_heading_acp2_ad">Address</h2>
                     </div>
-                    <div class="col-sm-6 col-lg-6 padright_zero">
+                    <div class="col-xs-8 col-sm-8 col-lg-6 padright_zero">
                         <ol class="breadcrumb pull-right">
                             <li>
                                 <a href="/">Home</a>
