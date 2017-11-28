@@ -6,7 +6,7 @@
         }  
         #o_shop_collapse_category li a {
             width: 75%;
-            padding:7px;
+            padding-left:48px;
         }
         .left_prod_cat_l3_atag: hover{
             color: #c1b497;

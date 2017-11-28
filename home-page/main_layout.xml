@@ -422,6 +422,10 @@
           .s_image_mask_boxes {
             padding-top: 50px;
           }
+          
+          #top_menu{
+              background: white;
+          }
         </style>
         <div id="wrapwrap" t-att-class="pageName or ''" style="font-family: 'Lato', sans-serif;">
             <header>

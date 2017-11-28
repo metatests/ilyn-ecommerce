@@ -2,7 +2,7 @@
 <data name="Delivery Costs" inherit_id="website_sale.total">
     <xpath expr="//div[@id='order_total_untaxed']" position="before">
         <div class="row" id="order_delivery" t-if="website_sale_order and website_sale_order.has_delivery">
-            <div class='col-xs-6 pull-right'>
+            <div class='col-xs-12 col-sm-6 pull-right'>
                 <span class="col-xs-6 text-right subtotal_text" title="Delivery will be updated after choosing a new delivery method"> Delivery:</span>
                 <span class="col-xs-6 text-left subtotal_text">
                     <span t-field="website_sale_order.amount_delivery" style="white-space: nowrap;" t-options="{                               &quot;widget&quot;: &quot;monetary&quot;,                               &quot;display_currency&quot;: website_sale_order.currency_id,                           }"/></span>
