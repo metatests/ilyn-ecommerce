@@ -118,13 +118,65 @@
                 }
 
             </style>
+            
+        <style>
+            @media screen and (min-width: 320px) and (max-width: 767px) {
+                .breadcrumb_heading_acp3{
+                    font-size: 24px;
+                    margin-left:4px;
+                }
+                ol.breadcrumb li a, ol.breadcrumb li span {
+                    font-size: 10px;
+                }
+                .breadcrumb{
+                    padding:4px;
+                }
+                .breadcrumb > li + li:before{
+                    padding:0;
+                }
+                #td-qty, #cust-td-pricetotal{
+                    display: none;
+                }
+                .btn_back_atcp3 {
+                    min-width: auto;
+                }
+                .actp3_btn {
+                    padding: 10px 15px;
+                    font-size: 10px;
+                }
+                .oe_sale_acquirer_button form button{
+                    padding: 10px 15px;
+                    font-size: 10px;
+                }
+                .frth_row_acp3 {
+                    padding: 20px 10px 20px 10px;
+                }
+                
+            }
+            @media screen and (min-width: 768px) and (max-width: 991px) {
+                #atcp3_payment_method_div{
+                    padding-left: 0px !important;
+                }
+            }
+            @media screen and (min-width: 992px) and (max-width: 1199px) {
+                #atcp3_payment_method_div{
+                    padding-left: 0px !important;
+                }
+            }
+            @media screen and (min-width: 1200px){
+                #atcp3_payment_method_div{
+                    padding-left: 0px !important;
+                }
+            }
+        </style>
+
         <div id="wrap" style="font-family: 'Oxygen', sans-serif">
             <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12 first_row_acp3">
                 <div class='container'>
-                    <div class='col-sm-6 col-lg-6 padleft_zero'>
+                    <div class='col-xs-4 col-sm-6 col-lg-6 padleft_zero'>
                         <h2 class="mb16 text-uppercase breadcrumb_heading_acp3">Payment</h2>
                     </div>
-                    <div class="col-sm-6 col-lg-6 padright_zero">
+                    <div class="col-xs-8 col-sm-6 col-lg-6 padright_zero">
                         <ol class="breadcrumb pull-right">
                             <li>
                                 <a href="/">Home</a>
@@ -139,7 +191,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-12 mt64 mb64">
+            <div class="col-sm-12 col-md-12 col-xs-12  mt64 mb64">
                 <div class="container oe_website_sale">
                     <div class='sec_row_acp3 '>
                         <t t-call="website_sale.wizard_checkout">
@@ -203,10 +255,10 @@
                                                 </td>
                                                 
                                                 <td class="text-center col-sm-2" id="td-qty" style='padding: 12px 0;'>
-                                                    <div class='mt24' t-esc="line.product_uom_qty"/>
+                                                    <div class='mt24 acp3_pqty' t-esc="line.product_uom_qty"/>
                                                 </td>
                                                 
-                                                <td class="text-center col-sm-2" style='padding: 12px 0;'>
+                                                <td class="text-center col-sm-2" id="cust-td-pricetotal" style='padding: 12px 0;'>
                                                     <div class='mt24'>
                                                         <span t-field='line.price_total'></span>
                                                     </div>
@@ -229,7 +281,7 @@
                                 <div class="oe_structure"/>
                                 <div class="js_payment mb64 row" t-if="acquirers and website_sale_order.amount_total" id="payment_method">
                                     
-                                    <div class="col-lg-6 col-sm-6" style='padding-left:0'>
+                                    <div class="col-lg-6 col-sm-6" id="atcp3_payment_method_div">
                                         <div class='col-sm-12'>
                                             <div class="panel panel-default">
                                                 <div class="panel-heading">
@@ -282,14 +334,14 @@
                                     </div>
                                     
                                     
-                                    <div class='col-sm-12'>
-                                        <div class='col-sm-12'>
-                                            <div class='col-sm-12 frth_row_acp3 mt32 mb32'>
-                                                <div class="col-lg-6 col-sm-6">
+                                    <div class='col-sm-12 col-xs-12'>
+                                        <div class='col-sm-12 col-xs-12'>
+                                            <div class='col-sm-12 col-xs-12 frth_row_acp3 mt32 mb32'>
+                                                <div class="col-lg-6 col-sm-6 col-xs-6">
                                                     <a href="/shop/checkout" class="btn actp3_btn btn_back_atcp3"> Back </a>
                                                 </div>
                                         
-                                            <div class="col-lg-6 col-sm-6 text-right">
+                                            <div class="col-lg-6 col-sm-6 col-xs-6 text-right">
                                                 <t t-foreach="acquirers or []" t-as="acquirer" id="acquirers_list">
                                                     <div t-att-data-id="acquirer.id" class="oe_sale_acquirer_button hidden pull-right">
                                                         <div t-raw="acquirer.button"/>
@@ -298,7 +350,7 @@
                                                                 <input type="checkbox" name="odoo_save_token"/>
                                                                 <label for="odoo_save_token">Save my payment data</label>
                                                             </div>
-                                                            <div class="pre_msg" t-field="acquirer.pre_msg"/>
+                                                            <div class="pre_msg hidden-xs" t-field="acquirer.pre_msg"/>
                                                         </div>
                                                     </div>
                                                 </t>

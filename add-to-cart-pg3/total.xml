@@ -24,7 +24,7 @@
             </style>
             
             <div class="row" id="order_total_untaxed">
-                <div class='col-xs-6 pull-right'>
+                <div class='col-xs-12 col-sm-6 pull-right'>
                     <span class="col-xs-6 text-right subtotal_text">Subtotal:</span>
                     <span class="col-xs-6 text-left subtotal_text">
                         <span t-field="website_sale_order.amount_untaxed" style="white-space: nowrap;" t-options="{'widget': 'monetary','from_currency': website_sale_order.pricelist_id.currency_id,'display_currency': website.currency_id}"/>
@@ -32,7 +32,7 @@
                 </div>
             </div>
             <div class="row" id="order_total_taxes">
-                <div class='col-xs-6 pull-right'>
+                <div class='col-xs-12 col-sm-6 pull-right'>
                 <span class="col-xs-6 text-right subtotal_text" title="Taxes may be updated after providing shipping address"> Taxes:</span>
                 <span class="col-xs-6 text-left subtotal_text">
                     <span t-field="website_sale_order.amount_tax" style="white-space: nowrap;" t-options="{'widget': 'monetary', 'from_currency': website_sale_order.pricelist_id.currency_id, 'display_currency': website.currency_id}"/>
@@ -40,7 +40,7 @@
                 </div>
             </div>
             <div class="row mt24 mb16" id="order_total">
-                <div class='col-xs-6 pull-right'>
+                <div class='col-xs-12 col-sm-6 pull-right'>
                 <span class="col-xs-6 text-right h4 dg_tc">Total:</span>
                 <span class="col-xs-6 text-left h4" style="white-space: nowrap;">
                     <span t-field="website_sale_order.amount_total" style="white-space: nowrap;" t-options="{'widget': 'monetary','from_currency': website_sale_order.pricelist_id.currency_id,'display_currency': website.currency_id}"/>
