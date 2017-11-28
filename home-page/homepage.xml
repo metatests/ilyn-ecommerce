@@ -15,8 +15,8 @@
         <div class="carousel-inner">
           <div class="item active" style="">
             <div class="container">
-              <div class="row content">
-                <div class="carousel-content cust_ts_left_panel col-md-3 " style="">
+              <div class="row content" id='cust-parent-carcon'>
+                <div class="carousel-content cust_ts_left_panel col-md-3 col-sm-3 col-xs-12" style="">
                   <h4 class="cust_ts_left_heading"><span class="text-uppercase">Premium</span> Collection
                                     </h4>
                   <h4 class="cust_ts_left_heading"> Winter '17 </h4>
@@ -24,8 +24,8 @@
                     <a id="shop_now_button" href="/shop" class="btn btn-default " data-original-title="" title="">SHOP NOW</a>
                   </p>
                 </div>
-                <div class="col-md-9 pad_lrz cust_carousel-img">
-                  <img class='img-responsive' src="/web/image/12942" title="" />
+                <div class="col-md-9 col-sm-9 col-xs-12 pad_lrz cust_carousel-img">
+                  <img class='img-responsive' src="/web/image/12942" id='cust-carousel-img1' title="" />
                 </div>
                 <br/>
               </div>
@@ -34,7 +34,7 @@
           <div class="item" style="">
             <div class="container">
               <div class="row content">
-                <div class="carousel-content cust_ts_left_panel col-md-3 " style="">
+                <div class="carousel-content cust_ts_left_panel col-md-3 col-sm-3 col-xs-12" style="">
                   <h4 class="cust_ts_left_heading"><span class="text-uppercase">Premium</span> Collection
                                     </h4>
                   <h4 class="cust_ts_left_heading"> Winter '17 </h4>
@@ -42,8 +42,8 @@
                     <a id="shop_now_button" href="/shop" class="btn btn-default " data-original-title="" title="">SHOP NOW</a>
                   </p>
                 </div>
-                <div class="col-md-9 pad_lrz cust_carousel-img">
-                  <img class='img-responsive' src="/web/image/12941" title="" />
+                <div class="col-md-9 col-sm-9 col-xs-12 pad_lrz cust_carousel-img">
+                  <img class='img-responsive' src="/web/image/12941" id='cust-carousel-img2' title="" />
                 </div>
               </div>
             </div>
@@ -465,6 +465,11 @@
             padding-left: 75px;
             padding-right: 75px;
 		      }
+		      #nst-ht, #ban-ht, #bct-ht{
+		          font-size:16px;
+		          color: black;
+		          font-weight: bold;
+    		  }
 		      </style>
       <script type="text/javascript">
 					$(document).ready(function(){
@@ -525,7 +530,7 @@
 					});
 
 				</script>
-      <style>
+        <style>
 					.left_pad30{
 						padding-left:30px;
 					}
@@ -555,7 +560,7 @@
                 #clothing-l1cat-imgdiv, #footwear-l1cat-imgdiv, #clothing-l1cat-imgsubdiv, #dis-cen-bandiv, #dis-cen-bctdiv{
                     padding-left:15px;
                 }
-                #acc-l1cat-imgdiv, #footwear-l1cat-imgsubdiv, #acc-l1cat-imgsubdiv, #dis-cen-bctimg-div, #dis-cen-nst-div, #dis-cen-nst-imgdiv, #whyilyn-rightdiv{
+                #acc-l1cat-imgdiv, #footwear-l1cat-imgsubdiv, #acc-l1cat-imgsubdiv, #dis-cen-bctimg-div, #dis-cen-nst-div, #dis-cen-nst-imgdiv{
                     padding-right: 15px;
                 }
                 .address_hb{
@@ -568,33 +573,111 @@
                 #ban-map{
                     height:auto !important;
                 }
-                #whyilyn-leftdiv{
+                #whyilyn-frst-div{
                     padding-left:15px !important;
                 }
-                #whyilyn-rightdiv{
+                #whyilyn-frth-div{
                     padding-right: 15px !important;
+                }
+                .cust_ts_left_heading {
+                    margin-left: 90px;
+                    margin-top: 8px;
+                    font-size: 14px;
+                }
+                .cust_ts_left_panel{
+                    height:140px;
+                }
+                #shop_now_button{
+                    border: 2px solid #c1b497;
+                    margin-top: 24px;
+                    margin-left: 90px;
+                    padding: 10px 12px;
+                    font-size: 10px;
                 }
                 
             }
             @media screen and (min-width: 768px) and (max-width: 991px) {
-            	  #whyilyn-leftdiv{
+                #clothing-l1cat-imgdiv, #footwear-l1cat-imgdiv, #clothing-l1cat-imgsubdiv, #dis-cen-bandiv, #dis-cen-bctdiv, #dis-cen-banimg-div{
+                    padding-left:15px;
+                }
+                #acc-l1cat-imgdiv, #footwear-l1cat-imgsubdiv, #acc-l1cat-imgsubdiv, #dis-cen-bctimg-div, #dis-cen-nst-div, #dis-cen-nst-imgdiv{
+                    padding-right: 15px;
+                }
+                .cust_ts_left_panel{
+                    height:183px;
+                }
+                div.carousel div.carousel-content{
+                    padding:0;
+                }
+                .cust_ts_left_heading{
+                    font-size:14px;
+                    margin-left: 45px;
+                    margin-top: 18px;
+                }
+                #shop_now_button{
+                    margin-top: 30px;
+                    margin-left: 30px;
+                    padding: 10px 12px;
+                    font-size: 12px;
+                }
+            	  #whyilyn-frst-div{
                     padding-left:15px !important;
                 }
-                #whyilyn-rightdiv{
+                #whyilyn-frth-div{
                     padding-right: 15px !important;
                 }
+                #whyilyn-thrd-div{
+                    margin-top:16px;
+                }
+                #whyilyn-frth-div{
+                    margin-top: 16px;
+                }
+                #ban-map{
+                    height:auto !important;
+                }
+                .btnx{
+                    padding: 10px 6px;
+                    font-size: 16px;
+                }
+                .image-mask-box .thumbnail .image-wrapper .masking a {
+                    width: 150px;
+                }
             }
-            @media screen and (min-width: 992px) and (max-width: 1199px) {
+            @media screen and (min-width: 992px) and (max-width: 1023px) {
+                .cust_ts_left_panel{
+                    height:236px;
+                }
+                #shop_now_button{
+                    margin-top: 36px;
+                    margin-left: 24px;
+                }
+                #ban-map{
+                    height:auto !important;
+                }
+            }
+            @media screen and (min-width: 1024px) and (max-width: 1199px) {
+                .cust_ts_left_panel{
+                    height:244px;
+                }
+                #ban-map{
+                    height:auto !important;
+                }
+                #shop_now_button{
+                    margin-top: 36px;
+                    margin-left: 24px;
+                }
             	
             }
             @media screen and (min-width: 1200px){
-            	
+            	#ban-map{
+                    height:auto !important;
+                }
             }
 
 				</style>
       <section class="s_title ">
         <div class="container" style=" padding-right:0;">
-          <div class="col-md-12 mb0 mt32" style="padding-left: 0px; ">
+          <div class="col-md-12 col-sm-12 mb0 mt32" style="padding-left: 0px; ">
             <h3 class=" text-muted text-center" style=" color: black;font-size: 18px;">
               <b>PRODUCTS</b>
               <div class="mt24" style="padding: 0px ;border-bottom: 6px solid #ededed;width:100%;"/>
@@ -606,19 +689,19 @@
       <section class="s_three_columns bg-white mt0 mb0" style="overflow: hidden;">
         <div class="container">
           <div class="row">
-            <div class="col-md-12 col-xs-12">
-              <div class="col-md-4 col-xs-12 padleft_zero mb0" id='clothing-l1cat-imgdiv'>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="col-md-4 col-xs-12 col-sm-4 padleft_zero mb0" id='clothing-l1cat-imgdiv'>
                 <div class="s_references">
                   <div class="container">
                     <div class="row">
-                      <div class="mt0 col-md-12 ">
+                      <div class="mt0 col-md-12 col-sm-12 ">
                         <h4 class="mt16 text-center" id="cloth-ht" style="color: rgb(0, 0, 0); font-size: 16px; font-weight: bold;">CLOTHING</h4>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="mt16 shop_img mb32 image-mask-box" style="margin-left: 0px;">
-                  <div class="product_container col-md-12 col-xs-12 padleft_zero" id='clothing-l1cat-imgsubdiv'>
+                  <div class="product_container col-md-12 col-xs-12 col-sm-12 padleft_zero" id='clothing-l1cat-imgsubdiv'>
                     <div class="thumbnail" id="cloth-cat">
                       <div class="image-wrapper">
                         <img src="/web/image/12818" class="pull-left product_image " data-original-title="" title="" style="position: relative; width: 100%; height: 100%;"/>
@@ -630,18 +713,18 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-4 col-xs-12 padleft_zero" id='footwear-l1cat-imgdiv'>
+              <div class="col-md-4 col-xs-12 col-sm-4 padleft_zero" id='footwear-l1cat-imgdiv'>
                 <div class="s_references">
                   <div class="container">
                     <div class="row">
-                      <div class="mt0 col-md-12 col-xs-12 ">
+                      <div class="mt0 col-md-12 col-xs-12 col-sm-12 ">
                         <h4 class="mt16 text-center " id="foot-ht" style="color: rgb(0, 0, 0); font-size: 16px; font-weight: bold; padding-left: 15px;">FOOTWEAR</h4>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="mt16  shop_img mb32 image-mask-box" style="margin-left: 0px;">
-                  <div class="product_container col-md-12 col-xs-12 padright_zero" id='footwear-l1cat-imgsubdiv'>
+                  <div class="product_container col-md-12 col-xs-12 col-sm-12 padright_zero" id='footwear-l1cat-imgsubdiv'>
                     <div class="thumbnail" id="foot-cat">
                       <div class="image-wrapper">
                         <img src="/web/image/12817" class="pull-left product_image " data-original-title="" title="" style="position: relative; width: 100%; height: 100%;"/>
@@ -653,18 +736,18 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-4 col-xs-12 padright_zero" id='acc-l1cat-imgdiv'>
+              <div class="col-md-4 col-xs-12 col-sm-4 padright_zero" id='acc-l1cat-imgdiv'>
                 <div class="s_references">
                   <div class="container">
                     <div class="row">
-                      <div class="mt0 col-md-12 col-xs-12 ">
+                      <div class="mt0 col-md-12 col-xs-12 col-sm-12 ">
                         <h4 class="mt16 text-center " id="acc-ht" style="color: rgb(0, 0, 0); font-size: 16px; font-weight: bold; padding-left: 15px;">ACCESSORIES</h4>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="mt16 shop_img mb32 image-mask-box" style="margin-left: 0px;">
-                  <div class="product_container col-md-12 col-xs-12 padright_zero" id='acc-l1cat-imgsubdiv'>
+                  <div class="product_container col-md-12 col-xs-12 col-sm-12 padright_zero" id='acc-l1cat-imgsubdiv'>
                     <div class="thumbnail" id="acc-cat">
                       <div class="image-wrapper">
                         <img src="/web/image/12816" class="pull-left product_image " data-original-title="" title="" style="position: relative; width: 100%; height: 100%;"/>
@@ -683,7 +766,7 @@
       <section class="s_title">
         <div class="container">
           <div class="row" style="padding: 0px;">
-            <div class="col-md-12 col-xs-12 mb0 mt32">
+            <div class="col-md-12 col-xs-12 col-sm-12 mb0 mt32">
               <h3 class="text-muted text-center" style="color: black;font-size: 18px;">
                 <b>DISPLAY CENTERS</b>
                 <div class="mt24" style="padding: 0px ;border-bottom: 6px solid #ededed;width:100%;"/>
@@ -696,8 +779,8 @@
       <section class="s_three_columns">
         <div class="container">
           <div class="row">
-            <div class="col-md-12 col-xs-12 ">
-              <div class="col-md-4 col-xs-12 padleft_zero" id='dis-cen-bandiv'>
+            <div class="col-md-12 col-xs-12 col-sm-12  ">
+              <div class="col-md-4 col-xs-12 col-sm-4 padleft_zero" id='dis-cen-bandiv'>
                 <div class="col-md-12 col-xs-12 mt16 mb16 address_hb" style="padding-left:0; padding-right:30px;">
                   <h4 class="h4 text-center" id="ban-ht">BANANI 11   </h4>
                   <h5 class="mb16 text-muted text-center">Level3, Tower 52, Road 11
@@ -708,7 +791,7 @@
                                         <br/>
                                     </h5>
                 </div>
-                <div class="col-md-12 col-xs-12 padleft_zero" id='dis-cen-banimg-div'>
+                <div class="col-md-12 col-xs-12 col-sm-12 padleft_zero" id='dis-cen-banimg-div'>
                   <div class="image-mask-box">
                     <div class="thumbnail" id="ban-map" style="border:none;height: 300px;padding:0">
                       <div class="image-wrapper">
@@ -737,8 +820,8 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-4 col-xs-12 padleft_zero" id='dis-cen-bctdiv'>
-                <div class="col-md-12 col-xs-12 mt16 mb16 address_hb">
+              <div class="col-md-4 col-xs-12 col-sm-4 padleft_zero" id='dis-cen-bctdiv'>
+                <div class="col-md-12 col-xs-12 col-sm-12 mt16 mb16 address_hb">
                   <h4 class="mb0 text-center" id="bct-ht">BASHUNDHARA CITY</h4>
                   <h5 class="mb16 text-muted text-center">Level 2, Block A, Basundhara City 
 													
@@ -750,7 +833,7 @@
                                         <br/>
                                     </h5>
                 </div>
-                <div class="col-md-12 col-xs-12 padright_zero" id='dis-cen-bctimg-div'>
+                <div class="col-md-12 col-xs-12 col-sm-12 padright_zero" id='dis-cen-bctimg-div'>
                   <div class="image-mask-box">
                     <div class="thumbnail" id="bct-map" style="border:none; padding:0">
                       <div class="image-wrapper">
@@ -779,8 +862,8 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-4 col-xs-12 padright_zero" id='dis-cen-nst-div'>
-                <div class="col-md-12 col-xs-12 mt16 mb16 address_hb">
+              <div class="col-md-4 col-xs-12 col-sm-4 padright_zero" id='dis-cen-nst-div'>
+                <div class="col-md-12 col-xs-12 col-sm-12 mt16 mb16 address_hb">
                   <h4 class="mb0 text-center" id="nst-ht">NEW STORE</h4>
                   <h5 class="mb16 text-muted text-center">Coming Soon! 
 													
@@ -791,7 +874,7 @@
                                         <br/>
                                     </h5>
                 </div>
-                <div class="col-md-12 col-xs-12 padright_zero" id='dis-cen-nst-imgdiv'>
+                <div class="col-md-12 col-xs-12 col-sm-12 padright_zero" id='dis-cen-nst-imgdiv'>
                   <div class="image-mask-box">
                     <div class="thumbnail" id="nst-map" style="border:none; padding:0">
                       <div class="image-wrapper">
@@ -827,7 +910,7 @@
       </section>
       <section class="s_title">
         <div class="container ">
-          <div class="col-md-12 col-xs-12 mb0 mt32 pad_lrz">
+          <div class="col-md-12 col-xs-12 col-sm-12 mb0 mt32 pad_lrz">
             <h3 class=" text-muted text-center" style=" color: black;font-size: 18px;">
               <b>WHY ILLIYEEN</b>
               <div class="mt24" style="padding: 0px ;border-bottom: 6px solid #ededed;width:100%;"/>
@@ -838,7 +921,7 @@
       </section>
       <section class="s_title mt24 mb32">
         <div class="container">
-          <div class="col-md-3 col-sm-3 col-xs-12" style="padding-left: 0px; " id='whyilyn-leftdiv'>
+          <div class="col-md-3 col-sm-6 col-xs-12" style="padding-left: 0px; " id='whyilyn-frst-div'>
             <div class="box text-center">
               <span class="fa fa-3x fa-gift"/>
               <h5 class="text-uppercase">
@@ -846,7 +929,7 @@
               </h5>
             </div>
           </div>
-          <div class="col-md-3 col-sm-3 col-xs-12">
+          <div class="col-md-3 col-sm-6 col-xs-12" id='whyilyn-sec-div'>
             <div class="box text-center">
               <span class="fa fa-3x fa-truck"/>
               <h5 class="text-uppercase ">
@@ -854,7 +937,7 @@
               </h5>
             </div>
           </div>
-          <div class="col-md-3 col-sm-3 col-xs-12">
+          <div class="col-md-3 col-sm-6 col-xs-12" id='whyilyn-thrd-div'>
             <div class="box text-center">
               <span class="fa fa-3x fa-money"/>
               <h5 class="text-uppercase">
@@ -862,7 +945,7 @@
               </h5>
             </div>
           </div>
-          <div class="col-md-3 col-sm-3 col-xs-12" style="padding-right:0;" id='whyilyn-rightdiv'>
+          <div class="col-md-3 col-sm-6 col-xs-12" style="padding-right:0;" id='whyilyn-frth-div'>
             <div class="box text-center">
               <span class="fa fa-3x fa-headphones"/>
               <h5 class="text-uppercase">
@@ -876,7 +959,7 @@
       <div class=''>
       <section class="s_title">
         <div class="container ">
-          <div class="col-md-12 mt32 mb32 pad_lrz">
+          <div class="col-md-12 col-sm-12 mt32 mb32 pad_lrz">
             <h3 class="text-center text-muted" style=" color: black;font-size: 18px;">
               <b>OUR BRANDS</b>
             </h3>
