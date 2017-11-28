@@ -130,6 +130,30 @@
             font-size: 11px; 
         }
         </style>
+        <style>
+            @media screen and (min-width: 320px) and (max-width: 767px) {
+                #aut_foot_footware_div{
+                    padding-left:0;
+                }
+                #aut_foot_stay_conn_div{
+                    padding-left:0;
+                }
+                #aut_foot_nst_heading{
+                    margin-top:16px !important;
+                }
+                
+            }
+            @media screen and (min-width: 768px) and (max-width: 991px) {
+                
+            }
+            @media screen and (min-width: 992px) and (max-width: 1199px) {
+                
+            }
+            @media screen and (min-width: 1200px){
+                
+            }
+        </style>
+
         <script type="text/javascript">
             $(document).ready(function(){
                 $("#subscription_form_submit").click(function(){
@@ -273,7 +297,7 @@
                     </div>
                     <div class="col-sm-4 col-md-4 col-xs-12 ">
                         <div class="col-md-12 col-sm-12 col-xs-12 pad_lrz">
-                            <div class="col-md-6 col-sm-6 col-xs-12 padleft_zero">
+                            <div class="col-md-6 col-sm-6 col-xs-6 padleft_zero">
                                 <h3 class="mt0 mb32">
                                     <a class="anc_tdn anc_l1" href="#"> Accessories </a>
                                 </h3>
@@ -299,7 +323,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-sm-6 col-xs-12 ">
+                            <div class="col-md-6 col-sm-6 col-xs-6 " id='aut_foot_footware_div'>
                                 <h3 class="mt0 mb32">
                                     <a class="anc_tdn anc_l1" href="#">Footware</a>
                                 </h3>
@@ -314,9 +338,14 @@
                             </div>
                         </div>
                     </div>
+                    
+                    <div class='col-xs-12 hidden-sm hidden-md hidden-lg mt24 mb8'>
+                        <div class='footer_line'></div>
+                    </div>
+                    
                     <div class="col-sm-8 col-md-8 col-xs-12 ">
                         <div class="col-sm-8 col-md-8 padleft_zero" >
-                            <h3 class="mt0 mb32 " > Display Centers </h3>
+                            <h3 class="mt0 mb32" id="aut_foot_display_center_heading"> Display Centers </h3>
                             <div class="col-md-6 col-sm-6 col-xs-12 padleft_zero">
                                 <h4 class="mb16 mt0 " style="color: #acacac;"> Banani Store</h4>
                                 <h6>Level3, Tower 52, Road 11 Banani, Dhaka 1213 </h6>
@@ -324,11 +353,14 @@
                                 <h6>Level 2, Block A, Basundhara City, Panthapath, Dhaka 1215 </h6>
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-12 padleft_zero">
-                                <h4 class="mb16 mt0" style="color: #acacac;">New Store</h4>
+                                <h4 class="mb16 mt0" id="aut_foot_nst_heading" style="color: #acacac;">New Store</h4>
                                 <h6>Coming Soon! </h6>
                             </div>
                         </div>
-                        <div class="col-sm-4 col-md-4">
+                        <div class='col-xs-12 hidden-sm hidden-md hidden-lg pad_lrz mt24 mb8'>
+                            <div class='footer_line'></div>
+                        </div>
+                        <div class="col-sm-4 col-md-4" id="aut_foot_stay_conn_div">
                             <h3 class="mt0 mb32 " > Stay Connected </h3>
                             <div class="col-md-12 col-sm-12 col-xs-12 padleft_zero">
                                 <p class="footer_msg_p"> Subscribe for updates and offers.</p>
