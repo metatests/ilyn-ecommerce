@@ -178,11 +178,21 @@
         <script type="text/javascript">
             $(document).ready(function(){
                 $("#subscription_form_submit").click(function(){
-                        if ($("#footer_subscription_customer_name").val()){
-                            if($("#footer_subscription_customer_phone").val()){
-                                $('#subscribe_success_modal').modal('show'); 
-                            }
-                        }
+                    var ec_cust_name =  $("#footer_subscription_customer_name").val();
+                    var ec_cust_phone = $("#footer_subscription_customer_phone").val(); 
+                    
+                    if ($("#footer_subscription_customer_name,#footer_subscription_customer_phone").filter(function() { return $(this).val(); }).length > 0) {
+                        $('#subscribe_success_modal12431243').modal('show'); 
+                    }
+                    
+                    var ec_subscription_msg = "Assalamualaikum " + ec_cust_name + ", Thank you for subscribing to ILYN.";
+                    console.log(ec_subscription_msg);
+                
+                    var url = "http://bangladeshsms.com/smsapi?api_key=C200038059f06f05487361.76812382&amp;type=text&amp;contacts="+ec_cust_phone+"&amp;senderid=8804445629100&amp;msg="+ec_subscription_msg;
+
+                    $.get(url,function(data,status) {
+                    },'html');
+                        
                 });
                 $("#subscription_form_submit").hover(
                     function(){
@@ -324,7 +334,7 @@
                                 </h3>
                                 <div class="footer-link">
                                     <a class="anc_tdn" href="#">
-                                        <h5>Leather Goods</h5>
+                                        <h5>Leather</h5>
                                     </a>
                                     <ul class="list-unstyled">
                                         <li>
@@ -385,15 +395,15 @@
                             <h3 class="mt0 mb32 " > Stay Connected </h3>
                             <div class="col-md-12 col-sm-12 col-xs-12 pad_lrz">
                                 <p class="footer_msg_p"> Subscribe for updates and offers.</p>
-                                <form action="/website_form/" method="post" data-model_name="res.partner" class="s_website_form form-horizontal container-fluid mt16" enctype="multipart/form-data">
+                                <form action="/website_form/" method="post" data-model_name="res.partner" class="s_website_form form-horizontal container-fluid mt16" enctype="multipart/form-data" id='ec_subscription_form'>
                                     <div class="form-group form-field o_website_form_required_custom">
                                         <div class="col-md-12 col-sm-12 col-xs-12 " style="padding-left:0; padding-right: 0">
-                                            <input type="text" class="form-control o_website_form_input" name="name" required="" id="footer_subscription_customer_name" placeholder="Your Name" value=""/>
+                                            <input type="text" class="form-control o_website_form_input" name="name" required="true" id="footer_subscription_customer_name" placeholder="Your Name" value=""/>
                                         </div>
                                     </div>
                                     <div class="form-group form-field o_website_form_required_custom">
                                         <div class="col-md-12 col-sm-12 col-xs-12" style="padding-left:0; padding-right: 0">
-                                            <input type="text" class="form-control o_website_form_input" name="phone" required="" id="footer_subscription_customer_phone" placeholder="Cell No" value=""/>
+                                            <input type="text" class="form-control o_website_form_input" name="phone" required="true" id="footer_subscription_customer_phone" placeholder="Cell No" value=""/>
                                         </div>
                                     </div>
                                     <div class="form-group mt16">
@@ -404,6 +414,8 @@
                                         </div>
                                     </div>
                                 </form>
+                                
+                                
                                 <div id="subscribe_success_modal" class="modal fade" role="dialog">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
@@ -412,9 +424,9 @@
                                                 <h4 class="modal-title">Thank you for Subscribing to ILYN</h4>
                                             </div>
                                             <div class="modal-body">
-                                                <div class="alert alert-success">   You're now subscribed to ILYN.  </div>
-                                                <p>Stay Connected for updates and place some message here.</p>
-                                                <p class="mt64">  What message here? and do not hesitate to contact us:   </p>
+                                                <div class="alert alert-success"> Hi <span id="ec_cust_name_span"></span>  You're now subscribed to ILYN.  </div>
+                                                <p>Stay Connected for updates.</p>
+                                                <p class="mt64">For any queries do not hesitate to contact us:   </p>
                                                 <ul class="list-unstyled">
                                                     <li>
                                                         <i class="fa fa-phone"></i> : 
