@@ -49,6 +49,9 @@
             #add_to_cart:hover{
                 background: #cdc3ab;
             }
+            .alert{ 
+                border-radius 0;
+            }
         </style>
         <style>
             @media screen and (min-width: 320px) and (max-width: 767px) {
@@ -224,14 +227,17 @@
                                 </div>
                             </form>
                             <hr t-if="product.availability != 'empty'"/>
-                            <div t-if="product.availability == 'in_stock'" class="alert alert-success">
+                            
+                            <div t-if="product.availability == 'in_stock'" class=" col-xs-12 mt24 col-sm-12 alert alert-success">
                                 <span class="fa fa-check"/>
                                 <span>In Stock</span>
                             </div>
-                            <div t-if="product.availability == 'warning'" class="alert alert-warning">
-                                <span class="fa fa-warning"/>
-                                <span t-field="product.availability_warning"/>
+                            <div t-if="product.availability == 'warning'" class="col-xs-12 mt24 col-sm-12 text-center alert alert-warning">
+                                <!--<span class="fa fa-warning"/>-->
+                                <span class="fa fa-meh-o fa-2x"/>
+                                <span style='margin-left:20px;' t-field="product.availability_warning"/>
                             </div>
+                            
                         </div>
                     </div>
                     
