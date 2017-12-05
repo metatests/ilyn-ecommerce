@@ -3,7 +3,7 @@
     <t t-set="pageName" t-value="'homepage'"/>
     <!-- slider part start -->
     <div id="wrap" class="oe_structure oe_empty">
-      <div id="myCarousel1505386689290" class="carousel slide s_banner carousel-custom col-sm-10 col-sm-offset-1 cust_top_slider" data-interval="10000" style="">
+      <div id="myCarousel1505386689290" class="carousel slide s_banner carousel-custom col-sm-10 col-sm-offset-1 mt48 cust_top_slider" data-interval="10000" style="">
         <ol class="carousel-indicators mb0">
           <li data-target="#myCarousel1505386689290" data-slide-to="0" class="active">
             <br/>
@@ -15,7 +15,7 @@
         <div class="carousel-inner">
           <div class="item active" style="">
             <div class="container">
-              <div class="row content" id="cust-parent-carcon">
+              <div class="row content" id='cust-parent-carcon'>
                 <div class="carousel-content cust_ts_left_panel col-md-3 col-sm-3 col-xs-12" style="">
                   <h4 class="cust_ts_left_heading"><span class="text-uppercase">Premium</span> Collection
                                     </h4>
@@ -25,7 +25,7 @@
                   </p>
                 </div>
                 <div class="col-md-9 col-sm-9 col-xs-12 pad_lrz cust_carousel-img">
-                  <img class="img-responsive" src="/web/image/12964" id="cust-carousel-img1" title=""/>
+                  <img class='img-responsive' src="/web/image/12942" id='cust-carousel-img1' title="" />
                 </div>
                 <br/>
               </div>
@@ -43,7 +43,7 @@
                   </p>
                 </div>
                 <div class="col-md-9 col-sm-9 col-xs-12 pad_lrz cust_carousel-img">
-                  <img class="img-responsive" src="/web/image/12963" id="cust-carousel-img2" title="" data-original-title=""/>
+                  <img class='img-responsive' src="/web/image/12941" id='cust-carousel-img2' title="" />
                 </div>
               </div>
             </div>
@@ -437,7 +437,7 @@
       <style>
 					.s_title .box {
 					padding: 50px 20px;
-					background-color: transparent;
+					background-color: #ededed;
 					border: 5px solid #e4e4e4;
 					-webkit-transition: all 0.3s ease;
 					-moz-transition: all 0.3s ease;
@@ -530,7 +530,7 @@
 					});
 
 				</script>
-      <style>
+        <style>
 					.left_pad30{
 						padding-left:30px;
 					}
@@ -551,7 +551,7 @@
 					}
 				
 				</style>
-      <style>
+				<style>
             @media screen and (min-width: 320px) and (max-width: 767px) {
             	  .six_logos_div_pad {
                     padding-left: 25px;
@@ -682,6 +682,7 @@
               <b>PRODUCTS</b>
               <div class="mt24" style="padding: 0px ;border-bottom: 6px solid #ededed;width:100%;"/>
             </h3>
+            
           </div>
         </div>
       </section>
@@ -689,7 +690,7 @@
         <div class="container">
           <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
-              <div class="col-md-4 col-xs-12 col-sm-4 padleft_zero mb0" id="clothing-l1cat-imgdiv">
+              <div class="col-md-4 col-xs-12 col-sm-4 padleft_zero mb0" id='clothing-l1cat-imgdiv'>
                 <div class="s_references">
                   <div class="container">
                     <div class="row">
@@ -700,7 +701,7 @@
                   </div>
                 </div>
                 <div class="mt16 shop_img mb32 image-mask-box" style="margin-left: 0px;">
-                  <div class="product_container col-md-12 col-xs-12 col-sm-12 padleft_zero" id="clothing-l1cat-imgsubdiv">
+                  <div class="product_container col-md-12 col-xs-12 col-sm-12 padleft_zero" id='clothing-l1cat-imgsubdiv'>
                     <div class="thumbnail" id="cloth-cat">
                       <div class="image-wrapper">
                         <img src="/web/image/12818" class="pull-left product_image " data-original-title="" title="" style="position: relative; width: 100%; height: 100%;"/>
@@ -712,7 +713,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-4 col-xs-12 col-sm-4 padleft_zero" id="footwear-l1cat-imgdiv">
+              <div class="col-md-4 col-xs-12 col-sm-4 padleft_zero" id='footwear-l1cat-imgdiv'>
                 <div class="s_references">
                   <div class="container">
                     <div class="row">
@@ -723,7 +724,7 @@
                   </div>
                 </div>
                 <div class="mt16  shop_img mb32 image-mask-box" style="margin-left: 0px;">
-                  <div class="product_container col-md-12 col-xs-12 col-sm-12 padright_zero" id="footwear-l1cat-imgsubdiv">
+                  <div class="product_container col-md-12 col-xs-12 col-sm-12 padright_zero" id='footwear-l1cat-imgsubdiv'>
                     <div class="thumbnail" id="foot-cat">
                       <div class="image-wrapper">
                         <img src="/web/image/12817" class="pull-left product_image " data-original-title="" title="" style="position: relative; width: 100%; height: 100%;"/>
@@ -735,7 +736,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-4 col-xs-12 col-sm-4 padright_zero" id="acc-l1cat-imgdiv">
+              <div class="col-md-4 col-xs-12 col-sm-4 padright_zero" id='acc-l1cat-imgdiv'>
                 <div class="s_references">
                   <div class="container">
                     <div class="row">
@@ -746,7 +747,7 @@
                   </div>
                 </div>
                 <div class="mt16 shop_img mb32 image-mask-box" style="margin-left: 0px;">
-                  <div class="product_container col-md-12 col-xs-12 col-sm-12 padright_zero" id="acc-l1cat-imgsubdiv">
+                  <div class="product_container col-md-12 col-xs-12 col-sm-12 padright_zero" id='acc-l1cat-imgsubdiv'>
                     <div class="thumbnail" id="acc-cat">
                       <div class="image-wrapper">
                         <img src="/web/image/12816" class="pull-left product_image " data-original-title="" title="" style="position: relative; width: 100%; height: 100%;"/>
@@ -770,6 +771,7 @@
                 <b>DISPLAY CENTERS</b>
                 <div class="mt24" style="padding: 0px ;border-bottom: 6px solid #ededed;width:100%;"/>
               </h3>
+              
             </div>
           </div>
         </div>
@@ -778,18 +780,11 @@
         <div class="container">
           <div class="row">
             <div class="col-md-12 col-xs-12 col-sm-12  ">
-              <div class="col-md-4 col-xs-12 col-sm-4 padleft_zero" id="dis-cen-bandiv">
-                <div class="col-md-12 col-xs-12 mt16 mb16 address_hb" style="padding-left:0; padding-right:30px;">
+              <div class="col-md-4 col-xs-12 col-sm-4 padleft_zero" id='dis-cen-bandiv'>
+                <div class="col-md-12 col-xs-12 mt16 mb16 address_hb" style="padding-left:0;">
                   <h4 class="h4 text-center" id="ban-ht">BANANI 11   </h4>
-                  <h5 class="mb16 text-muted text-center">Level3, Tower 52, Road 11
-													
-                                        <br/> Banani, Dhaka 1213 
-
-													
-                                        <br/>
-                                    </h5>
                 </div>
-                <div class="col-md-12 col-xs-12 col-sm-12 padleft_zero" id="dis-cen-banimg-div">
+                <div class="col-md-12 col-xs-12 col-sm-12 padleft_zero" id='dis-cen-banimg-div'>
                   <div class="image-mask-box">
                     <div class="thumbnail" id="ban-map" style="border:none;height: 300px;padding:0">
                       <div class="image-wrapper">
@@ -818,20 +813,11 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-4 col-xs-12 col-sm-4 padleft_zero" id="dis-cen-bctdiv">
+              <div class="col-md-4 col-xs-12 col-sm-4 padleft_zero" id='dis-cen-bctdiv'>
                 <div class="col-md-12 col-xs-12 col-sm-12 mt16 mb16 address_hb">
-                  <h4 class="mb0 text-center" id="bct-ht">BASHUNDHARA CITY</h4>
-                  <h5 class="mb16 text-muted text-center">Level 2, Block A, Basundhara City 
-													
-                                        <br/> Panthapath, Dhaka 1215 
-
-
-
-													
-                                        <br/>
-                                    </h5>
+                  <h4 class="text-center" id="bct-ht">BASHUNDHARA CITY</h4>
                 </div>
-                <div class="col-md-12 col-xs-12 col-sm-12 padright_zero" id="dis-cen-bctimg-div">
+                <div class="col-md-12 col-xs-12 col-sm-12 padright_zero" id='dis-cen-bctimg-div'>
                   <div class="image-mask-box">
                     <div class="thumbnail" id="bct-map" style="border:none; padding:0">
                       <div class="image-wrapper">
@@ -860,19 +846,11 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-4 col-xs-12 col-sm-4 padright_zero" id="dis-cen-nst-div">
+              <div class="col-md-4 col-xs-12 col-sm-4 padright_zero" id='dis-cen-nst-div'>
                 <div class="col-md-12 col-xs-12 col-sm-12 mt16 mb16 address_hb">
-                  <h4 class="mb0 text-center" id="nst-ht">NEW STORE</h4>
-                  <h5 class="mb16 text-muted text-center">Coming Soon! 
-													
-                                        <br/> Stay Tuned to find out
-
-
-													
-                                        <br/>
-                                    </h5>
+                  <h4 class=" text-center" id="nst-ht">NEW STORE</h4>
                 </div>
-                <div class="col-md-12 col-xs-12 col-sm-12 padright_zero" id="dis-cen-nst-imgdiv">
+                <div class="col-md-12 col-xs-12 col-sm-12 padright_zero" id='dis-cen-nst-imgdiv'>
                   <div class="image-mask-box">
                     <div class="thumbnail" id="nst-map" style="border:none; padding:0">
                       <div class="image-wrapper">
@@ -913,12 +891,13 @@
               <b>WHY ILLIYEEN</b>
               <div class="mt24" style="padding: 0px ;border-bottom: 6px solid #ededed;width:100%;"/>
             </h3>
+            
           </div>
         </div>
       </section>
       <section class="s_title mt24 mb32">
         <div class="container">
-          <div class="col-md-3 col-sm-6 col-xs-12" style="padding-left: 0px; " id="whyilyn-frst-div">
+          <div class="col-md-3 col-sm-6 col-xs-12" style="padding-left: 0px; " id='whyilyn-frst-div'>
             <div class="box text-center">
               <span class="fa fa-3x fa-gift"/>
               <h5 class="text-uppercase">
@@ -926,7 +905,7 @@
               </h5>
             </div>
           </div>
-          <div class="col-md-3 col-sm-6 col-xs-12" id="whyilyn-sec-div">
+          <div class="col-md-3 col-sm-6 col-xs-12" id='whyilyn-sec-div'>
             <div class="box text-center">
               <span class="fa fa-3x fa-truck"/>
               <h5 class="text-uppercase ">
@@ -934,7 +913,7 @@
               </h5>
             </div>
           </div>
-          <div class="col-md-3 col-sm-6 col-xs-12" id="whyilyn-thrd-div">
+          <div class="col-md-3 col-sm-6 col-xs-12" id='whyilyn-thrd-div'>
             <div class="box text-center">
               <span class="fa fa-3x fa-money"/>
               <h5 class="text-uppercase">
@@ -942,7 +921,7 @@
               </h5>
             </div>
           </div>
-          <div class="col-md-3 col-sm-6 col-xs-12" style="padding-right:0;" id="whyilyn-frth-div">
+          <div class="col-md-3 col-sm-6 col-xs-12" style="padding-right:0;" id='whyilyn-frth-div'>
             <div class="box text-center">
               <span class="fa fa-3x fa-headphones"/>
               <h5 class="text-uppercase">
@@ -952,44 +931,47 @@
           </div>
         </div>
       </section>
-      <div>
-        <section class="s_title">
-          <div class="container ">
-            <div class="col-md-12 col-sm-12 mt32 mb32 pad_lrz">
-              <h3 class="text-center text-muted" style=" color: black;font-size: 18px;">
-                <b>OUR BRANDS</b>
-              </h3>
-            </div>
+      
+      <div class=''>
+      <section class="s_title">
+        <div class="container ">
+          <div class="col-md-12 col-sm-12 mt32 mb32 pad_lrz">
+            <h3 class="text-center text-muted" style=" color: black;font-size: 18px;">
+              <b>OUR LABELS</b>
+            </h3>
           </div>
-        </section>
-        <section class="s_references bg-golden">
-          <div class="container">
-            <div class="row" style="padding: 24px 0 24px 0;">
-              <div class="col-md-3 col-sm-3 six_logos_div_pad col-xs-6 mt16 mb16 hidden">
-                <img src="/web/image/12824" class="img img-responsive " alt="Sahara" data-original-title="" title="ILYN Sahara"/>
-              </div>
-              <div class="col-md-4 col-sm-4 six_logos_div_pad col-xs-6 mt16 mb16">
-                <img src="/web/image/12890" class="img img-responsive " alt="Platinum" data-original-title="" title="ILYN Platinum"/>
-              </div>
-              <div class="col-md-4 col-sm-4 six_logos_div_pad col-xs-6 mt16 mb16">
-                <img src="/web/image/12891" class="img img-responsive " alt="Luxury" title="ILYN Luxury"/>
-              </div>
-              <div class="col-md-4 col-sm-4 six_logos_div_pad col-xs-6 mt16 mb16">
-                <img src="/web/image/12891" class="img img-responsive " alt="Luxury" title="ILYN Luxury"/>
-              </div>
-              <div class="col-md-4 col-sm-4 six_logos_div_pad col-xs-6 mt16 mb16">
-                <img src="/web/image/12893" class="img img-responsive " alt="Premium" title="ILYN Premium"/>
-              </div>
-              <div class="col-md-4 col-sm-4 six_logos_div_pad col-xs-6 mt16 mb16">
-                <img src="/web/image/12892" class="img img-responsive " alt="Premium Essentials" data-original-title="" title="ILYN Premium Essentials"/>
-              </div>
-              <div class="col-md-4 col-sm-4 six_logos_div_pad col-xs-6 mt16 mb16">
-                <img src="/web/image/12894" class="img img-responsive " alt="Handcrafted" data-original-title="" title="ILYN Handcrafted"/>
-              </div>
+        </div>
+      </section>
+      <section class="s_references bg-golden">
+        <div class="container">
+          <div class="row" style="padding: 24px 0 24px 0;">
+            <div class="col-md-3 col-sm-3 six_logos_div_pad col-xs-6 mt16 mb16 hidden">
+              <img src="/web/image/12824" class="img img-responsive " alt="Sahara" data-original-title="" title="ILYN Sahara"/>
             </div>
+            <div class="col-md-4 col-sm-4 six_logos_div_pad col-xs-6 mt16 mb16">
+              <img src="/web/image/12890" class="img img-responsive " alt="Platinum" data-original-title="" title="ILYN Platinum"/>
+            </div>
+            <div class="col-md-4 col-sm-4 six_logos_div_pad col-xs-6 mt16 mb16">
+              <img src="/web/image/12891" class="img img-responsive " alt="Luxury" title="ILYN Luxury"/>
+            </div>
+             <div class="col-md-4 col-sm-4 six_logos_div_pad col-xs-6 mt16 mb16">
+              <img src="/web/image/12891" class="img img-responsive " alt="Luxury" title="ILYN Luxury"/>
+            </div>
+            <div class="col-md-4 col-sm-4 six_logos_div_pad col-xs-6 mt16 mb16">
+              <img src="/web/image/12893" class="img img-responsive " alt="Premium" title="ILYN Premium"/>
+            </div>
+            <div class="col-md-4 col-sm-4 six_logos_div_pad col-xs-6 mt16 mb16">
+              <img src="/web/image/12892" class="img img-responsive " alt="Premium Essentials" data-original-title="" title="ILYN Premium Essentials"/>
+            </div>
+            <div class="col-md-4 col-sm-4 six_logos_div_pad col-xs-6 mt16 mb16">
+              <img src="/web/image/12894" class="img img-responsive " alt="Handcrafted" data-original-title="" title="ILYN Handcrafted"/>
+            </div>
+            
           </div>
-        </section>
+        </div>
+      </section>
       </div>
+      
     </div>
   </t>
 </t>

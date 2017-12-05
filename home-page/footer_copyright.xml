@@ -1,447 +1,50 @@
 <?xml version="1.0"?>
-<!--<data inherit_id="website.footer_custom" customize_show="True" name="Automatic Footer">-->
-<!--    <xpath expr="//div[@id='footer']" position="replace">-->
-<!--        <div id="footer" class="container hidden-print">-->
-<!--            <div class="row">-->
-<!--                <div class="col-md-4 col-lg-3">-->
-<!--                    <h4>Our Products &amp; Services</h4>-->
-<!--                    <ul class="list-unstyled" id="products">-->
-<!--                        <li><a href="/">Home</a></li>-->
-<!--                    </ul>-->
-<!--                </div>-->
-<!--                <div class="col-md-4  col-lg-3" id="info">-->
-<!--                    <h4>Connect with us</h4>-->
-<!--                    <ul class="list-unstyled">-->
-<!--                        <li><a href="/page/website.contactus">Contact us</a></li>-->
-<!--                    </ul>-->
-<!--                    <ul class="list-unstyled">-->
-<!--                        <li t-ignore="true"><i class="fa fa-phone"/><span t-field="res_company.phone"/></li>-->
-<!--                        <li t-ignore="true"><i class="fa fa-envelope"/><span t-field="res_company.email"/></li>-->
-<!--                    </ul>-->
-<!--                    <h2>-->
-<!--                        <a t-att-href="website.social_facebook" t-if="website.social_facebook"><i class="fa fa-facebook-square"/></a>-->
-<!--                        <a t-att-href="website.social_twitter" t-if="website.social_twitter"><i class="fa fa-twitter"/></a>-->
-<!--                        <a t-att-href="website.social_linkedin" t-if="website.social_linkedin"><i class="fa fa-linkedin"/></a>-->
-<!--                        <a t-att-href="website.social_youtube" t-if="website.social_youtube"><i class="fa fa-youtube-play"/></a>-->
-<!--                        <a t-att-href="website.social_googleplus" t-if="website.social_googleplus" rel="publisher"><i class="fa fa-google-plus-square"/></a>-->
-<!--                        <a t-att-href="website.social_github" t-if="website.social_github"><i class="fa fa-github"/></a>-->
-<!--                    </h2>-->
-<!--                </div>-->
-<!--                <div class="col-md-4 col-lg-5 col-lg-offset-1">-->
-<!--                    <h4>-->
-<!--                        <span t-field="res_company.name"/>-->
-<!--                        <small> - <a href="/page/website.aboutus">About us</a></small>-->
-<!--                    </h4>-->
-<!--                    <div>-->
-<!--                        <p>-->
-<!--                            We are a team of passionate people whose goal is to improve everyone's-->
-<!--                            life through disruptive products. We build great products to solve your-->
-<!--                            business problems.-->
-<!--                        </p>-->
-<!--                        <p>-->
-<!--                            Our products are designed for small to medium size companies willing to optimize-->
-<!--                            their performance.-->
-<!--                        </p>-->
-<!--                    </div>-->
-<!--                    <t t-call="website.language_selector"/>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </xpath>-->
-<!--</data>-->
-<data inherit_id="website.footer_custom" customize_show="True" name="Automatic Footer">
-    <xpath expr="//div[@id='footer']" position="replace">
-        <style>
-            
-            footer #footer .footer-link h5 {
-              letter-spacing: 1px;
-              color: #5f5f5f;
-              text-transform: uppercase;
-              margin-bottom: 13px;
-              margin-top:22px;
-              font-size: 14px;
-              font-weight: bold; 
-            }
-            
-            footer #footer .footer-link ul li {
-                color: #acacac;
-                font-size: 12px;
-                line-height: 20px;
-            }
-            footer #footer .footer-link ul li a {
+<data inherit_id="website.layout" name="Footer Copyright">
+    <xpath expr="//footer" position="inside">
+      <style>
+        .dark_footer{
+          background: #1d1a18;
+        }
+        .footer_line{
+            border-top: 1px solid #474747;padding-top: 15px;padding-right:15px; padding-left:15px;
+        }
+        .padtb15{
+            padding-bottom: 15px;padding-top:15px;
+            padding-left:0;
+            padding-right:0;
+        }
+        a.footer_anc {
             color: #acacac;
             font-size: 12px;
             line-height: 20px;
-            }
-            .anc_tdn{
-                text-decoration: none !important;
-            }
-          .anc_l1{
-              color: #5f5f5f;
-          }
-          .anc_l1:hover {
-              color: #5f5f5f;
-              text-decoration: none !important;
-          }
-          .anc_fc_gray{
-              color: #acacac;
-          }
-          .footer_msg_p{
-              color: #acacac;
-              font-size: 12px;
-          }
-          .perfume_heading{
-              letter-spacing: 1px;
-              color: #5f5f5f;
-              text-transform: uppercase;
-              margin-bottom: 13px;
-              margin-top: 22px;
-              font-size: 14px;
-              font-weight: bold;
         }
-        .pad_lrz{ 
-            padding-left:0;
-            padding-right:0
+        a.footer_anc:hover{
+            text-decoration: none;
         }
-        #subscription_form_submit{
-            background: transparent;
-            color: white;
-            border-radius: 0;
-            text-transform: uppercase;
-            font-size:12px;
-            border: 2px solid #c1b497 !important;
+      </style>       
+      <div class='dark_footer'>
+        <div class="container ">
             
-        }
-        .o_website_form_input{
-            border-radius: 0;
-        }
-        
-        textarea:focus,input[type="text"]:focus,input[type="password"]:focus,input[type="datetime"]:focus,input[type="datetime-local"]:focus,input[type="date"]:focus,input[type="month"]:focus,input[type="time"]:focus,input[type="week"]:focus,input[type="number"]:focus,input[type="email"]:focus,input[type="url"]:focus,input[type="search"]:focus,input[type="tel"]:focus,input[type="color"]:focus,.uneditable-input:focus {   
-            outline: none;
-            box-shadow:none !important;
-            border: 2px solid #c1b497 !important;
+            <div class="text-left col-xs-12 col-sm-4 padtb15" >
+                Copyright &amp;copy; <span t-field="res_company.name">Company name</span>
+            </div>
             
-        }
-        
-        #footer_subscription_customer_name, #footer_subscription_customer_phone{
-            background: #1d1a18;
-            color: #c1b497;
-            border: none;
-            font-size: 11px; 
-        }
-        </style>
-        <style>
-            @media screen and (min-width: 320px) and (max-width: 767px) {
-                #aut_foot_footware_div{
-                    padding-left:0;
-                }
-                #aut_foot_stay_conn_div{
-                    padding-left:0;
-                }
-                #aut_foot_nst_heading{
-                    margin-top:16px !important;
-                }
-                
-            }
-            @media screen and (min-width: 768px) and (max-width: 991px) {
-               #aut_foot_nst_heading{
-                    margin-top:0px !important;
-                }
-                #footer h3{
-                    font-size: 20px;
-                }
-                #footer h4{
-                    font-size: 16px;
-                }
-                #footer h6{
-                    font-size: 10px;
-                }
-                footer #footer .footer-link h5{
-                    font-size: 12px;
-                }
-                .footer_msg_p{
-                    font-size:10px;
-                }
-            }
-            @media screen and (min-width: 992px) and (max-width: 1199px) {
-               #aut_foot_nst_heading{
-                    margin-top:0px !important;
-                }
-            }
-            @media screen and (min-width: 1200px){
-               #aut_foot_nst_heading{
-                    margin-top:0px !important;
-                }
-            }
-        </style>
-
-        <script type="text/javascript">
-            $(document).ready(function(){
-                $("#subscription_form_submit").click(function(){
-                        if ($("#footer_subscription_customer_name").val()){
-                            if($("#footer_subscription_customer_phone").val()){
-                                $('#subscribe_success_modal').modal('show'); 
-                            }
-                        }
-                });
-                $("#subscription_form_submit").hover(
-                    function(){
-                        $(this).animate({backgroundColor: '#c1b497' }, 300);
-                    },
-                    function(){
-                        $(this).animate({backgroundColor: 'transparent' }, 300);
-                    }
-                );
-            });
-                    
-        </script>
-        <!--<div style="height:8px;background:#a89c83;width:100%;"></div>                                -->
-        
-        <div style="background:#25211e;" >
-            
-            <div id="footer" class="container hidden-print">
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                        <h3>
-                            <a class='anc_tdn anc_l1' href="#"> Clothing </a>
-                        </h3>
-                    </div>
-                    <div class="col-md-2 col-sm-2 col-xs-4 ">
-                        <div class="footer-link">
-                            <a class='anc_tdn' href="#">
-                                <h5>PANJABI</h5>
-                            </a>
-                            <ul class="list-unstyled">
-                                <li>
-                                    <a class='anc_tdn' href="/shop/category/all-panjabi-premium-85">Premium </a>
-                                </li>
-                                <li>
-                                    <a class='anc_tdn' href="/shop/category/all-panjabi-platinum-84">Platinum </a>
-                                </li>
-                                <li>
-                                    <a class='anc_tdn' href="/shop/category/all-panjabi-the-sahara-collection-86">Sahara </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-2 col-sm-2 col-xs-4 ">
-                        <div class="footer-link">
-                            <a class='anc_tdn' href="#">
-                                <h5>Kabli</h5>
-                            </a>
-                            <ul class="list-unstyled">
-                                <li>
-                                    <a class='anc_tdn' href="/shop/category/all-shirt-premium-76">Premium </a>
-                                </li>
-                                <li>
-                                    <a class='anc_tdn' href="/shop/category/all-shirt-platinum-75">Platinum </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-2 col-sm-2 col-xs-4 ">
-                        <div class="footer-link">
-                            <a class='anc_tdn' href="#">
-                                <h5>THOBE </h5>
-                            </a>
-                            <ul class="list-unstyled">
-                                <li>
-                                    <a class='anc_tdn' href="/shop/category/all-thobe-premium-80">Premium</a>
-                                </li>
-                                <li>
-                                    <a class='anc_tdn' href="/shop/category/all-thobe-platinum-79">Platinum</a>
-                                </li>
-                                <li>
-                                    <a class='anc_tdn' href="/shop/category/all-thobe-basic-78">Basic</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-2 col-sm-2 col-xs-4 " id='4th_level2_prodcat_div'>
-                        <div class="footer-link">
-                            <a class='anc_tdn' href="#">
-                                <h5>SHIRT</h5>
-                            </a>
-                            <ul class="list-unstyled">
-                                <li>
-                                    <a class='anc_tdn' href="/shop/category/all-shirt-premium-76">Premium</a>
-                                </li>
-                                <li>
-                                    <a class='anc_tdn' href="/shop/category/all-shirt-platinum-75">Platinum</a>
-                                </li>
-                                <li>
-                                    <a class='anc_tdn' href="/shop/category/all-shirt-basic-74">Basic</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-2 col-sm-2 col-xs-4 ">
-                        <div class="footer-link">
-                            <a class='anc_tdn' href="#">
-                                <h5>L-CHINO</h5>
-                            </a>
-                            <ul class="list-unstyled">
-                                <li>
-                                    <a class='anc_tdn' href="/shop/category/all-l-chino-basic-67">Basic </a>
-                                </li>
-                                <li>
-                                    <a class='anc_tdn' href="/shop/category/all-l-chino-basic-2-0-68">Basic 2.0</a>
-                                </li>
-                                <li>
-                                    <a class='anc_tdn' href="/shop/category/all-l-chino-air-66">Air </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-2 col-sm-2 col-xs-4 ">
-                        <div class="footer-link">
-                            <a class='anc_tdn' href="#">
-                                <h5>PAYJAMA </h5>
-                            </a>
-                            <ul class="list-unstyled">
-                                <li>
-                                    <a class='anc_tdn' href="/shop/category/all-payjama-relaxed-fit-88">Relaxed Fit </a>
-                                </li>
-                                <li>
-                                    <a class='anc_tdn' href="/shop/category/all-payjama-traditional-89">Traditional </a>
-                                </li>
-                                <li>
-                                    <a class='anc_tdn' href="/shop/category/all-payjama-trim-fit-90">Trim Fit </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+            <div class='text-left col-xs-12 col-sm-4 padtb15'>
+                <div class='col-xs-12 col-sm-6'>
+                    <a class='footer_anc' href="#"> Terms and Services </a>
                 </div>
-                <div class="row mb16">
-                    <div class='col-md-12 mt24 mb8'>
-                        <div class='footer_line'></div>
-                    </div>
-                    <div class="col-sm-4 col-md-4 col-xs-12 ">
-                        <div class="col-md-12 col-sm-12 col-xs-12 pad_lrz">
-                            <div class="col-md-6 col-sm-6 col-xs-6 padleft_zero">
-                                <h3 class="mt0 mb32">
-                                    <a class="anc_tdn anc_l1" href="#"> Accessories </a>
-                                </h3>
-                                <div class="footer-link">
-                                    <a class="anc_tdn" href="#">
-                                        <h5>Leather</h5>
-                                    </a>
-                                    <ul class="list-unstyled">
-                                        <li>
-                                            <a class="anc_tdn" href="#">Prayer Mat</a>
-                                        </li>
-                                        <li>
-                                            <a class="anc_tdn" href="/shop/category/all-panjabi-platinum-84"> Bag</a>
-                                        </li>
-                                        <li>
-                                            <a class="anc_tdn" href="/shop/category/all-panjabi-basic-82">Sleeve</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div style="margin-top: 22px;">
-                                    <a class="anc_tdn anc_l1" href="#">
-                                        <h5 class="perfume_heading">Perfume</h5>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-6 col-xs-6 " id='aut_foot_footware_div'>
-                                <h3 class="mt0 mb32">
-                                    <a class="anc_tdn anc_l1" href="#">Footwear</a>
-                                </h3>
-                                <div class="footer-link">
-                                    <a class="anc_tdn" href="#">
-                                        <h5 style="color: #acacac;">Sandal</h5>
-                                    </a>
-                                    <a class="anc_tdn" href="#">
-                                        <h5 style="color: #acacac;">Shoe</h5>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class='col-xs-12 hidden-sm hidden-md hidden-lg mt24 mb8'>
-                        <div class='footer_line'></div>
-                    </div>
-                    
-                    <div class="col-sm-8 col-md-8 col-xs-12 ">
-                        <div class="col-sm-8 col-md-8 pad_lrz" >
-                            <h3 class="mt0 mb32" id="aut_foot_display_center_heading"> Display Centers </h3>
-                            <div class="col-md-6 col-sm-6 col-xs-12 padleft_zero">
-                                <h4 class="mb16 mt0 " style="color: #acacac;"> Banani Store</h4>
-                                <h6>Level3, Tower 52, Road 11 Banani, Dhaka 1213 </h6>
-                                <h4 class="mb16 mt32" style="color: #acacac;">Bashundhara Store</h4>
-                                <h6>Level 2, Block A, Basundhara City, Panthapath, Dhaka 1215 </h6>
-                            </div>
-                            <div class="col-md-6 col-sm-6 col-xs-12 padleft_zero">
-                                <h4 class="mb16 mt0" id="aut_foot_nst_heading" style="color: #acacac;">New Store</h4>
-                                <h6>Coming Soon! </h6>
-                            </div>
-                        </div>
-                        <div class='col-xs-12 hidden-sm hidden-md hidden-lg pad_lrz mt24 mb8'>
-                            <div class='footer_line'></div>
-                        </div>
-                        <div class="col-sm-4 col-md-4 pad_lrz" id="aut_foot_stay_conn_div">
-                            <h3 class="mt0 mb32 " > Stay Connected </h3>
-                            <div class="col-md-12 col-sm-12 col-xs-12 pad_lrz">
-                                <p class="footer_msg_p"> Subscribe for updates and offers.</p>
-                                <form action="/website_form/" method="post" data-model_name="res.partner" class="s_website_form form-horizontal container-fluid mt16" enctype="multipart/form-data">
-                                    <div class="form-group form-field o_website_form_required_custom">
-                                        <div class="col-md-12 col-sm-12 col-xs-12 " style="padding-left:0; padding-right: 0">
-                                            <input type="text" class="form-control o_website_form_input" name="name" required="" id="footer_subscription_customer_name" placeholder="Your Name" value=""/>
-                                        </div>
-                                    </div>
-                                    <div class="form-group form-field o_website_form_required_custom">
-                                        <div class="col-md-12 col-sm-12 col-xs-12" style="padding-left:0; padding-right: 0">
-                                            <input type="text" class="form-control o_website_form_input" name="phone" required="" id="footer_subscription_customer_phone" placeholder="Cell No" value=""/>
-                                        </div>
-                                    </div>
-                                    <div class="form-group mt16">
-                                        <div class="col-sm-12 col-md-12 col-xs-12" style="padding-left:0; padding-right: 0">
-                                            <span class="btn btn-block o_website_form_send" id="subscription_form_submit">subscribe</span>
-                                            <div class='mt16'/>
-                                            <h5 id="o_website_form_result"/>
-                                        </div>
-                                    </div>
-                                </form>
-                                <div id="subscribe_success_modal" class="modal fade" role="dialog">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal">x</button>
-                                                <h4 class="modal-title">Thank you for Subscribing to ILYN</h4>
-                                            </div>
-                                            <div class="modal-body">
-                                                <div class="alert alert-success">   You're now subscribed to ILYN.  </div>
-                                                <p>Stay Connected for updates and place some message here.</p>
-                                                <p class="mt64">  What message here? and do not hesitate to contact us:   </p>
-                                                <ul class="list-unstyled">
-                                                    <li>
-                                                        <i class="fa fa-phone"></i> : 
-                                                        
-                                                        <span t-field="res_company.phone"/>
-                                                    </li>
-                                                    <li>
-                                                        <i class="fa fa-envelope"></i> : 
-                                                        
-                                                        <span t-field="res_company.email"/>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class='col-xs-12 col-sm-6'>
+                    <a class='footer_anc' href="#"> Replacement Policy </a>
                 </div>
             </div>
+            
+            <div class='text-right col-xs-12 col-sm-4 padtb15'>
+                <a href='#' class='footer_anc'> <i class='fa fa-2x fa-facebook'></i> </a>
+                <a href='#' class='footer_anc' style='margin-left: 20px;'> <i class='fa fa-2x fa-youtube'></i> </a> 
+            </div>
         </div>
+      </div>
     </xpath>
 </data>
 
-
-
+    

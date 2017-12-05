@@ -38,10 +38,21 @@
                         color: #252525;
                         text-decoration: none;
                         -webkit-transition: all 0.3s ease-in-out;
-                                    -moz-transition: all 0.3s ease-in-out;
-                                    -ms-transition: all 0.3s ease-in-out;
-                                    -o-transition: all 0.3s ease-in-out;
-                                    transition: all 0.3s 
+                        -moz-transition: all 0.3s ease-in-out;
+                        -ms-transition: all 0.3s ease-in-out;
+                        -o-transition: all 0.3s ease-in-out;
+                        transition: all 0.3s; 
+                    }
+                    .bdt_symbol, .shoppg_prod_price{
+                        display: inline; 
+                    }
+                    .bdt_symbol{
+                        font-size: 24px;
+                       
+                    }
+                    .shoppg_prod_price{
+                        font-size: 18px;
+                        font-weight: 600;
                     }
                     
                 </style>
@@ -86,10 +97,12 @@
                                     
                                     <span itemprop="priceCurrency" style="display:none;" t-esc="website.currency_id.name"/>
                                     
-                                    <h3 style='text-transform: uppercase;'> 
-                                        <span t-esc="product.website_price" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>
-                                        <span itemprop="price" style="display:none;" t-esc="product.website_price"/>
-                                    </h3>
+                                    <p style='text-transform: uppercase;'> 
+                                        <!--<span t-esc="product.website_price" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>-->
+                                        <!--<span itemprop="price" style="display:none;" t-esc="product.website_price"/>-->
+                                        <p class='bdt_symbol'>৳</p> 
+                                        <p class='shoppg_prod_price' t-field='product.website_price' />
+                                    </p>
                                     
                                 </b>
                             </div>

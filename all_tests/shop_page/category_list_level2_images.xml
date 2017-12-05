@@ -4,7 +4,6 @@
             <span t-if="c.parent_id">
                 <a t-att-href="keep('/shop/category/' + slug(c), category=0)" t-field="c.name"/>
             </span>
-
             
             <style>
                 .level3_categs_div{
