@@ -20,12 +20,13 @@
             }
             
             .product_name_heading_spv{
+                /*font-size:24px;*/
                 color: #252525;
                 font-weight: bold;
                 text-transform: uppercase;
             }
             #product_details{
-                /*padding-left: 36px;*/
+                padding-left: 36px;
             }
             .product_desc_pt_spv{
                 line-height: 24px;
@@ -52,6 +53,28 @@
             .alert{ 
                 border-radius 0;
             }
+            .js_variant_change{
+                margin-right:0 !important;
+            }
+            .control-label{
+                margin: 0 10px !important;
+                font-size: 12px;
+            }
+            input[type="radio"], input[type="checkbox"] {
+                margin: 2px 0 0;
+                -webkit-transition: all 0.25s ease-in-out;
+                -moz-transition: all 0.25s ease-in-out;
+                -ms-transition: all 0.25s ease-in-out;
+                -o-transition: all 0.25s ease-in-out;
+                transition: all 0.25s ease-in-out;
+                
+            }
+            input[type="radio"]:focus{
+                -ms-transform: scale(1.3);
+                -webkit-transform: scale(1.3); 
+                transform: scale(1.3);
+            }
+            
         </style>
         <style>
             @media screen and (min-width: 320px) and (max-width: 767px) {
@@ -65,7 +88,7 @@
                     float: left !important;
                 }
                 .product_name_heading_spv{
-                    font-size: 24px;
+                    font-size: 18px;
                 }
                 h3.product_price_fontcolor{
                     font-size: 18px;
@@ -75,10 +98,13 @@
                     margin-top:32px;
                     margin-bottom:32px;
                 }
+                #product_details{
+                   padding-left: 18px;
+                }
             }
             @media screen and (min-width: 768px) and (max-width: 991px) {
                 .product_name_heading_spv{
-                    font-size: 24px;
+                    font-size: 18px;
                 }
                 h3.product_price_fontcolor{
                     font-size: 18px;
@@ -86,6 +112,13 @@
                 .ul_hor_prod_att_name{
                     margin-top:32px;
                     margin-bottom:32px;
+                }
+                #product_details{
+                   padding-left: 18px;
+                }
+                .product_desc_pt_spv {
+                    line-height: 20px;
+                    font-size: 13px;
                 }
             }
             @media screen and (min-width: 992px) and (max-width: 1199px) {
@@ -141,7 +174,7 @@
             <div itemscope="itemscope" itemtype="http://schema.org/Product" id="wrap" class="js_sale">
                 <section t-attf-class="container padleft_zero oe_website_sale #{(compute_currency(product.lst_price) - product.website_price) &gt; 0.01 and website.get_current_pricelist().discount_policy == 'without_discount'  and 'discount'}" id="product_detail">
                     <div class="col-md-12 col-lg-12 col-xs-12 mb64 mt64" style='padding-left:0; padding-right:0'>
-                        <div class="col-sm-5 col-md-5 col-lg-5">
+                        <div class="col-sm-7 col-md-7 col-lg-7">
                             <span itemprop="image" t-field="product.image" t-options="{'widget': 'image', 'class': 'product_detail_img', 'alt-field': 'name', 'zoom': 'image'}" groups="!website_sale.group_website_multi_image"/>
                             <t groups="website_sale.group_website_multi_image">
                                 <t t-set="variant_img" t-value="product.product_variant_ids[0].image_variant"/>
@@ -183,11 +216,11 @@
                             </t>
                         </div>
                         
-                        <div class="col-sm-6 col-md-6 col-lg-6 col-md-offset-1 col-sm-offset-1 col-lg-offset-1" id="product_details">
-                            <h2 itemprop="name" t-field="product.name" class='product_name_heading_spv'>Product Name</h2>
+                        <div class="col-sm-5 col-md-5 col-lg-5 " id="product_details">
+                            <h2 itemprop="name" t-field="product.name" class='text-right product_name_heading_spv'>Product Name</h2>
                             <span itemprop="url" style="display:none;" t-esc="'/shop/product/%s' % slug(product)"/>
 
-                            <t t-call="website_sale.product_price"/>
+                            <div class='text-right'> <t t-call="website_sale.product_price"/> </div>
                             
                             <t t-set="attribute_value_ids" t-value="get_attribute_value_ids(product)"/>
                             <form action="/shop/cart/update" class="js_add_cart_variants" t-att-data-attribute_value_ids="attribute_value_ids" method="POST">
@@ -200,24 +233,28 @@
                                     </div>
                                     <hr/>
                                     
+                                    <div class='mb24'>
                                     <t t-placeholder="select">
                                         <input type="hidden" class="product_id" name="product_id" t-att-value="product.product_variant_id.id if len(product.product_variant_ids) == 1 else '0'"/>
                                         <t t-call="website_sale.variants">
                                             <t t-set="ul_class" t-value="'nav-stacked'"/></t>
                                     </t>
                                     <hr/>
-                                    
-                                    <div class='col-sm-12 pad_lrz'>
-                                        <p t-if="len(product.product_variant_ids) &gt; 1" class="css_not_available_msg bg-danger" style="padding: 15px;">Product not available</p>
-                                        <a id="add_to_cart" class="btn mt8 js_check_product a-submit" href="#">Add to Cart <i class='fa fa-angle-right'></i></a>
                                     </div>
                                     
-                                    <div class='col-sm-12 pad_lrz hidden'>
+                                    <div class='col-sm-12 pad_lrz'>
+                                        <div class='pull-right'>
+                                            <p t-if="len(product.product_variant_ids) &gt; 1" class="css_not_available_msg bg-danger" style="padding: 15px;">Product not available</p>
+                                            <a id="add_to_cart" class="btn mt8 js_check_product a-submit" href="#">Add to Cart <i class='fa fa-angle-right'></i></a>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class='col-sm-12 mt32 pad_lrz hidden'>
                                         <div class='col-sm-6 pad_lrz mt48'>
                                             <t t-call="website_sale.product_price"/>
                                         </div>
                                         
-                                        <div class='col-sm-6' style='padding-left: 70px; padding-right:0'>
+                                        <div class='col-sm-6' style='padding-right:0'>
                                             <p t-if="len(product.product_variant_ids) &gt; 1" class="css_not_available_msg bg-danger" style="padding: 15px;">Product not available</p>
                                             <a id="add_to_cart" class="btn mt8 js_check_product a-submit" href="#">Add to Cart <i class='fa fa-angle-right'></i></a>
                                         </div>
