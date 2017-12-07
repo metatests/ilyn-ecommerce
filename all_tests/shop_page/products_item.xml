@@ -61,7 +61,7 @@
                 <div class="image-mask-box-s">
                     <div class="thumbnail-s">
                         <div class="image-wrapper-s">
-                            <span t-field="product.image" t-options="{'widget': 'image',  'resize': 'None if product_image_big else 360x290'}" t-att-alt="product.name" style='margin-top:10px; margin-bottom:10px;'/>
+                            <span t-field="product.image" t-options="{'widget': 'image',  'resize': 'None if product_image_big else 360x240'}" t-att-alt="product.name" style='margin-top:10px; margin-bottom:10px;'/>
                             <div class="masking-s">
                                 <a t-att-href="keep('/shop/product/%s' % slug(product), page=(pager['page']['num'] if pager['page']['num']&gt;1 else None))" class="btnx-s btn-masking-s "> <i class='fa fa-shopping-cart'></i> </a> 
                             </div>
