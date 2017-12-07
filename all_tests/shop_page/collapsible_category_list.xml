@@ -20,24 +20,13 @@
         border-right: 1px solid #c1b497;
         border-bottom: 1px solid #c1b497;
       }
-      #o_shop_collapse_category li {
-        padding: 5px;
-        color: #c1b497;
-      }
-      #o_shop_collapse_category li a{
-        color: #16161d;
-        padding: 5px;
-      }
-      .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
-        color: #fff;
-        background-color: transparent;
-        border-bottom: 2px solid #c1b497;
-        border-radius: 0; 
-      }
-
       #prod_main_cat_at{
         text-decoration: none;
       }
+      #o_shop_collapse_category li a:nth-child(2){
+          font-weight: bold !important;
+      }
+      
     </style>
     <a href='/shop' id='prod_main_cat_at'> <div class="panel-heading product_category_panel_heading_cust">PRODUCT CATEGORIES </div></a>
     <ul class="nav nav-pills nav-stacked product_category_panel_cust" id="o_shop_collapse_category">
