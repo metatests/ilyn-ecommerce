@@ -1,6 +1,7 @@
 <t name="Homepage" priority="29" t-name="website.homepage">
   <t t-call="website.layout">
     <t t-set="pageName" t-value="'homepage'"/>
+    
     <!-- slider part start -->
     <div id="wrap" class="oe_structure oe_empty">
       <div id="myCarousel1505386689290" class="carousel slide s_banner carousel-custom col-sm-10 col-sm-offset-1 mt48 cust_top_slider" data-interval="10000" style="">
@@ -932,46 +933,119 @@
         </div>
       </section>
       
-      <div class=''>
-      <section class="s_title">
+      <!--<section class="s_title">-->
+      <!--  <div class="container ">-->
+      <!--    <div class="col-md-12 col-sm-12 mt32 mb32 pad_lrz">-->
+      <!--      <h3 class="text-center text-muted" style=" color: black;font-size: 18px;">-->
+      <!--        <b>OUR LABELS</b>-->
+      <!--      </h3>-->
+      <!--    </div>-->
+      <!--  </div>-->
+      <!--</section>-->
+     
+     <section class="s_title">
         <div class="container ">
           <div class="col-md-12 col-sm-12 mt32 mb32 pad_lrz">
-            <h3 class="text-center text-muted" style=" color: black;font-size: 18px;">
-              <b>OUR LABELS</b>
-            </h3>
-          </div>
-        </div>
-      </section>
-      <section class="s_references bg-golden">
-        <div class="container">
-          <div class="row" style="padding: 24px 0 24px 0;">
-            <div class="col-md-3 col-sm-3 six_logos_div_pad col-xs-6 mt16 mb16 hidden">
-              <img src="/web/image/12824" class="img img-responsive " alt="Sahara" data-original-title="" title="ILYN Sahara"/>
-            </div>
-            <div class="col-md-4 col-sm-4 six_logos_div_pad col-xs-6 mt16 mb16">
-              <img src="/web/image/12890" class="img img-responsive " alt="Platinum" data-original-title="" title="ILYN Platinum"/>
-            </div>
-            <div class="col-md-4 col-sm-4 six_logos_div_pad col-xs-6 mt16 mb16">
-              <img src="/web/image/12891" class="img img-responsive " alt="Luxury" title="ILYN Luxury"/>
-            </div>
-             <div class="col-md-4 col-sm-4 six_logos_div_pad col-xs-6 mt16 mb16">
-              <img src="/web/image/12891" class="img img-responsive " alt="Luxury" title="ILYN Luxury"/>
-            </div>
-            <div class="col-md-4 col-sm-4 six_logos_div_pad col-xs-6 mt16 mb16">
-              <img src="/web/image/12893" class="img img-responsive " alt="Premium" title="ILYN Premium"/>
-            </div>
-            <div class="col-md-4 col-sm-4 six_logos_div_pad col-xs-6 mt16 mb16">
-              <img src="/web/image/12892" class="img img-responsive " alt="Premium Essentials" data-original-title="" title="ILYN Premium Essentials"/>
-            </div>
-            <div class="col-md-4 col-sm-4 six_logos_div_pad col-xs-6 mt16 mb16">
-              <img src="/web/image/12894" class="img img-responsive " alt="Handcrafted" data-original-title="" title="ILYN Handcrafted"/>
-            </div>
+            <div class='mt64 mb64'>
+                <style>
+                    .owl-prev, .owl-next{
+                      padding:4px 12px!important;
+                      font-size:18px !important;
+                    }
+                    .owl-prev:before{
+                      content: "&lt;";
+                    }
+                    .owl-prev:after{
+                      content: "";
+                    }
+                    .owl-next:before{
+                      content: "";
+                    }
+                    .owl-next:after{
+                      content: "&gt;";
+                    }
+                </style>
+                <div class='col-xs-12 col-sm-3'>
+                    <h3 class="text-center text-muted" style=" color: black;font-size: 18px;">
+                        <b>OUR LABELS</b>
+                    </h3>
+                </div>
+                <div class='col-xs-12 col-sm-9'>
+                    <div class="owl-carousel owl-theme">
+                        <div> <img src='web/static/src/cust-carousel-assets/imgs/premium.png'/> </div>
+                        <div> <img src='web/static/src/cust-carousel-assets/imgs/platinum.png'/> </div>
+                        <div> <img src='web/static/src/cust-carousel-assets/imgs/luxury.png'/> </div>
+                        <div> <img src='web/static/src/cust-carousel-assets/imgs/hand_crafted.png'/> </div>
+                        <div> <img src='web/static/src/cust-carousel-assets/imgs/premium_essentials.png'/> </div>
+                        <div> <img src='web/static/src/cust-carousel-assets/imgs/dshra.png'/> </div>
             
+                    </div>
+                </div>
+                <script>
+                    $(document).ready(function(){
+                        $(".owl-carousel").owlCarousel(
+                            {
+                                loop:true, margin:40, nav:false, autoplay:true, autoplayTimeout:3000, 
+                                responsive:{       
+                                    0:{
+                                        items:1
+                                    },
+                                    768:{
+                                        items:3
+                                    },
+                                    1024:{
+                                        items:5
+                                    }
+                                }
+                            }
+                        );
+                        $(".owl-prev, .owl-next").html("");
+                        
+                        $(".owl-carousel").on('mousewheel', '.owl-stage', function (e) {
+                            if (e.deltaY>0) {
+                                owl.trigger('next.owl');
+                            } else {
+                                owl.trigger('prev.owl');
+                            }
+                            e.preventDefault();
+                        });
+                    });
+                </script>
+     
+            </div>
           </div>
         </div>
-      </section>
-      </div>
-      
+     </section>
+     
+      <!--<section class="s_references bg-golden">-->
+      <!--  <div class="container">-->
+      <!--    <div class="row" style="padding: 24px 0 24px 0;">-->
+      <!--      <div class="col-md-3 col-sm-3 six_logos_div_pad col-xs-6 mt16 mb16 hidden">-->
+      <!--        <img src="/web/image/12824" class="img img-responsive " alt="Sahara" data-original-title="" title="ILYN Sahara"/>-->
+      <!--      </div>-->
+      <!--      <div class="col-md-4 col-sm-4 six_logos_div_pad col-xs-6 mt16 mb16">-->
+      <!--        <img src="/web/image/12890" class="img img-responsive " alt="Platinum" data-original-title="" title="ILYN Platinum"/>-->
+      <!--      </div>-->
+      <!--      <div class="col-md-4 col-sm-4 six_logos_div_pad col-xs-6 mt16 mb16">-->
+      <!--        <img src="/web/image/12891" class="img img-responsive " alt="Luxury" title="ILYN Luxury"/>-->
+      <!--      </div>-->
+      <!--       <div class="col-md-4 col-sm-4 six_logos_div_pad col-xs-6 mt16 mb16">-->
+      <!--        <img src="/web/image/12891" class="img img-responsive " alt="Luxury" title="ILYN Luxury"/>-->
+      <!--      </div>-->
+      <!--      <div class="col-md-4 col-sm-4 six_logos_div_pad col-xs-6 mt16 mb16">-->
+      <!--        <img src="/web/image/12893" class="img img-responsive " alt="Premium" title="ILYN Premium"/>-->
+      <!--      </div>-->
+      <!--      <div class="col-md-4 col-sm-4 six_logos_div_pad col-xs-6 mt16 mb16">-->
+      <!--        <img src="/web/image/12892" class="img img-responsive " alt="Premium Essentials" data-original-title="" title="ILYN Premium Essentials"/>-->
+      <!--      </div>-->
+      <!--      <div class="col-md-4 col-sm-4 six_logos_div_pad col-xs-6 mt16 mb16">-->
+      <!--        <img src="/web/image/12894" class="img img-responsive " alt="Handcrafted" data-original-title="" title="ILYN Handcrafted"/>-->
+      <!--      </div>-->
+            
+      <!--    </div>-->
+      <!--  </div>-->
+      <!--</section>-->
+   
     </div>
   </t>
 </t>
