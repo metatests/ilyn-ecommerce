@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<data inherit_id="website_sale.product_quantity" customize_show="True" name="Show Stock">
+    <xpath expr="//a[@id='add_to_cart']" position="before">
+        <style>
+            .stock_message{
+                background: white !important;
+                color: #004000 !important;
+                margin-left: 20px;
+            }
+            .notStock{
+                background: white !important;
+                color: #660000 !important;
+                margin-left:20px;
+            }
+        </style>
+        <t t-if="len(product.product_variant_ids) &gt; 1">
+            <t t-if="product.product_variant_ids[0].qty_available &gt; 0">
+                <div>
+                    <span class="oe_qty_available" t-field="product.product_variant_ids[0].qty_available"/>
+                    <span class="oe_uom" t-field="product.product_variant_ids[0].uom_id" style="white-space: nowrap;"/>
+                    <span class="stock_message"/>
+                    <span class="stock_message_default"/>
+                </div>
+            </t>
+            <t t-if="product.product_variant_ids[0].qty_available == 0 or product.product_variant_ids[0].qty_available &lt; 0">
+                    <div>
+                        <span class="oe_qty_available" t-field="product.product_variant_ids[0].qty_available"/>
+                        <span class="oe_uom" t-field="product.product_variant_ids[0].uom_id" style="white-space: nowrap;"/>
+                        <span class="stock_message"/>
+                    </div>
+                </t>
+        </t>
+        <t t-if="len(product.product_variant_ids) == 1">
+            <t t-if="product.product_variant_ids[0].qty_available &gt; 0">
+                <div>
+                    <span class="oe_qty_available" t-field="product.product_variant_ids[0].qty_available"/>
+                    <span class="oe_uom" t-field="product.product_variant_ids[0].uom_id" style="white-space: nowrap;"/>
+                    <span class="stock_message"/>
+                    <span class="stock_message_default" style="color: #004c00;font-weight: bold;"> In Stock</span>
+                </div>
+            </t>
+            <t t-if="product.product_variant_ids[0].qty_available == 0 or product.product_variant_ids[0].qty_available &lt; 0">
+                <div>
+                    <span class="stock_message"/>
+                    <span class="stock_message_default" style="margin-left:20px; color: #660000;font-weight: bold;"> Out of Stock</span>
+                </div>
+            </t>
+        </t>
+    </xpath>
+    
+    <xpath expr="//a[@id='add_to_cart']" position="replace">
+        <t t-if="len(product.product_variant_ids) == 1">
+            <t t-if="product.product_variant_ids[0].qty_available == 0 or product.product_variant_ids[0].qty_available &lt; 0">
+                <t t-if="product.website_product_status == 1">
+                    <a id="add_to_cart" class="btn  mt8 js_check_product a-submit disabled" href="#"> Add to Cart</a>
+                </t>
+                <t t-if="product.website_product_status == 0">
+                    <a id="add_to_cart" class="btn  mt8 js_check_product a-submit" href="#"> Add to Cart</a>
+                </t>
+            </t>
+            <t t-if="product.product_variant_ids[0].qty_available &gt; 0">
+                <a id="add_to_cart" class="btn mt8 js_check_product a-submit" href="#"> Add to Cart</a>
+            </t>
+        </t>
+        <t t-if="len(product.product_variant_ids) &gt; 1">
+            <a id="add_to_cart" class="btn mt8 js_check_product a-submit" href="#"> Add to Cart</a>
+        </t>
+    </xpath>
+</data>
+
