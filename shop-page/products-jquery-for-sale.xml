@@ -1,0 +1,61 @@
+<script>
+	$(document).ready(function(){
+  	if ($("#all_sale_prod_type_select").find(":selected").text()==''){
+	  	$("#all_sale_prod_type_select").val("2-4");
+  		$("form#sale_attribute_form").submit();
+  	}
+  });
+</script>
+
+
+<!-- All Other Tests -->
+<script>
+    $(document).ready(function(){
+        if ($("#all_sale_prod_type_select").find(":selected").text()==''){
+            $("#all_sale_prod_type_select").val("2-4");
+            $("form#sale_attribute_form").submit();
+        }
+    });
+</script>
+
+<script>
+    $(document).ready(function(){
+        $("ul#top_menu li a").click(function(){
+            if ($("ul#top_menu li a span").text()=='SHOP'){
+                console.log("On Shop Pg");
+            } else if ($("ul#top_menu li a span").text()=='SALE'){
+                console.log("On Sale Pg");
+            }
+        });
+    });
+</script>
+          
+<script>
+    $(document).ready(function(){
+        if(window.location.pathname == '/shop'){
+            console.log("Shop Pg");
+        } else if (window.location.pathname == '/sale'){
+            console.log("Sale Pg");
+        }
+    });
+</script>
+
+<!-- Script on Shop Pg -->
+<script>
+    $(document).ready(function(){
+        if(window.location.pathname == '/shop'){
+            $("#all_sale_prod_type_select").val("2-4");
+            $("form#sale_attribute_form").submit();
+        }
+    });
+</script>
+
+<!-- Script on Sale Pg -->
+<script>
+    $(document).ready(function(){
+        if(window.location.pathname == '/page/sale'){
+            $("#all_sale_prod_type_select").val("2-5");
+            $("form#sale_attribute_form").submit();
+        }
+    });
+</script>
