@@ -45,6 +45,11 @@
             
             
             </script>
+            
+            <link rel="stylesheet" id="flatsome-main-css" href="web/static/src/cust_flatsome/css/flatsome.css" type="text/css" media="all"/>
+            <link rel="stylesheet" id="mh-custom-css" href="web/static/src/cust_flatsome/css/allcustom.css" type="text/css" media="all"/>
+               
+            
             <t t-call-assets="web.assets_common" t-js="false"/>
             <t t-call-assets="web.assets_frontend" t-js="false"/>
             <t t-call-assets="web_editor.summernote" t-js="false" groups="website.group_website_publisher"/>
@@ -320,9 +325,17 @@
             padding-top: 50px;
           }
           
-          #top_menu{
-              background: white;
-          }
+        </style>
+        
+        <style>
+            @media screen and (min-width: 320px) and (max-width: 767px) {
+                #top_menu{
+                    background: white;
+                }
+                .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:hover {
+                    top: 30px;
+                }
+            }
         </style>
         
         <style>
@@ -527,7 +540,6 @@
                                         <i class='fa fa-phone'></i>
                                         <span id='top_nav_phone'>09660450451 </span>
                                     </li>
-                                    
                                 </ul>
                             </div>
                         </div>
@@ -569,10 +581,15 @@
                     </div>
                 </div>
                 <!-- main navbar end -->
-                <!-- Owl Carousel CSS & JS -->
+                
+                <!--Owl Carousel CSS-->
                 <script src="web/static/src/cust-carousel-assets/js/owl.carousel.min.js"></script>
                 <link rel="stylesheet" href="web/static/src/cust-carousel-assets/css/owl.carousel.min.css"/>
                 <link rel="stylesheet" href="web/static/src/cust-carousel-assets/css/owl.theme.default.min.css"/>
+                
+                <!--Flatsome CSS-->
+                
+                
                 
             </header>
             <main>

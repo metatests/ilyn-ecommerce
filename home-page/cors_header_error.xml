@@ -1,0 +1,64 @@
+<!-- Method 1 -->
+<script>
+    $.ajax({
+        url: url,
+        crossOrigin: true,
+        type: 'GET',
+        xhrFields: { withCredentials: true },
+        accept: 'application/json'
+    }).done(function (data) {
+        console.log(data);                
+    }).fail(function (xhr, textStatus, error) {
+        var title, message;
+        switch (xhr.status) {
+            case 403:
+                title = xhr.responseJSON.errorSummary;
+                message = 'Please login to your server before running the test.';
+                break;
+            default:
+                title = 'Invalid URL or Cross-Origin Request Blocked';
+                message = 'You must explictly add this site (' + window.location.origin + ') to the list of allowed websites in your server.';
+                break;
+        }
+    });
+        
+</script>
+
+<!-- Method 2 -->
+<script>        
+    $.ajax({
+        url: url,
+        crossOrigin: true,
+        type: 'GET',
+        dataType: 'jsonp',
+        xhrFields: { withCredentials: false },
+        accept: 'application/json'
+    }).done(function (data) {
+        console.log(data);                
+    }).fail(function (xhr, textStatus, error) {
+        var title, message;
+        switch (xhr.status) {
+            case 403:
+                title = xhr.responseJSON.errorSummary;
+                message = 'Please login to your server before running the test.';
+                break;
+            default:
+                title = 'Invalid URL or Cross-Origin Request Blocked';
+                message = 'You must explictly add this site (' + window.location.origin + ') to the list of allowed websites in your server.';
+                break;
+        }
+    });
+</script>
+
+<!-- Method 3 -->
+<script>
+    var sms_request = new XMLHttpRequest();
+    
+    function sendSMS() {
+        if(sms_request) {    
+            sms_request.open('GET', url, true);
+            sms_request.onreadystatechange = handler;
+            sms_request.send(); 
+        }
+    }
+</script>
