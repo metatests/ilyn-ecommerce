@@ -23,7 +23,7 @@
       #prod_main_cat_at{
         text-decoration: none;
       }
-      #o_shop_collapse_category li a:nth-child(2){
+      #o_shop_collapse_category li a:nth-child(2),  #o_shop_collapse_category li a:nth-child(5){
           font-weight: bold !important;
       }
       

@@ -49,8 +49,7 @@
         #o_shop_collapse_category li a.left_prod_all_lv_cat_atag:hover{
             color: #16161d;
         }
-            
-    
+       
      
     </style>
 
@@ -64,6 +63,13 @@
         </t>
          <t t-if="categ.name=='ACCESSORIES' ">
             <a t-if='categ.child_id' t-field="categ.name" class='hidden' />
+            
+        </t>
+         <t t-if="categ.name=='SALE' ">
+            <p class='mt16' >  </p>
+            <p style='border-bottom: 1px solid #c1b497;'> </p>
+            <p class='mt24' > </p>
+            <a t-if='categ.child_id' t-field="categ.name" class='hidden' style='color: green' />
         </t>
         
         <t t-if="not categ.name=='CLOTHING'">
