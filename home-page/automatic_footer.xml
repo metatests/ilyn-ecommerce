@@ -149,10 +149,25 @@
 
         <script type="text/javascript">
             $(document).ready(function(){
-                $("#subscription_form_submit").click(function(){
-                    $('[data-toggle="cellnotooltip"]').tooltip();  
+        
+                $("#subscription_form_submit").click(function(e){
+                    
+                    $('[data-toggle="cellnotooltip"]').tooltip();   
+                    
                     var ec_cust_name =  $("#footer_subscription_customer_name").val();
-                    var ec_cust_phone = $("#footer_subscription_customer_phone").val(); 
+                    var ec_cust_phone = $("#footer_subscription_customer_phone").val();
+                    
+                    if (ec_cust_phone.length &lt; 11 || ec_cust_phone.length &gt; 11){
+                        alert("Please enter your 11 Digit Phone Number without spaces");
+                        event.preventDefault();
+                        event.stopPropagation();
+                        
+                    } 
+                    if (ec_cust_phone.length == 11){
+                        console.log("Kewl");
+                        // $("#ec_subscription_form").submit();
+                    }
+                    
                     
                     if ($("#footer_subscription_customer_name,#footer_subscription_customer_phone").filter(function() { return $(this).val(); }).length > 0) {
                         $('#subscribe_success_modal12431243').modal('show'); 
@@ -182,30 +197,31 @@
                     
 
                     function makeCorsRequest() {
-                      var url = "http://bangladeshsms.com/smsapi?api_key=C200038059f06f05487361.76812382&amp;type=text&amp;contacts="+ec_cust_phone+"&amp;senderid=8804445629100&amp;msg="+ec_subscription_msg;
-                      console.log("Here");
-                      var xhr = createCORSRequest('GET', url);
-                      if (!xhr) {
-                        alert('CORS not supported');
-                        return;
-                      }
-                    
-                      // Response handlers.
-                      xhr.onload = function() {
-                        var text = xhr.responseText;
-                        var title = getTitle(text);
-                        alert('Response from CORS request to ' + url + ': ' + title);
-                      };
-                    
-                      xhr.onerror = function() {
-                        alert('Woops, there was an error making the request.');
-                      };
-                    
-                      xhr.send();
+                        var url = "http://bangladeshsms.com/smsapi?api_key=C200038059f06f05487361.76812382&amp;type=text&amp;contacts="+ec_cust_phone+"&amp;senderid=8804445629100&amp;msg="+ec_subscription_msg;
+                        console.log("Cors Request");
+                        var xhr = createCORSRequest('GET', url);
+                        if (!xhr) {
+                          console.log('CORS not supported');
+                          return;
+                        }
+                      
+                        // Response handlers.
+                        xhr.onload = function() {
+                          var text = xhr.responseText;
+                          var title = getTitle(text);
+                          console.log('Response from CORS request to ' + url + ': ' + title);
+                        };
+                      
+                        xhr.onerror = function() {
+                          console.log('Woops, there was an error making the request.');
+                        };
+                      
+                        xhr.send();
                     }
                     makeCorsRequest()
                     
                 });
+                
                 $("#subscription_form_submit").hover(
                     function(){
                         $(this).animate({backgroundColor: '#c1b497' }, 300);
@@ -409,7 +425,7 @@
                             <h3 class="mt0 mb32 " > Stay Connected </h3>
                             <div class="col-md-12 col-sm-12 col-xs-12 pad_lrz">
                                 <p class="footer_msg_p"> Subscribe for updates and offers.</p>
-                                <form action="/website_form/" method="post" data-model_name="res.partner" class="s_website_form form-horizontal container-fluid mt16" enctype="multipart/form-data" id='ec_subscription_form'>
+                                <form action="/website_form/" method="post" data-model_name="res.partner" data-success_page="/page/contact-success/" class="s_website_form form-horizontal container-fluid mt16" enctype="multipart/form-data" id='ec_subscription_form'>
                                     <div class="form-group form-field o_website_form_required_custom">
                                         <div class="col-md-12 col-sm-12 col-xs-12 " style="padding-left:0; padding-right: 0">
                                             <input type="text" class="form-control o_website_form_input" name="name" required="true" id="footer_subscription_customer_name" placeholder="Your Name" value=""/>
@@ -418,6 +434,7 @@
                                     <div class="form-group form-field o_website_form_required_custom">
                                         <div class="col-md-12 col-sm-12 col-xs-12" style="padding-left:0; padding-right: 0">
                                             <div class="input-group">
+                                                <label class='input-group-addon'> Your Cell</label>
                                                 <span class="input-group-addon" id="basic-addon1">+880</span>
                                                 <input type="text" maxlength='11' data-toggle="cellnotooltip" title="Your 11 Digit Cell Number without spaces" class="form-control o_website_form_input" name="phone" required="true" id="footer_subscription_customer_phone" placeholder="ex: 01712345678" value=""/>
                                             </div>
