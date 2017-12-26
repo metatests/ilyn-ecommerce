@@ -768,7 +768,7 @@
                                                                         <div class="text dark">
                                                                             <div class="text-inner text-left">
                                                                                 <h2><strong>Platinum Punjabi</strong></h2>
-                                                                                <p class="lead">Limited Edition</p> <a class="button primary is-outline" style="border-radius:99px;"> <span>Go To Shop</span> </a></div>
+                                                                                <p class="lead">Limited Edition</p> <a class="button primary is-outline" style="border-radius:0;"> <span>Go To Shop</span> </a></div>
                                                                         </div>
                                                                     </div>
                                                                     <style scope="scope">
@@ -820,7 +820,7 @@
                                                                     <div data-animate="fadeInDown" >
                                                                         <div class="text dark">
                                                                             <div class="text-inner text-center">
-                                                                                <h2><strong>ILYN Premium</strong></h2> <a class="button primary is-outline is-large" style="border-radius:99px;"> <span>Shop now</span> </a></div>
+                                                                                <h2><strong>ILYN Premium</strong></h2> <a class="button primary is-outline is-large" style="border-radius:0;"> <span>Shop now</span> </a></div>
                                                                         </div>
                                                                     </div>
                                                                     <style scope="scope">
@@ -870,7 +870,7 @@
                                                                         <div class="text dark">
                                                                             <div class="text-inner text-left">
                                                                                 <!-- <h6 class="uppercase">Featured Vendor</h6> -->
-                                                                                <h2><strong>Platinum Shirt</strong></h2> <a class="button primary is-outline is-larger" style="border-radius:99px;"> <span>Shop now</span> </a></div>
+                                                                                <h2><strong>Platinum Shirt</strong></h2> <a class="button primary is-outline is-larger" style="border-radius:0;"> <span>Shop now</span> </a></div>
                                                                         </div>
                                                                     </div>
                                                                     <style scope="scope">
@@ -922,7 +922,7 @@
                                                                         <div class="text dark">
                                                                             <div class="text-inner text-left">
                                                                                 <h2><strong>ILYN Lifestyle</strong></h2>
-                                                                                <p class="lead">Winter Collection</p> <a class="button primary is-outline is-larger" style="border-radius:99px;"> <span>Shop now</span> </a></div>
+                                                                                <p class="lead">Winter Collection</p> <a class="button primary is-outline is-larger" style="border-radius:0;"> <span>Shop now</span> </a></div>
                                                                         </div>
                                                                     </div>
                                                                     <style scope="scope">
@@ -964,7 +964,7 @@
                                                                     <div data-animate="fadeInRight" >
                                                                         <div class="text dark">
                                                                             <div class="text-inner text-left">
-                                                                                <h2><strong>Sahara</strong></h2> <a class="button primary is-outline is-large" style="border-radius:99px;"> <span>Shop now</span> </a></div>
+                                                                                <h2><strong>Sahara</strong></h2> <a class="button primary is-outline is-large" style="border-radius:0;"> <span>Shop now</span> </a></div>
                                                                         </div>
                                                                     </div>
                                                                     <style scope="scope">

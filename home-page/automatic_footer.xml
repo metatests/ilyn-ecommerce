@@ -161,7 +161,7 @@
                         alert("Please enter your 11 Digit Phone Number without spaces");
                         event.preventDefault();
                         event.stopPropagation();
-                        
+                        window.reload();
                     } 
                     if (ec_cust_phone.length == 11){
                         console.log("Kewl");
