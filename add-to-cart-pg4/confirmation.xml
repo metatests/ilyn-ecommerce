@@ -34,13 +34,13 @@
                     text-transform: uppercase;
                     border: 2px solid #c1b497;
                     -webkit-transition: all 0.3s ease-in-out;
-                    -moz-transition: all 0.3s ease-in-out;
-                    -ms-transition: all 0.3s ease-in-out;
-                    -o-transition: all 0.3s ease-in-out;
-                    transition: all 0.3s ease-in-out;
-                }
-                #atcp4_print_btn:hover{
-                    background: transparent;
+                                -moz-transition: all 0.3s ease-in-out;
+                                -ms-transition: all 0.3s ease-in-out;
+                                -o-transition: all 0.3s ease-in-out;
+                                transition: all 0.3s ease-in-out;
+                  }
+                  #atcp4_print_btn:hover{
+                      background: transparent;
                     color: #c1b497;
                 }
                 #actp4_printbtn_span{
@@ -61,11 +61,11 @@
                     padding-top: 10px;
                     padding-bottom:10px;
                     -webkit-transition: all 0.3s ease-in-out;
-                    -moz-transition: all 0.3s ease-in-out;
-                    -ms-transition: all 0.3s ease-in-out;
-                    -o-transition: all 0.3s ease-in-out;
-                    transition: all 0.3s;
-                }
+                                -moz-transition: all 0.3s ease-in-out;
+                                -ms-transition: all 0.3s ease-in-out;
+                                -o-transition: all 0.3s ease-in-out;
+                                transition: all 0.3s;
+                    }
                 .acp4_ola:hover{
                     color: #c1b497;
                     text-decoration:none;
@@ -79,16 +79,16 @@
                     padding-bottom:12px;
                 }
                     
-            </style>
-            
+                </style>
+                
             <style>
-                @media (max-width: 500px){
+                  @media (max-width: 500px){
                     .oe_cart table td:first-child, #modal_optional_products table td:first-child {
                         display: block;
                     }
                 }
-            </style>  
-          
+            </style>    
+            
             <style>
                 @media screen and (min-width: 320px) and (max-width: 767px) {
                     #acp4_thanks_heading{
@@ -116,13 +116,13 @@
                     
                 }
                 @media screen and (min-width: 768px) and (max-width: 991px) {
-                  
+                    
                 }
                 @media screen and (min-width: 992px) and (max-width: 1199px) {
-                  
+                    
                 }
                 @media screen and (min-width: 1200px){
-                  
+                    
                 }
             </style>
 
@@ -247,7 +247,8 @@
                                                     <tr>
                                                         <td colspan="2">
                                                             <strong>Payment Method:</strong>
-                                                            <t t-esc="order.payment_acquirer_id.name"/>
+                                                            <h3> <t t-esc="order.payment_acquirer_id.id"/> </h3>
+                                                            <h3> <t t-esc="order.payment_acquirer_id.name"/> </h3>
                                                         </td>
                                                         <td class="text-right" width="100">
                                                             <strong>Total:</strong>
@@ -258,6 +259,123 @@
                                                     </tr>
                                                 </tbody>
                                             </table>
+                                        </div>
+                                        
+                                        <div class='col-xs-12 pad_lrz mt32'>
+                                            <h3 class="text-left">
+                                                <strong>Shipment Information:</strong>
+                                            </h3>
+                                            
+                                            <table class="table">
+                                                <tbody>
+                                                    <tr>
+                                                        <td colspan="2">
+                                                            <strong>Shipment Method:</strong>
+                                                            <h3> <t t-esc="order.carrier_id.id"/> </h3>
+                                                            <h3> <t t-esc="order.carrier_id.name"/> </h3>
+                                                            
+                                                        </td>
+                                                        
+                                                        
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        
+                                        <div class='col-xs-12 mt32 pad_lrz'>
+                                            <h3 class='text-left'>
+                                                <strong>Delivery Procedure</strong> 
+                                            </h3>
+                                            <h5 class='text-left mt24'> 3 EASY STEPS </h5>
+                                            
+                                            <t t-if='order.carrier_id.id == 7 or order.carrier_id.id == 9'>
+                                                <!--Inside Dhaka-->
+                                                
+                                                <div t-if = "order.payment_acquirer_id.id == 12">
+                                                    <!--Online-->
+                                                    <p>1. Your order will be verified by a customer service representative. Please wait for a call from our Service Center: 09666-774577. </p>
+                                                    <p>2. Next, your order will be processed and then shipped via the delivery man and delivered to your doorstep.</p>
+                                                    <p>3. Receive the product(s) from the delivery man.</p>
+                                                    <p>Note: To ensure you receive the product(s) on time it is essential that you receive the call from the delivery man. And if you do miss a call please call back. Thank you =) </p>
+                                                </div>
+                                                
+                                                <div t-if = "order.payment_acquirer_id.id == 13">
+                                                    <!--Cash on Delivery-->
+                                                    <p>1. Your oder will be verified by a customer service representative. Please wait for a call from our Service Center: 09666-774577.</p>
+                                                    <p>2. Next, your order will be processed then shipped and delivered to your doorstep. </p>
+                                                    <p>3. Make payment in cash to the delivery man and receive the product(s). </p>
+                                                    <p>Note: To ensure you receive the product(s) on time it is essential that you receive the call from the delivery man. And if you do miss a call please call back. Thank you =) </p>
+                                                </div>
+                                                
+                                                <div t-if = "order.payment_acquirer_id.id == 14">
+                                                    <!--Card on Delivery-->
+                                                    <p>1. Your oder will be verified by a customer service representative. Please wait for a call from our Service Center: 09666-774577.</p>
+                                                    <p>2. Next, your order will be processed then shipped and delivered to your doorstep. </p>
+                                                    <p>3. Make card payment via the POS machine carried by the delivery man and receive the product(s). </p>
+                                                    <p>Note: To ensure you receive the product(s) on time it is essential that you receive the call from the delivery man. And if you do miss a call please call back. Thank you =) </p>
+
+                                                </div>
+                                                
+                                                <div t-if = "order.payment_acquirer_id.id == 15">
+                                                    <!--bKash-->
+                                                    <p>1. Your order will be verified by a customer service representative. Please wait for a call from our Service Center: 09666-774577</p>
+                                                    <p>2. After bKash payment confirmation, your order will be processed then shipped via the delivery man and delivered to your doorstep.</p>
+                                                    <p>3. Receive the product(s) from the delivery man.</p>
+                                                    <p>Note: To ensure you receive the product(s) on time it is essential that you receive the call from the delivery man. And if you do miss a call please call back. Thank you =)</p>
+                                                    <p>bKash Payment Details:</p>
+                                                    <p>Merchant Number: 01787-653444</p>
+                                                    <p>Counter Number: 1</p>
+                                                    <p>Reference: 444</p>
+                                                    <p>Please use the Payment option =) </p>
+
+                                                </div>
+                                                
+                                            </t>
+                                            
+                                            <t t-if='order.carrier_id.id == 8 or order.carrier_id.id == 10'>
+                                                <!--Outside Dhaka-->
+                                                
+                                                <div t-if = "order.payment_acquirer_id.id == 12">
+                                                    <!--Online-->
+                                                    <p>Note: Your order will be verified by a customer service representative. Please wait for a call from our Service Center: 09666-774577. </p>
+                                                    <p>1. We hand it over to SA Paribahan / Sundarban Courier and send you the reference number.</p>
+                                                    <p>2. Your order is at your nearest SA Paribahan / Sundarban Courier branch within a few days. Just call them and send someone with the reference number to pick up your product(s).</p>
+                                                    <p>3. Receive your product(s) from your nearest SA Paribahan / Sundarban Courier branch. </p>
+                                                    <p> Thank you =) </p>
+
+                                                </div>
+                                                
+                                                <div t-if = "order.payment_acquirer_id.id == 13">
+                                                    <!--Cash on Delivery-->
+                                                    <p>Note: Your order will be verified by a customer service representative. Please wait for a call from our Service Center: 09666-774577. </p>
+                                                    <p>1. We hand it over to Sa Paribahan and send you the reference number.</p>
+                                                    <p>2. Your order is at your nearest SA Paribahan branch within a few days. Just call them and send someone with the reference number to pick up your product(s). </p>
+                                                    <p> Pay cash at SA Paribahan branch and receive your products(s).</p>
+                                                    <p> Thank you =) </p>
+                                                    
+                                                </div>
+                                                
+                                                <div t-if = "order.payment_acquirer_id.id == 14">
+                                                    <!--Card on Delivery-->
+                                                </div>
+                                                
+                                                <div t-if = "order.payment_acquirer_id.id == 15">
+                                                    <!--bKash-->
+                                                    <p> Your order will be verified by a customer service representative. Please wait for a call from our Service Center: 09666-774577. </p>
+                                                    <p>1. After bKash payment confirmation, we process your order. </p>
+                                                    <p>2. We hand it over to Sundarban Courier / SA Paribahan and send you the reference number. </p>
+                                                    <p>3. Your order is at your nearest Sundarban Courier / SA Paribahan branch within a few days. Just call them and send someone with the reference number to pick up your product(s).</p>
+                                                    <p> Thank you =) </p>
+                                                    <p> bKash Payment Details: </p>
+                                                    <p> Merchant Number: 01787-653444 </p>
+                                                    <p> Counter Number: 1 </p>
+                                                    <p> Reference: 444 </p>
+                                                    <p> Please use the Payment Option =) </p>
+                                                </div>
+                                            </t>
+                                            
+                                            
+                                            
                                         </div>
                                         
                                         <!--<t t-call="website_sale.payment_confirmation_status"/>-->
