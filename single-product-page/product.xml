@@ -278,6 +278,10 @@
                         </div>
                     </div>
                     
+                    <div class='mt24 mb24'>
+                        <h1> Size Guide for <strong> <span t-field='product.categ_id.parent_id.name' /></strong></h1>
+                    </div>
+                    
                     <div class='col-md-12 col-lg-12 col-xs-12 mt64 mb64 hidden'>
                         <h3 class='mb32'> SIZE CHART</h3>
                         <table class='table table-stripped table-hover '>
