@@ -170,6 +170,18 @@
             }
         </style>
 
+        <script>
+            $(document).ready(function(){
+                    if ($("input.acp4_delivery_method_radio#8").attr("checked")){
+                        $("li.acp4_payment_method_listitem#14").hide();
+                    }
+                    if ($("input.acp4_delivery_method_radio#10").attr("checked")){
+                        $("li.acp4_payment_method_listitem#13").hide();
+                        $("li.acp4_payment_method_listitem#14").hide();
+                    }
+            });
+        </script>
+
         <div id="wrap" style="font-family: 'Oxygen', sans-serif">
             <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12 first_row_acp3">
                 <div class='container'>
@@ -290,9 +302,9 @@
                                                 <div class="panel-body">
                                                     <ul class="list-unstyled">
                                                 <t t-foreach="acquirers or []" t-as="acquirer">
-                                                    <li>
+                                                    <li class='acp4_payment_method_listitem' t-att-id='acquirer.id'>
                                                         <label t-if="acquirer.button">
-                                                            <input t-att-value="acquirer.id" type="radio" name="acquirer" t-att-checked="acquirers[0] == acquirer"/>
+                                                            <input  t-att-value="acquirer.id" type="radio" name="acquirer" t-att-checked="acquirers[0] == acquirer"/>
                                                             <span t-field="acquirer.image_small" t-att-title="acquirer.name" t-field-options="{&quot;widget&quot;: &quot;image&quot;, &quot;style&quot;:&quot;max-width: 60px; display: inline-block&quot;}"/>
                                                             <span t-field="acquirer.name"/>
                                                             <span t-if="acquirer.fees_active">(processing fees apply)</span>
