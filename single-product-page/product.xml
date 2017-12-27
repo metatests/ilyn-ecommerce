@@ -74,7 +74,20 @@
                 -webkit-transform: scale(1.3); 
                 transform: scale(1.3);
             }
-            
+            .product_detail_img{
+                margin-left:0 !important;
+            }
+            .size_guide_div{
+                border: 2px solid #c1b497;
+                padding-top: 40px;
+                padding-bottom: 40px;
+            }
+            .carousel .carousel-control.right {
+                right: 75px;
+            }
+            #o-carousel-product .carousel-indicators li {
+                width: 110px !important;
+            }
         </style>
         <style>
             @media screen and (min-width: 320px) and (max-width: 767px) {
@@ -131,7 +144,7 @@
         <div style="font-family: 'Oxygen', sans-serif;">
            
             <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12 first_row">
-                <div class='container'>
+                <div class='container' style='padding-left:0'>
                     <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12 pad_lrz">
                         <div class=" " style='display:none'>
                             <t t-call="website_sale.search"/>
@@ -174,7 +187,7 @@
             <div itemscope="itemscope" itemtype="http://schema.org/Product" id="wrap" class="js_sale">
                 <section t-attf-class="container padleft_zero oe_website_sale #{(compute_currency(product.lst_price) - product.website_price) &gt; 0.01 and website.get_current_pricelist().discount_policy == 'without_discount'  and 'discount'}" id="product_detail">
                     <div class="col-md-12 col-lg-12 col-xs-12 mb64 mt64" style='padding-left:0; padding-right:0'>
-                        <div class="col-sm-7 col-md-7 col-lg-7">
+                        <div class="col-sm-7 col-md-7 col-lg-7 pad_lrz">
                             <span itemprop="image" t-field="product.image" t-options="{'widget': 'image', 'class': 'product_detail_img', 'alt-field': 'name', 'zoom': 'image'}" groups="!website_sale.group_website_multi_image"/>
                             <t groups="website_sale.group_website_multi_image">
                                 <t t-set="variant_img" t-value="product.product_variant_ids[0].image_variant"/>
@@ -278,47 +291,251 @@
                         </div>
                     </div>
                     
-                    <div class='mt24 mb24'>
-                        <h1> Size Guide for <strong> <span t-field='product.categ_id.parent_id.name' /></strong></h1>
+                    <div class='col-xs-12 col-sm-4 mt24 mb24 size_guide_div' >
+                        <h3 class='text-center'> Size Guide for <strong> <span t-field='product.categ_id.parent_id.name' /></strong></h3>
                     </div>
                     
-                    <div class='col-md-12 col-lg-12 col-xs-12 mt64 mb64 hidden'>
-                        <h3 class='mb32'> SIZE CHART</h3>
+                    <div class='col-sm-7 col-sm-offset-1 col-xs-12 mt24 mb64' t-if='product.categ_id.parent_id.id == 48'>
+                        <!--PANJABI SIZE CHART-->
                         <table class='table table-stripped table-hover '>
                             <thead>
                                 <tr>
-                                    <th> Code</th>
-                                    <th> XXL </th>
-                                    <th> XL </th>
-                                    <th> L </th>
-                                    <th> M </th>
-                                    <th> S </th>
+                                    <th width='150'> Measurement Points</th>
                                     <th> XS </th>
+                                    <th> S </th>
+                                    <th> M </th>
+                                    <th> L </th>
+                                    <th> XL </th>
+                                    <th> XXL </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td> Inch </td>
-                                    <td> 24 </td>
-                                    <td> 26 </td>
-                                    <td> 28 </td>
-                                    <td> 30 </td>
-                                    <td> 32 </td>
-                                    <td> 34 </td>
+                                    <td> 1/2 Chest Width </td>
+                                    <td> 19.75" </td>
+                                    <td> 20.75" </td>
+                                    <td> 21.75" </td>
+                                    <td> 22.75" </td>
+                                    <td> 24" </td>
+                                    <td> 25.75" </td>
                                 </tr>
                                 <tr>
-                                    <td> Cm</td>
-                                    <td> 44 </td>
-                                    <td> 46 </td>
-                                    <td> 48 </td>
-                                    <td> 50 </td>
-                                    <td> 52 </td>
-                                    <td> 54 </td>
+                                    <td> Body Length</td>
+                                    <td> 41.25" </td>
+                                    <td> 42.25" </td>
+                                    <td> 43.25" </td>
+                                    <td> 46.5" </td>
+                                    <td> 47.25" </td>
+                                    <td> 47.25" </td>
                                 </tr>
                             </tbody>
-                            <tfoot></tfoot>
+                            <tfoot>
+                                
+                            </tfoot>
                         </table>
                     </div>
+                    
+                    <div class='col-sm-7 col-sm-offset-1 col-xs-12 mt24 mb64' t-if='product.categ_id.parent_id.id == 75'>
+                        <!--KABLI SIZE CHART-->
+                        <table class='table table-stripped table-hover '>
+                            <thead>
+                                <tr>
+                                    <th> Measurement Points</th>
+                                    <th> XS </th>
+                                    <th> S </th>
+                                    <th> M </th>
+                                    <th> L </th>
+                                    <th> XL </th>
+                                    <th> XXL </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td> 1/2 Chest Width </td>
+                                    <td> 19.75" </td>
+                                    <td> 20.75" </td>
+                                    <td> 21.75" </td>
+                                    <td> 22.75" </td>
+                                    <td> 24" </td>
+                                    <td> 25.75" </td>
+                                </tr>
+                                <tr>
+                                    <td> Body Length</td>
+                                    <td> 41.25" </td>
+                                    <td> 42.25" </td>
+                                    <td> 43.25" </td>
+                                    <td> 46.5" </td>
+                                    <td> 47.25" </td>
+                                    <td> 47.25" </td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                
+                            </tfoot>
+                        </table>
+                    </div>
+                    
+                    <div class='col-sm-7 col-sm-offset-1 col-xs-12 mt64 mb64' t-if='product.categ_id.parent_id.id == 41'>
+                        <!--L-CHINO SIZE CHART-->
+                        <table class='table table-stripped table-hover '>
+                            <thead>
+                                <tr>
+                                    <th> Measurement Points</th>
+                                    <th> XS </th>
+                                    <th> S </th>
+                                    <th> M </th>
+                                    <th> L </th>
+                                    <th> XL </th>
+                                    <th> XXL </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td> 1/2 Chest Width </td>
+                                    <td> 19.75" </td>
+                                    <td> 20.75" </td>
+                                    <td> 21.75" </td>
+                                    <td> 22.75" </td>
+                                    <td> 24" </td>
+                                    <td> 25.75" </td>
+                                </tr>
+                                <tr>
+                                    <td> Body Length</td>
+                                    <td> 41.25" </td>
+                                    <td> 42.25" </td>
+                                    <td> 43.25" </td>
+                                    <td> 46.5" </td>
+                                    <td> 47.25" </td>
+                                    <td> 47.25" </td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                
+                            </tfoot>
+                        </table>
+                    </div>
+                    
+                    <div class='col-sm-7 col-sm-offset-1 col-xs-12 mt64 mb64 hidden' t-if='product.categ_id.parent_id.id == 61'>
+                        <!--THOBE SIZE CHART-->
+                        <table class='table table-stripped table-hover '>
+                            <thead>
+                                <tr>
+                                    <th> Measurement Points</th>
+                                    <th> XS </th>
+                                    <th> S </th>
+                                    <th> M </th>
+                                    <th> L </th>
+                                    <th> XL </th>
+                                    <th> XXL </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td> 1/2 Chest Width </td>
+                                    <td> 19.75" </td>
+                                    <td> 20.75" </td>
+                                    <td> 21.75" </td>
+                                    <td> 22.75" </td>
+                                    <td> 24" </td>
+                                    <td> 25.75" </td>
+                                </tr>
+                                <tr>
+                                    <td> Body Length</td>
+                                    <td> 41.25" </td>
+                                    <td> 42.25" </td>
+                                    <td> 43.25" </td>
+                                    <td> 46.5" </td>
+                                    <td> 47.25" </td>
+                                    <td> 47.25" </td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                
+                            </tfoot>
+                        </table>
+                    </div>
+                    
+                    <div class='col-sm-7 col-sm-offset-1 col-xs-12 mt64 mb64 hidden' t-if='product.categ_id.parent_id.id == 35'>
+                        <!--SHIRT SIZE CHART-->
+                        <table class='table table-stripped table-hover '>
+                            <thead>
+                                <tr>
+                                    <th> Measurement Points</th>
+                                    <th> XS </th>
+                                    <th> S </th>
+                                    <th> M </th>
+                                    <th> L </th>
+                                    <th> XL </th>
+                                    <th> XXL </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td> 1/2 Chest Width </td>
+                                    <td> 19.75" </td>
+                                    <td> 20.75" </td>
+                                    <td> 21.75" </td>
+                                    <td> 22.75" </td>
+                                    <td> 24" </td>
+                                    <td> 25.75" </td>
+                                </tr>
+                                <tr>
+                                    <td> Body Length</td>
+                                    <td> 41.25" </td>
+                                    <td> 42.25" </td>
+                                    <td> 43.25" </td>
+                                    <td> 46.5" </td>
+                                    <td> 47.25" </td>
+                                    <td> 47.25" </td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                
+                            </tfoot>
+                        </table>
+                    </div>
+                    
+                    <div class='col-sm-7 col-sm-offset-1 col-xs-12 mt64 mb64 hidden' t-if='product.categ_id.parent_id.id == 54'>
+                        <!--PAYJAMA SIZE CHART-->
+                        <table class='table table-stripped table-hover '>
+                            <thead>
+                                <tr>
+                                    <th> Measurement Points</th>
+                                    <th> XS </th>
+                                    <th> S </th>
+                                    <th> M </th>
+                                    <th> L </th>
+                                    <th> XL </th>
+                                    <th> XXL </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td> 1/2 Chest Width </td>
+                                    <td> 19.75" </td>
+                                    <td> 20.75" </td>
+                                    <td> 21.75" </td>
+                                    <td> 22.75" </td>
+                                    <td> 24" </td>
+                                    <td> 25.75" </td>
+                                </tr>
+                                <tr>
+                                    <td> Body Length</td>
+                                    <td> 41.25" </td>
+                                    <td> 42.25" </td>
+                                    <td> 43.25" </td>
+                                    <td> 46.5" </td>
+                                    <td> 47.25" </td>
+                                    <td> 47.25" </td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                
+                            </tfoot>
+                        </table>
+                    </div>
+                    
+                    
                 </section>
                 <div itemprop="description" t-field="product.website_description" class="oe_structure mt16" id="product_full_description"/>
                 <t t-set="head">
