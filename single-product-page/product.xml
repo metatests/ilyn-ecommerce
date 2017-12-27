@@ -300,7 +300,7 @@
                         <table class='table table-stripped table-hover '>
                             <thead>
                                 <tr>
-                                    <th width='150'> Measurement Points</th>
+                                    <th width='150'> Measurement</th>
                                     <th> XS </th>
                                     <th> S </th>
                                     <th> M </th>
@@ -340,7 +340,7 @@
                         <table class='table table-stripped table-hover '>
                             <thead>
                                 <tr>
-                                    <th> Measurement Points</th>
+                                    <th> Measurement </th>
                                     <th> XS </th>
                                     <th> S </th>
                                     <th> M </th>
@@ -375,38 +375,38 @@
                         </table>
                     </div>
                     
-                    <div class='col-sm-7 col-sm-offset-1 col-xs-12 mt64 mb64' t-if='product.categ_id.parent_id.id == 41'>
+                    <div class='col-sm-7 col-sm-offset-1 col-xs-12 mt24 mb64' t-if='product.categ_id.parent_id.id == 41'>
                         <!--L-CHINO SIZE CHART-->
                         <table class='table table-stripped table-hover '>
                             <thead>
                                 <tr>
-                                    <th> Measurement Points</th>
-                                    <th> XS </th>
-                                    <th> S </th>
-                                    <th> M </th>
-                                    <th> L </th>
-                                    <th> XL </th>
-                                    <th> XXL </th>
+                                    <th width='150'> Measurement</th>
+                                    <th class='text-center'> XS </th>
+                                    <th class='text-center'> S </th>
+                                    <th class='text-center'> M </th>
+                                    <th class='text-center'> L </th>
+                                    <th class='text-center'> XL </th>
+                                    <th class='text-center'> XXL </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td> 1/2 Chest Width </td>
-                                    <td> 19.75" </td>
-                                    <td> 20.75" </td>
-                                    <td> 21.75" </td>
-                                    <td> 22.75" </td>
-                                    <td> 24" </td>
-                                    <td> 25.75" </td>
+                                    <td> Waist </td>
+                                    <td> 27" - 29"</td>
+                                    <td> 30" - 32" </td>
+                                    <td> 33" - 35" </td>
+                                    <td> 36" - 38" </td>
+                                    <td> 39" - 41" </td>
+                                    <td> 42" - 44"</td>
                                 </tr>
                                 <tr>
-                                    <td> Body Length</td>
-                                    <td> 41.25" </td>
-                                    <td> 42.25" </td>
-                                    <td> 43.25" </td>
-                                    <td> 46.5" </td>
-                                    <td> 47.25" </td>
-                                    <td> 47.25" </td>
+                                    <td> Height Range</td>
+                                    <td> 5'4" - 5'8" </td>
+                                    <td> 5'5" - 5'9" </td>
+                                    <td> 5'6" - 5'10" </td>
+                                    <td> 5'7" - 5'11" </td>
+                                    <td> 5'8" - 6' </td>
+                                    <td> 5'9" - 6'1" </td>
                                 </tr>
                             </tbody>
                             <tfoot>
@@ -415,12 +415,12 @@
                         </table>
                     </div>
                     
-                    <div class='col-sm-7 col-sm-offset-1 col-xs-12 mt64 mb64 hidden' t-if='product.categ_id.parent_id.id == 61'>
+                    <div class='col-sm-7 col-sm-offset-1 col-xs-12 mt24 mb64 hidden' t-if='product.categ_id.parent_id.id == 61'>
                         <!--THOBE SIZE CHART-->
                         <table class='table table-stripped table-hover '>
                             <thead>
                                 <tr>
-                                    <th> Measurement Points</th>
+                                    <th> Measurement</th>
                                     <th> XS </th>
                                     <th> S </th>
                                     <th> M </th>
@@ -455,12 +455,12 @@
                         </table>
                     </div>
                     
-                    <div class='col-sm-7 col-sm-offset-1 col-xs-12 mt64 mb64 hidden' t-if='product.categ_id.parent_id.id == 35'>
+                    <div class='col-sm-7 col-sm-offset-1 col-xs-12 mt24 mb64 hidden' t-if='product.categ_id.parent_id.id == 35'>
                         <!--SHIRT SIZE CHART-->
                         <table class='table table-stripped table-hover '>
                             <thead>
                                 <tr>
-                                    <th> Measurement Points</th>
+                                    <th> Measurement </th>
                                     <th> XS </th>
                                     <th> S </th>
                                     <th> M </th>
@@ -495,12 +495,12 @@
                         </table>
                     </div>
                     
-                    <div class='col-sm-7 col-sm-offset-1 col-xs-12 mt64 mb64 hidden' t-if='product.categ_id.parent_id.id == 54'>
+                    <div class='col-sm-7 col-sm-offset-1 col-xs-12 mt24 mb64 hidden' t-if='product.categ_id.parent_id.id == 54'>
                         <!--PAYJAMA SIZE CHART-->
                         <table class='table table-stripped table-hover '>
                             <thead>
                                 <tr>
-                                    <th> Measurement Points</th>
+                                    <th> Measurement</th>
                                     <th> XS </th>
                                     <th> S </th>
                                     <th> M </th>

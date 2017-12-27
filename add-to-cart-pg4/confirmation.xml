@@ -247,7 +247,7 @@
                                                     <tr>
                                                         <td colspan="2">
                                                             <strong>Payment Method:</strong>
-                                                            <h3> <t t-esc="order.payment_acquirer_id.id"/> </h3>
+                                                            <!--<h3> <t t-esc="order.payment_acquirer_id.id"/> </h3>-->
                                                             <h3> <t t-esc="order.payment_acquirer_id.name"/> </h3>
                                                         </td>
                                                         <td class="text-right" width="100">
@@ -271,7 +271,7 @@
                                                     <tr>
                                                         <td colspan="2">
                                                             <strong>Shipment Method:</strong>
-                                                            <h3> <t t-esc="order.carrier_id.id"/> </h3>
+                                                            <!--<h3> <t t-esc="order.carrier_id.id"/> </h3>-->
                                                             <h3> <t t-esc="order.carrier_id.name"/> </h3>
                                                             
                                                         </td>

@@ -47,12 +47,12 @@
                         display: inline; 
                     }
                     .bdt_symbol{
-                        font-size: 24px;
+                        font-size: 18px;
                        
                     }
                     .shoppg_prod_price{
-                        font-size: 18px;
-                        font-weight: 600;
+                        font-size: 14px;
+                        font-weight: 400;
                     }
                     
                 </style>
