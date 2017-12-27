@@ -6,7 +6,7 @@
                 border-radius:0;
                 border: 3px solid #f0f0f0;
             }
-            .panel-body address{
+            .panel-body address, .panel-body span{
                 line-height: 30px;
                 font-size: 13px;
                 color: #252525;
@@ -55,7 +55,18 @@
             
             <div t-att-class="'panel panel-default %s' % (selected and 'border_primary' or 'js_change_shipping')">
                 <div class="panel-body" style="min-height: 130px;">
-                    <t t-esc="contact" t-options="dict(widget='contact', fields=['name', 'address', 'phone'], no_marker=True)"/>
+                    <!--<t t-esc="contact" t-options="dict(widget='contact', fields=['name', 'address', 'phone'], no_marker=True)"/>-->
+                    <div class='mt32 mb32'>
+                        <strong> <span t-field='contact.name' /> </strong>
+                        <br />
+                        <span t-field='contact.street' />
+                        <br/>
+                        <span t-field='contact.city' /> <span t-field='contact.zip' /> <span t-field='contact.country_id.name' />
+                        <br/>
+                        <span t-field='contact.phone' />
+                        <br />
+                        <span> Delivery Location:</span> <span t-field='contact.state_id.name' />
+                    </div>
                 </div>
                 <div class="panel-footer" t-if="not readonly">
                     <span class="btn-ship" t-att-style="'' if selected else 'display:none;'">
