@@ -93,12 +93,26 @@
                 border: none;
                 font-size: 11px; 
             }
+            
+            #your_cell_text_label, #your_cell_cc_label{
+                background-color: #1d1a18;
+            }
+            
             .input-group-addon{
                 border-radius:0;
                 border:none;
-                background-color: #1d1a18;
                 color: #c1b497;
                 font-size:12px;
+            }
+
+            input#footer_subscription_customer_phone::-webkit-outer-spin-button,input#footer_subscription_customer_phone::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                -ms-appearance: none;
+                -o-appearance: none;
+                margin: 0;
+            }
+            input#footer_subscription_customer_phone{
+               -moz-appearance:textfield;
             }
         
             </style>
@@ -163,10 +177,6 @@
                         event.stopPropagation();
                         window.reload();
                     } 
-                    if (ec_cust_phone.length == 11){
-                        console.log("Kewl");
-                        // $("#ec_subscription_form").submit();
-                    }
                     
                     
                     if ($("#footer_subscription_customer_name,#footer_subscription_customer_phone").filter(function() { return $(this).val(); }).length > 0) {
@@ -194,7 +204,6 @@
                       return xhr;
                     }
 
-                    
 
                     function makeCorsRequest() {
                         var url = "http://bangladeshsms.com/smsapi?api_key=C200038059f06f05487361.76812382&amp;type=text&amp;contacts="+ec_cust_phone+"&amp;senderid=8804445629100&amp;msg="+ec_subscription_msg;
@@ -434,9 +443,9 @@
                                     <div class="form-group form-field o_website_form_required_custom">
                                         <div class="col-md-12 col-sm-12 col-xs-12" style="padding-left:0; padding-right: 0">
                                             <div class="input-group">
-                                                <label class='input-group-addon'> Your Cell</label>
-                                                <span class="input-group-addon" id="basic-addon1">+880</span>
-                                                <input type="text" maxlength='11' data-toggle="cellnotooltip" title="Your 11 Digit Cell Number without spaces" class="form-control o_website_form_input" name="phone" required="true" id="footer_subscription_customer_phone" placeholder="ex: 01712345678" value=""/>
+                                                <label class='input-group-addon' id='your_cell_text_label'> Your Cell</label>
+                                                <span class="input-group-addon" id="your_cell_cc_label">+88</span>
+                                                <input type="number" maxlength='11' data-toggle="cellnotooltip" title="Your 11 Digit Cell Number without spaces" class="form-control o_website_form_input" name="phone" required="true" id="footer_subscription_customer_phone" placeholder="ex: 01712345678" value=""/>
                                             </div>
                                         </div>
                                     </div>
@@ -491,3 +500,4 @@
 
 
 
+s
