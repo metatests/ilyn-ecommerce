@@ -373,7 +373,7 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background-color: RGBA(193, 180, 151, 0.7);
+                background-color: RGBA(193, 180, 151, 0);
                 opacity: 0;
                 -webkit-transition: all 0.3s ease-in-out;
                 -moz-transition: all 0.3s ease-in-out;
@@ -396,6 +396,7 @@
   
             .image-mask-box .thumbnail:hover .image-wrapper .masking {
                 opacity: 1;
+                 background-color:RGBA(193, 180, 151, 0.7);
             }
   
             .image-mask-box .thumbnail:hover .image-wrapper img {
@@ -404,12 +405,14 @@
                 -ms-transform: scale(1.2);
                 -o-transform: scale(1.2);
                 transform: scale(1.2);
+                 background-color:RGBA(193, 180, 151, 0.7);
             }
   
             .image-mask-box .thumbnail:hover .image-wrapper a {
                 -o-animation: itemMove 0.3s linear;
                 -webkit-animation: itemMove 0.3s linear;
                 animation: itemMove 0.3s linear;
+                background-color:RGBA(193, 180, 151, 0.7);
             }
   
             .image-mask-box .thumbnail .caption h4 {
@@ -1061,10 +1064,17 @@
                       <div class="thumbnail" id="cloth-cat">
                         <div class="image-wrapper">
                           <img src="/web/image/12818" class="pull-left product_image " data-original-title="" title="" style="position: relative; width: 100%; height: 100%;"/>
-                          <div class="masking">
-                            <a href="#" class="btnx btn-masking btn-xlg o_default_snippet_text">VIEW PRODUCTS</a>
+                          <!--<div class="masking">-->
+                          <!--  <a href="#" class="btnx btn-masking btn-xlg o_default_snippet_text">VIEW PRODUCTS</a>-->
                              
-                          </div>
+                          <!--</div>-->
+                          <div class="masking" data-animate="fadeInDown" data-animated="true">
+                                <div class="text dark">
+                                    <div class="text-inner text-left">
+                                         <a class="btnx btn-masking btn-xlg o_default_snippet_text" style="border-radius:0;"> <span>VIEW PRODUCT</span> </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                       </div>
                     </div>
@@ -1085,9 +1095,16 @@
                       <div class="thumbnail" id="foot-cat">
                         <div class="image-wrapper">
                           <img src="/web/image/12817" class="pull-left product_image " data-original-title="" title="" style="position: relative; width: 100%; height: 100%;"/>
-                          <div class="masking">
-                            <a href="#" class="btnx btn-masking btn-xlg o_default_snippet_text">VIEW PRODUCTS</a>
-                          </div>
+                          <!--<div class="masking">-->
+                          <!--  <a href="#" class="btnx btn-masking btn-xlg o_default_snippet_text">VIEW PRODUCTS</a>-->
+                          <!--</div>-->
+                          <div class="masking" data-animate="fadeInDown" data-animated="true">
+                                <div class="text dark">
+                                    <div class="text-inner text-left">
+                                         <a class="btnx btn-masking btn-xlg o_default_snippet_text" style="border-radius:0;"> <span>VIEW PRODUCT</span> </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                       </div>
                     </div>
@@ -1108,9 +1125,16 @@
                       <div class="thumbnail" id="acc-cat">
                         <div class="image-wrapper">
                           <img src="/web/image/12816" class="pull-left product_image " data-original-title="" title="" style="position: relative; width: 100%; height: 100%;"/>
-                          <div class="masking">
-                            <a href="#" class="btnx btn-masking btn-xlg o_default_snippet_text">VIEW PRODUCTS</a>
-                          </div>
+                          <!--<div class="masking">-->
+                          <!--  <a href="#" class="btnx btn-masking btn-xlg o_default_snippet_text">VIEW PRODUCTS</a>-->
+                          <!--</div>-->
+                          <div class="masking" data-animate="fadeInDown" data-animated="true">
+                                <div class="text dark">
+                                    <div class="text-inner text-left">
+                                         <a class="btnx btn-masking btn-xlg o_default_snippet_text" style="border-radius:0;"> <span>VIEW PRODUCT</span> </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                       </div>
                     </div>
@@ -1142,13 +1166,21 @@
                     <h4 class="h4 text-center" id="ban-ht">BANANI 11   </h4>
                   </div>
                   <div class="col-md-12 col-xs-12 col-sm-12 padleft_zero" id='dis-cen-banimg-div'>
+                      
                     <div class="image-mask-box">
                       <div class="thumbnail" id="ban-map" style="border:none;height: 300px;padding:0">
                         <div class="image-wrapper">
                           <img src="/web/image/12816" class="pull-left product_image " data-original-title="" title="" style="position: relative;width: 100%;height: 100%;"/>
-                          <div class="masking">
-                            <a href="#" class="btnx btn-masking btn-xlg o_default_snippet_text" data-toggle="modal" data-target="#banani_map_modal">VIEW MAP</a>
-                          </div>
+                          <!--<div class="masking">-->
+                          <!--  <a href="#" class="btnx btn-masking btn-xlg o_default_snippet_text" data-toggle="modal" data-target="#banani_map_modal">VIEW MAP</a>-->
+                          <!--</div>-->
+                          <div class="masking" data-animate="fadeInDown" data-animated="true">
+                                <div class="text dark">
+                                    <div class="text-inner text-left">
+                                         <a class="btnx btn-masking btn-xlg o_default_snippet_text" data-toggle="modal" data-target="#banani_map_modal" style="border-radius:0;"> <span>VIEW MAP</span> </a>
+                                    </div>
+                                </div>
+                            </div>
                           <div id="banani_map_modal" class="modal fade" role="dialog">
                             <div class="modal-dialog">
                               <div class="modal-content">
@@ -1179,9 +1211,16 @@
                       <div class="thumbnail" id="bct-map" style="border:none; padding:0">
                         <div class="image-wrapper">
                           <img src="/web/image/12818" class="pull-left product_image " data-original-title="" title="" style="position: relative; width: 100%; height: 100%;"/>
-                          <div class="masking">
-                            <a href="#" class="btnx btn-masking btn-xlg o_default_snippet_text" data-toggle="modal" data-target="#bcity_map_modal">VIEW MAP</a>
-                          </div>
+                          <!--<div class="masking">-->
+                          <!--  <a href="#" class="btnx btn-masking btn-xlg o_default_snippet_text" data-toggle="modal" data-target="#bcity_map_modal">VIEW MAP</a>-->
+                          <!--</div>-->
+                          <div class="masking" data-animate="fadeInDown" data-animated="true">
+                                <div class="text dark">
+                                    <div class="text-inner text-left">
+                                         <a class="btnx btn-masking btn-xlg o_default_snippet_text" data-toggle="modal" data-target="#bcity_map_modal" style="border-radius:0;"> <span>VIEW MAP</span> </a>
+                                    </div>
+                                </div>
+                            </div>
                           <div id="bcity_map_modal" class="modal fade" role="dialog">
                             <div class="modal-dialog">
                               <div class="modal-content">
@@ -1212,9 +1251,16 @@
                       <div class="thumbnail" id="nst-map" style="border:none; padding:0">
                         <div class="image-wrapper">
                           <img src="/web/image/12817" class="pull-left product_image " data-original-title="" title="" style="position: relative; width: 100%; height: 100%;"/>
-                          <div class="masking">
-                            <a href="#" class="btnx btn-masking btn-xlg o_default_snippet_text" data-toggle="modal" data-target="#ctg_map_modal">VIEW MAP</a>
-                          </div>
+                          <!--<div class="masking">-->
+                          <!--  <a href="#" class="btnx btn-masking btn-xlg o_default_snippet_text" data-toggle="modal" data-target="#ctg_map_modal">VIEW MAP</a>-->
+                          <!--</div>-->
+                          <div class="masking" data-animate="fadeInDown" data-animated="true">
+                                <div class="text dark">
+                                    <div class="text-inner text-left">
+                                         <a class="btnx btn-masking btn-xlg o_default_snippet_text" data-toggle="modal" data-target="#ctg_map_modal" style="border-radius:0;"> <span>VIEW MAP</span> </a>
+                                    </div>
+                                </div>
+                            </div>
                           <div id="ctg_map_modal" class="modal fade" role="dialog">
                             <div class="modal-dialog">
                               <div class="modal-content">
