@@ -9621,10 +9621,6 @@ ul.wizard li:first-child {
     cursor: pointer;
 }
 
-.mycart-popover {
-    max-width: 500px;
-    min-width: 250px;
-}
 
 .mycart-popover .cart_line {
     border-bottom: 1px #EEE solid;
