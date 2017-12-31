@@ -285,7 +285,8 @@
   
             .btn-masking {
                 color: white;
-                background-color: transparent;
+                font-width:bold;
+                background-color: rgba(0,0,0,0.5);
                 border-color: white;
                 -webkit-box-shadow: none;
                 box-shadow: none;

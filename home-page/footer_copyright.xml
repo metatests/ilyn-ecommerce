@@ -17,10 +17,36 @@
             color: #acacac;
             font-size: 12px;
             line-height: 20px;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
         }
         a.footer_anc:hover{
+            color:#c1b497 !important;
             text-decoration: none;
         }
+        a.ft_fb:hover{
+            color: #3b5998 !important;
+        }
+        a.ft_yt{
+            margin-left: 20px;
+        }
+        a.ft_yt:hover{
+            color: #ff0000 !important;
+        }
+        
+     <!--a {-->
+     <!--           color: #25211e; /* 625a49 */-->
+     <!--           text-decoration: none;-->
+     <!--       }-->
+            
+     <!--       a:hover,a:focus,a:active {-->
+     <!--          color: #25211e !important;-->
+     <!--          text-decoration: underline;-->
+     <!--       }-->
+        
       </style>       
       <div class='dark_footer'>
         <div class="container ">
@@ -39,8 +65,8 @@
             </div>
             
             <div class='text-right col-xs-12 col-sm-4 padtb15'>
-                <a href='#' class='footer_anc'> <i class='fa fa-2x fa-facebook'></i> </a>
-                <a href='#' class='footer_anc' style='margin-left: 20px;'> <i class='fa fa-2x fa-youtube'></i> </a> 
+                <a href='#' class='footer_anc ft_fb'> <i class='fa fa-2x fa-facebook'></i> </a>
+                <a href='#' class='footer_anc ft_yt'> <i class='fa fa-2x fa-youtube'></i> </a> 
             </div>
         </div>
       </div>

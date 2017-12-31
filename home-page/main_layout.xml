@@ -1,5 +1,4 @@
 <?xml version="1.0"?>
-
 <t name="Main layout" t-name="website.layout">
     <t t-call="web.layout">
         <t t-set="html_data" t-value="{             'lang': lang and lang.replace('_', '-'),             'data-website-id': website.id if website else None,             'data-editable': '1' if editable else None,             'data-translatable': '1' if translatable else None,             'data-edit_translations': '1' if edit_translations else None,             'data-view-xmlid': xmlid if editable or translatable else None,             'data-main-object': repr(main_object) if editable or translatable else None,             'data-oe-company-name': res_company.name         }"/>
@@ -39,17 +38,16 @@
                 odoo.session_info = {
                     is_superuser: 
                 
+                
                 <t t-esc="json.dumps(request.env.user._is_superuser())"/>,
                     is_frontend: true,
                 };
             
             
-            </script>
             
+            </script>
             <link rel="stylesheet" id="flatsome-main-css" href="web/static/src/cust_flatsome/css/flatsome.css" type="text/css" media="all"/>
             <link rel="stylesheet" id="mh-custom-css" href="web/static/src/cust_flatsome/css/allcustom.css" type="text/css" media="all"/>
-               
-            
             <t t-call-assets="web.assets_common" t-js="false"/>
             <t t-call-assets="web.assets_frontend" t-js="false"/>
             <t t-call-assets="web_editor.summernote" t-js="false" groups="website.group_website_publisher"/>
@@ -61,13 +59,11 @@
             <t t-call-assets="web_editor.assets_editor" t-css="false" groups="website.group_website_publisher"/>
             <t t-call-assets="website.assets_editor" t-css="false" groups="website.group_website_publisher"/></t>
         <t t-set="head" t-value="head_website + (head or '')"/>
-            
         <!-- Lato Font Import  -->
         <style>
             @import url('https://fonts.googleapis.com/css?family=Lato');
             @import url('https://fonts.googleapis.com/css?family=Oxygen');
         </style>
-        
         <!--- Add by Mahedi-->
         <style>
             a {
@@ -111,8 +107,40 @@
                   
                   outline : 0;
               }
+              
+              
+              /* style cart window */
+                .popover {
+                    height: 400px !important;
+                    overflow-y:auto;
+                }
+               
+               /*
+                *  STYLE 1
+                */             
+                
+             .popover::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #F5F5F5;
+}
+
+.popover::-webkit-scrollbar
+{
+  width: 10px;
+  background-color: #F5F5F5;
+}
+
+.popover::-webkit-scrollbar-thumb
+{
+  background-color:#c1b497;
+  
+  background-image: -webkit-gradient(linear, 0 0, 0 100%,
+                     color-stop(.5, rgba(255, 255, 255, .2)),
+             color-stop(.5, transparent), to(transparent));
+}
+                             
           </style>
-        
         <style>
         .top-bar ul li a{
           color: #b3b3b3!important;
@@ -179,7 +207,6 @@
               padding-left: 10px;
           }
       </style>
-        
         <!-- A.S Shop Page Hover CSS -->
         <style type='text/css'>
           .btnx-s {
@@ -372,7 +399,6 @@
           }
           
         </style>
-        
         <style>
             @media screen and (min-width: 320px) and (max-width: 767px) {
                 #top_menu{
@@ -383,7 +409,6 @@
                 }
             }
         </style>
-        
         <style>
           .btnx {
           cursor: pointer;
@@ -571,15 +596,13 @@
           border-radius: 0 !important;
           }
         </style>
-        
-        
+
         <div id="wrapwrap" t-att-class="pageName or ''" style="font-family: 'Lato', sans-serif;">
             <header>
                 <!-- topbar start-->
                 <div class="top-bar">
                     <div class="container">
                         <div class="row">
-                            
                             <div class="col-md-12 col-xs-12">
                                 <ul class="list-inline pull-right top-right">
                                     <li style='color: #c1b497; padding-right:0;'>
@@ -627,16 +650,11 @@
                     </div>
                 </div>
                 <!-- main navbar end -->
-                
                 <!--Owl Carousel CSS-->
                 <script src="web/static/src/cust-carousel-assets/js/owl.carousel.min.js"></script>
                 <link rel="stylesheet" href="web/static/src/cust-carousel-assets/css/owl.carousel.min.css"/>
                 <link rel="stylesheet" href="web/static/src/cust-carousel-assets/css/owl.theme.default.min.css"/>
-                
                 <!--Flatsome CSS-->
-                
-                
-                
             </header>
             <main>
                 <t t-raw="0"/>
@@ -653,8 +671,10 @@
 
             ga('create', _.str.trim('
             
+            
             <t t-esc="website.google_analytics_key"/>'), 'auto');
             ga('send','pageview');
+        
         
         
         </script>
