@@ -1,40 +1,41 @@
-<?xml version="1.0"?>
 <t name="Main layout" t-name="website.layout">
-    <t t-call="web.layout">
-        <t t-set="html_data" t-value="{             'lang': lang and lang.replace('_', '-'),             'data-website-id': website.id if website else None,             'data-editable': '1' if editable else None,             'data-translatable': '1' if translatable else None,             'data-edit_translations': '1' if edit_translations else None,             'data-view-xmlid': xmlid if editable or translatable else None,             'data-main-object': repr(main_object) if editable or translatable else None,             'data-oe-company-name': res_company.name         }"/>
-        <t t-if="not title">
-            <t t-if="not additional_title and main_object and 'name' in main_object">
-                <t t-set="additional_title" t-value="main_object.name"/></t>
-            <t t-if="main_object and 'website_meta_title' in main_object and main_object.website_meta_title">
-                <t t-set="title" t-value="main_object.website_meta_title"/></t>
-            <t t-else="">
-                <t t-set="title">
-                    <t t-if="additional_title">
-                        <t t-raw="additional_title"/> | </t>
-                    <t t-esc="(website or res_company).name"/></t>
-            </t>
+  <t t-call="web.layout">
+    <t t-set="html_data" t-value="{             'lang': lang and lang.replace('_', '-'),             'data-website-id': website.id if website else None,             'data-editable': '1' if editable else None,             'data-translatable': '1' if translatable else None,             'data-edit_translations': '1' if edit_translations else None,             'data-view-xmlid': xmlid if editable or translatable else None,             'data-main-object': repr(main_object) if editable or translatable else None,             'data-oe-company-name': res_company.name         }"/>
+    <t t-if="not title">
+      <t t-if="not additional_title and main_object and 'name' in main_object">
+        <t t-set="additional_title" t-value="main_object.name"/>
+      </t>
+      <t t-if="main_object and 'website_meta_title' in main_object and main_object.website_meta_title">
+        <t t-set="title" t-value="main_object.website_meta_title"/>
+      </t>
+      <t t-else="">
+        <t t-set="title">
+          <t t-if="additional_title"><t t-raw="additional_title"/> | </t>
+          <t t-esc="(website or res_company).name"/>
         </t>
-        <t t-set="x_icon" t-value="'/web/image/website/%s/favicon/' % website.id"/>
-        <t t-set="head_website">
-            <meta name="description" t-att-content="main_object and 'website_meta_description' in main_object                 and main_object.website_meta_description or website_meta_description"/>
-            <meta name="keywords" t-att-content="main_object and 'website_meta_keywords' in main_object                 and main_object.website_meta_keywords or website_meta_keywords"/>
-            <meta name="generator" content="Odoo"/>
-            <!-- OpenGraph tags for Facebook sharing -->
-            <meta property="og:title" t-att-content="additional_title"/>
-            <meta property="og:site_name" t-att-content="res_company.name"/>
-            <t t-if="main_object and 'plain_content' in main_object and main_object.plain_content">
-                <t t-set="og_description" t-value="main_object.plain_content[0:500]"/>
-                <meta property="og:description" t-att-content="og_description"/>
-                <meta property="og:image" t-att-content="request.httprequest.url_root+'logo.png'"/>
-                <meta property="og:url" t-att-content="request.httprequest.url_root+request.httprequest.path[1:end]"/>
-            </t>
-            <t t-set="languages" t-value="website.get_languages() if website else None"/>
-            <t t-if="request and request.website_multilang and website">
-                <t t-foreach="website.get_alternate_languages(request.httprequest)" t-as="lg">
-                    <link rel="alternate" t-att-hreflang="lg['hreflang']" t-att-href="lg['href']"/>
-                </t>
-            </t>
-            <script type="text/javascript">
+      </t>
+    </t>
+    <t t-set="x_icon" t-value="'/web/image/website/%s/favicon/' % website.id"/>
+    <t t-set="head_website">
+      <meta name="description" t-att-content="main_object and 'website_meta_description' in main_object                 and main_object.website_meta_description or website_meta_description"/>
+      <meta name="keywords" t-att-content="main_object and 'website_meta_keywords' in main_object                 and main_object.website_meta_keywords or website_meta_keywords"/>
+      <meta name="generator" content="Odoo"/>
+      <!-- OpenGraph tags for Facebook sharing -->
+      <meta property="og:title" t-att-content="additional_title"/>
+      <meta property="og:site_name" t-att-content="res_company.name"/>
+      <t t-if="main_object and 'plain_content' in main_object and main_object.plain_content">
+        <t t-set="og_description" t-value="main_object.plain_content[0:500]"/>
+        <meta property="og:description" t-att-content="og_description"/>
+        <meta property="og:image" t-att-content="request.httprequest.url_root+'logo.png'"/>
+        <meta property="og:url" t-att-content="request.httprequest.url_root+request.httprequest.path[1:end]"/>
+      </t>
+      <t t-set="languages" t-value="website.get_languages() if website else None"/>
+      <t t-if="request and request.website_multilang and website">
+        <t t-foreach="website.get_alternate_languages(request.httprequest)" t-as="lg">
+          <link rel="alternate" t-att-hreflang="lg['hreflang']" t-att-href="lg['href']"/>
+        </t>
+      </t>
+      <script type="text/javascript">
                 odoo.session_info = {
                     is_superuser: 
                 
@@ -46,26 +47,47 @@
             
             
             </script>
-            <link rel="stylesheet" id="flatsome-main-css" href="web/static/src/cust_flatsome/css/flatsome.css" type="text/css" media="all"/>
-            <link rel="stylesheet" id="mh-custom-css" href="web/static/src/cust_flatsome/css/allcustom.css" type="text/css" media="all"/>
-            <t t-call-assets="web.assets_common" t-js="false"/>
-            <t t-call-assets="web.assets_frontend" t-js="false"/>
-            <t t-call-assets="web_editor.summernote" t-js="false" groups="website.group_website_publisher"/>
-            <t t-call-assets="web_editor.assets_editor" t-js="false" groups="website.group_website_publisher"/>
-            <t t-call-assets="website.assets_editor" t-js="false" groups="website.group_website_publisher"/>
-            <t t-call-assets="web.assets_common" t-css="false"/>
-            <t t-call-assets="web.assets_frontend" t-css="false"/>
-            <t t-call-assets="web_editor.summernote" t-css="false" groups="website.group_website_publisher"/>
-            <t t-call-assets="web_editor.assets_editor" t-css="false" groups="website.group_website_publisher"/>
-            <t t-call-assets="website.assets_editor" t-css="false" groups="website.group_website_publisher"/></t>
-        <t t-set="head" t-value="head_website + (head or '')"/>
-        <!-- Lato Font Import  -->
-        <style>
+      <link rel="stylesheet" id="flatsome-main-css" href="web/static/src/cust_flatsome/css/flatsome.css" type="text/css" media="all"/>
+      <link rel="stylesheet" id="mh-custom-css" href="web/static/src/cust_flatsome/css/allcustom.css" type="text/css" media="all"/>
+      <t t-call-assets="web.assets_common" t-js="false"/>
+      <t t-call-assets="web.assets_frontend" t-js="false"/>
+      <t t-call-assets="web_editor.summernote" t-js="false" groups="website.group_website_publisher"/>
+      <t t-call-assets="web_editor.assets_editor" t-js="false" groups="website.group_website_publisher"/>
+      <t t-call-assets="website.assets_editor" t-js="false" groups="website.group_website_publisher"/>
+      <t t-call-assets="web.assets_common" t-css="false"/>
+      <t t-call-assets="web.assets_frontend" t-css="false"/>
+      <t t-call-assets="web_editor.summernote" t-css="false" groups="website.group_website_publisher"/>
+      <t t-call-assets="web_editor.assets_editor" t-css="false" groups="website.group_website_publisher"/>
+      <t t-call-assets="website.assets_editor" t-css="false" groups="website.group_website_publisher"/>
+    </t>
+    <t t-set="head" t-value="head_website + (head or '')"/>
+    <!-- Lato Font Import  -->
+    <style>
             @import url('https://fonts.googleapis.com/css?family=Lato');
             @import url('https://fonts.googleapis.com/css?family=Oxygen');
         </style>
-        <!--- Add by Mahedi-->
-        <style>
+    <!--- Add by Mahedi-->
+    <style>
+        
+           ::selection {
+                background:transparent;;
+            }
+            html,body,div,p,a,span,section{
+            
+                -webkit-user-select: none; /* Chrome/Safari */        
+                -moz-user-select: none; /* Firefox */
+                -ms-user-select: none; /* IE10+ */
+            
+                /* Not implemented yet */
+                -o-user-select: none;
+                user-select: none; 
+            }
+            
+            .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+                 color: #c1b497;
+                 background-color: transparent !important;
+             }
+        
             a {
                 color: #25211e; /* 625a49 */
                 text-decoration: none;
@@ -97,13 +119,13 @@
             }
             
             
-            a:focus, a:active, 
+            a:focus, a:active, .btn:focus, .btn:active, .button:focus, .button:active
               button::-moz-focus-inner,
               input[type="reset"]::-moz-focus-inner,
               input[type="button"]::-moz-focus-inner,
               input[type="submit"]::-moz-focus-inner,
               select::-moz-focus-inner,
-              input[type="file"] > input[type="button"]::-moz-focus-inner {
+              input[type="file"] &gt; input[type="button"]::-moz-focus-inner {
                   
                   outline : 0;
               }
@@ -114,34 +136,58 @@
                     height: 400px !important;
                     overflow-y:auto;
                 }
+                
+                mycart-popover {
+                    max-width: 380px;
+                    min-width: 250px;
+                }
                
                /*
                 *  STYLE 1
                 */             
                 
              .popover::-webkit-scrollbar-track
-{
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-  background-color: #F5F5F5;
-}
+                {
+                  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+                  background-color: #F5F5F5;
+                }
+                
+                .popover::-webkit-scrollbar
+                {
+                  width: 10px;
+                  background-color: #F5F5F5;
+                }
+                
+                .popover::-webkit-scrollbar-thumb
+                {
+                  background-color:#c1b497;
+                  
+                  background-image: -webkit-gradient(linear, 0 0, 0 100%,
+                                     color-stop(.5, rgba(255, 255, 255, .2)),
+                             color-stop(.5, transparent), to(transparent));
+                }
 
-.popover::-webkit-scrollbar
-{
-  width: 10px;
-  background-color: #F5F5F5;
-}
-
-.popover::-webkit-scrollbar-thumb
-{
-  background-color:#c1b497;
-  
-  background-image: -webkit-gradient(linear, 0 0, 0 100%,
-                     color-stop(.5, rgba(255, 255, 255, .2)),
-             color-stop(.5, transparent), to(transparent));
-}
+                .text-center a{
+                
+                   margin-right: 16% !important;
+                }
+                
+                
+               .text-center > span.h5 > #cart_total{
+                    margin-left: -4% !important;
+                }
+                
+                 
+                .mycart-popover > .popover-content > .mb8{
+                    margin-bottom: 5% !important;
+                }
+                
                              
           </style>
-        <style>
+          
+          
+          
+    <style>
         .top-bar ul li a{
           color: #b3b3b3!important;
         }
@@ -161,39 +207,39 @@
             margin-top: 8px!important;
           }
 
-          .navbar-nav > li > a {
+          .navbar-nav &gt; li &gt; a {
                 color: #777;
                 font-weight: bold;
                 text-transform: uppercase;
                 padding-top: 30px!important;
                 padding-bottom: 30px!important;
-                -webkit-transition: all 0.3s ease-in-out;
+               -webkit-transition: all 0.3s ease-in-out;
                 -moz-transition: all 0.3s ease-in-out;
                 -ms-transition: all 0.3s ease-in-out;
                 -o-transition: all 0.3s ease-in-out;
                 transition: all 0.3s ease-in-out;
           }
-           .navbar-nav > li > a:hover{
+           .navbar-nav &gt; li &gt; a:hover{
              color: #c1b497 !important;
             }
 
-          .navbar.navbar-static-top ul.nav > li.divider {
+          .navbar.navbar-static-top ul.nav &gt; li.divider {
             margin-top: 20px!important;
             padding-top: 20px!important;
             border-right: 1px solid grey!important;
             height: 40px!important;
           }
 
-        .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+        .navbar-default .navbar-nav &gt; .active &gt; a, .navbar-default .navbar-nav &gt; .active &gt; a:hover, .navbar-default .navbar-nav &gt; .active &gt; a:focus {
             color: #c1b497;
             background-color: white;
         }
 
-          .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
+          .navbar-default .navbar-nav &gt; .active &gt; a, .navbar-default .navbar-nav &gt; .active &gt; a:hover, .navbar-default .navbar-nav &gt; .active &gt; a:focus{
               color: #c1b497 !important;
               background-color: white !important!;
           }
-          .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:hover{
+          .navbar-default .navbar-nav &gt; .active &gt; a, .navbar-default .navbar-nav &gt; .active &gt; a:hover, .navbar-default .navbar-nav &gt; .active &gt; a:hover{
               color: #c1b497 !important;
               background-color: transparent !important!;
           }
@@ -207,8 +253,8 @@
               padding-left: 10px;
           }
       </style>
-        <!-- A.S Shop Page Hover CSS -->
-        <style type='text/css'>
+    <!-- A.S Shop Page Hover CSS -->
+    <style type="text/css">
           .btnx-s {
             cursor: pointer;
             background-image: none;
@@ -223,7 +269,7 @@
             border: 2px solid transparent;
             text-transform: uppercase;
             outline: 0 !important;
-            -webkit-transition: all 0.3s ease-in-out;
+           -webkit-transition: all 0.3s ease-in-out;
             -moz-transition: all 0.3s ease-in-out;
             -ms-transition: all 0.3s ease-in-out;
             -o-transition: all 0.3s ease-in-out;
@@ -278,7 +324,7 @@
           
           .btn-masking-s:active,
           .btn-masking-s.active,
-          .open > .dropdown-toggle.btn-masking-s {
+          .open &gt; .dropdown-toggle.btn-masking-s {
             -webkit-box-shadow: none;
             box-shadow: none;
             -webkit-box-shadow: none 1px 2px #ccc;
@@ -399,17 +445,79 @@
           }
           
         </style>
-        <style>
-            @media screen and (min-width: 320px) and (max-width: 767px) {
-                #top_menu{
-                    background: white;
+    <style>
+        @media screen and (min-width: 320px) and (max-width: 767px) {
+        
+            /* 14-01-18 for cart style */
+            .text-center a{
+                
+                   margin-right: 1% !important;
                 }
-                .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:hover {
-                    top: 30px;
-                }
+        
+            #top_menu{
+                background: white;
             }
-        </style>
-        <style>
+            
+            #main_nav {
+                height: auto !important;
+                background: white !important;
+                box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1) !important;
+            }
+            
+            header a.navbar-brand img {
+               height: 36px !important;
+               margin-top: 8px !important;
+            }
+            header a.navbar-brand img {
+                max-height: auto !important;
+                margin-top: 8px !important;
+            }
+
+            .navbar-default .navbar-nav &gt; .active &gt; a, .navbar-default .navbar-nav &gt; .active &gt; a:hover, .navbar-default .navbar-nav &gt; .active &gt; a:hover {
+                top: 0 !important;
+            }
+            .navbar-nav > li > a {
+                color: #777;
+                font-weight: bold;
+                text-transform: uppercase;
+                padding-top:0px !important;
+                padding-bottom: 2% !important;
+                -webkit-transition: all 0.3s ease-in-out;
+                -moz-transition: all 0.3s ease-in-out;
+                -ms-transition: all 0.3s ease-in-out;
+                -o-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+            }
+            
+            .navbar.navbar-static-top ul.nav > li.divider {
+                margin-top: 0px !important;
+                padding-top: 0px !important;
+                border-right: 1px solid grey !important;
+                height: auto !important;
+            }
+        }
+            
+        @media screen and (min-width: 768px) and (max-width: 991px) {
+           
+        }
+        @media screen and (min-width: 992px) and (max-width: 1023px) {
+           
+        }
+        @media screen and (min-width: 1024px) and (max-width: 1199px) {
+           
+        }
+        @media screen and (min-width: 1200px){
+          
+        }    
+            
+            
+            
+            
+            
+            
+            
+    </style>
+    <style>
           .btnx {
           cursor: pointer;
           background-image: none;
@@ -596,74 +704,74 @@
           border-radius: 0 !important;
           }
         </style>
-
-        <div id="wrapwrap" t-att-class="pageName or ''" style="font-family: 'Lato', sans-serif;">
-            <header>
-                <!-- topbar start-->
-                <div class="top-bar">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12 col-xs-12">
-                                <ul class="list-inline pull-right top-right">
-                                    <li style='color: #c1b497; padding-right:0;'>
-                                        <i class='fa fa-phone'></i>
-                                        <span id='top_nav_phone'>09660450451 </span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- topbar end-->
-                <!-- main navbar start -->
-                <div class="navbar navbar-default navbar-static-top" id="main_nav">
-                    <div class="container">
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-top-collapse">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"/>
-                                <span class="icon-bar"/>
-                                <span class="icon-bar"/>
-                            </button>
-                            <a class="navbar-brand" href="/" t-if="website" t-field="website.name">My Website</a>
-                        </div>
-                        <div class="collapse navbar-collapse navbar-top-collapse">
-                            <ul class="nav navbar-nav navbar-right" id="top_menu">
-                                <t t-foreach="website.menu_id.child_id" t-as="submenu">
-                                    <t t-call="website.submenu"/></t>
-                                <li class="divider" t-ignore="true" t-if="website.user_id != user_id"/>
-                                <li class="dropdown" t-ignore="true" t-if="website.user_id != user_id">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                        <b>
-                                            <span t-esc="(len(user_id.name)&gt;25) and (user_id.name[:23]+'...') or user_id.name"/>
-                                            <span class="caret"/>
-                                        </b>
-                                    </a>
-                                    <ul class="dropdown-menu js_usermenu" role="menu">
-                                        <li id="o_logout">
-                                            <a t-attf-href="/web/session/logout?redirect=/" role="menuitem">Logout</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- main navbar end -->
-                <!--Owl Carousel CSS-->
-                <script src="web/static/src/cust-carousel-assets/js/owl.carousel.min.js"></script>
-                <link rel="stylesheet" href="web/static/src/cust-carousel-assets/css/owl.carousel.min.css"/>
-                <link rel="stylesheet" href="web/static/src/cust-carousel-assets/css/owl.theme.default.min.css"/>
-                <!--Flatsome CSS-->
-            </header>
-            <main>
-                <t t-raw="0"/>
-            </main>
-            <footer style="font-family: 'Oxygen', sans-serif;">
-                <div id="footer"></div>
-            </footer>
+    <div id="wrapwrap" t-att-class="pageName or ''" style="font-family: 'Lato', sans-serif;">
+      <header>
+        <!-- topbar start-->
+        <div class="top-bar">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12 col-xs-12">
+                <ul class="list-inline pull-right top-right">
+                  <li style="color: #c1b497; padding-right:0;">
+                    <i class="fa fa-phone"/>
+                    <span id="top_nav_phone"><font style="">09666774577</font>&amp;nbsp;</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
-        <script id="tracking_code" t-if="website and website.google_analytics_key and not editable">
+        <!-- topbar end-->
+        <!-- main navbar start -->
+        <div class="navbar navbar-default navbar-static-top" id="main_nav">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-top-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"/>
+                <span class="icon-bar"/>
+                <span class="icon-bar"/>
+              </button>
+              <a class="navbar-brand" href="/" t-if="website" t-field="website.name">My Website</a>
+            </div>
+            <div class="collapse navbar-collapse navbar-top-collapse">
+              <ul class="nav navbar-nav navbar-right" id="top_menu">
+                <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                  <t t-call="website.submenu"/>
+                </t>
+                <li class="divider" t-ignore="true" t-if="website.user_id != user_id"/>
+                <li class="dropdown" t-ignore="true" t-if="website.user_id != user_id">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <b>
+                      <span t-esc="(len(user_id.name)&gt;25) and (user_id.name[:23]+'...') or user_id.name"/>
+                      <span class="caret"/>
+                    </b>
+                  </a>
+                  <ul class="dropdown-menu js_usermenu" role="menu">
+                    <li id="o_logout">
+                      <a t-attf-href="/web/session/logout?redirect=/" role="menuitem">Logout</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- main navbar end -->
+        <!--Owl Carousel CSS-->
+        <script src="web/static/src/cust-carousel-assets/js/owl.carousel.min.js"/>
+        <link rel="stylesheet" href="web/static/src/cust-carousel-assets/css/owl.carousel.min.css"/>
+        <link rel="stylesheet" href="web/static/src/cust-carousel-assets/css/owl.theme.default.min.css"/>
+        <!--Flatsome CSS-->
+      </header>
+      <main>
+        <t t-raw="0"/>
+      </main>
+      <footer style="font-family: 'Oxygen', sans-serif;">
+        <div id="footer"/>
+      </footer>
+    </div>
+    <script id="tracking_code" t-if="website and website.google_analytics_key and not editable">
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -678,8 +786,5 @@
         
         
         </script>
-    </t>
+  </t>
 </t>
-
-
-

@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<t name="Collapse Category Recursive" t-name="website_sale.option_collapse_categories_recursive">
+    <style>
+        
+        #products_grid_before > ul >li a{
+        
+            font-size:16px;
+            
+        }
+        #products_grid_before ul > li > ul > li > a.left_prod_cat_l3_atag{
+        
+            font-size:14px;
+            
+        }
+        
+        .fa-chevron-right:before {
+             content: "\f054";
+             padding-left: 20%;
+             float:right !important;
+         }
+         .fa-chevron-down:before {
+             content: "\f078";
+              float:right !important;
+         }
+         
+         
+         /* product category list hover background color remove 16-01-18 */
+         .nav > li > a:hover, .nav > li > a:focus {
+              text-decoration: none;
+              background-color: transparent;
+          }
+          
+          
+          
+        #o_shop_collapse_category li{
+            color: #c1b497;
+            padding-top: 15px;
+        }
+        #o_shop_collapse_category li:last-child{
+            padding-bottom:15px;
+        } 
+        
+   
+        
+        
+        a.left_prod_all_lv_cat_atag{
+             padding-top: 15px !important;
+        }
+        
+        #o_shop_collapse_category li a{
+            color:#5f5f5f; 
+            width: 90%;
+            padding-left: 54px;
+         
+        }
+        #o_shop_collapse_category li a.left_prod_cat_l3_atag, #o_shop_collapse_category li a.left_prod_all_lv_cat_atag {
+            color: #5f5f5f; 
+           
+          
+        }
+       
+     
+        
+        #o_shop_collapse_category li a:hover{
+            background: transparent !important;
+        }
+            
+        #o_shop_collapse_category li a.left_prod_cat_l3_atag:hover, #o_shop_collapse_category li a.left_prod_cat_l3_atag:focus {
+            color: #c1b497 !important;
+            background: transparent !imporatant;
+        }
+        
+        #o_shop_collapse_category li.active a.left_prod_cat_l3_atag span.l3_categ_span{
+            color: #000;
+            border-radius: 0; 
+            border-bottom: 2px solid #c1b497;
+        }
+        .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+            background-color: transparent;
+        }
+   
+        #o_shop_collapse_category li a.left_prod_all_lv_cat_atag:hover{
+            color: #16161d;
+            backgroung-color:transparent  !important;
+        }
+       <!--class='hidden '-->
+     
+    </style>
+    <script>
+      
+    </script>
+
+    <li t-att-class="'active' if categ.id == int(category or 0) else None" t-att-id="slug(categ)">
+        
+        <t t-if="categ.name=='CLOTHING' ">
+            <a t-if='categ.child_id' id='clothing' t-field="categ.name" t-attf-class="fa #{'fa-chevron-down' if categ.id in parent_category_ids else 'fa-chevron-right'}"  style='font-weight: bold;' />
+ 
+        </t>
+        <t t-if="categ.name=='FOOTWEAR' ">
+            <a  t-if='categ.child_id' id='footwear' t-field="categ.name" class='hidden' />
+        </t>
+         <t t-if="categ.name=='ACCESSORIES' ">
+            <a t-if='categ.child_id' id='accessories' t-field="categ.name"  class='hidden' />
+            
+        </t>
+         <t t-if="categ.name=='SALE' ">
+           
+            <p style='border-bottom: 1px solid #c1b497;'> </p>
+            <a t-if='categ.child_id' t-field="categ.name" id='sale'  class='hidden' style='color: green' />
+        </t>
+        
+        <t t-if="not categ.name=='CLOTHING'">
+            <a t-if='categ.child_id' t-field="categ.name" t-att-id='categ.name' class='left_prod_all_lv_cat_atag' t-attf-class="fa #{'fa-chevron-down' if categ.id in parent_category_ids else 'fa-chevron-right'}" t-att-style="'padding-top:15px;font-weight: bold;' if categ.name else 'padding-top:0 !important;'"/>
+        </t>
+        
+        <a class='left_prod_cat_l3_atag' t-if='not categ.child_id' t-att-href="keep('/shop/category/' + slug(categ), category=0)">
+            <span class='l3_categ_span' t-field='categ.name'></span>
+        </a>
+        <!--</a><i t-if="categ.child_id" t-att-id='categ.name' t-attf-class="fa #{'fa-chevron-down' if categ.id in parent_category_ids else 'fa-chevron-right'}" ></i>-->
+        
+        <ul t-if="categ.child_id" class="nav nav-pills nav-stacked nav-hierarchy" t-att-style="'display:block;' if categ.id in parent_category_ids else 'display:none;'">
+            <t t-foreach="categ.child_id" t-as="categ">
+                <t t-call="website_sale.option_collapse_categories_recursive"/>
+            </t>
+        </ul>
+    </li>
+    
+   
+</t>
+
+    

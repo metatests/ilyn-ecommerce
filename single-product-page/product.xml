@@ -3,6 +3,9 @@
     <t t-call="website.layout">
         <t t-set="additional_title" t-value="product.name"/>
         <style>
+            .sliderImgPre, .sliderImgNext{
+                      top:37% !important;
+                  }
           
             .first_row{
                 background-color: #f0f0f0;
@@ -79,11 +82,37 @@
             .product_detail_img{
                 margin-left:0 !important;
             }
+            
+           
             .size_guide_div{
-              /*  border: 2px solid #c1b497; */
-                padding-top: 40px;
-                padding-bottom: 40px;
+               padding: 20px 0px 35px 0px ;
+              /* border: 2px solid #c1b497; */
+                
+                
             }
+            
+            /* size div alignment */
+            .js_add_cart_variants{
+             margin-bottom: 26px !important;
+            }
+           
+           
+           .o_alternative_product{
+                display: block;
+                width: 100% !important;
+                max-height: 100%;
+                margin-bottom: -15% !important;
+            }
+            .thumbnail {
+               display: block;
+               padding: 4px;
+               margin-bottom: 20px;
+               line-height: 1.42857143;
+               background-color: #ffffff;
+               border:none !important;
+               
+           }
+             
             .hr{
                 height:2px;
                 background-color:#cccccc;
@@ -96,9 +125,18 @@
             #o-carousel-product .carousel-indicators li {
                 width: 110px !important;
             }
+        
         </style>
         <style>
             @media screen and (min-width: 320px) and (max-width: 767px) {
+            
+                .productDetailsPage{
+                        margin-bottom: 20px !important;
+                      margin-top: 15px !important;
+                }
+            
+            
+            
                 #singlepg_breadcrumb_prodname_heading{
                     font-size: 18px;
                 }
@@ -116,12 +154,140 @@
                 }
                 
                 .ul_hor_prod_att_name{
-                    margin-top:32px;
-                    margin-bottom:32px;
+                    margin-top:0px !important;
+                    margin-bottom:15px !important;
                 }
-                #product_details{
-                   padding-left: 18px;
+               #product_details {
+                    padding-left: 0;
+                    padding-right: 0;
                 }
+                
+                
+               
+                 
+                
+                
+                /* breadcrumb start */
+                ol.breadcrumb li a, ol.breadcrumb li.active {
+                    font-size: 10px;
+                    color: #656565;
+                    text-transform: lowercase !important;
+                  }
+                  ol.breadcrumb{
+                      background-color: transparent;
+                      padding: 5px 0px;
+                      margin-bottom: 0;
+                  }
+                  
+                  /* slider css */
+                    .padleft_zero {
+                        padding-left: 15px !important;
+                      }
+                  
+                  .sliderImgPre, .sliderImgNext{
+                      top:30% !important;
+                  }
+                  
+                  .carousel .carousel-control.right {
+                    right: 0;
+                  }
+                .carousel .carousel-control.left {
+                  left: 0;
+                 }
+                 
+                 #o-carousel-product .carousel-inner div.item {
+                    height: auto !important;
+                 }
+                 
+                 #o-carousel-product .carousel-indicators {
+                    background-color: transparent;
+                    margin: 0px 0px 0px auto;
+                    overflow-y: hidden;
+                    position: static;
+                    white-space: nowrap;
+                    width:  100% !important;
+                    height: 100px !important;
+                    text-align: center;
+                    list-style-position: inside;
+                }
+                
+                .control-label {
+                    margin: 0 4px !important;
+                    font-size: 12px;
+                }
+                
+                
+                .pad_lrz {
+                    padding-left: 0 !important;
+                    padding-right: 0 !important;
+                }
+                
+                
+                
+                .css_quantity {
+                    max-width:100% !important;
+                 }
+                 .input_qty_btn_spv, .js_add_cart_json {
+                    border-radius: 0;
+                    background: white !important;
+                    border: 1px solid #cccccc !important;
+                    color: #c1b497;
+                    padding: 18px;
+                    -webkit-transition: all 0.3s ease-in-out;
+                    -moz-transition: all 0.3s ease-in-out;
+                    -ms-transition: all 0.3s ease-in-out;
+                    -o-transition: all 0.3s ease-in-out;
+                    transition: all 0.3s ease-in-out;
+                  }
+                  .css_quantity input[name="add_qty"] {
+                    text-align: center;
+                    height: 50px !important;
+                  }
+                  
+                 #add_to_cart {
+                        width: 48%;
+                        background: #c1b497;
+                        font-size: 12px;
+                        line-height: 1.5;
+                        color: white;
+                        text-transform: uppercase;
+                        padding: 8px 8px !important;
+                        border-radius: 0;
+                        -webkit-transition: all 0.3s ease-in-out;
+                        -moz-transition: all 0.3s ease-in-out;
+                        -ms-transition: all 0.3s ease-in-out;
+                        -o-transition: all 0.3s ease-in-out;
+                        transition: all 0.3s ease-in-out;
+                    }
+                    
+                    .sizeTable{
+                        padding-left:0 !important;
+                        padding-right:0 !importan;
+                        font-size:12px ;
+                    }
+                    .sizeTable > table{
+                        width:auto !important;
+                    }
+                    
+                    
+                    .size_guide_div{
+                        margin-bottom: 0 !important;
+                        margin-top: 15px !important;
+                        padding: 0px 0px 2px 0px;
+                        border: 2px solid #c1b497;
+                    }
+                    
+                    .size_guide_div h3{
+                        margin-top: 12px;
+                        margin-bottom: 10px;
+                    }
+                    
+                    #product_detail > .mt24{
+                        margin-top: 20px !important;
+                    }
+                 
+                
+                
             }
             @media screen and (min-width: 768px) and (max-width: 991px) {
                 .product_name_heading_spv{
@@ -143,14 +309,17 @@
                 }
             }
             @media screen and (min-width: 992px) and (max-width: 1199px) {
-                
+                .sliderImgPre, .sliderImgNext{
+                      top:37% !important;
+                  }
             }
             @media screen and (min-width: 1200px){
-                
+                .sliderImgPre, .sliderImgNext{
+                      top:37% !important;
+                  }
             }
         </style>
         <div style="font-family: 'Oxygen', sans-serif;">
-           
             <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12 first_row">
                 <div class='container' style='padding-left:0'>
                     <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12 pad_lrz">
@@ -160,7 +329,6 @@
                         <div class='col-sm-6 padleft_zero'>
                             <h3 id='singlepg_breadcrumb_prodname_heading' class='text-uppercase' itemprop="name" t-field="product.name"></h3>
                         </div>
-                        
                         <div class="col-sm-6 col-lg-6" style='padding-right:0'>
                             <ol class="breadcrumb pull-right">
                                 <li>
@@ -174,27 +342,21 @@
                                 </li>
                             </ol>
                         </div>
-                        
                         <div id="website_published_button" class="col-sm-2">
                             <t t-call="website.publish_management" groups="sales_team.group_sale_manager">
                                 <t t-set="object" t-value="product"/>
                                 <t t-set="publish_edit" t-value="True"/>
                                 <t t-set="action" t-value="'product.product_template_action'"/></t>
                         </div>
-                        
                         <div class=" text-right" style='display:none'>
                             <t t-call="website_sale.pricelist_list"/>
                         </div>
-                        
-                        
                     </div>
                 </div>
             </div>
-            
-            
             <div itemscope="itemscope" itemtype="http://schema.org/Product" id="wrap" class="js_sale">
                 <section t-attf-class="container padleft_zero oe_website_sale #{(compute_currency(product.lst_price) - product.website_price) &gt; 0.01 and website.get_current_pricelist().discount_policy == 'without_discount'  and 'discount'}" id="product_detail">
-                    <div class="col-md-12 col-lg-12 col-xs-12 mb64 mt64" style='padding-left:0; padding-right:0'>
+                    <div class="col-md-12 col-lg-12 col-xs-12 productDetailsPage mb64 mt64" style='padding-left:0; padding-right:0'>
                         <div class="col-sm-7 col-md-7 col-lg-7 pad_lrz">
                             <span itemprop="image" t-field="product.image" t-options="{'widget': 'image', 'class': 'product_detail_img', 'alt-field': 'name', 'zoom': 'image'}" groups="!website_sale.group_website_multi_image"/>
                             <t groups="website_sale.group_website_multi_image">
@@ -211,16 +373,16 @@
                                         </div>
                                         <t t-if="len(image_ids) or variant_img">
                                             <a class="carousel-control left" href="#o-carousel-product" role="button" data-slide="prev">
-                                                <span class="fa fa-chevron-left" aria-hidden="true"/>
+                                                <span class="fa fa-chevron-left sliderImgPre" aria-hidden="true"/>
                                                 <span class="sr-only">Previous</span>
                                             </a>
                                             <a class="carousel-control right" href="#o-carousel-product" role="button" data-slide="next">
-                                                <span class="fa fa-chevron-right" aria-hidden="true"/>
+                                                <span class="fa fa-chevron-right sliderImgNext" aria-hidden="true"/>
                                                 <span class="sr-only">Next</span>
                                             </a>
                                         </t>
                                     </div>
-                                    <ol class="carousel-indicators" t-if="len(image_ids) or variant_img">
+                                    <ol class="carousel-indicators" style="width:91% !important" t-if="len(image_ids) or variant_img">
                                         <li data-target="#o-carousel-product" data-slide-to="0" class="active">
                                             <img class="img img-responsive js_variant_img_small" t-attf-src="/website/image/product.product/{{product.product_variant_ids[0].id}}/image/90x90" t-att-alt="product.name"/>
                                         </li>
@@ -236,121 +398,147 @@
                                 </div>
                             </t>
                         </div>
-                        
                         <div class="col-sm-5 col-md-5 col-lg-5 " id="product_details">
                             <h2 itemprop="name" t-field="product.name" class='text-right product_name_heading_spv'>Product Name</h2>
                             <span itemprop="url" style="display:none;" t-esc="'/shop/product/%s' % slug(product)"/>
-
-                            <div class='text-right'> <t t-call="website_sale.product_price"/> </div>
-                            
+                            <div class='text-right'>
+                                <t t-call="website_sale.product_price"/>
+                            </div>
                             <t t-set="attribute_value_ids" t-value="get_attribute_value_ids(product)"/>
                             <form action="/shop/cart/update" class="js_add_cart_variants" t-att-data-attribute_value_ids="attribute_value_ids" method="POST">
                                 <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
                                 <div class="js_product" t-if="product.product_variant_ids">
-                                    
                                     <hr t-if="product.description_sale"/>
                                     <div>
-                                        <p t-field="product.description_sale" class="product_desc_pt_spv mt24 mb24"/>
+                                        <p t-field="product.description_sale" class="product_desc_pt_spv mt24 mb24" style="text-align: right !important; " />
                                     </div>
                                     <hr/>
-                                    
                                     <div class='mb24'>
-                                    <t t-placeholder="select">
-                                        <input type="hidden" class="product_id" name="product_id" t-att-value="product.product_variant_id.id if len(product.product_variant_ids) == 1 else '0'"/>
-                                        <t t-call="website_sale.variants">
-                                            <t t-set="ul_class" t-value="'nav-stacked'"/></t>
-                                    </t>
-                                    <hr/>
+                                        <t t-placeholder="select">
+                                            <input type="hidden" class="product_id" name="product_id" t-att-value="product.product_variant_id.id if len(product.product_variant_ids) == 1 else '0'"/>
+                                            <t t-call="website_sale.variants">
+                                                <t t-set="ul_class" t-value="'nav-stacked'"/></t>
+                                        </t>
+                                        <hr/>
                                     </div>
-                                    
                                     <div class='col-sm-12 pad_lrz'>
-                                        <div class='pull-right'>
+                                        <div class='proQntCart pull-right'>
                                             <p t-if="len(product.product_variant_ids) &gt; 1" class="css_not_available_msg bg-danger" style="padding: 15px;">Product not available</p>
-                                            <a id="add_to_cart" class="btn mt8 js_check_product a-submit" href="#">Add to Cart <i class='fa fa-angle-right'></i></a>
+                                            <a id="add_to_cart" class="btn mt8 js_check_product a-submit" href="#">Add to Cart 
+                                                <i class='fa fa-angle-right'></i>
+                                            </a>
                                         </div>
                                     </div>
-                                    
                                     <div class='col-sm-12 mt32 pad_lrz hidden'>
                                         <div class='col-sm-6 pad_lrz mt48'>
                                             <t t-call="website_sale.product_price"/>
                                         </div>
-                                        
                                         <div class='col-sm-6' style='padding-right:0'>
                                             <p t-if="len(product.product_variant_ids) &gt; 1" class="css_not_available_msg bg-danger" style="padding: 15px;">Product not available</p>
-                                            <a id="add_to_cart" class="btn mt8 js_check_product a-submit" href="#">Add to Cart <i class='fa fa-angle-right'></i></a>
+                                            <a id="add_to_cart" class="btn mt8 js_check_product a-submit" href="#">Add to Cart 
+                                                <i class='fa fa-angle-right'></i>
+                                            </a>
                                         </div>
-                                        
                                     </div>
-                                    
                                 </div>
                             </form>
                             <hr t-if="product.availability != 'empty'"/>
-                            
                             <div t-if="product.availability == 'in_stock'" class=" col-xs-12 mt24 col-sm-12 alert alert-success">
                                 <span class="fa fa-check"/>
                                 <span>In Stock</span>
                             </div>
                             <div t-if="product.availability == 'warning'" class="col-xs-12 mt24 col-sm-12 text-center alert alert-warning">
-                                <!--<span class="fa fa-warning"/>-->
+                                <span class="fa fa-warning"/>
                                 <span class="fa fa-meh-o fa-2x"/>
                                 <span style='margin-left:20px;' t-field="product.availability_warning"/>
                             </div>
-                            
                         </div>
                     </div>
-                    
-                <!--<div class="col-md-12 col-lg-12 col-xs-12">-->
+                    <!--<div class="col-md-12 col-lg-12 col-xs-12">-->
                     <div class='col-xs-12 col-sm-12 hr'></div>
                     <div class='col-xs-12 col-sm-4 mt24 mb24 size_guide_div' >
-                        <h3 class='text-center'> Size Guide for <strong> <span t-field='product.categ_id.parent_id.name' /></strong></h3>
+                        <h3 class='text-center'> Size Guide  
+                            <!--<strong>-->
+                            <!--    <span t-field='product.categ_id.parent_id.name' />-->
+                            <!--</strong>-->
+                        </h3>
                     </div>
-                    
-                    <div class='col-sm-7 col-sm-offset-1 col-xs-12 mt24 mb64' t-if='product.categ_id.parent_id.id == 48'>
+                    <div class='col-sm-7 col-sm-offset-1 col-xs-12 mt24 mb24 table-responsive sizeTable' t-if='product.categ_id.parent_id.id == 48'>
                         <!--PANJABI SIZE CHART-->
-                        <table class='table table-stripped table-hover '>
-                            <thead>
-                                <tr>
-                                    <th width='150'> Measurement</th>
-                                    <th> XS </th>
-                                    <th> S </th>
-                                    <th> M </th>
-                                    <th> L </th>
-                                    <th> XL </th>
-                                    <th> XXL </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td> 1/2 Chest Width </td>
-                                    <td> 19.75" </td>
-                                    <td> 20.75" </td>
-                                    <td> 21.75" </td>
-                                    <td> 22.75" </td>
-                                    <td> 24" </td>
-                                    <td> 25.75" </td>
-                                </tr>
-                                <tr>
-                                    <td> Body Length</td>
-                                    <td> 41.25" </td>
-                                    <td> 42.25" </td>
-                                    <td> 43.25" </td>
-                                    <td> 46.5" </td>
-                                    <td> 47.25" </td>
-                                    <td> 47.25" </td>
-                                </tr>
-                            </tbody>
-                            <tfoot>
-                                
-                            </tfoot>
-                        </table>
+                        <!--<table class='table table-stripped table-hover ' style="margin-bottom:0px !important">-->
+                        <!--    <thead>-->
+                        <!--        <tr>-->
+                        <!--            <th width='150'> Measurement</th>-->
+                        <!--            <th> XS </th>-->
+                        <!--            <th> S </th>-->
+                        <!--            <th> M </th>-->
+                        <!--            <th> L </th>-->
+                        <!--            <th> XL </th>-->
+                        <!--            <th> XXL </th>-->
+                        <!--        </tr>-->
+                        <!--    </thead>-->
+                        <!--    <tbody>-->
+                        <!--        <tr>-->
+                        <!--            <td> 1/2 Chest Width </td>-->
+                        <!--            <td> 19.75" </td>-->
+                        <!--            <td> 20.75" </td>-->
+                        <!--            <td> 21.75" </td>-->
+                        <!--            <td> 22.75" </td>-->
+                        <!--            <td> 24" </td>-->
+                        <!--            <td> 25.75" </td>-->
+                        <!--        </tr>-->
+                        <!--        <tr>-->
+                        <!--            <td> Body Length</td>-->
+                        <!--            <td> 41.25" </td>-->
+                        <!--            <td> 42.25" </td>-->
+                        <!--            <td> 43.25" </td>-->
+                        <!--            <td> 46.5" </td>-->
+                        <!--            <td> 47.25" </td>-->
+                        <!--            <td> 47.25" </td>-->
+                        <!--        </tr>-->
+                        <!--    </tbody>-->
+                        <!--    <tfoot></tfoot>-->
+                        <!--</table>-->
+                        <table class="table table-stripped table-hover" style="margin-bottom:0px !important">
+                         <thead>
+                           <tr>
+                             <th width="20%" >Measurement</th>
+                             <th>XS</th>
+                             <th>S</th>
+                             <th>M</th>
+                             <th>L</th>
+                             <th>XL</th>
+                             <th>XXL</th>
+                           </tr>
+                         </thead>
+                         <tbody>
+                           <tr>
+                                <td>1/2 Chest Width</td>
+                                <td>19.75"</td>
+                                <td>20.75"</td>
+                                <td>21.75"</td>
+                                <td>22.75"</td>
+                                <td>24"</td>
+                                <td>25.75"</td>
+                           </tr>
+                           <tr>
+                                <td> Body Length</td>
+                                <td>41.25"</td>
+                                <td>42.25"</td>
+                                <td>43.25"</td>
+                                <td>46.5"</td>
+                                <td>47.25"</td>
+                                <td>47.25"</td>
+                            </tr>
+                         </tbody>
+                       </table>
                     </div>
-                    
-                    <div class='col-sm-7 col-sm-offset-1 col-xs-12 mt24 mb64' t-if='product.categ_id.parent_id.id == 75'>
+                    <div class='col-sm-7 col-sm-offset-1 col-xs-12 mt24 mb24 table-responsive sizeTable' t-if='product.categ_id.parent_id.id == 75'>
                         <!--KABLI SIZE CHART-->
                         <table class='table table-stripped table-hover '>
                             <thead>
                                 <tr>
-                                    <th> Measurement </th>
+                                    <th width="20%"> Measurement </th>
                                     <th> XS </th>
                                     <th> S </th>
                                     <th> M </th>
@@ -379,18 +567,15 @@
                                     <td> 47.25" </td>
                                 </tr>
                             </tbody>
-                            <tfoot>
-                                
-                            </tfoot>
+                            <tfoot></tfoot>
                         </table>
                     </div>
-                    
-                    <div class='col-sm-7 col-sm-offset-1 col-xs-12 mt24 mb64' t-if='product.categ_id.parent_id.id == 41'>
+                    <div class='col-sm-7 col-sm-offset-1 col-xs-12 mt24 mb24 table-responsive sizeTable' t-if='product.categ_id.parent_id.id == 41'>
                         <!--L-CHINO SIZE CHART-->
                         <table class='table table-stripped table-hover '>
                             <thead>
                                 <tr>
-                                    <th width='150'> Measurement</th>
+                                    <th width="20%"> Measurement</th>
                                     <th class='text-center'> XS </th>
                                     <th class='text-center'> S </th>
                                     <th class='text-center'> M </th>
@@ -419,18 +604,15 @@
                                     <td> 5'9" - 6'1" </td>
                                 </tr>
                             </tbody>
-                            <tfoot>
-                                
-                            </tfoot>
+                            <tfoot></tfoot>
                         </table>
                     </div>
-                    
                     <div class='col-sm-7 col-sm-offset-1 col-xs-12 mt24 mb64 hidden' t-if='product.categ_id.parent_id.id == 61'>
                         <!--THOBE SIZE CHART-->
-                        <table class='table table-stripped table-hover '>
+                        <table class='table table-stripped table-hover table-responsive sizeTable'>
                             <thead>
                                 <tr>
-                                    <th> Measurement</th>
+                                    <th width="20%"> Measurement</th>
                                     <th> XS </th>
                                     <th> S </th>
                                     <th> M </th>
@@ -459,18 +641,15 @@
                                     <td> 47.25" </td>
                                 </tr>
                             </tbody>
-                            <tfoot>
-                                
-                            </tfoot>
+                            <tfoot></tfoot>
                         </table>
                     </div>
-                    
-                    <div class='col-sm-7 col-sm-offset-1 col-xs-12 mt24 mb64 hidden' t-if='product.categ_id.parent_id.id == 35'>
+                    <div class='col-sm-7 col-sm-offset-1 col-xs-12 mt24 mb64 hidden table-responsive sizeTable' t-if='product.categ_id.parent_id.id == 35'>
                         <!--SHIRT SIZE CHART-->
                         <table class='table table-stripped table-hover '>
                             <thead>
                                 <tr>
-                                    <th> Measurement </th>
+                                    <th width="20%"> Measurement </th>
                                     <th> XS </th>
                                     <th> S </th>
                                     <th> M </th>
@@ -499,18 +678,15 @@
                                     <td> 47.25" </td>
                                 </tr>
                             </tbody>
-                            <tfoot>
-                                
-                            </tfoot>
+                            <tfoot></tfoot>
                         </table>
                     </div>
-                    
-                    <div class='col-sm-7 col-sm-offset-1 col-xs-12 mt24 mb64 hidden' t-if='product.categ_id.parent_id.id == 54'>
+                    <div class='col-sm-7 col-sm-offset-1 col-xs-12 mt24 mb64 hidden table-responsive sizeTable' t-if='product.categ_id.parent_id.id == 54'>
                         <!--PAYJAMA SIZE CHART-->
                         <table class='table table-stripped table-hover '>
                             <thead>
                                 <tr>
-                                    <th> Measurement</th>
+                                    <th width="20%"> Measurement</th>
                                     <th> XS </th>
                                     <th> S </th>
                                     <th> M </th>
@@ -539,14 +715,11 @@
                                     <td> 47.25" </td>
                                 </tr>
                             </tbody>
-                            <tfoot>
-                                
-                            </tfoot>
+                            <tfoot></tfoot>
                         </table>
                     </div>
                     <div class='col-xs-12 col-sm-12 hr mb20'></div>
-                 <!--</div>   -->
-                    
+                    <!--</div>   -->
                 </section>
                 <div itemprop="description" t-field="product.website_description" class="oe_structure mt16" id="product_full_description"/>
                 <t t-set="head">

@@ -1,43 +1,40 @@
 <?xml version="1.0"?>
-<data inherit_id="website_sale.product" customize_show="True" name="Select Quantity">
-    <xpath expr="//a[@id='add_to_cart']" position="before">
-        <style>
-            .css_quantity{
-                  max-width: 196px;
-                }
-           
-            .input-group-addon{
-                border-radius:0;
-                background: white;
-                color:#c1b497;
-                padding:15px;
-                -webkit-transition: all 0.3s ease-in-out;
-                -moz-transition: all 0.3s ease-in-out;
-                -ms-transition: all 0.3s ease-in-out;
-                -o-transition: all 0.3s ease-in-out;
-                transition: all 0.3s ease-in-out;
-            }
-            .input-group-addon:hover{
-                background: #c1b497;
-                color: white;
-                
-            }
-            .css_quantity input[name="add_qty"]{
-                height:45px;
-            }
-            .oe_website_sale ul ul {
-                margin-left: 0;
-            }
-          </style>
-        <div class="css_quantity input-group oe_website_spinner" contenteditable="false">
-            <a t-attf-href="#" class="mb8 input-group-addon js_add_cart_json input_qty_btn_spv">
-                <i class="fa fa-minus"/>
-            </a>
-            <input type="text" class="form-control quantity" data-min="1" name="add_qty" value="1" />
-            <a t-attf-href="#" class="mb8 input-group-addon float_left js_add_cart_json input_qty_btn_spv">
-                <i class="fa fa-plus"/>
-            </a>
-        </div>
-        <div class='mb24'></div>
-    </xpath>
+<data inherit_id="website_sale.product_quantity" customize_show="True" name="Select Quantity">
+  <xpath expr="//div[@class='css_quantity input-group oe_website_spinner']" position="replace">
+
+        <t t-if="product.qty_available &gt; 0">
+                <div class="css_quantity input-group oe_website_spinner" contenteditable="false">
+        <a t-attf-href="#" class="mb8 input-group-addon js_add_cart_json">
+            <i class="fa fa-minus"/>
+        </a>
+        <input type="text" class="form-control" data-min="1" name="add_qty" value="1"/>
+        <a t-attf-href="#" class="mb8 input-group-addon float_left js_add_cart_json">
+            <i class="fa fa-plus"/>
+        </a>
+    </div>
+        </t>
+
+        <t t-if="product.qty_available == 0 or product.qty_available &lt; 0">
+            <t t-if="product.website_product_status == 1">
+                <div class="css_quantity input-group oe_website_spinner" contenteditable="false">
+                </div>
+            </t>
+        <t t-if="product.website_product_status == 0">
+    <div class="css_quantity input-group oe_website_spinner" contenteditable="false">
+        <a t-attf-href="#" class="mb8 input-group-addon js_add_cart_json">
+            <i class="fa fa-minus"/>
+        </a>
+        <input type="text" class="form-control" data-min="1" name="add_qty" value="1"/>
+        <a t-attf-href="#" class="mb8 input-group-addon float_left js_add_cart_json">
+            <i class="fa fa-plus"/>
+        </a>
+    </div>
+        </t>
+        </t>
+        
+
+  </xpath>
 </data>
+
+
+

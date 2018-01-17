@@ -20,7 +20,7 @@
                     text-transform: uppercase;
                 }
                 .sec_row_acp{
-                    padding: 30px;
+                    padding: 30px;http://odoo.metamorphosis.com.bd/shop/cart#
                     border: 5px solid #f0f0f0;
                 }
                 .thrd_row_acp{
@@ -35,11 +35,6 @@
                     line-height: 1.3333333;
                     font-weight: bold;
                     font-family: Lato;
-                    -webkit-transition: all 0.3s ease-in-out;
-                    -moz-transition: all 0.3s ease-in-out;
-                    -ms-transition: all 0.3s ease-in-out;
-                    -o-transition: all 0.3s ease-in-out;
-                    transition: all 0.3s ease-in-out;
                 }
                 .btn_back_atcp{
                     color: #252525;
@@ -64,6 +59,8 @@
                     font-weight: 400;
                     font-size:30px;
                 }
+                
+            
             </style>
             
             <style>
@@ -73,6 +70,7 @@
                     }
                     #cart_products{
                         font-size:10px;
+                        margin-bottom:3%
                     }
                     .breadcrumb_heading_acp{
                         font-size: 24px;
@@ -89,8 +87,48 @@
                     .actp_prod_tr_border{
                         border-top: 3px solid #f0f0f0;
                     }
-                    #order_total_untaxed .pull-right, #order_total_taxes .pull-right, #order_total .pull-right{
-                        float:none !important;
+                 
+                   
+                    .btn_pc_atcp, .btn_back_atcp{
+                        font-size:10px !important;
+                    }
+                    
+                    .oe_website_sale, .oe_cart{
+                    
+                        padding-left: 0;
+
+                        padding-right: 0;
+                    }
+                    
+                    .sec_row_acp {
+                        padding: 25px;
+                    }
+                    .act_btn {
+                        padding:8px 8px !important;
+                    
+                    }
+                    
+                    .btn_back_atcp {
+                        color: #252525;
+                        background: #dedede;
+                        min-width: 100%;
+                    }
+                    
+                    .thrd_row_acp {
+                         background: none !important;
+                         padding: 0;
+                         width: 100% !important;
+                     }
+                     
+                     .oe_cart table tr{
+                        padding:5px !important;
+                     }
+                     .actp_prod_tr_border td{
+                        width:100% !important;
+                     }
+                     
+                     #wrapwrap table.table td, .o_editable table.table td {
+                        width: 100% !important;
                     }
                    
                 }
@@ -103,6 +141,7 @@
                     }
                     #cart_products{
                         font-size:12px;
+                        margin-bottom: 3%;
                     }
                     .act_prod_qty_div {
                         padding-left: opx;
@@ -116,10 +155,14 @@
                     }
                 }
                 @media screen and (min-width: 992px) and (max-width: 1199px) {
-                    
+                    #cart_products{
+                        margin-bottom: 3%;
+                    }
                 }
                 @media screen and (min-width: 1200px){
-                    
+                        #cart_products{
+                        margin-bottom: 3%;
+                    }
                 }
             </style>    
             
@@ -153,23 +196,42 @@
                         </t>
                         <div class="row ">
                             <div class="col-md-12 col-sm-12 oe_cart mt24">
-                                <t t-call="website_sale.cart_lines"/>
+                 
+                                    <t t-call="website_sale.cart_lines"/>
+                                
+                                
                                 
                                 <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12 mt24 mb36 thrd_row_acp">
-                                    <div class='col-xs-6 col-sm-6'>
+                                    <div class='col-xs-6 col-sm-4 pull-left'>
                                         <a href="/shop" class="btn btn_back_atcp act_btn">
                                             <span class="hidden-xs">Continue Shopping</span>
                                             <span class="visible-xs-inline">Continue Shopping</span>
                                         </a>
                                     </div>
-                                    <div class='col-xs-6 col-sm-3 col-sm-offset-2 '>
+                                    <div class='col-xs-6 col-sm-5'></div>
+                                    <div class='col-xs-6 col-sm-3 pull-right text-right'>
                                         <a t-if="not optional_products and website_sale_order and website_sale_order.website_order_line" class="btn btn_pc_atcp act_btn btn-block" href="/shop/checkout">
                                             <span class="hidden-xs">Checkout</span>
                                             <span class="visible-xs-inline">Checkout</span>
                                         </a>
                                     </div>
                                 </div>
-                            
+                                
+                                <!--<div class="col-sm-12 col-md-12 col-lg-12 col-xs-12 mt24 mb36 thrd_row_acp">-->
+                                <!--    <div class='col-xs-6 col-sm-6'>-->
+                                <!--        <a href="/shop" class="btn btn_back_atcp act_btn">-->
+                                <!--            <span class="hidden-xs">Continue Shopping</span>-->
+                                <!--            <span class="visible-xs-inline">Continue Shopping</span>-->
+                                <!--        </a>-->
+                                <!--    </div>-->
+                                <!--    <div class='col-xs-6 col-sm-3 col-md-4 col-md-offset-2 col-sm-offset-2'>-->
+                                <!--        <a t-if="not optional_products and website_sale_order and website_sale_order.website_order_line" class="btn btn_pc_atcp act_btn btn-block" href="/shop/checkout">-->
+                                <!--            <span class="hidden-xs">Checkout</span>-->
+                                <!--            <span class="visible-xs-inline">Checkout</span>-->
+                                <!--        </a>-->
+                                <!--    </div>-->
+                                <!--</div>-->
+                                
                                 <div class="clearfix"></div>
                                 
                                 <div class="oe_structure"></div>

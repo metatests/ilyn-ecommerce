@@ -3,6 +3,14 @@
 <data inherit_id="website.footer_custom" customize_show="True" name="Automatic Footer">
     <xpath expr="//div[@id='footer']" position="replace">
         <style>
+            #clothing_list{
+                padding-left:0px !important;
+                padding-right:0px !important;
+            }
+            #clothing_listSub{
+                padding-left:0px !important;
+                padding-right:0px !important;
+            }
             footer #footer .footer-link h5 a{
               color: #5f5f5f !important;
               
@@ -11,10 +19,11 @@
             
             
             .disp-cen-add-heading{
-                text-transform: uppercase;
+                line-height: 16px;
                 letter-spacing: 1.5px;
                 font-size:11px;
             }
+            
             
             footer #footer .footer-link ul li {
                 color: #acacac;
@@ -44,9 +53,13 @@
                 -o-transition: all 0.3s ease-in-out;
                 transition: all 0.3s ease-in-out;
             }
-            .anc_l1:hover, .anc_tdn:hover{
+            .anc_l1:hover, .anc_tdn:hover, .anc_l1:focus, .anc_l1:active{
                 color: #c1b497 !important;
                 text-decoration: none !important;
+            }
+            a.anc_tdn:hover,a.anc_tdn:focus,a.anc_tdn:active{
+                color:#c1b497 !important;
+                text-decoration: none;
             }
            
             .anc_fc_gray{
@@ -116,10 +129,12 @@
             input#footer_subscription_customer_phone{
                -moz-appearance:textfield;
             }
+           
         
             </style>
         <style>
             @media screen and (min-width: 320px) and (max-width: 767px) {
+              
                 #aut_foot_footware_div{
                     padding-left:0;
                 }
@@ -130,6 +145,49 @@
                     margin-top:16px !important;
                 }
                 
+             
+                 #aut_foot_stay_conn_div > h3{
+                    text-align:center !important;
+                    margin-bottom: 18px !important;
+                }
+                #aut_foot_stay_conn_div > .pad_lrz > .footer_msg_p {
+                     color: #acacac;
+                     font-size: 12px;
+                     text-align: center;
+                 }
+                 
+                 
+                 #responsiveShopAdd h4, #responsiveShopAdd h6 {
+                     font-size: 16 px;
+                     line-height:14px !important;
+                     padding-right: 0;
+                     text-align: center;
+                 }
+                 
+                #responsiveShopAdd > #aut_foot_display_center_heading{
+                    text-align: center;
+                    margin-bottom: 20px !important;
+                 }
+                 
+                 
+                 .pad_lrz {
+                      text-align: center;
+                  }
+                  .pad_lrz > #accessoriseFootware{
+                        padding-left: 7% !important;
+                    }
+                #responsiveClothing{
+                    text-align: center;
+                }
+                    
+                footer #footer {
+                     padding-top: 0 !important; 
+                }
+                footer #footer .footer-link ul li {
+                    color: #acacac;
+                    font-size: 16px;
+                    line-height: 20px;
+                }
             }
             @media screen and (min-width: 768px) and (max-width: 991px) {
                  #aut_foot_nst_heading{
@@ -249,165 +307,433 @@
         <div style="background:#25211e;" >
             
             <div id="footer" class="container hidden-print">
-                <div class="row">
+                <div class="row" id="responsiveClothing">
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <h3>
-                            <a class=' anc_l1' href="#"> Clothing </a>
+                            <a class='anc_l1' href="#"> Clothing </a>
                         </h3>
                     </div>
-                    <div class="col-md-2 col-sm-2 col-xs-4 ">
-                        <div class="footer-link">
-                            <a class='anc_tdn' href="#">
-                                <h5> PANJABI </h5>
-                            </a>
-                            <ul class="list-unstyled">
-                                <li>
-                                    <a class='anc_tdn' href="/shop/category/all-panjabi-premium-85">Premium </a>
-                                </li>
-                                <li>
-                                    <a class='anc_tdn' href="/shop/category/all-panjabi-platinum-84">Platinum </a>
-                                </li>
-                                <li>
-                                    <a class='anc_tdn' href="/shop/category/all-panjabi-the-sahara-collection-86">Sahara </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-2 col-sm-2 col-xs-4 ">
-                        <div class="footer-link">
-                            <a class='anc_tdn' href="#">
-                                <h5> KABLI </h5>
-                            </a>
-                            <ul class="list-unstyled">
-                                <li>
-                                    <a class='anc_tdn' href="/shop/category/all-shirt-premium-76">Premium </a>
-                                </li>
-                                <li>
-                                    <a class='anc_tdn' href="/shop/category/all-shirt-platinum-75">Platinum </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-2 col-sm-2 col-xs-4 ">
-                        <div class="footer-link">
-                            <a class='anc_tdn' href="#">
-                                <h5> THOBE </h5>
-                            </a>
-                            <ul class="list-unstyled">
-                                <li>
-                                    <a class='anc_tdn' href="/shop/category/all-thobe-premium-80">Premium</a>
-                                </li>
-                                <li>
-                                    <a class='anc_tdn' href="/shop/category/all-thobe-platinum-79">Platinum</a>
-                                </li>
-                                <li>
-                                    <a class='anc_tdn' href="/shop/category/all-thobe-basic-78">Basic</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-2 col-sm-2 col-xs-4 " id='4th_level2_prodcat_div'>
-                        <div class="footer-link">
-                            <a class='anc_tdn' href="#">
-                                <h5> SHIRT </h5>
-                            </a>
-                            
-                            <ul class="list-unstyled">
-                                <li>
-                                    <a class='anc_tdn' href="/shop/category/all-shirt-premium-76">Premium</a>
-                                </li>
-                                <li>
-                                    <a class='anc_tdn' href="/shop/category/all-shirt-platinum-75">Platinum</a>
-                                </li>
-                                <li>
-                                    <a class='anc_tdn' href="/shop/category/all-shirt-basic-74">Basic</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-2 col-sm-2 col-xs-4 ">
-                        <div class="footer-link">
-                            <a class='anc_tdn' href="#">
-                                <h5> L-CHINO </h5>
-                            </a>
-                            <ul class="list-unstyled">
-                                <li>
-                                    <a class='anc_tdn' href="/shop/category/all-l-chino-basic-67">Basic </a>
-                                </li>
-                                <li>
-                                    <a class='anc_tdn' href="/shop/category/all-l-chino-basic-2-0-68">Basic 2.0</a>
-                                </li>
-                                <li>
-                                    <a class='anc_tdn' href="/shop/category/all-l-chino-air-66">Air </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-2 col-sm-2 col-xs-4 ">
-                        <div class="footer-link">
-                            <a class='anc_tdn' href="#">
-                                <h5> PAYJAMA </h5>
-                            </a>
-                            
-                            <ul class="list-unstyled">
-                                <li>
-                                    <a class='anc_tdn' href="/shop/category/all-payjama-relaxed-fit-88">Relaxed Fit </a>
-                                </li>
-                                <li>
-                                    <a class='anc_tdn' href="/shop/category/all-payjama-traditional-89">Traditional </a>
-                                </li>
-                                <li>
-                                    <a class='anc_tdn' href="/shop/category/all-payjama-trim-fit-90">Trim Fit </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                    
+                     <div class="col-md-12 col-sm-12 col-xs-12" id="clothing_list">
+                          <div class="col-md-4 col-sm-4 col-xs-12" id="clothing_listSub">
+                                <div class="col-md-6 col-sm-6 col-xs-6">
+                                    <div class="footer-link">
+                                       <a class='anc_tdn' href="#">
+                                          <h5> THOBE </h5>
+                                       </a>
+                                       <ul class="list-unstyled">
+                                           <li>
+                                               <a class='anc_tdn' href="/shop/category/all-thobe-basic-78">Basic</a>
+                                           </li>
+                                           <li>
+                                               <a class='anc_tdn' href="/shop/category/all-thobe-premium-80">Premium</a>
+                                           </li>
+                                           <!--<li>-->
+                                           <!--    <a class='anc_tdn' href="/shop/category/all-thobe-platinum-79">Platinum</a>-->
+                                           <!--</li>-->
+                                           <!--<li>-->
+                                           <!--     <a class='anc_tdn' href="/shop/category/all-panjabi-the-sahara-collection-86">Sahara </a>-->
+                                           <!-- </li>-->
+                                       </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6">
+                                    <div class="footer-link">
+                                         <a class='anc_tdn' href="#">
+                                             <h5> KABLI </h5>
+                                         </a>
+                                        <ul class="list-unstyled">
+                                             <li>
+                                                 <a class='anc_tdn' href="/shop/category/all-shirt-premium-76">Premium </a>
+                                             </li>
+                                             <li>
+                                                 <a class='anc_tdn' href="/shop/category/all-shirt-platinum-75">Platinum </a>
+                                             </li>
+                                            <!-- <li>-->
+                                            <!--    <a class='anc_tdn' href="/shop/category/all-panjabi-the-sahara-collection-86">Sahara </a>-->
+                                            <!--</li>-->
+                                        </ul>
+                                     </div>
+                                </div>
+                                
+                          </div> 
+                          <div class="col-md-4 col-sm-4 col-xs-12" id="clothing_listSub">
+                              <div class="col-md-6 col-sm-6 col-xs-6">
+                                    <div class="footer-link">
+                                        <a class='anc_tdn' href="#">
+                                            <h5> PANJABI </h5>
+                                        </a>
+                                        <ul class="list-unstyled">
+                                            <li>
+                                                <a class='anc_tdn' href="/shop/category/all-panjabi-premium-85">Premium </a>
+                                            </li>
+                                            <!--<li>-->
+                                            <!--    <a class='anc_tdn' href="/shop/category/all-panjabi-the-sahara-collection-86">Luxury </a>-->
+                                            <!--</li>-->
+                                            <li>
+                                                <a class='anc_tdn' href="/shop/category/all-panjabi-platinum-84">Platinum </a>
+                                            </li>
+                                            <li>
+                                                <a class='anc_tdn' href="/shop/category/all-panjabi-the-sahara-collection-86">Sahara </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6">
+                                    <div class="footer-link">
+                                        <a class='anc_tdn' href="#">
+                                            <h5> SHIRT </h5>
+                                        </a>
+                                        
+                                        <ul class="list-unstyled">
+                                            <li>
+                                                <a class='anc_tdn' href="/shop/category/all-shirt-basic-74">Basic</a>
+                                            </li>
+                                            <li>
+                                                <a class='anc_tdn' href="/shop/category/all-shirt-premium-76">Premium</a>
+                                            </li>
+                                            <!--<li>-->
+                                            <!--    <a class='anc_tdn' href="/shop/category/all-panjabi-platinum-84">Platinum </a>-->
+                                            <!--</li>-->
+                                            <!--<li>-->
+                                            <!--    <a class='anc_tdn' href="/shop/category/all-panjabi-the-sahara-collection-86">Sahara </a>-->
+                                            <!--</li>-->
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="col-md-4 col-sm-4 col-xs-12" id="clothing_listSub">
+                                <div class="col-md-6 col-sm-6 col-xs-6">
+                                    <div class="footer-link">
+                                       <a class='anc_tdn' href="#">
+                                           <h5> TROUSER </h5>
+                                       </a>
+                                       
+                                       <ul class="list-unstyled">
+                                           <li>
+                                                <a class='anc_tdn' href="/shop/category/all-shirt-basic-74">Basic</a>
+                                            </li>
+                                            <!--<li>-->
+                                            <!--    <a class='anc_tdn' href="/shop/category/all-shirt-premium-76">Premium</a>-->
+                                            <!--</li>-->
+                                            <li>
+                                                <a class='anc_tdn' href="/shop/category/all-panjabi-platinum-84">Platinum </a>
+                                            </li>
+                                       </ul>
+                                   </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6">
+                                    <div class="footer-link">
+                                        <a class='anc_tdn' href="#">
+                                            <h5> L-CHINO </h5>
+                                        </a>
+                                        <ul class="list-unstyled">
+                                            <li>
+                                                <a class='anc_tdn' href="/shop/category/all-l-chino-basic-67">Basic </a>
+                                            </li>
+                                            <li>
+                                                <a class='anc_tdn' href="/shop/category/all-l-chino-air-66">Air </a>
+                                            </li>
+                                            <!--<li>-->
+                                            <!--    <a class='anc_tdn' href="/shop/category/all-l-chino-air-66">Pacifire </a>-->
+                                            <!--</li>-->
+                                            <!--<li>-->
+                                            <!--    <a class='anc_tdn' href="/shop/category/all-l-chino-air-66">Color Jeans </a>-->
+                                            <!--</li>-->
+                                            <!--<li>-->
+                                            <!--    <a class='anc_tdn' href="/shop/category/all-l-chino-air-66">Dinem  </a>-->
+                                            <!--</li>-->
+                                        </ul>
+                                    </div>
+                                </div>
+                          </div> 
+                          
+                     </div>
+                    
+                     <!--<div class="col-md-12 col-sm-12 col-xs-12">-->
+                     <!--     <div class="col-md-4 col-sm-4 col-xs-12" id="clothing_list">-->
+                     <!--           <div class="col-md-4 col-sm-4 col-xs-12"  id="clothing_list">-->
+                     <!--               <div class="footer-link">-->
+                     <!--                  <a class='anc_tdn' href="#">-->
+                     <!--                     <h5> THOBE </h5>-->
+                     <!--                  </a>-->
+                     <!--                  <ul class="list-unstyled">-->
+                     <!--                      <li>-->
+                     <!--                          <a class='anc_tdn' href="/shop/category/all-thobe-premium-80">Premium</a>-->
+                     <!--                      </li>-->
+                     <!--                      <li>-->
+                     <!--                          <a class='anc_tdn' href="/shop/category/all-thobe-platinum-79">Platinum</a>-->
+                     <!--                      </li>-->
+                     <!--                      <li>-->
+                     <!--                          <a class='anc_tdn' href="/shop/category/all-thobe-basic-78">Basic</a>-->
+                     <!--                      </li>-->
+                     <!--                      <li>-->
+                     <!--                           <a class='anc_tdn' href="/shop/category/all-panjabi-the-sahara-collection-86">Sahara </a>-->
+                     <!--                       </li>-->
+                     <!--                  </ul>-->
+                     <!--               </div>-->
+                     <!--           </div>-->
+                     <!--           <div class="col-md-4 col-sm-4 col-xs-12"  id="clothing_list">-->
+                     <!--               <div class="footer-link">-->
+                     <!--                    <a class='anc_tdn' href="#">-->
+                     <!--                        <h5> KABLI </h5>-->
+                     <!--                    </a>-->
+                     <!--                    <ul class="list-unstyled">-->
+                     <!--                        <li>-->
+                     <!--                            <a class='anc_tdn' href="/shop/category/all-shirt-premium-76">Premium </a>-->
+                     <!--                        </li>-->
+                     <!--                        <li>-->
+                     <!--                            <a class='anc_tdn' href="/shop/category/all-shirt-platinum-75">Platinum </a>-->
+                     <!--                        </li>-->
+                     <!--                        <li>-->
+                     <!--                           <a class='anc_tdn' href="/shop/category/all-panjabi-the-sahara-collection-86">Sahara </a>-->
+                     <!--                       </li>-->
+                     <!--                    </ul>-->
+                     <!--                </div>-->
+                     <!--           </div>-->
+                     <!--           <div class="col-md-4 col-sm-4 col-xs-12"  id="clothing_list">-->
+                     <!--               <div class="footer-link">-->
+                     <!--                   <a class='anc_tdn' href="#">-->
+                     <!--                       <h5> PANJABI </h5>-->
+                     <!--                   </a>-->
+                     <!--                   <ul class="list-unstyled">-->
+                     <!--                       <li>-->
+                     <!--                           <a class='anc_tdn' href="/shop/category/all-panjabi-premium-85">Premium </a>-->
+                     <!--                       </li>-->
+                     <!--                       <li>-->
+                     <!--                           <a class='anc_tdn' href="/shop/category/all-panjabi-the-sahara-collection-86">Luxury </a>-->
+                     <!--                       </li>-->
+                     <!--                       <li>-->
+                     <!--                           <a class='anc_tdn' href="/shop/category/all-panjabi-platinum-84">Platinum </a>-->
+                     <!--                       </li>-->
+                     <!--                       <li>-->
+                     <!--                           <a class='anc_tdn' href="/shop/category/all-panjabi-the-sahara-collection-86">Sahara </a>-->
+                     <!--                       </li>-->
+                     <!--                   </ul>-->
+                     <!--               </div>-->
+                     <!--           </div>-->
+                     <!--     </div> -->
+                     <!--     <div class="col-md-4 col-sm-4 col-xs-12"  id="clothing_list">-->
+                     <!--           <div class="col-md-4 col-sm-4 col-xs-12"  id="clothing_list">-->
+                     <!--               <div class="footer-link">-->
+                     <!--                   <a class='anc_tdn' href="#">-->
+                     <!--                       <h5> SHIRT </h5>-->
+                     <!--                   </a>-->
+                                        
+                     <!--                   <ul class="list-unstyled">-->
+                     <!--                       <li>-->
+                     <!--                           <a class='anc_tdn' href="/shop/category/all-shirt-basic-74">Basic</a>-->
+                     <!--                       </li>-->
+                     <!--                       <li>-->
+                     <!--                           <a class='anc_tdn' href="/shop/category/all-shirt-premium-76">Premium</a>-->
+                     <!--                       </li>-->
+                     <!--                       <li>-->
+                     <!--                           <a class='anc_tdn' href="/shop/category/all-panjabi-platinum-84">Platinum </a>-->
+                     <!--                       </li>-->
+                     <!--                       <li>-->
+                     <!--                           <a class='anc_tdn' href="/shop/category/all-panjabi-the-sahara-collection-86">Sahara </a>-->
+                     <!--                       </li>-->
+                     <!--                   </ul>-->
+                     <!--               </div>-->
+                     <!--           </div>-->
+                     <!--           <div class="col-md-4 col-sm-4 col-xs-12"  id="clothing_list">-->
+                     <!--               <div class="footer-link">-->
+                     <!--                  <a class='anc_tdn' href="#">-->
+                     <!--                      <h5> TROUSER </h5>-->
+                     <!--                  </a>-->
+                                       
+                     <!--                  <ul class="list-unstyled">-->
+                     <!--                      <li>-->
+                     <!--                           <a class='anc_tdn' href="/shop/category/all-shirt-basic-74">Basic</a>-->
+                     <!--                       </li>-->
+                     <!--                       <li>-->
+                     <!--                           <a class='anc_tdn' href="/shop/category/all-shirt-premium-76">Premium</a>-->
+                     <!--                       </li>-->
+                     <!--                       <li>-->
+                     <!--                           <a class='anc_tdn' href="/shop/category/all-panjabi-platinum-84">Platinum </a>-->
+                     <!--                       </li>-->
+                     <!--                  </ul>-->
+                     <!--              </div>-->
+                     <!--           </div>-->
+                     <!--           <div class="col-md-4 col-sm-4 col-xs-12"  id="clothing_list">-->
+                     <!--               <div class="footer-link">-->
+                     <!--                   <a class='anc_tdn' href="#">-->
+                     <!--                       <h5> L-CHINO </h5>-->
+                     <!--                   </a>-->
+                     <!--                   <ul class="list-unstyled">-->
+                     <!--                       <li>-->
+                     <!--                           <a class='anc_tdn' href="/shop/category/all-l-chino-basic-67">Basic </a>-->
+                     <!--                       </li>-->
+                     <!--                       <li>-->
+                     <!--                           <a class='anc_tdn' href="/shop/category/all-l-chino-air-66">Air </a>-->
+                     <!--                       </li>-->
+                     <!--                       <li>-->
+                     <!--                           <a class='anc_tdn' href="/shop/category/all-l-chino-air-66">Pacifire </a>-->
+                     <!--                       </li>-->
+                     <!--                       <li>-->
+                     <!--                           <a class='anc_tdn' href="/shop/category/all-l-chino-air-66">Color Jeans </a>-->
+                     <!--                       </li>-->
+                     <!--                       <li>-->
+                     <!--                           <a class='anc_tdn' href="/shop/category/all-l-chino-air-66">Dinem  </a>-->
+                     <!--                       </li>-->
+                     <!--                   </ul>-->
+                     <!--               </div>-->
+                     <!--           </div>-->
+                                
+                     <!--     </div> -->
+                     <!--     <div class="col-md-4 col-sm-4 col-xs-12"  id="clothing_list">-->
+                                
+                     <!--           <div class="col-md-4 col-sm-4 col-xs-12"   id="clothing_list">-->
+                     <!--               <div class="footer-link">-->
+                     <!--                   <a class='anc_tdn' href="#">-->
+                     <!--                       <h5> T-SHIRT </h5>-->
+                     <!--                   </a>-->
+                     <!--                   <ul class="list-unstyled">-->
+                     <!--                       <li>-->
+                     <!--                           <a class='anc_tdn' href="/shop/category/all-l-chino-basic-67">Classic </a>-->
+                     <!--                       </li>-->
+                     <!--                       <li>-->
+                     <!--                           <a class='anc_tdn' href="/shop/category/all-l-chino-basic-2-0-68">Henlay</a>-->
+                     <!--                       </li>-->
+                     <!--                       <li>-->
+                     <!--                           <a class='anc_tdn' href="/shop/category/all-l-chino-air-66">Polo </a>-->
+                     <!--                       </li>-->
+                     <!--                   </ul>-->
+                     <!--               </div>-->
+                     <!--           </div>-->
+                     <!--           <div class="col-md-4 col-sm-4 col-xs-12"   id="clothing_list">-->
+                     <!--               <div class="footer-link">-->
+                     <!--                   <a class='anc_tdn' href="#">-->
+                     <!--                       <h5> LAYERING </h5>-->
+                     <!--                   </a>-->
+                     <!--                   <ul class="list-unstyled">-->
+                     <!--                       <li>-->
+                     <!--                           <a class='anc_tdn' href="/shop/category/all-l-chino-basic-67">Coat </a>-->
+                     <!--                       </li>-->
+                     <!--                       <li>-->
+                     <!--                           <a class='anc_tdn' href="/shop/category/all-l-chino-basic-2-0-68">Jacket </a>-->
+                     <!--                       </li>-->
+                     <!--                       <li>-->
+                     <!--                           <a class='anc_tdn' href="/shop/category/all-l-chino-air-66">Shalw </a>-->
+                     <!--                       </li>-->
+                     <!--                   </ul>-->
+                     <!--               </div>-->
+                     <!--           </div>-->
+                     <!--           <div class="col-md-4 col-sm-4 col-xs-12"   id="clothing_list">-->
+                     <!--               <div class="footer-link">-->
+                     <!--                   <a class='anc_tdn' href="#">-->
+                     <!--                       <h5> ESSENTIALS</h5>-->
+                     <!--                   </a>-->
+                     <!--                   <ul class="list-unstyled">-->
+                     <!--                       <li>-->
+                     <!--                           <a class='anc_tdn' href="/shop/category/all-l-chino-basic-67">innerwear </a>-->
+                     <!--                       </li>-->
+                     <!--                       <li>-->
+                     <!--                           <a class='anc_tdn' href="/shop/category/all-l-chino-basic-2-0-68">Loungewear</a>-->
+                     <!--                       </li>-->
+                     <!--                       <li>-->
+                     <!--                           <a class='anc_tdn' href="/shop/category/all-l-chino-air-66">Headwear </a>-->
+                     <!--                       </li>-->
+                     <!--                   </ul>-->
+                     <!--               </div>-->
+                     <!--           </div>-->
+                                
+                     <!--     </div>-->
+                     <!--</div>-->
+                    
+                    <!--<div class="col-md-2 col-sm-2 col-xs-4 ">-->
+                    <!--    <div class="footer-link">-->
+                    <!--        <a class='anc_tdn' href="#">-->
+                    <!--            <h5> PANJABI </h5>-->
+                    <!--        </a>-->
+                    <!--        <ul class="list-unstyled">-->
+                    <!--            <li>-->
+                    <!--                <a class='anc_tdn' href="/shop/category/all-panjabi-premium-85">Premium </a>-->
+                    <!--            </li>-->
+                    <!--            <li>-->
+                    <!--                <a class='anc_tdn' href="/shop/category/all-panjabi-platinum-84">Platinum </a>-->
+                    <!--            </li>-->
+                    <!--            <li>-->
+                    <!--                <a class='anc_tdn' href="/shop/category/all-panjabi-the-sahara-collection-86">Sahara </a>-->
+                    <!--            </li>-->
+                    <!--            <li>-->
+                    <!--                <a class='anc_tdn' href="/shop/category/clothing-panjabi-basic-34">Basic </a>-->
+                    <!--            </li>-->
+                    <!--        </ul>-->
+                    <!--    </div>-->
+                    <!--</div>-->
+                   
+                
                 </div>
+                
+            
+                
+<!--End Clothing category list-->
                 <div class="row mb16">
-                    <div class='col-md-12 mt24 mb8'>
+                    <div class='col-md-12 col-xs-12 mt24 mb8'>
                         <div class='footer_line'></div>
                     </div>
                     <div class="col-sm-4 col-md-4 col-xs-12 ">
                         <div class="col-md-12 col-sm-12 col-xs-12 pad_lrz">
-                            <div class="col-md-6 col-sm-6 col-xs-6 padleft_zero">
+                            <div class="col-md-6 col-sm-6 col-xs-6 padleft_zero"  id="accessoriseFootware">
                                 <h3 class="mt0 mb32">
-                                    <a class=" anc_l1" href="#"> Accessories </a>
+                                    <a class="anc_l1" href="#"> Accessories </a>
                                 </h3>
                                 <div class="footer-link">
                                     <a class="anc_tdn" href="#">
-                                        <h5>LEATHER</h5>
+                                        <h5>LEATHER GOODS</h5>
                                     </a>
                                     <ul class="list-unstyled">
-                                        <li>
-                                            <a class="anc_tdn" href="#">Prayer Mat</a>
-                                        </li>
+                                        <!--<li>-->
+                                        <!--    <a class="anc_tdn" href="#">Prayer Mat</a>-->
+                                        <!--</li>-->
                                         <li>
                                             <a class="anc_tdn" href="/shop/category/all-panjabi-platinum-84"> Bag</a>
                                         </li>
-                                        <li>
-                                            <a class="anc_tdn" href="/shop/category/all-panjabi-basic-82">Sleeve</a>
-                                        </li>
+                                        <!--<li>-->
+                                        <!--    <a class="anc_tdn" href="/shop/category/all-panjabi-basic-82">Sleeve</a>-->
+                                        <!--</li>-->
                                     </ul>
                                 </div>
-                                <!--<div style="margin-top: 22px;">-->
-                                <!--    <a class="anc_tdn anc_l1" href="#">-->
-                                <!--        <h5 class="perfume_heading">Perfume</h5>-->
-                                <!--    </a>-->
-                                <!--</div>-->
+                                
                             </div>
-                            <div class="col-md-6 col-sm-6 col-xs-6 " id='aut_foot_footware_div'>
+                            
+                            
+                <!-- *************** Backup lod style date 09-01-1 ***********-->
+                            
+                            
+                            <!--<div class="col-md-6 col-sm-6 col-xs-6 " id='aut_foot_footware_div'>-->
+                            <!--    <h3 class="mt0 mb32">-->
+                            <!--        <a class=" anc_l1" href="#">Footwear</a>-->
+                            <!--    </h3>-->
+                            <!--    <div class="footer-link">-->
+                            <!--        <a class="anc_tdn" href="#">-->
+                            <!--            <h5 style="color: #acacac;">Sandal</h5>-->
+                            <!--        </a>-->
+                            <!--        <a class="anc_tdn" href="#">-->
+                            <!--            <h5 style="color: #acacac;">Shoe</h5>-->
+                            <!--        </a>-->
+                            <!--    </div>-->
+                            <!--</div>-->
+                            <div class="col-md-6 col-sm-6 col-xs-6 padleft_zero" id="accessoriseFootware">
                                 <h3 class="mt0 mb32">
-                                    <a class=" anc_l1" href="#">Footwear</a>
+                                    <a class="anc_l1" href="#"> Footwear </a>
                                 </h3>
                                 <div class="footer-link">
                                     <a class="anc_tdn" href="#">
-                                        <h5 style="color: #acacac;">Sandal</h5>
+                                        <h5>SANDAL</h5>
                                     </a>
-                                    <a class="anc_tdn" href="#">
-                                        <h5 style="color: #acacac;">Shoe</h5>
-                                    </a>
+                                    <ul class="list-unstyled">
+                                        
+                                        <!--<li>-->
+                                        <!--    <a class="anc_tdn" href="/shop/category/all-panjabi-platinum-84"> Bag</a>-->
+                                        <!--</li>-->
+                                    </ul>
                                 </div>
                             </div>
+                            
+                            
+                            
                         </div>
                     </div>
                     
@@ -416,16 +742,16 @@
                     </div>
                     
                     <div class="col-sm-8 col-md-8 col-xs-12 ">
-                        <div class="col-sm-8 col-md-8 pad_lrz" >
+                        <div class="col-sm-8 col-md-8 pad_lrz" id="responsiveShopAdd">
                             <h3 class="mt0 mb32" id="aut_foot_display_center_heading"> Display Centers </h3>
                             <div class="col-md-6 col-sm-6 col-xs-12 padleft_zero">
-                                <h4 class="mb16 mt0 " style="color: #acacac;"> Banani Store</h4>
-                                <h6 class='disp-cen-add-heading'>Level3, Tower 52, Road 11 Banani, Dhaka 1213 </h6>
-                                <h4 class="mb16 mt32" style="color: #acacac;">Bashundhara Store</h4>
-                                <h6 class='disp-cen-add-heading'>Level 2, Block A, Basundhara City, Panthapath, Dhaka 1215 </h6>
+                                <h4 class="mb16 mt0 " style="color: #acacac;"> Banani 11</h4>
+                                <h6 class='disp-cen-add-heading'>Level 3, Tower 52, Road 11 Banani, Dhaka 1213 </h6>
+                                <h4 class="mb16 mt32" style="color: #acacac;">Bashundhara City</h4>
+                                <h6 class='disp-cen-add-heading'>Shop No. 27/41/42, Level 2, <br></br>Block A, Basundhara City,  <br></br> Panthapath, Dhaka 1215 </h6>
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-12 padleft_zero">
-                                <h4 class="mb16 mt0" id="aut_foot_nst_heading" style="color: #acacac;">New Store</h4>
+                                <h4 class="mb16 mt0" id="aut_foot_nst_heading" style="color: #acacac;">Jamuna Future Park</h4>
                                 <h6 class='disp-cen-add-heading'>Coming Soon! </h6>
                             </div>
                         </div>
@@ -435,17 +761,17 @@
                         <div class="col-sm-4 col-md-4 pad_lrz" id="aut_foot_stay_conn_div">
                             <h3 class="mt0 mb32 " > Stay Connected </h3>
                             <div class="col-md-12 col-sm-12 col-xs-12 pad_lrz">
-                                <p class="footer_msg_p"> Subscribe for updates and offers.</p>
+                                <p class="footer_msg_p"> Subscribe for updates and special offers.</p>
                                 <form action="/website_form/" method="post" data-model_name="res.partner" data-success_page="/page/contact-success/" class="s_website_form form-horizontal container-fluid mt16" enctype="multipart/form-data" id='ec_subscription_form'>
                                     <div class="form-group form-field o_website_form_required_custom">
                                         <div class="col-md-12 col-sm-12 col-xs-12 " style="padding-left:0; padding-right: 0">
-                                            <input type="text" class="form-control o_website_form_input" name="name" required="true" id="footer_subscription_customer_name" placeholder="Your Name" value=""/>
+                                            <input type="text" class="form-control o_website_form_input" name="name" required="true" id="footer_subscription_customer_name" placeholder=" Name" value=""/>
                                         </div>
                                     </div>
                                     <div class="form-group form-field o_website_form_required_custom">
                                         <div class="col-md-12 col-sm-12 col-xs-12" style="padding-left:0; padding-right: 0">
                                             <div class="input-group">
-                                                <label class='input-group-addon' id='your_cell_text_label'> Your Cell</label>
+                                                <label class='input-group-addon' id='your_cell_text_label'> Phone</label>
                                                 <span class="input-group-addon" id="your_cell_cc_label">+88</span>
                                                 <input type="number" maxlength='11' data-toggle="cellnotooltip" title="Your 11 Digit Cell Number without spaces" class="form-control o_website_form_input" name="phone" required="true" id="footer_subscription_customer_phone" placeholder="ex: 01712345678" value=""/>
                                             </div>

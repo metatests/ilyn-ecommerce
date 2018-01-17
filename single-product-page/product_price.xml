@@ -13,7 +13,7 @@
             }
         </style>
       <div itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer" class="product_price mt16">
-                   
+          
           <h3 class='product_price_fontcolor'> 
             <p class='bdt_symbol'>৳</p> 
             <p class='shoppg_prod_price' t-field='product.website_price' />

@@ -121,6 +121,14 @@
                     padding:0;
                 }
                 
+               .btn-def-hov-gl{
+                    font-size:12px;
+                }
+                
+              .btn-golden{
+                    font-size:11px;
+                }
+                
             }
             @media screen and (min-width: 768px) and (max-width: 991px) {
                 

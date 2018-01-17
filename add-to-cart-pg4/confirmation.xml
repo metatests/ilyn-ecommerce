@@ -86,17 +86,45 @@
                     .oe_cart table td:first-child, #modal_optional_products table td:first-child {
                         display: block;
                     }
+                    
+                    
+                    
                 }
             </style>    
             
             <style>
                 @media screen and (min-width: 320px) and (max-width: 767px) {
+                    .paddingLR0{
+                        padding-left:0 !important;
+                        padding-right:0 !imprtant
+                    } 
+                    #atcp4_print_btn{
+                        display: none !important;
+                    }
+                    
+                    .pad_lrz {
+                         text-align: center !important;
+                     }
+                     .pad_lrz p{
+                        text-align: left !important;
+                     }
+                     
+                     .pad_lrz h3{
+                         text-align: left !important;
+                         font-size:15px !important;
+                     }
+                    #actp4_orderdetail_heading{
+                        text-align: center;
+                        font-size: 15px;
+                    }
                     #acp4_thanks_heading{
-                        font-size:24px;
+                        font-size:15px;
                         line-height:1.4;
                     }
                     #acp4_orderconf_heading{
-                        text-align:left;
+                        font-size: 15px;
+                        text-align: left;
+                        margin-top: 15px;
                     }
                     #shipping_address_panel{
                         padding-left:0;
@@ -113,6 +141,20 @@
                     .breadcrumb > li + li:before{
                         padding:0;
                     }
+                    
+                    
+                    
+                    .oe_cart table td:last-child, .oe_cart table td:nth-last-child(2), #modal_optional_products table td:last-child, #modal_optional_products table td:nth-last-child(2) {
+                       
+                       text-align: left;
+                   }
+                   
+                   #shipment{
+                    width:100% !important
+                   }
+                   #paymentMethod{
+                    text-align:center !important;
+                   }
                     
                 }
                 @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -151,10 +193,10 @@
                     <t t-call="website_sale.wizard_checkout">
                         <t t-set="step" t-value="50"/></t>
                     <div class='sec_row_acp4 mb64 mt64'>
-                        <div class='col-xs-12 col-sm-9'>
+                        <div class='col-xs-12 col-sm-9 paddingLR0'>
                             <h1 id="acp4_thanks_heading">Thank you for your Order.</h1>
                         </div>
-                        <div class='col-xs-12 col-sm-3'>
+                        <div class='col-xs-12 col-sm-3 paddingLR0'>
                             <a class="btn btn-block" href="/shop/print" target="_blank" id='atcp4_print_btn'>
                                 <i class="fa fa-print fa-2x"/> <span id='actp4_printbtn_span'>Print </span>
                             </a>
@@ -162,7 +204,7 @@
                         
                         <div class="row">
                             <div class='col-xs-12 col-sm-12'>
-                                <div class="col-xs-12 col-sm-12">
+                                <div class="col-xs-12 col-sm-12 paddingLR0">
                                     <h3 class="text-right" id='acp4_orderconf_heading'>Order <em t-field="order.name"/> Confirmed </h3>           
                                     
                                     <div class="oe_cart">
@@ -170,12 +212,12 @@
                                         <!--<h3 class="mt32 text-left" id="atcp4_order_details_heading">-->
                                         <!--    <strong>Order Details:</strong>-->
                                         <!--</h3>-->
-                                        <table class="table">
+                                        <table class="table paddingLR0">
                                             <thead>
                                                 <tr>
-                                                    <th class='text-center'  >Products</th>
+                                                    <th class='text-left'  >Products</th>
                                                     <th class='text-left' width="120">Quantity</th>
-                                                    <th class="text-right" width="120">Unit Price</th>
+                                                    <th class="text-left" width="120">Unit Price</th>
                                                     <th class="text-right hidden-xs" width="120">Subtotal</th>
                                                 </tr>
                                             </thead>
@@ -194,7 +236,7 @@
                                                         
                                                     </td>
                                                     <td>
-                                                        <span class="text-right">
+                                                        <span class="">
                                                             <div t-field="line.price_unit" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: order.pricelist_id.currency_id}"/>
                                                         </span>
                                                     </td>
@@ -248,12 +290,12 @@
                                                         <td colspan="2">
                                                             <strong>Payment Method:</strong>
                                                             <!--<h3> <t t-esc="order.payment_acquirer_id.id"/> </h3>-->
-                                                            <h3> <t t-esc="order.payment_acquirer_id.name"/> </h3>
+                                                            <h3 id="paymentMethod"> <t t-esc="order.payment_acquirer_id.name"/> </h3>
                                                         </td>
-                                                        <td class="text-right" width="100">
+                                                        <td id="paymentMethod" class="text-right" width="100">
                                                             <strong>Total:</strong>
                                                         </td>
-                                                        <td class="text-right" width="100">
+                                                        <td id="paymentMethod" class="text-right" width="100">
                                                             <strong t-field="order.amount_total" t-options="{'widget': 'monetary', 'display_currency': order.pricelist_id.currency_id}"/>
                                                         </td>
                                                     </tr>
@@ -269,7 +311,7 @@
                                             <table class="table">
                                                 <tbody>
                                                     <tr>
-                                                        <td colspan="2">
+                                                        <td colspan="2" id="shipment">
                                                             <strong>Shipment Method:</strong>
                                                             <!--<h3> <t t-esc="order.carrier_id.id"/> </h3>-->
                                                             <h3> <t t-esc="order.carrier_id.name"/> </h3>

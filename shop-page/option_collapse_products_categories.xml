@@ -28,6 +28,9 @@
       }
       
     </style>
+
+
+    
     <a href='/shop' id='prod_main_cat_at'> <div class="panel-heading product_category_panel_heading_cust">PRODUCT CATEGORIES </div></a>
     <ul class="nav nav-pills nav-stacked product_category_panel_cust" id="o_shop_collapse_category">
     <!-- <li t-att-class=" '' if category else 'active' ">

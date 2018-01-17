@@ -1,73 +1,80 @@
 <?xml version="1.0"?>
 <data name="Contact Form" inherit_id="website.contactus" customize_show="True">
-            <xpath expr="//div[@name='mail_button']" position="replace">
-                <div>
-                    <style>
-                        .cust_black_btn{
-                            background: #25211e;
-                            text-transform: uppercase;
-                            color: #eee;
-                            padding: 20px;
-                            border-radius:0;
-                            border: 2px solid #25211e;
-                            -webkit-transition: all 0.3s ease-in-out;
-                            -moz-transition: all 0.3s ease-in-out;
-                            -ms-transition: all 0.3s ease-in-out;
-                            -o-transition: all 0.3s ease-in-out;
-                            transition: all 0.3s ease-in-out;
-                        }
-                        .cust_black_btn:hover{
-                            background: transparent;
-                            color: #25211e;
-                        }
-                            
-                    </style>
-                    <form action="/website_form/" method="post" data-model_name="crm.lead" data-success_page="/page/website_crm.contactus_thanks" class="s_website_form form-horizontal container-fluid mt32" enctype="multipart/form-data">
-                        <div class="form-group form-field o_website_form_required_custom">
-                            <label class="col-md-3 col-sm-4 control-label" for="contact_name">Your Name</label>
-                            <div class="col-md-9 col-sm-8">
-                                <input type="text" class="form-control o_website_form_input" name="contact_name" t-att-value="request.params.get('contact_name', '')" required=""/>
-                            </div>
-                        </div>
-                        <div class="form-group form-field">
-                            <label class="col-md-3 col-sm-4 control-label" for="phone">Phone Number</label>
-                            <div class="col-md-9 col-sm-8">
-                                <input type="text" class="form-control o_website_form_input" name="phone" t-att-value="request.params.get('phone', '')"/>
-                            </div>
-                        </div>
-                        <div class="form-group form-field o_website_form_required_custom">
-                            <label class="col-md-3 col-sm-4 control-label" for="email_from">Email</label>
-                            <div class="col-md-9 col-sm-8">
-                                <input type="text" class="form-control o_website_form_input" name="email_from" required="" t-att-value="request.params.get('email_from', '')"/>
-                            </div>
-                        </div>
-                        <div class="form-group form-field o_website_form_required_custom">
-                            <label class="col-md-3 col-sm-4 control-label" for="partner_name">Your Company</label>
-                            <div class="col-md-9 col-sm-8">
-                                <input type="text" class="form-control o_website_form_input" name="partner_name" required="" t-att-value="request.params.get('partner_name', '')"/>
-                            </div>
-                        </div>
-                        <div class="form-group form-field o_website_form_required">
-                            <label class="col-md-3 col-sm-4 control-label" for="name">Subject</label>
-                            <div class="col-md-9 col-sm-8">
-                                <input type="text" class="form-control o_website_form_input" name="name" required="" t-att-value="request.params.get('name', '')"/>
-                            </div>
-                        </div>
-                        <div class="form-group form-field o_website_form_required_custom">
-                            <label class="col-md-3 col-sm-4 control-label" for="description">Your Question</label>
-                            <div class="col-md-9 col-sm-8">
-                                <textarea class="form-control o_website_form_input" name="description" required=""><t t-esc="request.params.get('description', '')"/></textarea>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-md-offset-3 col-sm-offset-4 col-sm-8 col-md-9">
-                                <span class="btn btn-block cust_black_btn o_website_form_send">Send</span>
-                                <span id="o_website_form_result"/>
-                            </div>
-                        </div>
-                    </form>
+    <xpath expr="//div[@name='mail_button']" position="replace">
+        <style>
+           .form-horizontal .control-label {
+                text-align: left !important;
+                margin-bottom: 0;
+                padding-top: 7px;
+                padding-left: 0px !important;
+            }
+        </style>
+                <style>
+            @media screen and (min-width: 320px) and (max-width: 767px) {
+                #cssFormobile{
+                    padding-left: 0px !important;
+                }
+            }
+            @media screen and (min-width: 768px) and (max-width: 991px) {
+                
+            }
+            @media screen and (min-width: 992px) and (max-width: 1199px) {
+                
+            }
+            @media screen and (min-width: 1200px){
+                 
+                }
+            }
+        </style>
+        <div>
+            <form action="/website_form/" method="post" data-model_name="crm.lead" data-success_page="/page/website_crm.contactus_thanks" class="s_website_form form-horizontal container-fluid mt32" enctype="multipart/form-data">
+                <div class="form-group form-field o_website_form_required_custom">
+                    <label class="col-md-2 col-sm-3 col-xs-12 control-label" for="contact_name">Name</label>
+                    <div class="col-md-7 col-sm-8" id="cssFormobile">
+                        <input type="text" class="form-control o_website_form_input" name="contact_name" t-att-value="request.params.get('contact_name', '')" required=""/>
+                    </div>
                 </div>
-			</xpath>
-		</data>
+                <div class="form-group form-field">
+                    <label class="col-md-2 col-sm-3 col-xs-12 control-label" for="phone">Cell</label>
+                    <div class="col-md-7 col-sm-8" id="cssFormobile">
+                        <input type="text" class="form-control o_website_form_input" name="phone" t-att-value="request.params.get('phone', '')"/>
+                    </div>
+                </div>
+                <div class="form-group form-field o_website_form_required_custom">
+                    <label class="col-md-2 col-sm-3 col-xs-12 control-label" for="email_from">Email</label>
+                    <div class="col-md-7 col-sm-8" id="cssFormobile">
+                        <input type="text" class="form-control o_website_form_input" name="email_from" required="" t-att-value="request.params.get('email_from', '')"/>
+                    </div>
+                </div>
+                <div class="form-group form-field o_website_form_required_custom">
+                    <label class="col-md-2 col-sm-3 col-xs-12 control-label" for="partner_name">Company</label>
+                    <div class="col-md-7 col-sm-8" id="cssFormobile">
+                        <input type="text" class=" form-control o_website_form_input" name="partner_name" required="" t-att-value="request.params.get('partner_name', '')"/>
+                    </div>
+                </div>
+                <div class="form-group form-field o_website_form_required">
+                    <label class="col-md-2 col-sm-3 col-xs-12 control-label" for="name">Subject</label>
+                    <div class="col-md-7 col-sm-8" id="cssFormobile">
+                        <input type="text" class="form-control o_website_form_input" name="name" required="" t-att-value="request.params.get('name', '')"/>
+                    </div>
+                </div>
+                <div class="form-group form-field o_website_form_required_custom">
+                    <label class="col-md-2 col-sm-3 col-xs-12 control-label" for="description">Question</label>
+                    <div class="col-md-7 col-sm-8" id="cssFormobile">
+                        <textarea class="form-control o_website_form_input" name="description" required="">
+                            <t t-esc="request.params.get('description', '')"/>
+                        </textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-sm-offset-3 col-sm-8 col-md-7" id="cssFormobile">
+                        <span class="btn btn-primary btn-lg o_website_form_send">Send</span>
+                        <span id="o_website_form_result"/>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </xpath>
+</data>
 
         

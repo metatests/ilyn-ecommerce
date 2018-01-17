@@ -18,40 +18,82 @@
                     </div>
                     <style>
                         @media screen and (min-width: 320px) and (max-width: 767px) {
+                            #noPproductFound{
+                                margin-right:5% !important;
+                            }
+                            .products_pager{
+                                margin-bottom: 20px !important;
+                            }
+                            
+                            .oe_website_sale ul ul {
+                                margin-left:0 !important;
+                            }
+                            #prod_cat_in_prod_grid{
+                                margin-top: 15px !important;
+                            }
+                            .level2_categ_img > .mb48 {
+                               margin-bottom: 15px !important;
+                            }
+                            .level3_categs_div {
+                               margin-right: 0 !important;
+                              padding-right: 0px;
+                              background: white;
+                              border-left: 2px solid #c1b497;
+                              border-top: 2px solid #c1b497;
+                               border-bottom: none !important;
+                              border-right: 2px solid #c1b497;
+                             }
+      
+                            .product_category_panel_cust {
+                               margin-left:0 !important;
+                             }
+                             .product_category_panel_heading_cust{
+                                   margin-left: 0 !important;
+                             }
+                             
+                             
+                            .level3_categ {
+                              padding-bottom:10px;
+                            }
+                            .level3_categ h2 {
+                                font-size: 18px !important;
+                                padding-top: 0 !important;
+                            }
+                            
+                            .level3_categ > .mb16{
+                                margin-bottom:0 !important
+                            }
+                            
+                            .level3_categ h4 {
+                              font-size: 14px;
+                              margin-top: 10px;
+                              margin-bottom: 0px;
+                            }
+                            
+                            
+                        /* category wise prtoiduct page css */
+                            #products_grid.col-md-9 .oe-height-4 {
+                              height: auto;
+                              padding-left: 0;
+                              margin-top: 15px !important;
+                            }
                         
-                          .level3_categs_div{
-                            margin-right: 15px;
-                          }
-
-                          .product_category_panel_cust {
-                            margin-left: 5px;
-                          }
-                            .product_category_panel_heading_cust{
-                                margin-left: 5px;
-                          }
-                          .level3_categ {
-                            padding-bottom:10px;
-                          }
-                          .level3_categ h2 {
-                              font-size: 23px;
-                              padding-top: 10px;
-                          }
-                          .level3_categ h4 {
-                            font-size: 15px;
-                            margin-top: 10px;
-                            margin-bottom: 0px;
-                          }
+                            
                         }
                         @media screen and (min-width: 786px) and (max-width: 991px) {
+                            #noPproductFound{
+                                margin-top:8% !important;
+                            }
+                       
                           .level3_categs_div{
                             height: 180px;
                           }
                         
                           .product_category_panel_cust {
-                            margin-left: 5px;
+                            margin-left:0 !important;
                           }
                           .product_category_panel_heading_cust{
-                                margin-left: 5px;
+                                margin-left: 0 !important;
                           }
                           .level3_categ h2{
                             font-size: 23px;
@@ -64,6 +106,9 @@
                           }
                         }
                         @media screen and (min-width: 992px) and (max-width: 1199px) {
+                          #noPproductFound{
+                                margin-top:8% !important;
+                            }
                           .level3_categs_div{
                             height: 174px;
                           }
@@ -79,6 +124,10 @@
                           
                         }
                         @media screen and (min-width: 1200px){
+                        
+                          #noPproductFound{
+                                margin-top:8% !important;
+                            }
                           .level3_categs_div{
                             height: 212px;
                           }
@@ -107,8 +156,8 @@
                           .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
                                 z-index: 2;
                                 color: #fff;
-                                background-color: #494946;
-                                border-color: #494946;
+                                background-color: #c1b497;
+                                border-color: #c1b497;
                                 cursor: default;
                             }
                             .pagination > li > a, .pagination > li > span {
@@ -170,7 +219,7 @@
                             </t>
 
                             <t t-if="not bins">
-                                <div class="text-center text-muted">
+                                <div class="text-center text-muted" id="noPproductFound">
                                     <h3 class="css_editable_display">No product defined.</h3>
                                     <p groups="sales_team.group_sale_manager">Click <i>'New'</i> in the top-right corner to create your first product.</p>
                                 </div>

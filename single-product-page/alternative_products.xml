@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<data inherit_id="website_sale.product" customize_show="True" name="Alternative Products">
+    
+   
+    <xpath expr="//div[@id='product_full_description']" position="after">
+        
+         <style>
+            @media screen and (min-width: 320px) and (max-width: 767px) {
+                
+               .mt32, .mt16{
+                margin-top:0px !important;
+               }
+               .alt_pro h3{
+               
+                text-align:center;
+               
+               }
+               .o_alternative_product {
+                    display: block;
+                    width: 78% !important;
+                    height: 78% !important;
+                    margin-bottom: -15% !important;
+                }
+                
+                .alt_pro h5{
+                    margin-left: 11%;
+                }
+
+
+            }
+            @media screen and (min-width: 768px) and (max-width: 991px) {
+                 
+            }
+            @media screen and (min-width: 992px) and (max-width: 1199px) {
+                 
+            }
+            @media screen and (min-width: 1200px){
+                 
+            }
+        </style>
+        
+        
+        <div class="container mt32 alt_pro" t-if="product.alternative_product_ids">
+            <div class=" mt16" style="">
+                <h3>Alternative Products:</h3>
+                <t t-foreach="product.alternative_product_ids" t-as="alt_product">
+                    <div class="col-md-2 thumbnail" >
+                        <!--<div class="mt16 text-center" style="height: 100%;">-->
+                            <div t-field="alt_product.image_small" t-options="{'widget': 'image', 'class': ' o_alternative_product' }" />
+                            <h5 style="display: block;margin-bottom:1% !important">
+                                <a t-attf-href="/shop/product/#{ slug(alt_product) }" >
+                                    <span t-att-title="alt_product.name" t-field="alt_product.name" />
+                                </a>
+                            </h5>
+                        <!--</div>-->
+                    </div>
+                </t>
+            </div>
+        </div>
+    </xpath>
+</data>
+
+    
+    
+    
+<!--    <?xml version="1.0"?>-->
+<!--<data inherit_id="website_sale.product" customize_show="True" name="Alternative Products">-->
+<!--    <xpath expr="//div[@id='product_full_description']" position="after">-->
+<!--        <div class="container mt32" t-if="product.alternative_product_ids">-->
+<!--            <div class="row mt16" style="">-->
+<!--                <h3>Alternative Products:</h3>-->
+<!--                <t t-foreach="product.alternative_product_ids" t-as="alt_product">-->
+<!--                    <div class="col-md-2 thumbnail" style="width: 170px; height:130px; float:left; display:inline; margin-right: 10px; overflow:hidden;">-->
+<!--                        <div class="mt16 text-center" style="height: 100%;">-->
+<!--                            <div t-field="alt_product.image_small" t-options="{'widget': 'image', 'class': ' o_alternative_product' }"/>-->
+<!--                            <h5 style="display: block;margin-bottom:1% !important">-->
+<!--                                <a t-attf-href="/shop/product/#{ slug(alt_product) }" >-->
+<!--                                    <span t-att-title="alt_product.name" t-field="alt_product.name" />-->
+<!--                                </a>-->
+<!--                            </h5>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </t>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </xpath>-->
+<!--</data>-->

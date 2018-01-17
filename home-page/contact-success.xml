@@ -1,12 +1,12 @@
 <t t-name="website.contact-success">
   <t t-call="website.layout">
-
+    
     <script>
-      $(document).ready(function() {
-        document.title = 'Success';
-      });
+        $(document).ready(function() {
+            document.title = 'Success';
+        });
     </script>
-
+    
     <div id="wrap" class="oe_structure oe_empty">
       <section class="s_title">
         <div class="container">
@@ -25,8 +25,8 @@
               <h3 class="text-center text-muted">
                 <br/>
               </h3>
-              <h3 class="text-center text-muted">You are now subscribed to ILYN. </h3>
-              <h3 class="text-center text-muted">Stay connected for updates and latest offers.</h3>
+              <h3 class="text-center text-muted">You are now subscribed to ILLIYEEN. </h3>
+              <h3 class="text-center text-muted">Stay connected for updates and special offers.</h3>
               <h3 class="text-center text-muted">
                 <br/>
               </h3>

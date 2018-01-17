@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<t name="Category list" t-name="website_sale.categories_recursive">
+    <li t-att-class="'active' if c.id == int(category or 0) else None">
+        <a t-att-href="keep('/shop/category/' + slug(c), category=0)" t-field="c.name"/>
+        <ul t-if="c.child_id" class="nav nav-pills nav-stacked nav-hierarchy">
+            <t t-foreach="c.child_id" t-as="c">
+                <t t-call="website_sale.categories_recursive"/></t>
+        </ul>
+    </li>
+</t>
+<!--    <?xml version="1.0"?>-->
+<!--<t name="Category list" t-name="website_sale.categories_recursive">-->
+<!--        <li t-att-class="'active' if c.id == int(category or 0) else None">-->
+<!--            <a t-att-href="keep('/shop/category/' + slug(c), category=0)" t-field="c.name"/>-->
+<!--            <ul t-if="c.child_id" class="nav nav-pills nav-stacked nav-hierarchy">-->
+<!--                <t t-foreach="c.child_id" t-as="c">-->
+<!--                    <t t-call="website_sale.categories_recursive"/>-->
+<!--                </t>-->
+<!--            </ul>-->
+<!--        </li>-->
+<!--    </t>-->

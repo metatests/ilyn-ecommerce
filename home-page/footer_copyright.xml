@@ -12,61 +12,134 @@
             padding-bottom: 15px;padding-top:15px;
             padding-left:0;
             padding-right:0;
+            font-size: 12px
         }
         a.footer_anc {
             color: #acacac;
             font-size: 12px;
             line-height: 20px;
-            -webkit-transition: all 0.3s ease-in-out;
-            -moz-transition: all 0.3s ease-in-out;
-            -ms-transition: all 0.3s ease-in-out;
-            -o-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out;
+            
         }
-        a.footer_anc:hover{
+        a.footer_anc:hover,a.footer_anc:focus,a.footer_anc:active{
             color:#c1b497 !important;
             text-decoration: none;
         }
-        a.ft_fb:hover{
-            color: #3b5998 !important;
-        }
-        a.ft_yt{
-            margin-left: 20px;
-        }
-        a.ft_yt:hover{
-            color: #ff0000 !important;
+        
+        .social a{
+             margin-left: 20px;
         }
         
-     <!--a {-->
-     <!--           color: #25211e; /* 625a49 */-->
-     <!--           text-decoration: none;-->
-     <!--       }-->
-            
-     <!--       a:hover,a:focus,a:active {-->
-     <!--          color: #25211e !important;-->
-     <!--          text-decoration: underline;-->
-     <!--       }-->
+        #responsiveTremsPolicy > #tou{
+            padding-left:7px !important;
+            padding-right:0 !important;
+        }
         
-      </style>       
+        #responsiveTremsPolicy > #ps{
+            padding-left:0 !important;
+            padding-right:0 !important;
+            width: 40.667%;
+        }
+        
+        #responsiveTremsPolicy > #rp{
+            padding-left:0 !important;
+            padding-right:0 !important;
+        }
+       
+        <!--a.ft_fb:hover,a:focus,a:active {-->
+        <!--    color: #ff0000 !important;-->
+        <!--} -->
+        <!--a.ft_yt:hover,a:focus,a:active {-->
+        <!--    color: #ff0000 !important;-->
+        <!--}-->
+        <!--a.ft_in:hover,a:focus,a:active {-->
+        <!--    color: #ff0000 !important;-->
+        <!--}-->
+        
+    
+        
+      </style>   
+      
+      
+      
+      
+       <style>
+            @media screen and (min-width: 320px) and (max-width: 767px) {
+                
+                /*  socila icon */
+                .social{
+                   text-align: center; !important;
+                }
+                .social a {
+                   margin-left: 0 !important; 
+                   padding: 10px;
+                }
+                
+                #responsiveCopyRight{
+                    text-align:center !important;
+                }
+                
+                #responsiveTremsPolicy{
+                    text-align:center !important;
+                    padding-top: 0px !important;
+                }
+                #responsiveTremsPolicy > #tou{
+                     padding-left:0 !important;
+                     padding-right:0 !important;
+                 }
+                 
+                 #responsiveTremsPolicy > #ps{
+                     padding-left:0 !important;
+                     padding-right:0 !important;
+                     width: 100%;
+                 }
+                 
+                 #responsiveTremsPolicy > #rp{
+                     padding-left:0 !important;
+                     padding-right:0 !important;
+                 }
+        
+                .padtb15 {
+                    padding-bottom: 15px;
+                    padding-top: 15px;
+                    padding-left: 0;
+                    font-size: 14px;
+                }
+               
+            }
+            @media screen and (min-width: 768px) and (max-width: 991px) {
+                 
+            }
+            @media screen and (min-width: 992px) and (max-width: 1199px) {
+                 
+            }
+            @media screen and (min-width: 1200px){
+                 
+            }
+        </style>
+        
       <div class='dark_footer'>
         <div class="container ">
             
-            <div class="text-left col-xs-12 col-sm-4 padtb15" >
-                Copyright &amp;copy; <span t-field="res_company.name">Company name</span>
+            <div class="text-left col-xs-12 col-sm-4 padtb15" id="responsiveCopyRight">
+              Copyright &amp;copy;  <span t-field="res_company.name" />
             </div>
             
-            <div class='text-left col-xs-12 col-sm-4 padtb15'>
-                <div class='col-xs-12 col-sm-6'>
-                    <a class='footer_anc' href="#"> Terms and Services </a>
+            <div class='text-left col-xs-12 col-sm-4 padtb15' id="responsiveTremsPolicy">
+                <div class='col-xs-12 col-sm-4' id="tou">
+                    <a class='footer_anc' href="#"> Terms of Use </a>
                 </div>
-                <div class='col-xs-12 col-sm-6'>
-                    <a class='footer_anc' href="#"> Replacement Policy </a>
+                <div class='col-xs-12 col-sm-5' id="ps">
+                    <a class='footer_anc' href="#">Privacy Statement</a>
+                </div>
+                <div class='col-xs-12 col-sm-3' id="rp">
+                    <a class='footer_anc' href="#"> Return Policy </a>
                 </div>
             </div>
             
-            <div class='text-right col-xs-12 col-sm-4 padtb15'>
-                <a href='#' class='footer_anc ft_fb'> <i class='fa fa-2x fa-facebook'></i> </a>
-                <a href='#' class='footer_anc ft_yt'> <i class='fa fa-2x fa-youtube'></i> </a> 
+            <div class='text-right col-xs-12 col-sm-4 padtb15 social'>
+                <a href='https://www.facebook.com/ILYNLifeStyle/?ref=br_rs' class='footer_anc ft_fb'> <i class='fa fa-2x fa-facebook-square' aria-hidden="true"></i> </a>
+                <a href='#' class='footer_anc ft_yt'> <i class='fa fa-2x fa-youtube-square' aria-hidden="true"></i> </a> 
+                <a href='#' class='footer_anc ft_in'> <i class="fa fa-2x fa-instagram" aria-hidden="true"></i> </a> 
             </div>
         </div>
       </div>

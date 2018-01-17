@@ -1,6 +1,11 @@
 <?xml version="1.0"?>
 <t name="Shopping Cart Lines" t-name="website_sale.cart_lines">
     <style>
+        
+            .js_cart_lines > .col-sm-offset-8 {
+                margin-left: 77.667% !important;
+            }
+            
             .atcp_panel_heading_cust{
                 background: #c1b497;
                 border-radius: 0px;
@@ -66,11 +71,6 @@
                 background: white;
                 border-radius:0;
                 color: #c1b497;
-                -webkit-transition: all 0.3s ease-in-out;
-                -moz-transition: all 0.3s ease-in-out;
-                -ms-transition: all 0.3s ease-in-out;
-                -o-transition: all 0.3s ease-in-out;
-                transition: all 0.3s ease-in-out;
             }
             .atcp1_qty_btn{
                 background: white;
@@ -86,6 +86,24 @@
             }
 
         </style>
+         <style>
+                @media screen and (min-width: 320px) and (max-width: 767px) {
+                    .js_cart_lines > .col-sm-offset-8 {
+                            margin-left:3% !important;
+                    }
+                   
+                }
+                @media screen and (min-width: 768px) and (max-width: 991px) {
+                    
+                }
+                @media screen and (min-width: 992px) and (max-width: 1199px) {
+                    
+                }
+                @media screen and (min-width: 1200px){
+                    
+                }
+            </style> 
+            
     <div t-if="not website_sale_order or not website_sale_order.website_order_line" class="js_cart_lines well well-lg">
           Your cart is empty!
         </div>
@@ -157,12 +175,13 @@
         
     </table>
     
-    <div class="col-sm-12 actp_prod_tr_border" style='padding:20px 0 0 0;'>
+    <!--<div class="col-sm-12 actp_prod_tr_border" style='padding:20px 0 0 0;'>-->
         <div class="js_cart_lines">
             <t t-call="website_sale.total">
-                <!--<t t-set="extra_class" t-value="&quot;col-sm-4 col-sm-offset-8 col-xs-12&quot;"/>--></t>
+                <t t-set="extra_class" t-value="&quot;col-sm-4 col-sm-offset-8 col-xs-12&quot;"/>
+                </t>
         </div>
-    </div>
+    <!--</div>-->
 </t>
 
     

@@ -1,74 +1,14 @@
 <t name="Homepage" priority="29" t-name="website.homepage">
+  <!--background-image: url(web/static/src/cust_flatsome/images/premium-punjabi1.jpg)-->
   <t t-call="website.layout">
     <t t-set="pageName" t-value="'homepage'"/>
-    
     <!-- slider part start -->
     <div id="wrap" class="oe_structure oe_empty">
-        <!--<div class='hidden'>-->
-        <!--    <div id="myCarousel1505386689290" class="carousel slide s_banner carousel-custom col-sm-10 col-sm-offset-1 mt48 cust_top_slider" data-interval="10000" style="">-->
-        <!--    <ol class="carousel-indicators mb0">-->
-        <!--      <li data-target="#myCarousel1505386689290" data-slide-to="0" class="active">-->
-        <!--        <br/>-->
-        <!--      </li>-->
-        <!--      <li data-target="#myCarousel1505386689290" data-slide-to="1">-->
-        <!--        <br/>-->
-        <!--      </li>-->
-        <!--    </ol>-->
-        <!--    <div class="carousel-inner">-->
-        <!--      <div class="item active" style="">-->
-        <!--        <div class="container">-->
-        <!--          <div class="row content" id='cust-parent-carcon'>-->
-        <!--            <div class="carousel-content cust_ts_left_panel col-md-3 col-sm-3 col-xs-12" style="">-->
-        <!--              <h4 class="cust_ts_left_heading"><span class="text-uppercase">Premium</span> Collection-->
-        <!--                                </h4>-->
-        <!--              <h4 class="cust_ts_left_heading"> Winter '17 </h4>-->
-        <!--              <p>-->
-        <!--                <a id="shop_now_button" href="/shop" class="btn btn-default " data-original-title="" title="">SHOP NOW</a>-->
-        <!--              </p>-->
-        <!--            </div>-->
-        <!--            <div class="col-md-9 col-sm-9 col-xs-12 pad_lrz cust_carousel-img">-->
-        <!--              <img class='img-responsive' src="/web/image/12942" id='cust-carousel-img1' title="" />-->
-        <!--            </div>-->
-        <!--            <br/>-->
-        <!--          </div>-->
-        <!--        </div>-->
-        <!--      </div>-->
-        <!--      <div class="item" style="">-->
-        <!--        <div class="container">-->
-        <!--          <div class="row content">-->
-        <!--            <div class="carousel-content cust_ts_left_panel col-md-3 col-sm-3 col-xs-12" style="">-->
-        <!--              <h4 class="cust_ts_left_heading"><span class="text-uppercase">Premium</span> Collection-->
-        <!--                                </h4>-->
-        <!--              <h4 class="cust_ts_left_heading"> Winter '17 </h4>-->
-        <!--              <p>-->
-        <!--                <a id="shop_now_button" href="/shop" class="btn btn-default " data-original-title="" title="">SHOP NOW</a>-->
-        <!--              </p>-->
-        <!--            </div>-->
-        <!--            <div class="col-md-9 col-sm-9 col-xs-12 pad_lrz cust_carousel-img">-->
-        <!--              <img class='img-responsive' src="/web/image/12941" id='cust-carousel-img2' title="" />-->
-        <!--            </div>-->
-        <!--          </div>-->
-        <!--        </div>-->
-        <!--      </div>-->
-        <!--    </div>-->
-        <!--    <div class="carousel-control left slider_icon" data-target="#myCarousel1505386689290" data-slide="prev" style="width: 10%" data-cke-saved-href="#myCarousel1505386689290">&amp;nbsp; -->
-    
-    
-    
-                
-        <!--                <i class="fa fa-chevron-left" data-original-title="" title=""/>-->
-        <!--            </div>-->
-        <!--    <div class="carousel-control right slider_icon" data-target="#myCarousel1505386689290" data-slide="next" style="width: 10%" data-cke-saved-href="#myCarousel1505386689290">&amp;nbsp; -->
-    
-    
-    
-                
-        <!--                <i class="fa fa-chevron-right" data-original-title="" title=""/>-->
-        <!--            </div>-->
-        <!--  </div>-->
-        <!--</div>-->
-        
-        <style>
+      <style>
+          
+           .section{
+               display:none;
+           }
             #shop_now_button{
                 color: #c1b497;
                 background: transparent;
@@ -251,7 +191,7 @@
                 right: 0;
             }
           </style>
-        <style>
+      <style>
             .btnx {
                 cursor: pointer;
                 background-image: none;
@@ -435,7 +375,7 @@
                 border-radius: 0 !important;
             }
           </style>
-        <style>
+      <style>
             .s_title .box {
                 padding: 50px 20px;
                 background-color: white; 
@@ -473,7 +413,7 @@
                 font-weight: bold;
             }
             </style>
-        <style>
+      <style>
           .left_pad30{
               padding-left:30px;
           }
@@ -494,7 +434,7 @@
           }
           
           </style>
-        <style>
+      <style>
             
             @media screen and (min-width: 320px) and (max-width: 767px) {
                 .six_logos_div_pad {
@@ -502,27 +442,42 @@
                     padding-right: 25px;
                 }
                 #clothing-l1cat-imgdiv, #footwear-l1cat-imgdiv, #clothing-l1cat-imgsubdiv, #dis-cen-bandiv, #dis-cen-bctdiv{
-                    padding-left:15px;
+                  
+                     padding-left: 0 !important;
+                    padding-right: 0 !important;
                 }
-                #acc-l1cat-imgdiv, #footwear-l1cat-imgsubdiv, #acc-l1cat-imgsubdiv, #dis-cen-bctimg-div, #dis-cen-nst-div, #dis-cen-nst-imgdiv{
-                    padding-right: 15px;
+                #acc-l1cat-imgdiv, #footwear-l1cat-imgsubdiv, #acc-l1cat-imgsubdiv, #dis-cen-nst-div{
+                     padding-left: 0 !important;
+                    padding-right: 0 !important;
                 }
                 .address_hb{
                     padding-left:15px !important;
                     padding-right: 15px !important;
                 }
-                #dis-cen-banimg-div{
-                    padding-left:15px;
+               
+                #dis-cen-banimg-div, #dis-cen-nst-imgdiv, #dis-cen-bctimg-div{
+                    padding-left: 0;
+                    padding-right: 0;
                 }
-                #ban-map{
+
+                #ban-map, #bct-map{
                     height:auto !important;
                 }
-                #whyilyn-frst-div{
-                    padding-left:15px !important;
+                #whyilyn-frst-div, #whyilyn-sec-div, #whyilyn-thrd-div{
+                    padding-left:0 !important;
+                    padding-right:0 !important;
+                    padding-bottom: 15px !important;
                 }
                 #whyilyn-frth-div{
-                    padding-right: 15px !important;
+                    padding-left:0 !important;
+                    padding-right: 0 !important;
                 }
+                
+                .s_title{
+                    margin-bottom: 0 !important;
+                }
+                
+                
                 .cust_ts_left_heading {
                     margin-left: 90px;
                     margin-top: 8px;
@@ -545,7 +500,7 @@
                     padding-left:15px;
                 }
                 #acc-l1cat-imgdiv, #footwear-l1cat-imgsubdiv, #acc-l1cat-imgsubdiv, #dis-cen-bctimg-div, #dis-cen-nst-div, #dis-cen-nst-imgdiv{
-                    padding-right: 15px;
+                    padding-right: 0;
                 }
                 .cust_ts_left_panel{
                     height:183px;
@@ -619,7 +574,7 @@
             }
         
         </style>
-        <script type="text/javascript">
+      <script type="text/javascript">
             $(document).ready(function(){
                 $("#cloth-cat").hover(
                     function(){
@@ -689,13 +644,11 @@
             });
   
           </script>
-        
-        
-        <section class="s_title ">
-            <div class='container pad_lrz'>
-                <div class='hidden-xs pad_lrz col-sm-12'>
-                    <script src="web/static/src/cust_flatsome/js/lazyload.1.0.5.min.js"></script>
-                    <script data-no-minify="1" data-cfasync="false">
+      <section class="s_title ">
+        <div class="container pad_lrz">
+          <div class="hidden-xs pad_lrz col-sm-12">
+            <script src="web/static/src/cust_flatsome/js/lazyload.1.0.5.min.js"/>
+            <script data-no-minify="1" data-cfasync="false">
                         (function(w, d) {
                             function a() {
                                 var b = d.createElement("script");
@@ -707,12 +660,12 @@
                             w.attachEvent ? w.attachEvent("onload", a) : w.addEventListener("load", a, !1)
                         })(window, document);
                     </script>
-                    <style>
+            <style>
                         .row-box-shadow-1 .col-inner, .row-box-shadow-1-hover .col-inner:hover, .box-shadow-1, .box-shadow-1-hover:hover {
                             box-shadow: none;
                         }
                     </style>
-                    <style>
+            <style>
                         .bg {
                             opacity: 0;
                             transition: opacity 1s;
@@ -725,35 +678,39 @@
                             opacity: 1
                         }
                     </style>
-        
-                    
-                    <div id="main" class="">
-                        <div id="content" role="main" class="content-area">
-                            <section class="section" id="section_1961936321">
-                                <div class="bg section-bg fill bg-fill  bg-loaded">
-                                    <div class="section-bg-overlay absolute fill"></div>
+            <div id="main">
+              <div id="content" role="main" class="content-area">
+                <section class="section" id="section_1961936321">
+                  <div class="bg section-bg fill bg-fill  bg-loaded">
+                    <div class="section-bg-overlay absolute fill"/>
+                  </div>
+                  <div class="section-content relative">
+                    <div class="banner-grid-wrapper">
+                      <div id="banner-grid-1505051311" class="banner-grid row row-grid row-small row-box-shadow-1" data-packery-options="" style="position: relative; height: 444px;">
+                        <div class="col grid-col small-13 large-8 grid-col-1-2" style="position: absolute; left: 0px; top: 0px; padding-left: 0px;">
+                          <div class="col-inner">
+                            <div data-animate="fadeInLeft" class="banner has-hover bg-zoom" id="banner-1054614501" data-animated="true">
+                              <div class="banner-inner fill">
+                                <div class="banner-bg fill">
+                                  <div class="bg fill bg-fill  bg-loaded"/>
                                 </div>
-                                <div class="section-content relative">
-                                    <div class="banner-grid-wrapper">
-                                        <div id="banner-grid-1505051311" class="banner-grid row row-grid row-small row-box-shadow-1" data-packery-options="" style="position: relative; height: 1665px;">
-                                            <div class="col grid-col small-13 large-8 grid-col-1-2" style="position: absolute; left: 0px; top: 0px; padding-left:0">
-                                                <div class="col-inner">
-                                                    <div data-animate="fadeInLeft" class="banner has-hover bg-zoom" id="banner-1054614501">
-                                                        <div class="banner-inner fill">
-                                                            <div class="banner-bg fill">
-                                                                <div class="bg fill bg-fill  bg-loaded"></div>
-                                                            </div>
-                                                            <div class="banner-layers container">
-                                                                <div class="fill banner-link"></div>
-                                                                <div id="text-box-924091083" class="text-box banner-layer x10 md-x10 lg-x10 y50 md-y50 lg-y50 res-text">
-                                                                    <div data-animate="fadeInLeft" >
-                                                                        <div class="text dark">
-                                                                            <div class="text-inner text-left">
-                                                                                <h2><strong>Platinum Punjabi</strong></h2>
-                                                                                <p class="lead">Limited Edition</p> <a class="button primary is-outline" style="border-radius:0;"> <span>Go To Shop</span> </a></div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <style scope="scope">
+                                <div class="banner-layers container">
+                                  <div class="fill banner-link"/>
+                                  <div id="text-box-924091083" class="text-box banner-layer x10 md-x10 lg-x10 y50 md-y50 lg-y50 res-text">
+                                    <div data-animate="fadeInLeft" data-animated="true">
+                                      <div class="text dark">
+                                        <div class="text-inner text-left">
+                                          <h2>
+                                            <strong>Platinum Punjabi</strong>
+                                          </h2>
+                                          <p class="lead">Limited Edition</p>
+                                          <a class="button primary is-outline" style="border-radius:0;">
+                                            <span>Go To Shop</span>
+                                          </a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <style scope="scope">
                                                                         #text-box-924091083 {
                                                                             width: 90%
                                                                         }
@@ -768,44 +725,49 @@
                                                                             }
                                                                         }
                                                                     </style>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <style scope="scope">
+                                  </div>
+                                </div>
+                              </div>
+                              <style scope="scope">
                                                             #banner-1054614501 {
                                                                 padding-top: 500px
                                                             }
                 
                                                             #banner-1054614501 .bg.bg-loaded {
-                                                                background-image: url(web/static/src/cust_flatsome/images/premium-punjabi1.jpg)
+                                                               background-image: url(web/static/src/cust_flatsome/images/premium-punjabi1.jpg)
                                                             }
                 
                                                             #banner-1054614501 .bg {
                                                                 background-position: 32% 58%
                                                             }
                                                         </style>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                           
-                                            <div class="col grid-col small-13 large-4 grid-col-2-3" style="position: absolute; left: 0px; top: 333px; padding-right:0;">
-                                                <div class="col-inner">
-                                                    <div data-animate="fadeInRight" class="banner has-hover bg-zoom" id="banner-972998828">
-                                                        <div class="banner-inner fill">
-                                                            <div class="banner-bg fill">
-                                                                <div class="bg fill bg-fill  bg-loaded"></div>
-                                                                <div class="overlay"></div>
-                                                            </div>
-                                                            <div class="banner-layers container">
-                                                                <div class="fill banner-link"></div>
-                                                                <div id="text-box-955910682" class="text-box banner-layer x50 md-x50 lg-x50 y50 md-y50 lg-y50 res-text">
-                                                                    <div data-animate="fadeInDown" >
-                                                                        <div class="text dark">
-                                                                            <div class="text-inner text-center">
-                                                                                <h2><strong>ILYN Premium</strong></h2> <a class="button primary is-outline is-large" style="border-radius:0;"> <span>Shop now</span> </a></div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <style scope="scope">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col grid-col small-13 large-4 grid-col-2-3" style="position: absolute; left: 0px; top: 0px; padding-right: 0px;">
+                          <div class="col-inner">
+                            <div data-animate="fadeInRight" class="banner has-hover bg-zoom" id="banner-972998828" data-animated="true">
+                              <div class="banner-inner fill">
+                                <div class="banner-bg fill">
+                                  <div class="bg fill bg-fill  bg-loaded"/>
+                                  <div class="overlay"/>
+                                </div>
+                                <div class="banner-layers container">
+                                  <div class="fill banner-link"/>
+                                  <div id="text-box-955910682" class="text-box banner-layer x50 md-x50 lg-x50 y50 md-y50 lg-y50 res-text">
+                                    <div data-animate="fadeInDown" data-animated="true">
+                                      <div class="text dark">
+                                        <div class="text-inner text-center">
+                                          <h2>
+                                            <strong>ILYN Premium</strong>
+                                          </h2>
+                                          <a class="button primary is-outline is-large" style="border-radius:0;">
+                                            <span>Shop now</span>
+                                          </a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <style scope="scope">
                                                                         #text-box-955910682 {
                                                                             width: 74%
                                                                         }
@@ -814,16 +776,17 @@
                                                                             font-size: 100%
                                                                         }
                                                                     </style>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <style scope="scope">
+                                  </div>
+                                </div>
+                              </div>
+                              <style scope="scope">
                                                             #banner-972998828 {
                                                                 padding-top: 500px
                                                             }
                 
                                                             #banner-972998828 .bg.bg-loaded {
-                                                                background-image: url(web/static/src/cust_flatsome/images/premium-punjabi2.jpg)
+                                                                background-image: url(web/static/src/cust_flatsome/images/premium-punjabi2.jpg)                                               
+                                                                /* background-image: url(http://www.ayurvedawellbeing.co.nz/images/ayurvedawellbeing.co.nz/mens%20casual%20shirt%20shirt%20long%20sleeved%20collar%20designers%20formal%20s%20men%20pin%20check%20social%20new%20male%20plaid%20clothes-16IU.jpg) */
                                                             }
                 
                                                             #banner-972998828 .overlay {
@@ -834,28 +797,32 @@
                                                                 background-position: 47% 55%
                                                             }
                                                         </style>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="col grid-col small-15 large-4 grid-col-1-2" style="position: absolute; left: 0px; top: 777px; padding-left:0;">
-                                                <div class="col-inner">
-                                                    <div data-animate='fadeInLeft' class="banner has-hover bg-zoom" id="banner-1062720894">
-                                                        <div class="banner-inner fill">
-                                                            <div class="banner-bg fill">
-                                                                <div class="bg fill bg-fill "></div>
-                                                            </div>
-                                                            <div class="banner-layers container">
-                                                                <div class="fill banner-link"></div>
-                                                                <div id="text-box-7416835" class="text-box banner-layer x50 md-x50 lg-x50 y85 md-y85 lg-y85 res-text">
-                                                                    <div data-animate="fadeInLeft">
-                                                                        <div class="text dark">
-                                                                            <div class="text-inner text-left">
-                                                                                <!-- <h6 class="uppercase">Featured Vendor</h6> -->
-                                                                                <h2><strong>Platinum Shirt</strong></h2> <a class="button primary is-outline is-larger" style="border-radius:0;"> <span>Shop now</span> </a></div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <style scope="scope">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col grid-col small-15 large-4 grid-col-1-2" style="position: absolute; left: 0px; top: 0px; padding-left: 0px;">
+                          <div class="col-inner">
+                            <div data-animate="fadeInLeft" class="banner has-hover bg-zoom" id="banner-1062720894" data-animated="true">
+                              <div class="banner-inner fill">
+                                <div class="banner-bg fill">
+                                  <div class="bg fill bg-fill  bg-loaded"/>
+                                </div>
+                                <div class="banner-layers container">
+                                  <div class="fill banner-link"/>
+                                  <div id="text-box-7416835" class="text-box banner-layer x50 md-x50 lg-x50 y85 md-y85 lg-y85 res-text">
+                                    <div data-animate="fadeInLeft" data-animated="true">
+                                      <div class="text dark">
+                                        <div class="text-inner text-left">
+                                          <h2>
+                                            <strong>Platinum Shirt</strong>
+                                          </h2>
+                                          <a class="button primary is-outline is-larger" style="border-radius:0;">
+                                            <span>Shop now</span>
+                                          </a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <style scope="scope">
                                                                         #text-box-7416835 {
                                                                             width: 60%
                                                                         }
@@ -870,10 +837,10 @@
                                                                             }
                                                                         }
                                                                     </style>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <style scope="scope">
+                                  </div>
+                                </div>
+                              </div>
+                              <style scope="scope">
                                                             #banner-1062720894 {
                                                                 padding-top: 500px
                                                             }
@@ -886,28 +853,33 @@
                                                                 background-position: 66% 22%
                                                             }
                                                         </style>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="col grid-col small-13 large-4 grid-col-1-2" style="position: absolute; left: 0px; top: 1110px;">
-                                                <div class="col-inner">
-                                                    <div data-animate='fadeInUp' class="banner has-hover bg-zoom" id="banner-1806505683">
-                                                        <div class="banner-inner fill">
-                                                            <div class="banner-bg fill">
-                                                                <div class="bg fill bg-fill "></div>
-                                                            </div>
-                                                            <div class="banner-layers container">
-                                                                <div class="fill banner-link"></div>
-                                                                <div id="text-box-388011525" class="text-box banner-layer x10 md-x10 lg-x10 y85 md-y85 lg-y85 res-text">
-                                                                    <div data-animate="fadeInUp" >
-                                                                        <div class="text dark">
-                                                                            <div class="text-inner text-left">
-                                                                                <h2><strong>ILYN Lifestyle</strong></h2>
-                                                                                <p class="lead">Winter Collection</p> <a class="button primary is-outline is-larger" style="border-radius:0;"> <span>Shop now</span> </a></div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <style scope="scope">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col grid-col small-13 large-4 grid-col-1-2" style="position: absolute; left: 0px; top: 0px;">
+                          <div class="col-inner">
+                            <div data-animate="fadeInUp" class="banner has-hover bg-zoom" id="banner-1806505683" data-animated="true">
+                              <div class="banner-inner fill">
+                                <div class="banner-bg fill">
+                                  <div class="bg fill bg-fill  bg-loaded"/>
+                                </div>
+                                <div class="banner-layers container">
+                                  <div class="fill banner-link"/>
+                                  <div id="text-box-388011525" class="text-box banner-layer x10 md-x10 lg-x10 y85 md-y85 lg-y85 res-text">
+                                    <div data-animate="fadeInUp" data-animated="true">
+                                      <div class="text dark">
+                                        <div class="text-inner text-left">
+                                          <h2>
+                                            <strong>ILYN Lifestyle</strong>
+                                          </h2>
+                                          <p class="lead">Winter Collection</p>
+                                          <a class="button primary is-outline is-larger" style="border-radius:0;">
+                                            <span>Shop now</span>
+                                          </a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <style scope="scope">
                                                                         #text-box-388011525 {
                                                                             width: 80%
                                                                         }
@@ -916,10 +888,10 @@
                                                                             font-size: 100%
                                                                         }
                                                                     </style>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <style scope="scope">
+                                  </div>
+                                </div>
+                              </div>
+                              <style scope="scope">
                                                             #banner-1806505683 {
                                                                 padding-top: 500px
                                                             }
@@ -928,28 +900,33 @@
                                                                 background-image: url(web/static/src/cust_flatsome/images/premium-shirt2.jpg)
                                                             }
                                                         </style>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="col grid-col small-15 large-4 grid-col-1-3" style="position: absolute; left: 0px; top: 1443px; padding-right:0;">
-                                                <div class="col-inner">
-                                                    <div data-animate='fadeInRight' class="banner has-hover bg-zoom" id="banner-1898672023">
-                                                        <div class="banner-inner fill">
-                                                            <div class="banner-bg fill">
-                                                                <div class="bg fill bg-fill "></div>
-                                                                <div class="overlay"></div>
-                                                            </div>
-                                                            <div class="banner-layers container">
-                                                                <div class="fill banner-link"></div>
-                                                                <div id="text-box-215342604" class="text-box banner-layer x50 md-x50 lg-x50 y85 md-y85 lg-y85 res-text">
-                                                                    <div data-animate="fadeInRight" >
-                                                                        <div class="text dark">
-                                                                            <div class="text-inner text-left">
-                                                                                <h2><strong>Sahara</strong></h2> <a class="button primary is-outline is-large" style="border-radius:0;"> <span>Shop now</span> </a></div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <style scope="scope">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col grid-col small-15 large-4 grid-col-1-3" style="position: absolute; left: 0px; top: 0px; padding-right: 0px;">
+                          <div class="col-inner">
+                            <div data-animate="fadeInRight" class="banner has-hover bg-zoom" id="banner-1898672023" data-animated="true">
+                              <div class="banner-inner fill">
+                                <div class="banner-bg fill">
+                                  <div class="bg fill bg-fill  bg-loaded"/>
+                                  <div class="overlay"/>
+                                </div>
+                                <div class="banner-layers container">
+                                  <div class="fill banner-link"/>
+                                  <div id="text-box-215342604" class="text-box banner-layer x50 md-x50 lg-x50 y85 md-y85 lg-y85 res-text">
+                                    <div data-animate="fadeInRight" data-animated="true">
+                                      <div class="text dark">
+                                        <div class="text-inner text-left">
+                                          <h2>
+                                            <strong>Sahara</strong>
+                                          </h2>
+                                          <a class="button primary is-outline is-large" style="border-radius:0;">
+                                            <span>Shop now</span>
+                                          </a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <style scope="scope">
                                                                         #text-box-215342604 {
                                                                             width: 79%
                                                                         }
@@ -958,10 +935,10 @@
                                                                             font-size: 100%
                                                                         }
                                                                     </style>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <style scope="scope">
+                                  </div>
+                                </div>
+                              </div>
+                              <style scope="scope">
                                                             #banner-1898672023 {
                                                                 padding-top: 500px
                                                             }
@@ -974,12 +951,11 @@
                                                                 background-color: rgba(0, 0, 0, 0.09)
                                                             }
                                                         </style>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                        </div>
-                                        <style scope="scope">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <style scope="scope">
                                             #banner-grid-1505051311 .grid-col-1 {
                                                 height: 666px
                                             }
@@ -1004,9 +980,9 @@
                                                 height: 499.5px
                                             }
                                         </style>
-                                    </div>
-                                </div>
-                                <style scope="scope">
+                    </div>
+                  </div>
+                  <style scope="scope">
                                     #section_1961936321 {
                                         padding-top: 30px;
                                         padding-bottom: 30px;
@@ -1017,184 +993,144 @@
                                         background-color: rgba(255, 255, 255, 0.62)
                                     }
                                 </style>
-                            </section>
-                        </div>
-                    </div>
-            
-                    <script type="text/javascript">
+                </section>
+              </div>
+            </div>
+            <script type="text/javascript">
                         var flatsomeVars = {
                             "ajaxurl": "http:\/\/flatsome3.uxthemes.com\/wp-admin\/admin-ajax.php",
                             "rtl": "",
                             "sticky_height": "70"
                         };
                     </script>
-            
-                    <script type="text/javascript" src="web/static/src/cust_flatsome/js/flatsome.js"></script>
-                    <script type="text/javascript" src="web/static/src/cust_flatsome/js/packery.pkgd.min.js"></script>
+            <script type="text/javascript" src="web/static/src/cust_flatsome/js/flatsome.js"/>
+            <script type="text/javascript" src="web/static/src/cust_flatsome/js/packery.pkgd.min.js"/>
+          </div>
+        </div>
+      </section>
+      <section class="s_title " id="products_section_homepage">
+        <div class="container" style=" padding-right:0;">
+          <div class="col-md-12 col-sm-12 mb0" style="padding-left: 0px; ">
+            <h3 class=" text-muted text-center" style=" color: black;font-size: 18px;">
+              <b>PRODUCTS</b>
+              <div class="mt24" style="padding: 0px ;border-bottom: 2px solid #ededed;width:100%;" id="prod_heading_underline"/>
+            </h3>
+          </div>
+        </div>
+      </section>
+      <section class="s_three_columns bg-white mt0 mb0" style="overflow: hidden;" id="l1_categ_wdiv">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="col-md-4 col-xs-12 col-sm-4 padleft_zero mb0" id="clothing-l1cat-imgdiv">
+                <div class="s_references">
+                  <div class="container">
+                    <div class="row">
+                      <div class="mt0 col-md-12 col-sm-12 ">
+                        <h4 class="mt16 text-center" id="cloth-ht" style="color: rgb(0, 0, 0); font-size: 16px; font-weight: bold;">CLOTHING</h4>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+                <div class="mt16 shop_img mb32 image-mask-box" style="margin-left: 0px;">
+                  <div class="product_container col-md-12 col-xs-12 col-sm-12 padleft_zero" id="clothing-l1cat-imgsubdiv">
+                    <div class="thumbnail" id="cloth-cat">
+                      <div class="image-wrapper">
+                        <a href="/shop/category/clothing-55">
+                          <img src="/web/image/13756" class="pull-left product_image " data-original-title="" title="" style="position: relative; width: 100%; height: 100%;"/>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 col-xs-12 col-sm-4 padleft_zero" id="footwear-l1cat-imgdiv">
+                <div class="s_references">
+                  <div class="container">
+                    <div class="row">
+                      <div class="mt0 col-md-12 col-xs-12 col-sm-12 ">
+                        <h4 class="mt16 text-center " id="foot-ht" style="color: rgb(0, 0, 0); font-size: 16px; font-weight: bold; padding-left: 15px;">FOOTWEAR</h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mt16  shop_img mb32 image-mask-box" style="margin-left: 0px;">
+                  <div class="product_container col-md-12 col-xs-12 col-sm-12 padright_zero" id="footwear-l1cat-imgsubdiv">
+                    <div class="thumbnail" id="foot-cat">
+                      <div class="image-wrapper">
+                        <a href="/shop/category/footwear-48">
+                          <img src="/web/image/13757" class="pull-left product_image " data-original-title="" title="" style="position: relative; width: 100%; height: 100%;"/>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 col-xs-12 col-sm-4 padright_zero" id="acc-l1cat-imgdiv">
+                <div class="s_references">
+                  <div class="container">
+                    <div class="row">
+                      <div class="mt0 col-md-12 col-xs-12 col-sm-12 ">
+                        <h4 class="mt16 text-center " id="acc-ht" style="color: rgb(0, 0, 0); font-size: 16px; font-weight: bold; padding-left: 15px;">ACCESSORIES</h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mt16 shop_img mb32 image-mask-box" style="margin-left: 0px;">
+                  <div class="product_container col-md-12 col-xs-12 col-sm-12 padright_zero" id="acc-l1cat-imgsubdiv">
+                    <div class="thumbnail" id="acc-cat">
+                      <div class="image-wrapper">
+                        <a href="/shop/category/accessories-25">
+                          <img src="/web/image/13755" class="pull-left product_image " data-original-title="" title="" style="position: relative; width: 100%; height: 100%;"/>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-        </section>
-        
-        <section class="s_title " id="products_section_homepage">
-          <div class="container" style=" padding-right:0;">
-            <div class="col-md-12 col-sm-12 mb0" style="padding-left: 0px; ">
-              <h3 class=" text-muted text-center" style=" color: black;font-size: 18px;">
-                <b>PRODUCTS</b>
-                <div class="mt24" style="padding: 0px ;border-bottom: 2px solid #ededed;width:100%;" id='prod_heading_underline'/>
+          </div>
+        </div>
+      </section>
+      <section class="s_title">
+        <div class="container">
+          <div class="row" style="padding: 0px;">
+            <div class="col-md-12 col-xs-12 col-sm-12 mb0 mt32">
+              <h3 class="text-muted text-center" style="color: black;font-size: 18px;">
+                <b>DISPLAY CENTERS</b>
+                <div class="mt24" style="padding: 0px ;border-bottom: 2px solid #ededed;width:100%;" id="display_center_heading_underline"/>
               </h3>
-              
             </div>
           </div>
-        </section>
-        <section class="s_three_columns bg-white mt0 mb0" style="overflow: hidden;" id='l1_categ_wdiv'>
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="col-md-4 col-xs-12 col-sm-4 padleft_zero mb0" id='clothing-l1cat-imgdiv'>
-                  <div class="s_references">
-                    <div class="container">
-                      <div class="row">
-                        <div class="mt0 col-md-12 col-sm-12 ">
-                          <h4 class="mt16 text-center" id="cloth-ht" style="color: rgb(0, 0, 0); font-size: 16px; font-weight: bold;">CLOTHING</h4>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="mt16 shop_img mb32 image-mask-box" style="margin-left: 0px;">
-                    <div class="product_container col-md-12 col-xs-12 col-sm-12 padleft_zero" id='clothing-l1cat-imgsubdiv'>
-                      <div class="thumbnail" id="cloth-cat">
-                        <div class="image-wrapper">
-                          <img src="/web/image/12818" class="pull-left product_image " data-original-title="" title="" style="position: relative; width: 100%; height: 100%;"/>
-                          <!--<div class="masking">-->
-                          <!--  <a href="#" class="btnx btn-masking btn-xlg o_default_snippet_text">VIEW PRODUCTS</a>-->
-                             
-                          <!--</div>-->
-                          <div class="masking" data-animate="fadeInDown" data-animated="true">
-                                <div class="text dark">
-                                    <div class="text-inner text-left">
-                                         <a class="btnx btn-masking btn-xlg o_default_snippet_text" style="border-radius:0;"> <span>VIEW PRODUCT</span> </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+        </div>
+      </section>
+      <section class="s_three_columns">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 col-xs-12 col-sm-12  " id="disp_center_wdiv">
+              <div class="col-md-4 col-xs-12 col-sm-4 padleft_zero" id="dis-cen-bandiv">
+                <div class="col-md-12 col-xs-12 mt16 mb16 address_hb" style="padding-left:0;">
+                  <h4 class="h4 text-center" id="ban-ht" style="color: rgb(0, 0, 0);">BANANI 11   </h4>
                 </div>
-                <div class="col-md-4 col-xs-12 col-sm-4 padleft_zero" id='footwear-l1cat-imgdiv'>
-                  <div class="s_references">
-                    <div class="container">
-                      <div class="row">
-                        <div class="mt0 col-md-12 col-xs-12 col-sm-12 ">
-                          <h4 class="mt16 text-center " id="foot-ht" style="color: rgb(0, 0, 0); font-size: 16px; font-weight: bold; padding-left: 15px;">FOOTWEAR</h4>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="mt16  shop_img mb32 image-mask-box" style="margin-left: 0px;">
-                    <div class="product_container col-md-12 col-xs-12 col-sm-12 padright_zero" id='footwear-l1cat-imgsubdiv'>
-                      <div class="thumbnail" id="foot-cat">
-                        <div class="image-wrapper">
-                          <img src="/web/image/12817" class="pull-left product_image " data-original-title="" title="" style="position: relative; width: 100%; height: 100%;"/>
-                          <!--<div class="masking">-->
-                          <!--  <a href="#" class="btnx btn-masking btn-xlg o_default_snippet_text">VIEW PRODUCTS</a>-->
-                          <!--</div>-->
-                          <div class="masking" data-animate="fadeInDown" data-animated="true">
-                                <div class="text dark">
-                                    <div class="text-inner text-left">
-                                         <a class="btnx btn-masking btn-xlg o_default_snippet_text" style="border-radius:0;"> <span>VIEW PRODUCT</span> </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4 col-xs-12 col-sm-4 padright_zero" id='acc-l1cat-imgdiv'>
-                  <div class="s_references">
-                    <div class="container">
-                      <div class="row">
-                        <div class="mt0 col-md-12 col-xs-12 col-sm-12 ">
-                          <h4 class="mt16 text-center " id="acc-ht" style="color: rgb(0, 0, 0); font-size: 16px; font-weight: bold; padding-left: 15px;">ACCESSORIES</h4>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="mt16 shop_img mb32 image-mask-box" style="margin-left: 0px;">
-                    <div class="product_container col-md-12 col-xs-12 col-sm-12 padright_zero" id='acc-l1cat-imgsubdiv'>
-                      <div class="thumbnail" id="acc-cat">
-                        <div class="image-wrapper">
-                          <img src="/web/image/12816" class="pull-left product_image " data-original-title="" title="" style="position: relative; width: 100%; height: 100%;"/>
-                          <!--<div class="masking">-->
-                          <!--  <a href="#" class="btnx btn-masking btn-xlg o_default_snippet_text">VIEW PRODUCTS</a>-->
-                          <!--</div>-->
-                          <div class="masking" data-animate="fadeInDown" data-animated="true">
-                                <div class="text dark">
-                                    <div class="text-inner text-left">
-                                         <a class="btnx btn-masking btn-xlg o_default_snippet_text" style="border-radius:0;"> <span>VIEW PRODUCT</span> </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="s_title">
-          <div class="container">
-            <div class="row" style="padding: 0px;">
-              <div class="col-md-12 col-xs-12 col-sm-12 mb0 mt32">
-                <h3 class="text-muted text-center" style="color: black;font-size: 18px;">
-                  <b>DISPLAY CENTERS</b>
-                  <div class="mt24" style="padding: 0px ;border-bottom: 2px solid #ededed;width:100%;" id='display_center_heading_underline'/>
-                </h3>
-                
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="s_three_columns">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12 col-xs-12 col-sm-12  " id='disp_center_wdiv'>
-                <div class="col-md-4 col-xs-12 col-sm-4 padleft_zero" id='dis-cen-bandiv'>
-                  <div class="col-md-12 col-xs-12 mt16 mb16 address_hb" style="padding-left:0;">
-                    <h4 class="h4 text-center" id="ban-ht">BANANI 11   </h4>
-                  </div>
-                  <div class="col-md-12 col-xs-12 col-sm-12 padleft_zero" id='dis-cen-banimg-div'>
-                      
-                    <div class="image-mask-box">
-                      <div class="thumbnail" id="ban-map" style="border:none;height: 300px;padding:0">
-                        <div class="image-wrapper">
-                          <img src="/web/image/12816" class="pull-left product_image " data-original-title="" title="" style="position: relative;width: 100%;height: 100%;"/>
-                          <!--<div class="masking">-->
-                          <!--  <a href="#" class="btnx btn-masking btn-xlg o_default_snippet_text" data-toggle="modal" data-target="#banani_map_modal">VIEW MAP</a>-->
-                          <!--</div>-->
-                          <div class="masking" data-animate="fadeInDown" data-animated="true">
-                                <div class="text dark">
-                                    <div class="text-inner text-left">
-                                         <a class="btnx btn-masking btn-xlg o_default_snippet_text" data-toggle="modal" data-target="#banani_map_modal" style="border-radius:0;"> <span>VIEW MAP</span> </a>
-                                    </div>
-                                </div>
-                            </div>
-                          <div id="banani_map_modal" class="modal fade" role="dialog">
-                            <div class="modal-dialog">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <button type="button" class="close" data-dismiss="modal">x</button>
-                                  <h4 class="modal-title">Banani 11 Display Center</h4>
-                                </div>
-                                <div class="modal-body">
-                                  <iframe scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=23.7912105,90.4019766&amp;hl=es;z=14&amp;output=embed" width="100%" height="300" frameborder="0"/>
-                                </div>
-                                <div class="modal-footer">
-                                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                </div>
+                <div class="col-md-12 col-xs-12 col-sm-12 padleft_zero" id="dis-cen-banimg-div">
+                  <div class="image-mask-box">
+                    <div class="thumbnail" id="ban-map" style="border:none;height: 300px;padding:0">
+                      <div class="image-wrapper">
+                        <a data-toggle="modal" data-target="#banani_map_modal">
+                          <img src="/web/image/13760" class="pull-left product_image " data-original-title="" title="" style="position: relative;width: 100%;height: 100%;"/>
+                        </a>
+                        <div id="banani_map_modal" class="modal fade" role="dialog">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">x</button>
+                                <h4 class="modal-title">Banani 11 Display Center</h4>
+                              </div>
+                              <div class="modal-body">
+                                <iframe scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=23.7912105,90.4019766&amp;hl=es;z=14&amp;output=embed" width="100%" height="300" frameborder="0"/>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                               </div>
                             </div>
                           </div>
@@ -1203,38 +1139,30 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-4 col-xs-12 col-sm-4 padleft_zero" id='dis-cen-bctdiv'>
-                  <div class="col-md-12 col-xs-12 col-sm-12 mt16 mb16 address_hb">
-                    <h4 class="text-center" id="bct-ht">BASHUNDHARA CITY</h4>
-                  </div>
-                  <div class="col-md-12 col-xs-12 col-sm-12 padright_zero" id='dis-cen-bctimg-div'>
-                    <div class="image-mask-box">
-                      <div class="thumbnail" id="bct-map" style="border:none; padding:0">
-                        <div class="image-wrapper">
-                          <img src="/web/image/12818" class="pull-left product_image " data-original-title="" title="" style="position: relative; width: 100%; height: 100%;"/>
-                          <!--<div class="masking">-->
-                          <!--  <a href="#" class="btnx btn-masking btn-xlg o_default_snippet_text" data-toggle="modal" data-target="#bcity_map_modal">VIEW MAP</a>-->
-                          <!--</div>-->
-                          <div class="masking" data-animate="fadeInDown" data-animated="true">
-                                <div class="text dark">
-                                    <div class="text-inner text-left">
-                                         <a class="btnx btn-masking btn-xlg o_default_snippet_text" data-toggle="modal" data-target="#bcity_map_modal" style="border-radius:0;"> <span>VIEW MAP</span> </a>
-                                    </div>
-                                </div>
-                            </div>
-                          <div id="bcity_map_modal" class="modal fade" role="dialog">
-                            <div class="modal-dialog">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <button type="button" class="close" data-dismiss="modal">x</button>
-                                  <h4 class="modal-title">Bashundhara City Display Center</h4>
-                                </div>
-                                <div class="modal-body">
-                                  <iframe scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=23.7912105,90.4019766&amp;hl=es;z=14&amp;output=embed" width="100%" height="300" frameborder="0"/>
-                                </div>
-                                <div class="modal-footer">
-                                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                </div>
+              </div>
+              <div class="col-md-4 col-xs-12 col-sm-4 padleft_zero" id="dis-cen-bctdiv">
+                <div class="col-md-12 col-xs-12 mt16 mb16 address_hb" style="">
+                  <h4 class="h4 text-center" id="bct-ht" style="color: rgb(0, 0, 0);">BASHUNDHARA CITY</h4>
+                </div>
+                <div class="col-md-12 col-xs-12 col-sm-12 padright_zero" id="dis-cen-bctimg-div">
+                  <div class="image-mask-box">
+                    <div class="thumbnail" id="bct-map" style="border:none;height: 300px;padding:0">
+                      <div class="image-wrapper">
+                        <a data-toggle="modal" data-target="#.bcity_map_modal">
+                          <img src="/web/image/13769" class="pull-left product_image " data-original-title="" title="" style="position: relative; width: 100%; height: 100%;"/>
+                        </a>
+                        <div id="bcity_map_modal" class="modal fade" role="dialog">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">x</button>
+                                <h4 class="modal-title">Banani 11 Display Center</h4>
+                              </div>
+                              <div class="modal-body">
+                                <iframe scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=23.7912105,90.4019766&amp;hl=es;z=14&amp;output=embed" width="100%" height="300" frameborder="0"/>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                               </div>
                             </div>
                           </div>
@@ -1243,39 +1171,31 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-4 col-xs-12 col-sm-4 padright_zero" id='dis-cen-nst-div'>
-                  <div class="col-md-12 col-xs-12 col-sm-12 mt16 mb16 address_hb">
-                    <h4 class=" text-center" id="nst-ht">NEW STORE</h4>
-                  </div>
-                  <div class="col-md-12 col-xs-12 col-sm-12 padright_zero" id='dis-cen-nst-imgdiv'>
-                    <div class="image-mask-box">
-                      <div class="thumbnail" id="nst-map" style="border:none; padding:0">
-                        <div class="image-wrapper">
-                          <img src="/web/image/12817" class="pull-left product_image " data-original-title="" title="" style="position: relative; width: 100%; height: 100%;"/>
-                          <!--<div class="masking">-->
-                          <!--  <a href="#" class="btnx btn-masking btn-xlg o_default_snippet_text" data-toggle="modal" data-target="#ctg_map_modal">VIEW MAP</a>-->
-                          <!--</div>-->
-                          <div class="masking" data-animate="fadeInDown" data-animated="true">
-                                <div class="text dark">
-                                    <div class="text-inner text-left">
-                                         <a class="btnx btn-masking btn-xlg o_default_snippet_text" data-toggle="modal" data-target="#ctg_map_modal" style="border-radius:0;"> <span>VIEW MAP</span> </a>
-                                    </div>
-                                </div>
-                            </div>
-                          <div id="ctg_map_modal" class="modal fade" role="dialog">
-                            <div class="modal-dialog">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <button type="button" class="close" data-dismiss="modal">x</button>
-                                  <h4 class="modal-title">Chittagong Store Display Center</h4>
-                                </div>
-                                <div class="modal-body">
-                                  <h3> Stay Tuned!</h3>
-                                  <h6> Store Opening Soon at Chittagong City.</h6>
-                                </div>
-                                <div class="modal-footer">
-                                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                </div>
+              </div>
+              <div class="col-md-4 col-xs-12 col-sm-4 padright_zero" id="dis-cen-nst-div">
+                <div class="col-md-12 col-xs-12 col-sm-12 mt16 mb16 address_hb">
+                  <h4 class=" text-center" id="nst-ht" style="color: rgb(0, 0, 0);">JAMUNA FUTURE PARK</h4>
+                </div>
+                <div class="col-md-12 col-xs-12 col-sm-12 padright_zero" id="dis-cen-nst-imgdiv">
+                  <div class="image-mask-box">
+                    <div class="thumbnail" id="nst-map" style="border:none; padding:0">
+                      <div class="image-wrapper">
+                        <a data-toggle="modal" data-target="#ctg_map_modal">
+                          <img src="/web/image/13759" class="pull-left product_image" data-original-title="" title="" style="position: relative; width: 100%; height: 100%;"/>
+                        </a>
+                        <div id="ctg_map_modal" class="modal fade" role="dialog">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">x</button>
+                                <h4 class="modal-title">Chittagong Store Display Center</h4>
+                              </div>
+                              <div class="modal-body">
+                                <h3> Stay Tuned!</h3>
+                                <h6> Store Opening Soon at Chittagong City.</h6>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                               </div>
                             </div>
                           </div>
@@ -1287,70 +1207,59 @@
               </div>
             </div>
           </div>
-        </section>
-        <section class="s_title">
-          <div class="container ">
-            <div class="col-md-12 col-xs-12 col-sm-12 mb0 mt32 pad_lrz">
-              <h3 class=" text-muted text-center" style=" color: black;font-size: 18px;">
-                <b>WHY ILLIYEEN</b>
-                <div class="mt24" style="padding: 0px ;border-bottom: 2px solid #ededed;width:100%;" id='why_ilyn_heading_underline'/>
-              </h3>
-              
+        </div>
+      </section>
+      <section class="s_title">
+        <div class="container ">
+          <div class="col-md-12 col-xs-12 col-sm-12 mb0 mt32 pad_lrz">
+            <h3 class=" text-muted text-center" style=" color: black;font-size: 18px;">
+              <b>EXCLUSIVITY</b>
+              <div class="mt24" style="padding: 0px ;border-bottom: 2px solid #ededed;width:100%;" id="why_ilyn_heading_underline"/>
+            </h3>
+          </div>
+        </div>
+      </section>
+      <section class="s_title mt24 mb32">
+        <div class="container" id="why_ilyn_wdiv">
+          <div class="col-md-3 col-sm-6 col-xs-12 why-ilyn-col3-div" style="padding-left: 0px; " id="whyilyn-frst-div">
+            <div class="box text-center">
+              <img class="img-responsive" style="width: 25%; margin: 0px auto;" src="/web/image/13956"/>
+              <h5 class="text-uppercase">
+                <strong>Design Innovation</strong>
+              </h5>
             </div>
           </div>
-        </section>
-        <section class="s_title mt24 mb32">
-          <div class="container" id='why_ilyn_wdiv'>
-            <div class="col-md-3 col-sm-6 col-xs-12 why-ilyn-col3-div" style="padding-left: 0px; " id='whyilyn-frst-div'>
-              <div class="box text-center">
-                <span class="fa fa-3x fa-gift"/>
-                <h5 class="text-uppercase">
-                  <strong>Premium Quality</strong>
-                </h5>
-              </div>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12 why-ilyn-col3-div" id='whyilyn-sec-div'>
-              <div class="box text-center">
-                <span class="fa fa-3x fa-truck"/>
-                <h5 class="text-uppercase ">
-                  <strong>Free Shipping</strong>
-                </h5>
-              </div>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12 why-ilyn-col3-div" id='whyilyn-thrd-div'>
-              <div class="box text-center">
-                <span class="fa fa-3x fa-money"/>
-                <h5 class="text-uppercase">
-                  <strong>100% money back</strong>
-                </h5>
-              </div>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12 why-ilyn-col3-div" style="padding-right:0;" id='whyilyn-frth-div'>
-              <div class="box text-center">
-                <span class="fa fa-3x fa-headphones"/>
-                <h5 class="text-uppercase">
-                  <strong>24/7 support</strong>
-                </h5>
-              </div>
+          <div class="col-md-3 col-sm-6 col-xs-12 why-ilyn-col3-div" id="whyilyn-sec-div">
+            <div class="box text-center">
+              <img class="img-responsive" style="width: 25%; margin: 0px auto;" src="/web/image/13957"/>
+              <h5 class="text-uppercase ">
+                <strong>High End Manufactureing</strong>
+              </h5>
             </div>
           </div>
-        </section>
-        
-        <!--<section class="s_title">-->
-        <!--  <div class="container ">-->
-        <!--    <div class="col-md-12 col-sm-12 mt32 mb32 pad_lrz">-->
-        <!--      <h3 class="text-center text-muted" style=" color: black;font-size: 18px;">-->
-        <!--        <b>OUR LABELS</b>-->
-        <!--      </h3>-->
-        <!--    </div>-->
-        <!--  </div>-->
-        <!--</section>-->
-       
-        <section class="s_title">
-            <div class="container ">
-              <div class="col-md-12 col-sm-12 mt32 mb32 pad_lrz" id='our_labels_wdiv'>
-                <div class='mt64 mb64'>
-                    <style>
+          <div class="col-md-3 col-sm-6 col-xs-12 why-ilyn-col3-div" id="whyilyn-thrd-div">
+            <div class="box text-center">
+              <img src="/web/image/13959" class="img-responsive" style="width: 25%; margin: 0px auto;"/>
+              <h5 class="text-uppercase">
+                <strong>Premium Quality</strong>
+              </h5>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12 why-ilyn-col3-div" id="whyilyn-frth-div">
+            <div class="box text-center">
+              <img src="/web/image/13958" class="img-responsive" style="width: 25%; margin: 0px auto;"/>
+              <h5 class="text-uppercase">
+                <strong>International Standard</strong>
+              </h5>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="s_title">
+        <div class="container ">
+          <div class="col-md-12 col-sm-12 mt32 mb32 pad_lrz" id="our_labels_wdiv">
+            <div class="mt64 mb64">
+              <style>
                         .owl-prev, .owl-next{
                           padding:4px 12px!important;
                           font-size:18px !important;
@@ -1371,12 +1280,12 @@
                            background: #c1b497;
                         }
                     </style>
-                    <div class='col-xs-12 col-sm-3'>
-                        <h3 class="text-center text-muted" style=" color: black;font-size: 18px;" id='our_labels_heading'>
-                            <b>OUR LABELS</b>
-                        </h3>
-                    </div>
-                    <div class='col-xs-12 col-sm-9'>
+              <div class="col-xs-12 col-sm-3">
+                <h3 class="text-center text-muted" style=" color: black;font-size: 18px;" id="our_labels_heading">
+                  <b>OUR LABELS</b>
+                </h3>
+              </div>
+                   <div class='col-xs-12 col-sm-9'>
                         <div class="owl-carousel owl-theme">
                             <div> <img src='web/static/src/cust-carousel-assets/imgs/premium.png'/> </div>
                             <div> <img src='web/static/src/cust-carousel-assets/imgs/platinum.png'/> </div>
@@ -1384,10 +1293,11 @@
                             <div> <img src='web/static/src/cust-carousel-assets/imgs/hand_crafted.png'/> </div>
                             <div> <img src='web/static/src/cust-carousel-assets/imgs/premium_essentials.png'/> </div>
                             <div> <img src='web/static/src/cust-carousel-assets/imgs/dshra.png'/> </div>
-                
+                            <div> <img src='web/static/src/cust-carousel-assets/imgs/L-Chino.png'/> </div>
+                            <div> <img src='web/static/src/cust-carousel-assets/imgs/intercontinental.png'/> </div>
                         </div>
                     </div>
-                    <script>
+              <script>
                         $(document).ready(function(){
                             $(".owl-carousel").owlCarousel(
                                 {
@@ -1408,7 +1318,7 @@
                             $(".owl-prev, .owl-next").html("");
                             
                             $(".owl-carousel").on('mousewheel', '.owl-stage', function (e) {
-                                if (e.deltaY>0) {
+                                if (e.deltaY&gt;0) {
                                     owl.trigger('next.owl');
                                 } else {
                                     owl.trigger('prev.owl');
@@ -1417,41 +1327,10 @@
                             });
                         });
                     </script>
-            
-                </div>
-              </div>
             </div>
-        </section>
-     
-      <!--<section class="s_references bg-golden">-->
-      <!--  <div class="container">-->
-      <!--    <div class="row" style="padding: 24px 0 24px 0;">-->
-      <!--      <div class="col-md-3 col-sm-3 six_logos_div_pad col-xs-6 mt16 mb16 hidden">-->
-      <!--        <img src="/web/image/12824" class="img img-responsive " alt="Sahara" data-original-title="" title="ILYN Sahara"/>-->
-      <!--      </div>-->
-      <!--      <div class="col-md-4 col-sm-4 six_logos_div_pad col-xs-6 mt16 mb16">-->
-      <!--        <img src="/web/image/12890" class="img img-responsive " alt="Platinum" data-original-title="" title="ILYN Platinum"/>-->
-      <!--      </div>-->
-      <!--      <div class="col-md-4 col-sm-4 six_logos_div_pad col-xs-6 mt16 mb16">-->
-      <!--        <img src="/web/image/12891" class="img img-responsive " alt="Luxury" title="ILYN Luxury"/>-->
-      <!--      </div>-->
-      <!--       <div class="col-md-4 col-sm-4 six_logos_div_pad col-xs-6 mt16 mb16">-->
-      <!--        <img src="/web/image/12891" class="img img-responsive " alt="Luxury" title="ILYN Luxury"/>-->
-      <!--      </div>-->
-      <!--      <div class="col-md-4 col-sm-4 six_logos_div_pad col-xs-6 mt16 mb16">-->
-      <!--        <img src="/web/image/12893" class="img img-responsive " alt="Premium" title="ILYN Premium"/>-->
-      <!--      </div>-->
-      <!--      <div class="col-md-4 col-sm-4 six_logos_div_pad col-xs-6 mt16 mb16">-->
-      <!--        <img src="/web/image/12892" class="img img-responsive " alt="Premium Essentials" data-original-title="" title="ILYN Premium Essentials"/>-->
-      <!--      </div>-->
-      <!--      <div class="col-md-4 col-sm-4 six_logos_div_pad col-xs-6 mt16 mb16">-->
-      <!--        <img src="/web/image/12894" class="img img-responsive " alt="Handcrafted" data-original-title="" title="ILYN Handcrafted"/>-->
-      <!--      </div>-->
-            
-      <!--    </div>-->
-      <!--  </div>-->
-      <!--</section>-->
-   
+          </div>
+        </div>
+      </section>
     </div>
   </t>
 </t>

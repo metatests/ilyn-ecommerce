@@ -2,17 +2,11 @@
 <t name="Contact us" t-name="website.contactus">
     <t t-call="website.layout">
       <div id="wrap">
-          
-        <style>
-           .addr_lh{
-                line-height: 30px;
-            }
-        </style>  
         <div class="oe_structure"/>
         <div class="container">
             <h1>Contact us</h1>
             <div class="row">
-                <div class="col-sm-6 col-xs-12 ">
+                <div class="col-md-8">
                     <div class="oe_structure">
                         <div>
                             <p>Contact us about anything related to our company or services.</p>
@@ -20,15 +14,11 @@
                         </div>
                     </div>
                     <div class="text-center mt64" name="mail_button">
-                        <a t-attf-href="mailto:{{ res_company.email }}" class="btn" id="o_contact_mail">Send us an email</a>
+                        <a t-attf-href="mailto:{{ res_company.email }}" class="btn btn-primary" id="o_contact_mail">Send us an email</a>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-4 col-sm-offset-1">
-                    <!--<t t-call="website.company_description"/>-->
-                    <h2 class='mt32 text-uppercase'>Banani Store </h2>
-                    <h5 class='mt16 addr_lh' >LEVEL3, TOWER 52, ROAD 11 <br/>BANANI, DHAKA 1213</h5>
-                    <h2 class='text-uppercase mt64'> Bashundhara Store </h2>
-                    <h5 class='mt16 addr_lh' >LEVEL 2, BLOCK A, BASUNDHARA CITY, <br/>PANTHAPATH, DHAKA 1215 </h5>
+                <div class="col-md-4 mb32">
+                    <t t-call="website.company_description"/>
                 </div>
             </div>
         </div>

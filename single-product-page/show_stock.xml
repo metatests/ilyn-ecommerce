@@ -5,49 +5,68 @@
             .stock_message{
                 background: white !important;
                 color: #004000 !important;
-                margin-left: 20px;
+                margin-left: 0%;
             }
+           
+            
             .notStock{
                 background: white !important;
                 color: #660000 !important;
-                margin-left:20px;
-        }
+                margin-left:0%;
+            }
         </style>
         <t t-if="len(product.product_variant_ids) &gt; 1">
-            <t t-if="product.product_variant_ids[0].qty_available &gt; 0">
+            <t t-if="product.product_variant_ids[0].qty_available &gt; 3">
                 <div class='mt24 mb16'>
-                    <span class="oe_qty_available" t-field="product.product_variant_ids[0].qty_available"/>
-                    <span class="oe_uom" t-field="product.product_variant_ids[0].uom_id" style="white-space: nowrap;"/>
+                    <!--<span class="oe_qty_available" t-field="product.product_variant_ids[0].qty_available"/>-->
+                    <!--<span class="oe_uom" t-field="product.product_variant_ids[0].uom_id" style="white-space: nowrap;"/>-->
                     <span class="stock_message"/>
                     <span class="stock_message_default"/>
                 </div>
             </t>
+            <t t-if="product.product_variant_ids[0].qty_available &lt;= 3">
+                <div class='mt24 mb16'>
+                    <!--<span class="oe_qty_available" t-field="product.product_variant_ids[0].qty_available"/>-->
+                    <!--<span class="oe_uom" t-field="product.product_variant_ids[0].uom_id" style="white-space: nowrap;"/>-->
+                    <span class="stock_message"/>
+                    <span class="stock_message_default"/>
+                </div>
+            </t>
+          
             <t t-if="product.product_variant_ids[0].qty_available == 0 or product.product_variant_ids[0].qty_available &lt; 0">
                     <div class='mt24 mt16'>
-                        <span class="oe_qty_available" t-field="product.product_variant_ids[0].qty_available"/>
-                        <span class="oe_uom" t-field="product.product_variant_ids[0].uom_id" style="white-space: nowrap;"/>
+                        <!--<span class="oe_qty_available" t-field="product.product_variant_ids[0].qty_available"/>-->
+                        <!--<span class="oe_uom" t-field="product.product_variant_ids[0].uom_id" style="white-space: nowrap;"/>-->
                         <span class="stock_message"/>
                     </div>
                 </t>
         </t>
         <t t-if="len(product.product_variant_ids) == 1">
-            <t t-if="product.product_variant_ids[0].qty_available &gt; 0">
+            <t t-if="product.product_variant_ids[0].qty_available &lt;= 3">
                 <div class='mt24 mb16'>
-                    <span class="oe_qty_available" t-field="product.product_variant_ids[0].qty_available"/>
-                    <span class="oe_uom" t-field="product.product_variant_ids[0].uom_id" style="white-space: nowrap;"/>
+                    <!--<span class="oe_qty_available" t-field="product.product_variant_ids[0].qty_available"/>-->
+                    <!--<span class="oe_uom" t-field="product.product_variant_ids[0].uom_id" style="white-space: nowrap;"/>-->
+                   <span class="stock_message"/>
+                    <span class="stock_message_default"/>
+                </div>
+            </t>
+            <t t-if="product.product_variant_ids[0].qty_available &gt; 3">
+                <div class='mt24 mb16'>
+                    <!--<span class="oe_qty_available" t-field="product.product_variant_ids[0].qty_available"/>-->
+                    <!--<span class="oe_uom" t-field="product.product_variant_ids[0].uom_id" style="white-space: nowrap;"/>-->
                     <span class="stock_message"/>
-                    <span class="stock_message_default" style="color: #004c00;font-weight: bold;"> In Stock</span>
+                    <span class="stock_message_default"/>
                 </div>
             </t>
             <t t-if="product.product_variant_ids[0].qty_available == 0 or product.product_variant_ids[0].qty_available &lt; 0">
                 <div class='mt24 mb16'>
                     <span class="stock_message"/>
-                    <span class="stock_message_default" style="margin-left:20px; color: #660000;font-weight: bold;"> Out of Stock</span>
+                    <span class="stock_message_default"/>
                 </div>
             </t>
         </t>
+        
     </xpath>
-    
     <xpath expr="//a[@id='add_to_cart']" position="replace">
         <t t-if="len(product.product_variant_ids) == 1">
             <t t-if="product.product_variant_ids[0].qty_available == 0 or product.product_variant_ids[0].qty_available &lt; 0">
@@ -67,4 +86,8 @@
         </t>
     </xpath>
 </data>
+
+
+
+
 

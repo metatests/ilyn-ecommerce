@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<data inherit_id="website_sale.product" customize_show="True" name="Product attributes">
+        <xpath expr="//p[@t-field='product.description_sale']" position="after">
+            <hr t-if="sum([(1 if len(l.value_ids)==1 else 0) for l in product.attribute_line_ids])"/>
+            <p class="text-muted">
+                <t t-foreach="product.attribute_line_ids.sorted(key=lambda x: x.attribute_id.sequence)" t-as="variant_id">
+                    <t t-if="len(variant_id.value_ids)==1">
+                        <span t-field="variant_id.attribute_id"/>: <span t-field="variant_id.value_ids[0].name"/><br/></t>
+                </t>
+            </p>
+        </xpath>
+    </data>
+
+    
